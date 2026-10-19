@@ -6,7 +6,23 @@
 ## Get the compiled version
 
 You can get the compiled version of this code in the
-[taiga-front-dist](http://github.com/taigaio/taiga-front-dist) repository
+[taiga-front-dist](https://github.com/taigaio/taiga-front-dist) repository
+
+### EcoMapa container build
+
+The Dockerfile in this fork compiles the frontend from this checkout and its
+committed `package-lock.json`. It does not download `taiga-front-dist`. Use the
+Node version in `.nvmrc` for local builds. The Docker build sets a stable asset
+version from the source files and lockfile so two builds of the same inputs use
+the same asset paths. The optional Slack, GitHub, and GitLab plugins still come
+from separately hash-verified upstream release archives.
+
+`elements.js` is a checked-in bundle generated from the separate
+[taiga-front-next](https://github.com/taigaio/taiga-front-next) source tree.
+`app/js/angular-sanitize.js` is also checked-in browser code. Updating an npm
+package here does not replace either file. The current source build still
+ships unsupported AngularJS and the existing editor bundle. Review and test
+those browser paths before using this image publicly.
 
 ## Documentation
 

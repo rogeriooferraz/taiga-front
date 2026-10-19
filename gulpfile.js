@@ -8,7 +8,6 @@
 
 var gulp = require("gulp"),
     fs = require('fs'),
-    imagemin = require("gulp-imagemin"),
     jade = require("gulp-jade"),
     coffee = require("gulp-coffee"),
     concat = require("gulp-concat"),
@@ -17,7 +16,7 @@ var gulp = require("gulp"),
     rename = require("gulp-rename"),
     gulpif = require("gulp-if"),
     replace = require("gulp-replace"),
-    sass = require('gulp-sass')(require('node-sass'));
+    sass = require('gulp-sass')(require('sass'));
     minifyCSS = require("gulp-clean-css"),
     stylelint = require('gulp-stylelint');
     cache = require("gulp-cache"),
@@ -53,7 +52,7 @@ const availableThemes = JSON.stringify(themes.availableThemes.map((theme) => {
     return theme.name;
 }));
 
-var version = "v-" + Date.now();
+var version = process.env.TAIGA_BUILD_VERSION || "v-" + Date.now();
 
 // userpilot config
 var userpilotToken = process.env.USERPILOT_TOKEN || null;
@@ -331,7 +330,7 @@ gulp.task("sass-compile", function() {
         .pipe(insert.prepend('@import "dependencies";'))
         .pipe(cached("sass"))
         .pipe(sass({
-            includePaths: [
+            loadPaths: [
                 paths.app + "styles/extras/",
                 themes.current.path
             ]
@@ -604,7 +603,6 @@ gulp.task("copy-theme-fonts", function() {
 
 gulp.task("copy-images", function() {
     return gulp.src([paths.app + "/images/**/*", paths.app + '/modules/compile-modules/**/images/*'])
-        .pipe(gulpif(isDeploy, imagemin({progressive: true})))
         .pipe(gulp.dest(paths.distVersion + "/images/"));
 });
 
@@ -615,7 +613,6 @@ gulp.task("copy-emojis", function() {
 
 gulp.task("copy-theme-images", function() {
     return gulp.src(themes.current.path + "/images/**/*")
-        .pipe(gulpif(isDeploy, imagemin({progressive: true})))
         .pipe(gulp.dest(paths.distVersion + "/images/"  + themes.current.name));
 });
 
