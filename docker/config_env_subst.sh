@@ -54,6 +54,28 @@ if [[ -z "${DEBUG}" ]]; then
     export DEBUG="false"
 fi
 
+# Optional deployment support contact. Reject characters that could break
+# the generated JSON before passing the value through envsubst.
+PROJECT_SUPPORT_URL="${PROJECT_SUPPORT_URL:-}"
+if [[ -n "$PROJECT_SUPPORT_URL" ]]; then
+    if [[ ! "$PROJECT_SUPPORT_URL" =~ ^(mailto:|https://) ]] ||
+       [[ ! "$PROJECT_SUPPORT_URL" =~ ^[A-Za-z0-9:/?\&=._%+@#~-]+$ ]]; then
+        echo "Invalid PROJECT_SUPPORT_URL" >&2
+        exit 1
+    fi
+fi
+export PROJECT_SUPPORT_URL
+
+PROJECT_SUPPORT_LABEL="${PROJECT_SUPPORT_LABEL:-Project support}"
+if [[ ${#PROJECT_SUPPORT_LABEL} -gt 80 ]] ||
+   [[ "$PROJECT_SUPPORT_LABEL" == *\"* ]] ||
+   [[ "$PROJECT_SUPPORT_LABEL" == *\\* ]] ||
+   [[ "$PROJECT_SUPPORT_LABEL" =~ [[:cntrl:]] ]]; then
+    echo "Invalid PROJECT_SUPPORT_LABEL" >&2
+    exit 1
+fi
+export PROJECT_SUPPORT_LABEL
+
 contribs=$( IFS=,; echo "[${contribs[*]}]" )
 
 export CONTRIB_PLUGINS=$contribs

@@ -16,6 +16,8 @@ NavigationBarDirective = (currentUserService, navigationBarService, locationServ
 
         scope.vm.publicRegisterEnabled = config.get("publicRegisterEnabled")
         scope.vm.customSupportUrl = config.get("supportUrl")
+        scope.vm.projectSupportUrl = config.get("projectSupportUrl")
+        scope.vm.projectSupportLabel = config.get("projectSupportLabel") || "Project support"
         scope.vm.isFeedbackEnabled = config.get("feedbackEnabled")
 
         loadUserPilot = () =>
