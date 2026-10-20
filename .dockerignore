@@ -19,3 +19,7 @@
 !gulp-utils.js
 !package.json
 !package-lock.json
+!third_party/
+!third_party/taiga-html-editor/
+!third_party/taiga-html-editor/ckeditor-translations/
+!third_party/taiga-html-editor/ckeditor-translations/**

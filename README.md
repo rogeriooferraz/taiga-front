@@ -8,7 +8,7 @@
 You can get the compiled version of this code in the
 [taiga-front-dist](https://github.com/taigaio/taiga-front-dist) repository
 
-### EcoMapa container build
+### Source-built container
 
 The Dockerfile in this fork compiles the frontend from this checkout and its
 committed `package-lock.json`. It does not download `taiga-front-dist`. Use the
@@ -23,6 +23,20 @@ from separately hash-verified upstream release archives.
 package here does not replace either file. The current source build still
 ships unsupported AngularJS and the existing editor bundle. Review and test
 those browser paths before using this image publicly.
+
+The CKEditor translation files in
+[`third_party/taiga-html-editor/`](third_party/taiga-html-editor/) are generated
+from the pinned Taiga editor source. The source build copies them into the
+versioned asset tree so non-English editing retains its localization. The
+container bases are pinned by digest; the final image still refreshes Alpine
+packages during its build, so record and scan the exact resulting image digest
+for release.
+
+Set the optional `PROJECT_SUPPORT_URL` environment variable to a deployment's
+own `https://` or `mailto:` contact to show a separate project support link.
+`PROJECT_SUPPORT_LABEL` can name that contact in the deployment's language;
+its default is "Project support". When the URL is unset, the link is hidden.
+The Taiga community link and feedback action remain separate.
 
 ## Documentation
 

@@ -6,8 +6,6 @@
 # Copyright (c) 2021-present Kaleidos INC
 ###
 
-# cp -r node_modules/taiga-html-editor/packages/ckeditor5-build-classic/build/translations ../taiga-front/extras
-
 taiga = @.taiga
 
 Wysiwyg = ($translate, $confirm, $storage, wysiwygService, animationFrame, tgLoader, analytics, $location, $attachmentsFullService) ->

@@ -26,6 +26,7 @@ var gulp = require("gulp"),
     insert = require("gulp-insert"),
     autoprefixer = require("gulp-autoprefixer"),
     templateCache = require("gulp-angular-templatecache"),
+    through = require("through2"),
     order = require("gulp-order"),
     os = require('os'),
     del = require("del"),
@@ -269,8 +270,19 @@ gulp.task("copy-index", function() {
 });
 
 gulp.task("template-cache", function() {
+    var templates = [];
+
     return gulp.src(paths.htmlPartials)
         .pipe(gulpif(isDeploy, replace(/e2e-([a-z\-]+)/g, '')))
+        .pipe(through.obj(function(file, encoding, callback) {
+            templates.push(file);
+            callback();
+        }, function(callback) {
+            templates.sort(function(a, b) {
+                return a.relative < b.relative ? -1 : a.relative > b.relative ? 1 : 0;
+            }).forEach(this.push.bind(this));
+            callback();
+        }))
         .pipe(templateCache({
             standalone: true,
             transformUrl: function(url) {
@@ -622,7 +634,7 @@ gulp.task("copy-extras", function() {
 });
 
 gulp.task("copy-ckeditor-translations", function() {
-    return gulp.src(paths.modules + "taiga-html-editor/packages/ckeditor5-build-classic/build/translations/*")
+    return gulp.src("third_party/taiga-html-editor/ckeditor-translations/*.js")
         .pipe(gulp.dest(paths.distVersion + "/ckeditor-translations/"));
 });
 

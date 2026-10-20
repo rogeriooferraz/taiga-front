@@ -1,7 +1,7 @@
 # This source code is licensed under the terms of the GNU Affero General
 # Public License found in the LICENSE file in the root of this source tree.
 
-FROM node:24.22.0-bookworm-slim AS frontend
+FROM node:24.22.0-bookworm-slim@sha256:a5f4366e834695d5f363b920c104953a535d3a9864d1bdf74566a0ebe01daee5 AS frontend
 RUN apt-get update && apt-get install --no-install-recommends -y ca-certificates git \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /work
@@ -13,16 +13,19 @@ COPY app-loader/ app-loader/
 COPY conf/ conf/
 COPY emojis/ emojis/
 COPY extras/ extras/
+COPY third_party/taiga-html-editor/ckeditor-translations/ third_party/taiga-html-editor/ckeditor-translations/
 RUN set -eu; \
     source_hash="$( \
-        { find app app-loader conf emojis extras -type f -print0 | sort -z | xargs -0 sha256sum; \
+        { find app app-loader conf emojis extras third_party/taiga-html-editor/ckeditor-translations -type f -print0 | sort -z | xargs -0 sha256sum; \
           sha256sum .stylelintrc.js elements.js gulpfile.js gulp-utils.js package.json package-lock.json; } \
         | sha256sum | cut -c1-16 \
     )"; \
     TAIGA_BUILD_VERSION="v-${source_hash}" ./node_modules/.bin/gulp deploy; \
-    test -s dist/index.html
+    test -s dist/index.html; \
+    test "$(find dist -type f -path '*/ckeditor-translations/*.js' | wc -l)" -eq 62; \
+    test -s dist/v-*/ckeditor-translations/pt-br.js
 
-FROM alpine:3.24 AS plugins
+FROM alpine:3.24@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6 AS plugins
 RUN apk add --no-cache curl unzip
 WORKDIR /work
 RUN set -eu; \
@@ -37,7 +40,7 @@ RUN set -eu; \
     echo '98bfc0d0358a15f1c02ddae1b1f7d40cd1c2de4bcb486e151334d7b3193bc612  gitlab.zip' | sha256sum -c -; \
     unzip -j -q gitlab.zip 'taiga-contrib-gitlab-auth-6.10.0/front/dist/*' -d /out/plugins/gitlab-auth
 
-FROM nginx:stable-alpine
+FROM nginx:stable-alpine@sha256:970364228b1e4f932abc22d321932816782cca8a20b85a77552a7cfe9acfb3b5
 RUN apk upgrade --no-cache && apk add --no-cache bash
 COPY --from=frontend /work/dist/ /usr/share/nginx/html/
 COPY --from=plugins /out/plugins/ /usr/share/nginx/html/plugins/
