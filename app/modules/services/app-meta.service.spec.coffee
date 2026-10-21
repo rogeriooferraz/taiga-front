@@ -32,6 +32,12 @@ describe "AppMetaService", ->
         appMetaService.setTitle(data.title)
         expect($("title")).to.have.text(data.title)
 
+    it "renders a project title as text", () ->
+        title = '<img src=x onerror=alert(1)>'
+        appMetaService.setTitle(title)
+        expect($("title")).to.have.text(title)
+        expect($("title img")).to.have.length(0)
+
     it "set meta description", () ->
         appMetaService.setDescription(data.description)
         expect($("meta[name='description']")).to.have.attr("content", data.description)
