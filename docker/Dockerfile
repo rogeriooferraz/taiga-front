@@ -22,7 +22,7 @@ RUN set -eu; \
     )"; \
     TAIGA_BUILD_VERSION="v-${source_hash}" ./node_modules/.bin/gulp deploy; \
     test -s dist/index.html; \
-    test "$(find dist -type f -path '*/ckeditor-translations/*.js' | wc -l)" -eq 62; \
+    test "$(find dist -type f -path '*/ckeditor-translations/*.js' | wc -l)" -eq 63; \
     test -s dist/v-*/ckeditor-translations/pt-br.js
 
 FROM alpine:3.24@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6 AS plugins
