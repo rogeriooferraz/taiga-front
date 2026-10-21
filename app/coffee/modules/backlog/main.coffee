@@ -1012,7 +1012,7 @@ UsRolePointsSelectorDirective = ($rootscope, $template, $compile, $translate) ->
 
         $scope.$on "uspoints:select", (ctx, roleId, roleName) ->
             $el.find(".popover").popover().close()
-            $el.find(".header-points").html("#{roleName}")
+            $el.find(".header-points").text(roleName)
 
         $scope.$on "uspoints:clear-selection", (ctx, roleId) ->
             $el.find(".popover").popover().close()
@@ -1100,21 +1100,17 @@ UsPointsDirective = ($tgEstimationsService, $repo, $tgTemplate) ->
 
                 estimationProcess.render = () ->
                     totalPoints = @calculateTotalPoints()
-                    if not selectedRoleId? or roles.length == 1
-                        text = totalPoints
-                        title = totalPoints
-                    else
+                    pointName = null
+                    if selectedRoleId? and roles.length > 1
                         pointId = @us.points[selectedRoleId]
                         pointObj = @pointsById[pointId]
-                        text = "#{pointObj.name} / <span>#{totalPoints}</span>"
-                        title = "#{pointObj.name} / #{totalPoints}"
+                        pointName = pointObj.name
 
                     ctx = {
                         totalPoints: totalPoints
                         roles: @calculateRoles()
                         editable: @isEditable
-                        text:  text
-                        title: title
+                        pointName: pointName
                     }
                     mainTemplate = "common/estimation/us-estimation-total.html"
                     template = $tgTemplate.get(mainTemplate, true)
