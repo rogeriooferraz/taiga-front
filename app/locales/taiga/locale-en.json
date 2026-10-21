@@ -269,7 +269,9 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Select Language",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Remove formatting",
             "OUTDATED": "Another person has made changes while you were editing. Check the new version on the activity tab before you save your changes.",
-            "MARKDOWN_HELP": "Markdown syntax help"
+            "MARKDOWN_HELP": "Markdown syntax help",
+            "LOAD_EXTERNAL_IMAGE": "Load external image",
+            "LOAD_EXTERNAL_IMAGES": "Load external images"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {

@@ -41,6 +41,12 @@ class WysiwygService
 
         return @htmlSanitizer.sanitize(@.projectDataConversion[projectId].toHtml(text))
 
+    originalRemoteImageUrl: (src) ->
+        return window.angularDataConversion().originalRemoteImageUrl(src)
+
+    deferRemoteImageUrl: (src) ->
+        return window.angularDataConversion().deferRemoteImageUrl(src)
+
     getAttachmentData: (tokens) ->
         return @attachmentsService.get(tokens[0], tokens[1]).then (response) => response.data.url
 
@@ -115,15 +121,18 @@ class WysiwygService
         _.map [links, images], (tag) =>
             _.map tag.elements, (e) =>
                 attrValue = e.getAttribute(tag.attr)
+                original = if tag.attr == 'src' then @.originalRemoteImageUrl(attrValue) else null
+                refreshValue = original or attrValue
 
-                if attrValue && attrValue.indexOf && attrValue.indexOf('#_taiga-refresh=') != -1
-                    match = attrValue.match(regex)
+                if refreshValue && refreshValue.indexOf && refreshValue.indexOf('#_taiga-refresh=') != -1
+                    match = refreshValue.match(regex)
                     if match && match.length == 2
                         tokens = match[1].split(":")
 
                         promise = @.getCachedAttachment(tokens)
                         .then (url) =>
-                            e.setAttribute(tag.attr, url)
+                            resolved = if tag.attr == 'src' then @.deferRemoteImageUrl(url) else url
+                            e.setAttribute(tag.attr, resolved)
                         .catch () =>
                             console.warn('attachment ref not found', attrValue)
 

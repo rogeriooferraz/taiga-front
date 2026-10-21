@@ -67,7 +67,7 @@ class WikiDetailController extends mixOf(taiga.Controller, taiga.PageMixin)
             projectName: @scope.project.name
         })
         description =  @translate.instant("WIKI.PAGE_DESCRIPTION", {
-            wikiPageContent: angular.element(@scope.wiki?.html or "").text()
+            wikiPageContent: @appMetaService.textFromHtml(@scope.wiki?.html)
             totalEditions: @scope.wiki?.editions or 0
             lastModifiedDate: moment(@scope.wiki?.modified_date).format(@translate.instant("WIKI.DATETIME"))
         })

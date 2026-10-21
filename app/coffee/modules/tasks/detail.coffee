@@ -67,7 +67,7 @@ class TaskDetailController extends mixOf(taiga.Controller, taiga.PageMixin)
         })
         description = @translate.instant("TASK.PAGE_DESCRIPTION", {
             taskStatus: @scope.statusById[@scope.task.status]?.name or "--"
-            taskDescription: angular.element(@scope.task.description_html or "").text()
+            taskDescription: @appMetaService.textFromHtml(@scope.task.description_html)
         })
         @appMetaService.setAll(title, description)
 

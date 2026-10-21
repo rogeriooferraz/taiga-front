@@ -85,7 +85,7 @@ class UserStoryDetailController extends mixOf(taiga.Controller, taiga.PageMixin)
         description = @translate.instant("US.PAGE_DESCRIPTION", {
             userStoryStatus: @scope.statusById[@scope.us.status]?.name or "--"
             userStoryPoints: @scope.us.total_points
-            userStoryDescription: angular.element(descriptionHtml).text()
+            userStoryDescription: @appMetaService.textFromHtml(descriptionHtml)
             userStoryClosedTasks: closedTasks
             userStoryTotalTasks: totalTasks
             userStoryProgressPercentage: progressPercentage

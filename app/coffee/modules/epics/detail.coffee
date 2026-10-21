@@ -73,7 +73,7 @@ class EpicDetailController extends mixOf(taiga.Controller, taiga.PageMixin)
         })
         description = @translate.instant("EPIC.PAGE_DESCRIPTION", {
             epicStatus: @scope.statusById[@scope.epic.status]?.name or "--"
-            epicDescription: angular.element(@scope.epic.description_html or "").text()
+            epicDescription: @appMetaService.textFromHtml(@scope.epic.description_html)
         })
         @appMetaService.setAll(title, description)
 

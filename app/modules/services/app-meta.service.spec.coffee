@@ -42,6 +42,11 @@ describe "AppMetaService", ->
         appMetaService.setDescription(data.description)
         expect($("meta[name='description']")).to.have.attr("content", data.description)
 
+    it "extracts metadata text without activating image markup", () ->
+        html = '<h2>Heading</h2><img src="https://other.example/image.png">' +
+            '<p>Body</p><script>unsafe()</script>'
+        expect(appMetaService.textFromHtml(html)).to.equal('HeadingBody')
+
     it "set meta for twitter", () ->
         appMetaService.setTwitterMetas(data.title, data.description)
         expect($("meta[name='twitter:card']")).to.have.attr("content",  "summary")

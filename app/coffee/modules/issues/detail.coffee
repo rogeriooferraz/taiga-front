@@ -76,7 +76,7 @@ class IssueDetailController extends mixOf(taiga.Controller, taiga.PageMixin)
             issueType: @scope.typeById[@scope.issue.type]?.name or "--"
             issueSeverity: @scope.severityById[@scope.issue.severity]?.name or "--"
             issuePriority: @scope.priorityById[@scope.issue.priority]?.name or "--"
-            issueDescription: angular.element(@scope.issue.description_html or "").text()
+            issueDescription: @appMetaService.textFromHtml(@scope.issue.description_html)
         })
         @appMetaService.setAll(title, description)
 

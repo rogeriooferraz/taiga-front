@@ -50,7 +50,9 @@ describe 'tgWysiwygService HTML boundary', ->
         converter = {
             setUp: sinon.stub(),
             toHtml: sinon.stub(),
-            toMarkdown: sinon.stub()
+            toMarkdown: sinon.stub(),
+            originalRemoteImageUrl: sinon.stub().returns(null),
+            deferRemoteImageUrl: sinon.stub().returnsArg(0)
         }
         window.angularDataConversion = -> converter
 
@@ -84,6 +86,19 @@ describe 'tgWysiwygService HTML boundary', ->
     it 'keeps safe resolved attachment URLs', ->
         service.refreshAttachmentURL('<img src="/media/#_taiga-refresh=task:1">').then (html) ->
             expect(html).to.contain 'src="/media/attachment.png"'
+
+    it 'refreshes deferred cross-origin attachment images', ->
+        deferred = 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%2F%3E#taiga-remote-image=old'
+        refreshed = 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%2F%3E#taiga-remote-image=new'
+        converter.originalRemoteImageUrl.withArgs(deferred).returns(
+            'https://media.example/old.png#_taiga-refresh=task:1')
+        converter.deferRemoteImageUrl.withArgs('https://media.example/new.png').returns(refreshed)
+        service.getAttachmentData = -> Promise.resolve('https://media.example/new.png')
+
+        service.refreshAttachmentURL('<img src="' + deferred + '">').then (html) ->
+            expect(html).to.contain('src="' + refreshed + '"')
+            expect(converter.deferRemoteImageUrl).to.have.been.calledWith(
+                'https://media.example/new.png')
 
     it 'preserves email links while resolving relative project links', ->
         html = service.relativePaths '<a href="mailto:team@example.org">mail</a>' +

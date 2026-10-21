@@ -6,7 +6,7 @@
 # Copyright (c) 2021-present Kaleidos INC
 ###
 
-BindCode = ($sce, $parse, $compile, wysiwygService, htmlSanitizer) ->
+BindCode = ($sce, $parse, $compile, $translate, wysiwygService, htmlSanitizer) ->
   return {
     restrict: 'A',
     compile:  (tElement, tAttrs) ->
@@ -21,7 +21,26 @@ BindCode = ($sce, $parse, $compile, wysiwygService, htmlSanitizer) ->
             window._extraValidHtmlElments = {input: true}
             window._extraValidAttrs = {checked: true}
 
-            element.html($sce.getTrustedHtml(htmlSanitizer.sanitize(html)) || '')
+            template = document.createElement('template')
+            template.innerHTML = $sce.getTrustedHtml(htmlSanitizer.sanitize(html)) || ''
+            template.content.querySelectorAll('img[src]').forEach (image) =>
+                original = wysiwygService.originalRemoteImageUrl(image.getAttribute('src'))
+                if original
+                    button = document.createElement('button')
+                    button.type = 'button'
+                    button.textContent = $translate.instant('COMMON.WYSIWYG.LOAD_EXTERNAL_IMAGE')
+                    button.addEventListener 'mousedown', (event) ->
+                        event.stopPropagation()
+                    button.addEventListener 'click', (event) ->
+                        event.preventDefault()
+                        event.stopPropagation()
+                        loadedImage = image.cloneNode(false)
+                        loadedImage.referrerPolicy = 'no-referrer'
+                        button.parentNode.replaceChild(loadedImage, button)
+                        loadedImage.src = original
+                    image.parentNode.replaceChild(button, image)
+
+            element.empty().append(template.content)
             element[0].querySelectorAll('pre code').forEach (block) =>
                 blockClasses = block.className + ' ';
                 blockClasses += if block.parentNode then block.parentNode.className else ''
@@ -67,6 +86,7 @@ angular.module("taigaComponents")
         "$sce",
         "$parse",
         "$compile",
+        "$translate",
         "tgWysiwygService",
         "tgHtmlSanitizer",
         BindCode])

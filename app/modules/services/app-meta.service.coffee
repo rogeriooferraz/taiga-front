@@ -18,6 +18,13 @@ class AppMetaService
 
     constructor: (@rootScope) ->
 
+    textFromHtml: (html) ->
+        template = document.createElement('template')
+        template.innerHTML = html or ''
+        template.content.querySelectorAll('script, style, svg, math').forEach (element) ->
+            element.remove()
+        return template.content.textContent or ''
+
     _set: (key, value) ->
         return if not key
 
