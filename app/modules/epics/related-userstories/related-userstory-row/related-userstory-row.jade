@@ -19,7 +19,7 @@ tg-svg.icon-drag(
             ng-attr-title="{{vm.userstory.get('subject')}}"
         )
             span.related-ref {{ '#'+vm.userstory.get('ref') }}
-            span.related-subject {{ vm.userstory.get('subject') | emojify}}
+            span.related-subject(ng-bind-html="vm.userstory.get('subject') | emojify")
         tg-belong-to-epics(
             format="pill"
             ng-if="vm.userstory.get('epics')"
