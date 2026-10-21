@@ -551,7 +551,9 @@ gulp.task("moment-locales", function() {
 });
 
 gulp.task("jslibs-watch", function() {
-    return gulp.src([...paths.libs, paths.modules + "@highlightjs/cdn-assets/highlight.min.js"])
+    return gulp.src([...paths.libs,
+        paths.modules + "dompurify/dist/purify.min.js",
+        paths.modules + "@highlightjs/cdn-assets/highlight.min.js"])
         .pipe(plumber())
         .pipe(concat("libs.js"))
         .pipe(gulp.dest(paths.distVersion + "js/"));
@@ -563,8 +565,9 @@ gulp.task("jslibs-deploy", function() {
         .pipe(sourcemaps.init())
         .pipe(concat("libs.js"))
         .pipe(uglify())
-        //  we can't uglify highlightjs
-        .pipe(gulp.src([paths.modules + "@highlightjs/cdn-assets/highlight.min.js"]))
+        // Keep already-minified libraries outside the legacy Uglify pass.
+        .pipe(gulp.src([paths.modules + "dompurify/dist/purify.min.js",
+            paths.modules + "@highlightjs/cdn-assets/highlight.min.js"]))
         .pipe(concat("libs.js"))
         .pipe(sourcemaps.write("./maps"))
         .pipe(gulp.dest(paths.distVersion + "js/"));
@@ -715,7 +718,7 @@ gulp.task("watch", function(cb) {
     gulp.watch(paths.sass_watch, gulp.parallel(["styles-lint"]));
     gulp.watch(paths.styles_dependencies, gulp.parallel(["styles-dependencies"]));    gulp.watch(paths.svg, gulp.parallel(["copy-svg"]));
     gulp.watch(paths.coffee, gulp.parallel(["app-watch"]));
-    gulp.watch(paths.libs, gulp.parallel(["jslibs-watch"]));
+    gulp.watch([...paths.libs, paths.modules + "dompurify/dist/purify.min.js"], gulp.parallel(["jslibs-watch"]));
     gulp.watch(paths.elements, gulp.parallel(["elements"]));
     gulp.watch([paths.locales, paths.modulesLocales], gulp.parallel(["locales"]));
     gulp.watch(paths.images, gulp.parallel(["copy-images"]));

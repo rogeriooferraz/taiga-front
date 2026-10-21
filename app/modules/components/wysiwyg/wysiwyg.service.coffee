@@ -11,10 +11,10 @@ class WysiwygService
         "tgProjectService",
         "tgAttachmentsFullService",
         "tgAttachmentsService",
-        "$sce"
+        "tgHtmlSanitizer"
     ]
 
-    constructor: (@projectService, @attachmentsFullService, @attachmentsService, @sce) ->
+    constructor: (@projectService, @attachmentsFullService, @attachmentsService, @htmlSanitizer) ->
         @.projectDataConversion = {}
         # prevent duplicate calls to the same attachment
         @.cache = {}
@@ -39,7 +39,7 @@ class WysiwygService
             @.dataConversion.setUp(@projectService.project.get('slug'))
             @.projectDataConversion[projectId] = @.dataConversion
 
-        return @.projectDataConversion[projectId].toHtml(text)
+        return @htmlSanitizer.sanitize(@.projectDataConversion[projectId].toHtml(text))
 
     getAttachmentData: (tokens) ->
         return @attachmentsService.get(tokens[0], tokens[1]).then (response) => response.data.url
@@ -64,17 +64,13 @@ class WysiwygService
                     return url
 
     relativePaths: (html) ->
-        el = document.createElement('html')
+        el = document.createElement('template')
+        el.innerHTML = @htmlSanitizer.sanitize(html)
 
-        window._extraValidHtmlElments = {input: true}
-        window._extraValidAttrs = {checked: true}
-
-        el.innerHTML = @sce.getTrustedHtml(html) || ''
-
-        el.querySelectorAll('a').forEach (link) =>
+        el.content.querySelectorAll('a').forEach (link) =>
             href = link.getAttribute('href')
 
-            if href && !href.startsWith('http') && !href.startsWith('/') && !link.classList.contains('mention')
+            if href && !/^[a-z][a-z0-9+.-]*:/i.test(href) && !href.startsWith('/') && !link.classList.contains('mention')
                 currentHref = window.location.href.slice(
                     0,
                     window.location.href.lastIndexOf('/') + 1
@@ -89,11 +85,11 @@ class WysiwygService
 
                 link.setAttribute('href', newHref)
 
-            if href.startsWith('project') && link.classList.contains('mention')
+            if href && href.startsWith('project') && link.classList.contains('mention')
                 link.removeAttribute('rel')
                 link.removeAttribute('target')
 
-        return el.innerHTML
+        return @htmlSanitizer.sanitize(el.innerHTML)
 
     refreshAttachmentURLFromMarkdown: (markdown) ->
         html = @.getHTML(markdown)
@@ -102,20 +98,16 @@ class WysiwygService
             return @.getMarkdown(html)
 
     refreshAttachmentURL: (html) ->
-        el = document.createElement('html')
-
-        window._extraValidHtmlElments = {input: true}
-        window._extraValidAttrs = {checked: true}
-
-        el.innerHTML = @sce.getTrustedHtml(html) || ''
+        el = document.createElement('template')
+        el.innerHTML = @htmlSanitizer.sanitize(html)
         regex = /#_taiga-refresh=([a-zA-Z]*\:\d+)/
 
         links = {
-            "elements": el.querySelectorAll('a'),
+            "elements": el.content.querySelectorAll('a'),
             "attr": "href",
         }
         images = {
-            "elements": el.querySelectorAll('img'),
+            "elements": el.content.querySelectorAll('img'),
             "attr": "src",
         }
 
@@ -137,8 +129,8 @@ class WysiwygService
 
                         promises.push(promise)
 
-        Promise.all(promises).then ->
-            return el.innerHTML
+        Promise.all(promises).then =>
+            return @htmlSanitizer.sanitize(el.innerHTML)
 
 angular.module("taigaComponents")
     .service("tgWysiwygService", WysiwygService)

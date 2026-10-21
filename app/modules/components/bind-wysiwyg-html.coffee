@@ -6,7 +6,7 @@
 # Copyright (c) 2021-present Kaleidos INC
 ###
 
-BindCode = ($sce, $parse, $compile, wysiwygService) ->
+BindCode = ($sce, $parse, $compile, wysiwygService, htmlSanitizer) ->
   return {
     restrict: 'A',
     compile:  (tElement, tAttrs) ->
@@ -21,7 +21,7 @@ BindCode = ($sce, $parse, $compile, wysiwygService) ->
             window._extraValidHtmlElments = {input: true}
             window._extraValidAttrs = {checked: true}
 
-            element.html($sce.getTrustedHtml(html) || '')
+            element.html($sce.getTrustedHtml(htmlSanitizer.sanitize(html)) || '')
             element[0].querySelectorAll('pre code').forEach (block) =>
                 blockClasses = block.className + ' ';
                 blockClasses += if block.parentNode then block.parentNode.className else ''
@@ -68,4 +68,5 @@ angular.module("taigaComponents")
         "$parse",
         "$compile",
         "tgWysiwygService",
+        "tgHtmlSanitizer",
         BindCode])
