@@ -17,10 +17,10 @@ BindOnceBindDirective = ->
     return {link:link}
 
 # Html bind once directive
-BindOnceHtmlDirective = ->
+BindOnceHtmlDirective = ($sanitize) ->
     link = ($scope, $el, $attrs) ->
         bindOnce $scope, $attrs.tgBoHtml, (val) ->
-            $el.html(val)
+            $el.html($sanitize(val or ""))
 
     return {link:link}
 
@@ -66,20 +66,20 @@ BindTitleDirective = ->
 
     return {link:link}
 
-BindHtmlDirective = ->
+BindHtmlDirective = ($sanitize) ->
     link = ($scope, $el, $attrs) ->
         $scope.$watch $attrs.tgBindHtml, (val) ->
-            $el.html(val) if val?
+            $el.html($sanitize(val or ""))
 
     return {link:link}
 
 module = angular.module("taigaBase")
 module.directive("tgBoBind", BindOnceBindDirective)
-module.directive("tgBoHtml", BindOnceHtmlDirective)
+module.directive("tgBoHtml", ["$sanitize", BindOnceHtmlDirective])
 module.directive("tgBoRef", BindOnceRefDirective)
 module.directive("tgBoSrc", BindOnceSrcDirective)
 module.directive("tgBoHref", BindOnceHrefDirective)
 module.directive("tgBoAlt", BindOnceAltDirective)
 module.directive("tgBoTitle", BindOnceTitleDirective)
 module.directive("tgBindTitle", BindTitleDirective)
-module.directive("tgBindHtml", BindHtmlDirective)
+module.directive("tgBindHtml", ["$sanitize", BindHtmlDirective])
