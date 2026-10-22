@@ -271,7 +271,9 @@
             "OUTDATED": "Another person has made changes while you were editing. Check the new version on the activity tab before you save your changes.",
             "MARKDOWN_HELP": "Markdown syntax help",
             "LOAD_EXTERNAL_IMAGE": "Load external image",
-            "LOAD_EXTERNAL_IMAGES": "Load external images"
+            "LOAD_EXTERNAL_IMAGES": "Load external images",
+            "LOAD_IMAGE": "Load image",
+            "LOAD_IMAGES": "Load images"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {

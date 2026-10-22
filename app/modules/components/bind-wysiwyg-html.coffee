@@ -28,7 +28,7 @@ BindCode = ($sce, $parse, $compile, $translate, wysiwygService, htmlSanitizer) -
                 if original
                     button = document.createElement('button')
                     button.type = 'button'
-                    button.textContent = $translate.instant('COMMON.WYSIWYG.LOAD_EXTERNAL_IMAGE')
+                    button.textContent = $translate.instant('COMMON.WYSIWYG.LOAD_IMAGE')
                     button.addEventListener 'mousedown', (event) ->
                         event.stopPropagation()
                     button.addEventListener 'click', (event) ->
