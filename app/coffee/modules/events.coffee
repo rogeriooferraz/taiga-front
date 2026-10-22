@@ -24,7 +24,9 @@ class EventsService
         @.error = false
         @.pendingMessages = []
         @.reconnectTryInterval = @config.get("eventsReconnectTryInterval", 10000)
-        @.maxConnectionErrors = @config.get("eventsMaxConnectionErrors", 5)
+        # Zero keeps retrying after a prolonged outage; a positive value
+        # retains the configured limit on consecutive connection failures.
+        @.maxConnectionErrors = @config.get("eventsMaxConnectionErrors", 0)
         @.errors = 0
 
         @.missedHeartbeats = 0
@@ -35,6 +37,7 @@ class EventsService
 
     setupConnection: ->
         @.stopExistingConnection()
+        @.connected = false
 
         url = @config.get("eventsUrl")
 
@@ -193,14 +196,12 @@ class EventsService
     # Subscribe and Unsubscribe
     ###########################################
     subscribe: (scope, routingKey, callback, options) ->
-        if @.error
-            return
-
         @log.debug("Subscribe to: #{routingKey}")
         subscription = {
             scope: scope,
             routingKey: routingKey,
-            callback: callback
+            callback: callback,
+            options: options
         }
 
         message = {
@@ -212,30 +213,40 @@ class EventsService
             message.options = options
 
         @.subscriptions[routingKey] = subscription
-        @.sendMessage(message)
+        @.sendMessage(message) if not @.error
 
-        scope.$on("$destroy", => @.unsubscribe(routingKey)) if scope
+        if scope
+            scope.$on("$destroy", =>
+                @.unsubscribe(routingKey) if @.subscriptions[routingKey] is subscription)
 
     unsubscribe: (routingKey) ->
-        if @.error
-            return
-
         @log.debug("Unsubscribe from: #{routingKey}")
+        delete @.subscriptions[routingKey]
 
         message = {
             "cmd": "unsubscribe",
             "routing_key": routingKey
         }
 
-        @.sendMessage(message)
+        @.sendMessage(message) if not @.error
 
     ###########################################
     # Event listeners
     ###########################################
     onOpen: ->
-        @.connected = true
-
         @log.debug("WebSocket connection opened")
+        @.error = false
+        @.errors = 0
+        @.connected = false
+        @.pendingMessages = []
+        @.notifications()
+        @.liveNotifications()
+        @.webNotifications()
+
+        # The subscription map is the desired state after reconnect. Drop
+        # queued commands for the old socket and authenticate before replay.
+        @.pendingMessages = []
+        @.connected = true
         token = @auth.getToken()
 
         message = {
@@ -244,10 +255,13 @@ class EventsService
         }
 
         @.sendMessage(message)
+        for own routingKey, subscription of @.subscriptions
+            @.sendMessage({
+                cmd: "subscribe",
+                routing_key: routingKey,
+                options: subscription.options
+            })
         @.startHeartBeatMessages()
-        @.notifications()
-        @.liveNotifications()
-        @.webNotifications()
 
     onMessage: (event) ->
         @log.debug "WebSocket message received: #{event.data}"
@@ -264,7 +278,7 @@ class EventsService
         @.error = true
         @.errors++
 
-        if @.errors < @.maxConnectionErrors
+        if @.maxConnectionErrors <= 0 or @.errors < @.maxConnectionErrors
             setTimeout(@.setupConnection, @.randomTryInterval())
         else
             @log.error("Events are disabled: the maximum number of connection errors has been reached.")
