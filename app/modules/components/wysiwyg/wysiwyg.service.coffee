@@ -9,15 +9,14 @@
 class WysiwygService
     @.$inject = [
         "tgProjectService",
-        "tgAttachmentsFullService",
         "tgAttachmentsService",
         "tgHtmlSanitizer"
     ]
 
-    constructor: (@projectService, @attachmentsFullService, @attachmentsService, @htmlSanitizer) ->
+    constructor: (@projectService, @attachmentsService, @htmlSanitizer) ->
         @.projectDataConversion = {}
-        # prevent duplicate calls to the same attachment
-        @.cache = {}
+        # Coalesce concurrent reads without retaining signed URLs after they resolve.
+        @.pendingAttachmentURLs = {}
 
     getMarkdown: (html) ->
         projectId = @projectService.project.get('id')
@@ -50,24 +49,15 @@ class WysiwygService
     getAttachmentData: (tokens) ->
         return @attachmentsService.get(tokens[0], tokens[1]).then (response) => response.data.url
 
-    getCachedAttachment: (tokens) ->
-        attachmentId = parseInt(tokens[1], 10)
+    getAttachmentURL: (tokens) ->
+        key = "#{tokens[0]}:#{tokens[1]}"
+        return @.pendingAttachmentURLs[key] if @.pendingAttachmentURLs[key]
 
-        attachments = @attachmentsFullService.attachments.toJS()
-        attachment = attachments.find (attachment) => attachment.file.id == attachmentId
-
-        if attachment
-            return Promise.resolve(attachment.file.url)
-        else
-            cache_key = tokens[0] + tokens[1]
-            cached_result = @.cache[cache_key]
-
-            if cached_result
-                return Promise.resolve(cached_result)
-            else
-                return @.getAttachmentData(tokens).then (url) =>
-                    @.cache[cache_key] = url
-                    return url
+        request = @.getAttachmentData(tokens)
+        @.pendingAttachmentURLs[key] = request
+        clear = => delete @.pendingAttachmentURLs[key]
+        request.then(clear, clear)
+        return request
 
     relativePaths: (html) ->
         el = document.createElement('template')
@@ -129,7 +119,7 @@ class WysiwygService
                     if match && match.length == 2
                         tokens = match[1].split(":")
 
-                        promise = @.getCachedAttachment(tokens)
+                        promise = @.getAttachmentURL(tokens)
                         .then (url) =>
                             resolved = if tag.attr == 'src' then @.deferRemoteImageUrl(url) else url
                             e.setAttribute(tag.attr, resolved)

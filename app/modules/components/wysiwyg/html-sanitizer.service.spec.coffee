@@ -41,8 +41,8 @@ describe 'tgHtmlSanitizer', ->
         expect(result.content.querySelector('a').hasAttribute('href')).to.be.false
         expect(result.content.querySelector('img').hasAttribute('src')).to.be.false
 
-describe 'tgWysiwygService HTML boundary', ->
-    service = originalConverter = null
+describe 'tgWysiwygService', ->
+    service = originalConverter = attachmentGet = null
     converter = null
 
     beforeEach ->
@@ -55,14 +55,12 @@ describe 'tgWysiwygService HTML boundary', ->
             deferRemoteImageUrl: sinon.stub().returnsArg(0)
         }
         window.angularDataConversion = -> converter
+        attachmentGet = sinon.stub().returns(Promise.resolve({data: {url: '/media/attachment.png'}}))
 
         module 'taigaComponents'
         module ($provide) ->
             $provide.value 'tgProjectService', {project: {get: (key) -> if key == 'id' then 1 else 'demo'}}
-            $provide.value 'tgAttachmentsFullService', {attachments: {toJS: -> []}}
-            $provide.value 'tgAttachmentsService', {
-                get: -> Promise.resolve({data: {url: '/media/attachment.png'}})
-            }
+            $provide.value 'tgAttachmentsService', {get: attachmentGet}
             return null
         inject (_tgWysiwygService_) ->
             service = _tgWysiwygService_
@@ -86,6 +84,35 @@ describe 'tgWysiwygService HTML boundary', ->
     it 'keeps safe resolved attachment URLs', ->
         service.refreshAttachmentURL('<img src="/media/#_taiga-refresh=task:1">').then (html) ->
             expect(html).to.contain 'src="/media/attachment.png"'
+
+    it 'requests a fresh attachment URL for each later rendering', ->
+        attachmentGet.onFirstCall().returns Promise.resolve({data: {url: '/media/attachment.png?token=first'}})
+        attachmentGet.onSecondCall().returns Promise.resolve({data: {url: '/media/attachment.png?token=second'}})
+        marker = '<img src="/media/#_taiga-refresh=task:1">'
+
+        service.refreshAttachmentURL(marker).then (first) ->
+            expect(first).to.contain 'token=first'
+            service.refreshAttachmentURL(marker).then (second) ->
+                expect(second).to.contain 'token=second'
+                expect(attachmentGet).to.have.been.calledTwice
+
+    it 'shares concurrent attachment reads and retries a failed read', ->
+        resolveRead = null
+        attachmentGet.onFirstCall().returns new Promise (resolve) -> resolveRead = resolve
+        attachmentGet.onSecondCall().returns Promise.reject(new Error('temporary failure'))
+        attachmentGet.onThirdCall().returns Promise.resolve({data: {url: '/media/renewed.png'}})
+
+        first = service.getAttachmentURL(['task', '1'])
+        second = service.getAttachmentURL(['task', '1'])
+        expect(first).to.equal second
+        expect(attachmentGet).to.have.been.calledOnce
+        resolveRead({data: {url: '/media/first.png'}})
+
+        Promise.all([first, second]).then ->
+            service.getAttachmentURL(['task', '1']).catch ->
+                service.getAttachmentURL(['task', '1']).then (renewed) ->
+                    expect(renewed).to.equal '/media/renewed.png'
+                    expect(attachmentGet).to.have.been.calledThrice
 
     it 'refreshes deferred cross-origin attachment images', ->
         deferred = 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%2F%3E#taiga-remote-image=old'
