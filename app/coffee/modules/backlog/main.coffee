@@ -720,10 +720,6 @@ module.controller("BacklogController", BacklogController)
 
 BacklogDirective = ($repo, $rootscope, $translate, $rs) ->
     ## Doom line Link
-    doomLineTemplate = _.template("""
-    <div class="doom-line"><span><%- text %></span></div>
-    """)
-
     linkDoomLine = ($scope, $el, $attrs, $ctrl) ->
         reloadDoomLine = ->
             if $scope.displayVelocity
@@ -752,7 +748,12 @@ BacklogDirective = ($repo, $rootscope, $translate, $rs) ->
 
         addDoomLineDom = (element) ->
             text = $translate.instant("BACKLOG.DOOMLINE")
-            $(element).before(doomLineTemplate({"text": text}))
+            doomLine = document.createElement("div")
+            doomLine.className = "doom-line"
+            label = document.createElement("span")
+            label.textContent = text
+            doomLine.appendChild(label)
+            $(element).before(doomLine)
 
         getUsItems = ->
             rowElements = $el.find('.backlog-table-body .us-item-row')
