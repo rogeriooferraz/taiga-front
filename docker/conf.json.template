@@ -8,6 +8,7 @@
     "debug": ${DEBUG},
     "debugInfo": ${DEBUG},
     "defaultLanguage": "${LANGUAGE_CODE}",
+    "instanceDefaultsEnabled": ${INSTANCE_DEFAULTS_ENABLED},
     "themes": ["taiga", "taiga-dark"],
     "defaultTheme": "taiga",
     "defaultLoginEnabled": true,

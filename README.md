@@ -38,6 +38,18 @@ own `https://` or `mailto:` contact to show a separate project support link.
 its default is "Project support". When the URL is unset, the link is hidden.
 The Taiga community link and feedback action remain separate.
 
+Set `LANGUAGE_CODE` to a shipped locale code (for example `en` or `pt-br`) in
+both frontend and backend containers to share a deployment language fallback.
+The older frontend `DEFAULT_LANGUAGE` remains an alias and must agree when
+both variables are set. This frontend ships `taiga` and `taiga-dark` for
+account choice, with light `taiga` as its deployment fallback.
+Set `INSTANCE_DEFAULTS_ENABLED=true` only with a compatible backend that
+provides the public and administrator instance-defaults endpoints. The
+frontend then waits for the public settings response before selecting a locale
+or stylesheet, and its avatar menu shows System settings to instance
+administrators. Profile language and theme choices take priority over the
+instance defaults.
+
 ## Documentation
 
 Currently, we have authored three main documentation hubs:

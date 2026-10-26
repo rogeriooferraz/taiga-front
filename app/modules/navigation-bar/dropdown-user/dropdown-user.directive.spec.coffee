@@ -13,6 +13,8 @@ describe "dropdownUserDirective", () ->
     mockTgLocation = null
     mockTgNavUrls = null
     mockTgFeedbackService = null
+    httpService = null
+    q = null
     template = "<div tg-dropdown-user></div>"
 
     createDirective = () ->
@@ -28,6 +30,7 @@ describe "dropdownUserDirective", () ->
         mockTgAuth = {
             userData: Immutable.fromJS({id: 66})
             logout: sinon.stub()
+            isAuthenticated: sinon.stub().returns(true)
         }
         provide.value "$tgAuth", mockTgAuth
 
@@ -51,6 +54,10 @@ describe "dropdownUserDirective", () ->
         }
         provide.value "$tgNavUrls", mockTgNavUrls
 
+    _mockTgHttp = () ->
+        httpService = {get: sinon.stub()}
+        provide.value "$tgHttp", httpService
+
     _mocks = () ->
         module ($provide) ->
             provide = $provide
@@ -59,6 +66,7 @@ describe "dropdownUserDirective", () ->
             _mockTgConfig()
             _mockTgLocation()
             _mockTgNavUrls()
+            _mockTgHttp()
             return null
 
     beforeEach ->
@@ -67,9 +75,10 @@ describe "dropdownUserDirective", () ->
 
         _mocks()
 
-        inject ($rootScope, $compile) ->
+        inject ($rootScope, $compile, $q) ->
             scope = $rootScope.$new()
             compile = $compile
+            q = $q
 
     it "dropdown user directive scope content", () ->
         mockTgConfig.get.withArgs("feedbackEnabled").returns(true)
@@ -95,3 +104,47 @@ describe "dropdownUserDirective", () ->
         expect(mockTgLocation.url.calledWith("/discover")).to.be.true
         expect(mockTgLocation.search.calledWith({})).to.be.true
 
+    it "shows system settings only after an administrator capability response", () ->
+        mockTgConfig.get.withArgs("instanceDefaultsEnabled").returns(true)
+        mockTgConfig.get.withArgs("api").returns("/api/v1/")
+        deferred = q.defer()
+        httpService.get.returns(deferred.promise)
+        elm = createDirective()
+        scope.$apply()
+        vm = elm.isolateScope().vm
+        expect(vm.canManageInstance).to.be.false
+        expect(httpService.get.calledWith("/api/v1/instance-defaults/admin")).to.be.true
+        deferred.resolve({data: {}})
+        scope.$apply()
+        expect(vm.canManageInstance).to.be.true
+
+    it "hides system settings after a denied capability response", () ->
+        mockTgConfig.get.withArgs("instanceDefaultsEnabled").returns(true)
+        mockTgConfig.get.withArgs("api").returns("/api/v1/")
+        deferred = q.defer()
+        httpService.get.returns(deferred.promise)
+        elm = createDirective()
+        scope.$apply()
+        deferred.reject({status: 403})
+        scope.$apply()
+        expect(elm.isolateScope().vm.canManageInstance).to.be.false
+
+    it "checks capability after login and clears it after logout", () ->
+        mockTgConfig.get.withArgs("instanceDefaultsEnabled").returns(true)
+        mockTgConfig.get.withArgs("api").returns("/api/v1/")
+        mockTgAuth.isAuthenticated.returns(false)
+        deferred = q.defer()
+        httpService.get.returns(deferred.promise)
+        elm = createDirective()
+        scope.$apply()
+        expect(httpService.get.called).to.be.false
+        mockTgAuth.isAuthenticated.returns(true)
+        scope.$broadcast("auth:login")
+        scope.$apply()
+        expect(httpService.get.calledOnce).to.be.true
+        deferred.resolve({data: {}})
+        scope.$apply()
+        expect(elm.isolateScope().vm.canManageInstance).to.be.true
+        scope.$broadcast("auth:logout")
+        scope.$apply()
+        expect(elm.isolateScope().vm.canManageInstance).to.be.false

@@ -116,6 +116,7 @@ urls = {
     "user-settings-live-notifications": "/user-settings/live-notifications"
     "user-settings-web-notifications": "/user-settings/web-notifications"
     "user-settings-contrib": "/user-settings/contrib/:plugin"
+    "system-settings-defaults": "/system-settings/defaults"
 
     "notifications": "/notifications"
 }

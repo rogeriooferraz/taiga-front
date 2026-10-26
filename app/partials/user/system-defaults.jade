@@ -1,0 +1,62 @@
+//- This source code is licensed under the terms of the
+//- GNU Affero General Public License found in the LICENSE file in
+//- the root directory of this source tree.
+//-
+//- Copyright (c) 2021-present Kaleidos INC
+
+doctype html
+
+div.wrapper.system-defaults
+    section.main.admin-common
+        header
+            h1(translate="SYSTEM_SETTINGS.TITLE")
+            p(translate="SYSTEM_SETTINGS.DESCRIPTION")
+
+        form(ng-submit="vm.save()")
+            fieldset
+                h2(translate="SYSTEM_SETTINGS.LANGUAGE_HEADING")
+                label(for="system-default-language", translate="SYSTEM_SETTINGS.DEFAULT_LANGUAGE")
+                select#system-default-language(
+                    ng-model="vm.language"
+                    ng-options="locale.code as locale.name for locale in vm.data.languages"
+                )
+                    option(value="", translate="SYSTEM_SETTINGS.USE_DEPLOYMENT_DEFAULT")
+                p
+                    span(translate="SYSTEM_SETTINGS.EFFECTIVE_VALUE")
+                    |  {{vm.effectiveLanguage()}}
+                p(ng-if="!vm.language", translate="SYSTEM_SETTINGS.SOURCE_DEPLOYMENT")
+                p(ng-if="vm.language", translate="SYSTEM_SETTINGS.SOURCE_ADMIN")
+                p(translate="SYSTEM_SETTINGS.LANGUAGE_HELP")
+                button.btn-small(
+                    type="button"
+                    variant="secondary"
+                    ng-click="vm.language=''"
+                    translate="SYSTEM_SETTINGS.RESET_DEFAULT")
+
+            fieldset
+                h2(translate="SYSTEM_SETTINGS.APPEARANCE_HEADING")
+                label(for="system-default-theme", translate="SYSTEM_SETTINGS.DEFAULT_THEME")
+                select#system-default-theme(
+                    ng-model="vm.theme"
+                    ng-options="theme for theme in vm.data.themes"
+                )
+                    option(value="", translate="SYSTEM_SETTINGS.USE_DEPLOYMENT_DEFAULT")
+                p
+                    span(translate="SYSTEM_SETTINGS.EFFECTIVE_VALUE")
+                    |  {{vm.effectiveTheme()}}
+                p(ng-if="!vm.theme", translate="SYSTEM_SETTINGS.SOURCE_DEPLOYMENT")
+                p(ng-if="vm.theme", translate="SYSTEM_SETTINGS.SOURCE_ADMIN")
+                p(translate="SYSTEM_SETTINGS.THEME_HELP")
+                button.btn-small(
+                    type="button"
+                    variant="secondary"
+                    ng-click="vm.theme=''"
+                    translate="SYSTEM_SETTINGS.RESET_DEFAULT")
+
+            p(ng-if="vm.error", role="alert") {{vm.error | translate}}
+            p(translate="SYSTEM_SETTINGS.APPLY_HELP")
+            button.btn-small(
+                type="submit"
+                variant="primary"
+                ng-disabled="vm.saving"
+                translate="COMMON.SAVE")

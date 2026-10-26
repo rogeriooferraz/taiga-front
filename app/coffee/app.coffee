@@ -457,6 +457,24 @@ configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEven
     )
 
     # User settings
+    $routeProvider.when("/system-settings/defaults",
+        {
+            templateUrl: "user/system-defaults.html",
+            controller: "InstanceDefaultsController",
+            controllerAs: "vm",
+            resolve: {
+                instanceDefaults: ["$tgHttp", "$tgConfig", "$location", "$q",
+                    (httpService, config, location, $q) ->
+                        if !config.get("instanceDefaultsEnabled")
+                            location.path("/permission-denied")
+                            return $q.reject("Instance defaults are disabled")
+                        return httpService.get("#{config.get('api')}instance-defaults/admin")
+                        .then ((result) -> result.data), (error) ->
+                            location.path(if error.status == 403 then "/permission-denied" else "/error")
+                            return $q.reject(error)
+                ]
+            }
+        })
     $routeProvider.when("/user-settings/user-profile",
         {templateUrl: "user/user-profile.html"})
     $routeProvider.when("/user-settings/user-change-password",

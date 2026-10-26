@@ -64,6 +64,13 @@
                     title="{{'PROJECT.NAVIGATION.NOTIFICATIONS_TITLE' | translate}}",
                     translate="PROJECT.NAVIGATION.NOTIFICATIONS")
 
+            li.user-profile-option(ng-if="vm.canManageInstance")
+                a.secondary(
+                    href="#",
+                    tg-nav="system-settings-defaults",
+                    title="{{'SYSTEM_SETTINGS.TITLE' | translate}}",
+                    translate="SYSTEM_SETTINGS.TITLE")
+
             li.user-profile-option
                 a(
                     href="#",

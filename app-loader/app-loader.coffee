@@ -142,9 +142,9 @@ loadTheme = (theme) ->
         link.onerror = reject
         link.href = "#{window._version}/styles/theme-#{theme}.css"
 
-showLoadError = ->
+showLoadError = (message = "Taiga could not load.") ->
     loading = document.getElementById("taiga-loading")
-    loading.textContent = "Taiga could not load."
+    loading.textContent = message
     retry = document.createElement("button")
     retry.type = "button"
     retry.textContent = "Retry"
@@ -163,13 +163,48 @@ startApp = ->
     .catch ->
         showLoadError()
 
+loadInstanceDefaults = ->
+    return Promise.resolve() if !window.taigaConfig.instanceDefaultsEnabled
+
+    controller = new AbortController()
+    timeout = setTimeout((-> controller.abort()), 5000)
+    url = "#{window.taigaConfig.api}instance-defaults"
+    return fetch(url, {cache: "no-store", signal: controller.signal})
+    .then (response) ->
+        throw new Error("Instance defaults unavailable") if !response.ok
+        return response.json()
+    .then (data) ->
+        throw new Error("Invalid instance defaults") if !data? or
+            !Number.isInteger(data.revision) or data.revision < 0
+
+        localeCheck = Promise.resolve()
+        if data.default_language?
+            language = data.default_language
+            throw new Error("Invalid instance language") if typeof language != "string" or
+                !/^[a-z]{2}(-[a-z0-9]+)*$/.test(language)
+            localeCheck = fetch("#{window._version}/locales/taiga/locale-#{language}.json",
+                         {cache: "no-store", signal: controller.signal})
+            .then (localeResponse) ->
+                throw new Error("Instance language is not shipped") if !localeResponse.ok
+
+        return localeCheck.then ->
+            if data.default_theme?
+                throw new Error("Instance theme is not shipped") if !isAvailableTheme(data.default_theme)
+                window.taigaConfig.defaultTheme = data.default_theme
+            window.taigaConfig.defaultLanguage = data.default_language if data.default_language?
+            window._taigaInstanceDefaults = data
+    .finally -> clearTimeout(timeout)
+
 promise = fetch "conf.json", {cache: "no-store"}
 promise = promise.then (response) ->
     throw new Error("conf.json could not load") if !response.ok
     return response.json()
 promise = promise.then (data) ->
     window.taigaConfig = Object.assign({}, window.taigaConfig, data)
-    document.documentElement.lang = window.taigaConfig.defaultLanguage
+    window._taigaDeploymentDefaults = {
+        language: window.taigaConfig.defaultLanguage,
+        theme: window.taigaConfig.defaultTheme
+    }
 
     base = document.querySelector('base')
 
@@ -180,8 +215,10 @@ promise = promise.then (data) ->
         base.setAttribute("href", window.taigaConfig.baseHref)
         document.head.appendChild(base)
 
-    startApp()
+    return loadInstanceDefaults().then ->
+        document.documentElement.lang = window.taigaConfig.defaultLanguage
+        startApp()
 
-promise.catch () ->
-    console.error "Taiga could not load conf.json."
-    showLoadError()
+promise.catch (error) ->
+    console.error "Taiga bootstrap failed.", error
+    showLoadError("Taiga settings are unavailable. Retry, or contact an administrator.")

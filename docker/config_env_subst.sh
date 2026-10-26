@@ -53,6 +53,13 @@ if [[ -n "${LANGUAGE_CODE:-}" && -n "${DEFAULT_LANGUAGE:-}" &&
 fi
 export LANGUAGE_CODE="${LANGUAGE_CODE:-${DEFAULT_LANGUAGE:-en}}"
 
+INSTANCE_DEFAULTS_ENABLED="${INSTANCE_DEFAULTS_ENABLED:-false}"
+if [[ "$INSTANCE_DEFAULTS_ENABLED" != "true" && "$INSTANCE_DEFAULTS_ENABLED" != "false" ]]; then
+    echo "INSTANCE_DEFAULTS_ENABLED must be true or false" >&2
+    exit 1
+fi
+export INSTANCE_DEFAULTS_ENABLED
+
 if [[ ! "$LANGUAGE_CODE" =~ ^[a-z]{2}(-[a-z0-9]+)*$ ]] ||
    ! compgen -G "/usr/share/nginx/html/v-*/locales/taiga/locale-${LANGUAGE_CODE}.json" > /dev/null; then
     echo "LANGUAGE_CODE is not a shipped frontend locale" >&2
