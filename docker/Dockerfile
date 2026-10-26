@@ -22,6 +22,8 @@ RUN set -eu; \
     )"; \
     TAIGA_BUILD_VERSION="v-${source_hash}" ./node_modules/.bin/gulp deploy; \
     test -s dist/index.html; \
+    test -s dist/v-*/styles/theme-taiga.css; \
+    test -s dist/v-*/styles/theme-taiga-dark.css; \
     test "$(find dist -type f -path '*/ckeditor-translations/*.js' | wc -l)" -eq 63; \
     test -s dist/v-*/ckeditor-translations/pt-br.js
 
