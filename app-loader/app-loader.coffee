@@ -156,6 +156,7 @@ startApp = ->
     loadTheme(theme)
     .catch ->
         throw new Error("The default theme could not load") if theme == "taiga"
+        window._taigaAvailableThemes = window._taigaAvailableThemes.filter (available) -> available != theme
         return loadTheme("taiga")
     .then ->
         document.body.classList.add("taiga-ready")

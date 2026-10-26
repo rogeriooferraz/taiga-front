@@ -46,7 +46,7 @@ class UserSettingsController extends mixOf(taiga.Controller, taiga.PageMixin)
         else
             @scope.lang = @scope.user.lang || ""
             @scope.theme = @scope.user.theme || ""
-            @scope.effectiveLang = @translate.preferredLanguage()
+            @scope.effectiveLang = @config.get("defaultLanguage") || "en"
             @scope.effectiveTheme = @getTheme()
 
         maxFileSize = @config.get("maxUploadFileSize", null)
@@ -72,12 +72,11 @@ class UserSettingsController extends mixOf(taiga.Controller, taiga.PageMixin)
 
     getTheme: ->
         compiledThemes = window._taigaAvailableThemes
+        enabledThemes = @config.get("themes", [])
 
-        theme = @scope.user.theme ||
-               @config.get("defaultTheme") ||
-               "taiga"
+        theme = @config.get("defaultTheme") || "taiga"
 
-        if !compiledThemes.includes(theme)
+        if !compiledThemes.includes(theme) || !enabledThemes.includes(theme)
             theme = "taiga"
 
         return theme
