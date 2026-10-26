@@ -23,7 +23,7 @@ div.wrapper.system-defaults
                     option(value="", translate="SYSTEM_SETTINGS.USE_DEPLOYMENT_DEFAULT")
                 p
                     span(translate="SYSTEM_SETTINGS.EFFECTIVE_VALUE")
-                    |  {{vm.effectiveLanguage()}}
+                    |  {{vm.effectiveLanguage() | localeName:vm.data.languages}}
                 p(ng-if="!vm.language", translate="SYSTEM_SETTINGS.SOURCE_DEPLOYMENT")
                 p(ng-if="vm.language", translate="SYSTEM_SETTINGS.SOURCE_ADMIN")
                 p(translate="SYSTEM_SETTINGS.LANGUAGE_HELP")
@@ -38,12 +38,12 @@ div.wrapper.system-defaults
                 label(for="system-default-theme", translate="SYSTEM_SETTINGS.DEFAULT_THEME")
                 select#system-default-theme(
                     ng-model="vm.theme"
-                    ng-options="theme for theme in vm.data.themes"
+                    ng-options="theme as (theme | themeName) for theme in vm.data.themes"
                 )
                     option(value="", translate="SYSTEM_SETTINGS.USE_DEPLOYMENT_DEFAULT")
                 p
                     span(translate="SYSTEM_SETTINGS.EFFECTIVE_VALUE")
-                    |  {{vm.effectiveTheme()}}
+                    |  {{vm.effectiveTheme() | themeName}}
                 p(ng-if="!vm.theme", translate="SYSTEM_SETTINGS.SOURCE_DEPLOYMENT")
                 p(ng-if="vm.theme", translate="SYSTEM_SETTINGS.SOURCE_ADMIN")
                 p(translate="SYSTEM_SETTINGS.THEME_HELP")

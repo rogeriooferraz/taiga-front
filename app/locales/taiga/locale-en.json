@@ -1969,6 +1969,10 @@
             "RESULTS": "Search results"
         }
     },
+    "THEMES": {
+        "LIGHT": "Light",
+        "DARK": "Dark"
+    },
     "SYSTEM_SETTINGS": {
         "TITLE": "System settings",
         "DESCRIPTION": "Set defaults for accounts without a personal choice.",
