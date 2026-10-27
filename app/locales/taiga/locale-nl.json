@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Wiki links toevoegen",
                 "DELETE_WIKI_LINKS": "Verwijder wiki links"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Dit project is gearchiveerd. Het kan nu alleen nog worden gelezen."
         }
     },
     "LOGIN": {
