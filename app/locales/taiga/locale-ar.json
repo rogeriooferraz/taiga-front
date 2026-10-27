@@ -490,10 +490,6 @@
             "TITLE_ACTION_DELETE_TAG": "Delete tag"
         },
         "HELP": "Do you need help? Check out our support page!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Default Values",
-            "SUBTITLE": "Set default values for all selector inputs."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Manage members",
             "PAGE_TITLE": "Memberships - {{projectName}}",
@@ -928,8 +924,6 @@
             "TITLE_CREATE_PROJECT": "Create project",
             "HELP_TITLE": "Help",
             "HOMEPAGE": "Homepage",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Edit your notification settings",

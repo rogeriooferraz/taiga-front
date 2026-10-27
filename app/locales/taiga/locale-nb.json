@@ -490,10 +490,6 @@
             "TITLE_ACTION_DELETE_TAG": "Slett etikett"
         },
         "HELP": "Trenger du hjelp? Sjekk ut vår hjelpeside!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Standard verdier",
-            "SUBTITLE": "Sett standard verdi for alle valgte felter."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Konfigurer medlemmer",
             "PAGE_TITLE": "Medlemskap - {{projectName}}",
@@ -939,8 +935,6 @@
             "TITLE_CREATE_PROJECT": "Opprett prosjekt",
             "HELP_TITLE": "Hjelp",
             "HOMEPAGE": "Hjemmeside",
-            "TAIGA_RESOURCES_TITLE": "Gå til Ompa Lompa ressurser",
-            "TAIGA_RESOURCES": "Ompa Lompa ressurser",
             "FEEDBACK_TITLE": "Send tilbakemelding til oss",
             "FEEDBACK": "Spør et spørsmål",
             "NOTIFICATIONS_TITLE": "Endre dine varslingsinstillinger",

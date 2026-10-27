@@ -490,10 +490,6 @@
             "TITLE_ACTION_DELETE_TAG": "Verwijder tag"
         },
         "HELP": "Help je hulp nodig? Bekijk onze support pagina!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Standaard waardes",
-            "SUBTITLE": "Standaard waardes instellen voor alle invoer selecties."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Gebruikers beheren",
             "PAGE_TITLE": "Lidmaatschappen - {{projectName}}",
@@ -934,8 +930,6 @@
             "TITLE_CREATE_PROJECT": "Project aanmaken",
             "HELP_TITLE": "Help",
             "HOMEPAGE": "Startpagina",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Stel een vraag",
             "NOTIFICATIONS_TITLE": "Notificatie instellingen bewerken",

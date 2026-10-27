@@ -489,10 +489,6 @@
             "TITLE_ACTION_DELETE_TAG": "Уклони ознаку"
         },
         "HELP": "Да ли вам је потребна помоћ? Прегледајте нашу страницу за подршку!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Подразумеване врености",
-            "SUBTITLE": "Постави почетне вредности за сва поља."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Уреди чланове",
             "PAGE_TITLE": "Чланства - {{projectName}}",
@@ -927,8 +923,6 @@
             "TITLE_CREATE_PROJECT": "Креирај пројекат",
             "HELP_TITLE": "Помоћ",
             "HOMEPAGE": "Главна страна",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Уреди подешавања обавештајима",

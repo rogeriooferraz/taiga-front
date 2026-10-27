@@ -490,10 +490,6 @@
             "TITLE_ACTION_DELETE_TAG": "حذف برچسب"
         },
         "HELP": "نیازمند کمک هستید؟ به صفحه‌ی پشتیبانی ما مراجعه کنید!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "حذف کردن مقدار",
-            "SUBTITLE": "مقدار پیش‌فرض برای تمام ورودی‌های انتخابی را تنظیم کنید."
-        },
         "MEMBERSHIPS": {
             "TITLE": "مدیریت اعضا",
             "PAGE_TITLE": "عضویت‌ها - {{projectName}}",
@@ -932,8 +928,6 @@
             "TITLE_CREATE_PROJECT": "ایجاد پروژه",
             "HELP_TITLE": "راهنمایی",
             "HOMEPAGE": "صفحه‌ی خانه",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "ویرایش تنظیمات نوتیفیکیشن",

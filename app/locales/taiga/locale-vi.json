@@ -489,10 +489,6 @@
             "TITLE_ACTION_DELETE_TAG": "Xóa thẻ"
         },
         "HELP": "Bạn cần hỗ trợ? Tham khảo trang trợ giúp của chúng tôi!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Giá trị mặc định",
-            "SUBTITLE": "Đặt giá trị mặc định cho tất cả nguồn vào được chọn"
-        },
         "MEMBERSHIPS": {
             "TITLE": "Quản lý thành viên",
             "PAGE_TITLE": "Thành viên - {{Tên dự án}}",
@@ -927,8 +923,6 @@
             "TITLE_CREATE_PROJECT": "Tạo dự án",
             "HELP_TITLE": "Trợ giúp",
             "HOMEPAGE": "Trang chủ",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Chỉnh sửa cài đặt thông báo",

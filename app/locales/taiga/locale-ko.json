@@ -489,10 +489,6 @@
             "TITLE_ACTION_DELETE_TAG": "태그 삭제하기"
         },
         "HELP": "도움이 필요하다면 고객 지원 페이지를 확인하세요",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "기본 값",
-            "SUBTITLE": "선택된 모든 항목을 모두 초기값으로 설정"
-        },
         "MEMBERSHIPS": {
             "TITLE": "회원 관리",
             "PAGE_TITLE": "팀원 - {{projectName}}",
@@ -927,8 +923,6 @@
             "TITLE_CREATE_PROJECT": "프로젝트 생성하기",
             "HELP_TITLE": "도움말",
             "HOMEPAGE": "홈페이지",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "알림 설정 수정",

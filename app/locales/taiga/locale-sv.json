@@ -489,10 +489,6 @@
             "TITLE_ACTION_DELETE_TAG": "Ta bort etikett"
         },
         "HELP": "Behöver du hjälp? Besök hjälpsidorna!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Standardvärden",
-            "SUBTITLE": "Sätt standardvärden för alla ingångsval."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Hantera medlemmar",
             "PAGE_TITLE": "Medlemskap - {{projectName}}",
@@ -927,8 +923,6 @@
             "TITLE_CREATE_PROJECT": "Skapa projekt",
             "HELP_TITLE": "Hjälp",
             "HOMEPAGE": "Webbplats",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Ändra inställningar för dina notifieringar",

@@ -490,10 +490,6 @@
             "TITLE_ACTION_DELETE_TAG": "Ezabatu etiketa"
         },
         "HELP": "Laguntza behar duzu? Begiratu gure laguntza orrira!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Balio lehenetsiak",
-            "SUBTITLE": "Ezarri balio lehenetsiak hautatutako guztiei"
-        },
         "MEMBERSHIPS": {
             "TITLE": "Kudeatu lankideak",
             "PAGE_TITLE": "Lankidetasuna - {{projectName}}",
@@ -939,8 +935,6 @@
             "TITLE_CREATE_PROJECT": "Sortu proiektu bat",
             "HELP_TITLE": "Laguntza",
             "HOMEPAGE": "Hasiera",
-            "TAIGA_RESOURCES_TITLE": "Ikusi Taigaren baliabideak",
-            "TAIGA_RESOURCES": "Taiga baliabideak",
             "FEEDBACK_TITLE": "Bidali zure iritzia",
             "FEEDBACK": "Egin galdera bat",
             "NOTIFICATIONS_TITLE": "Editatu jakinarazpen ezarpenak",

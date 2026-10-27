@@ -490,10 +490,6 @@
             "TITLE_ACTION_DELETE_TAG": "Elimina l'etiqueta"
         },
         "HELP": "Necessites ajuda? Mira la nosta pàgina de suport!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Valors per defecte",
-            "SUBTITLE": "Selecciona els valors per defecte per a tots els selectors"
-        },
         "MEMBERSHIPS": {
             "TITLE": "Gestió de Membres",
             "PAGE_TITLE": "Afiliacions - {{projectName}}",
@@ -939,8 +935,6 @@
             "TITLE_CREATE_PROJECT": "Crear projecte",
             "HELP_TITLE": "Ajuda",
             "HOMEPAGE": "Inici",
-            "TAIGA_RESOURCES_TITLE": "Anar a Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Escriu-nos amb el teu feedback",
             "FEEDBACK": "Fes una pregunta",
             "NOTIFICATIONS_TITLE": "Edita la configuració de les teves notificacions",

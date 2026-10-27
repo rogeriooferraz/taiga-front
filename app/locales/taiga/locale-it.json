@@ -490,10 +490,6 @@
             "TITLE_ACTION_DELETE_TAG": "Elimina etichetta"
         },
         "HELP": "Hai bisogno di aiuto? Controlla la nostra pagina di supporto!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Valori di default",
-            "SUBTITLE": "Imposta valori di default per tutti i selettori input."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Gestisci membri",
             "PAGE_TITLE": "Webhooks - {{projectName}}",
@@ -939,8 +935,6 @@
             "TITLE_CREATE_PROJECT": "Crea progetto",
             "HELP_TITLE": "Aiuto",
             "HOMEPAGE": "Pagina iniziale",
-            "TAIGA_RESOURCES_TITLE": "Vai alle risorse di Taiga",
-            "TAIGA_RESOURCES": "Risorse di Taiga",
             "FEEDBACK_TITLE": "Scrivici la tua opinione",
             "FEEDBACK": "Fai una domanda",
             "NOTIFICATIONS_TITLE": "Modifica le impostazioni delle notifiche",

@@ -490,10 +490,6 @@
             "TITLE_ACTION_DELETE_TAG": "Удалить тэг"
         },
         "HELP": "Вам нужна помощь? Посетите нашу страницу поддержки!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Значения по умолчанию",
-            "SUBTITLE": "Задать начальные значения для всех полей"
-        },
         "MEMBERSHIPS": {
             "TITLE": "Управление участниками",
             "PAGE_TITLE": "Участие - {{projectName}}",
@@ -933,8 +929,6 @@
             "TITLE_CREATE_PROJECT": "Создать проект",
             "HELP_TITLE": "Помощь",
             "HOMEPAGE": "Домашняя страница",
-            "TAIGA_RESOURCES_TITLE": "Перейти к ресурсам Тайги",
-            "TAIGA_RESOURCES": "Ресурсы Тайги",
             "FEEDBACK_TITLE": "Напишите нам свой отзыв",
             "FEEDBACK": "Задайте вопрос",
             "NOTIFICATIONS_TITLE": "Настроить уведомления",

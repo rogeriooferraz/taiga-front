@@ -489,10 +489,6 @@
             "TITLE_ACTION_DELETE_TAG": "Dzēst birku"
         },
         "HELP": "Vai nepieciešama palīdzība? Apskatiet atbalsta lapu!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Noklusētās vērtības",
-            "SUBTITLE": "Norādiet noklusētās vērtības visiem atlases ievades laukiem."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Pārvaldīt dalībniekus",
             "PAGE_TITLE": "Dalība - {{projectName}}",
@@ -927,8 +923,6 @@
             "TITLE_CREATE_PROJECT": "Izveidot projektu",
             "HELP_TITLE": "Palīdzība",
             "HOMEPAGE": "Tīmekļvietne",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Rediģēt paziņojumu iestatījumus",

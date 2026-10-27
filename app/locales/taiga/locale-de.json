@@ -490,10 +490,6 @@
             "TITLE_ACTION_DELETE_TAG": "Schlagwort löschen"
         },
         "HELP": "Wenn Sie Hilfe benötigen, besuchen Sie unsere Support-Seite!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Vorgabewerte",
-            "SUBTITLE": "Standardwerte für alle ausgewählten Eingaben setzen."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Mitglieder verwalten",
             "PAGE_TITLE": "Mitgliedschaften - {{projectName}}",
@@ -939,8 +935,6 @@
             "TITLE_CREATE_PROJECT": "Projekt anlegen",
             "HELP_TITLE": "Hilfe",
             "HOMEPAGE": "Homepage",
-            "TAIGA_RESOURCES_TITLE": "Wechseln Sie zu den Taiga-Ressourcen",
-            "TAIGA_RESOURCES": "Taiga-Ressourcen",
             "FEEDBACK_TITLE": "Schreiben Sie uns Ihr Feedback",
             "FEEDBACK": "Eine Frage stellen",
             "NOTIFICATIONS_TITLE": "Benachrichtigungseinstellungen bearbeiten",

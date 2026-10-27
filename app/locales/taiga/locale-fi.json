@@ -489,10 +489,6 @@
             "TITLE_ACTION_DELETE_TAG": "Poista avainsana"
         },
         "HELP": "Tarvitsetko apua? Katso tukisivuilta.",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Oletusarvot",
-            "SUBTITLE": "Aseta oletukset kaikille syötteille."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Hallinnoi jäseniä",
             "PAGE_TITLE": "Jäsenet - {{projectName}}",
@@ -927,8 +923,6 @@
             "TITLE_CREATE_PROJECT": "Luo projekti",
             "HELP_TITLE": "Ohjeet",
             "HOMEPAGE": "Etusivu",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Muokkaa ilmoitusasetuksiasi",

@@ -490,10 +490,6 @@
             "TITLE_ACTION_DELETE_TAG": "Видалити мітку"
         },
         "HELP": "Потрібна допомога? Завітайте на нашу сторінку підтримки!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Типові значення",
-            "SUBTITLE": "Встановити типові значення для всіх полів вибору."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Керувати учасниками",
             "PAGE_TITLE": "Членство - {{projectName}}",
@@ -939,8 +935,6 @@
             "TITLE_CREATE_PROJECT": "Створити проєкт",
             "HELP_TITLE": "Допомога",
             "HOMEPAGE": "Домашня сторінка",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Відредагуйте Ваші налаштування повідомлень",
