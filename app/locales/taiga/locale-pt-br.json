@@ -1967,6 +1967,29 @@
             "RESULTS": "Resultado de pesquisa"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Configurações do sistema",
+        "DESCRIPTION": "Defina os padrões para contas sem uma escolha pessoal.",
+        "LANGUAGE_HEADING": "Idioma",
+        "DEFAULT_LANGUAGE": "Idioma padrão",
+        "APPEARANCE_HEADING": "Aparência",
+        "DEFAULT_THEME": "Tema padrão",
+        "USE_DEPLOYMENT_DEFAULT": "Usar o padrão da implantação",
+        "EFFECTIVE_VALUE": "Valor efetivo:",
+        "SOURCE_DEPLOYMENT": "Origem: padrão da implantação",
+        "SOURCE_ADMIN": "Origem: escolha do administrador",
+        "LANGUAGE_HELP": "Usado na interface e nos emails quando a conta não define um idioma.",
+        "THEME_HELP": "Usado na interface quando a conta não define um tema.",
+        "RESET_DEFAULT": "Restaurar o padrão da implantação",
+        "APPLY_HELP": "As alterações salvas entram em vigor no próximo carregamento da página. As escolhas pessoais têm prioridade.",
+        "CONFLICT": "Outro administrador alterou estes padrões. Recarregue antes de salvar.",
+        "UNAVAILABLE_CHOICE": "Uma opção salva não está mais disponível. Restaure o padrão antes de salvar.",
+        "ERROR_SAVE": "Não foi possível salvar as configurações do sistema. Tente novamente."
+    },
+    "THEMES": {
+        "LIGHT": "Claro",
+        "DARK": "Escuro"
+    },
     "ZOOM": {
         "TITLE": "Visualização:",
         "ZOOM-1": "Compact",
