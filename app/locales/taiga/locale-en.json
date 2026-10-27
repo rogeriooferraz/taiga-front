@@ -1965,6 +1965,25 @@
             "RESULTS": "Search results"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "System settings",
+        "DESCRIPTION": "Set defaults for accounts without a personal choice.",
+        "LANGUAGE_HEADING": "Language",
+        "DEFAULT_LANGUAGE": "Default language",
+        "APPEARANCE_HEADING": "Appearance",
+        "DEFAULT_THEME": "Default theme",
+        "USE_DEPLOYMENT_DEFAULT": "Use deployment default",
+        "EFFECTIVE_VALUE": "Effective value:",
+        "SOURCE_DEPLOYMENT": "Source: deployment default",
+        "SOURCE_ADMIN": "Source: administrator override",
+        "LANGUAGE_HELP": "Used by interfaces and email when an account language is not set.",
+        "THEME_HELP": "Used by interfaces when an account theme is not set.",
+        "RESET_DEFAULT": "Reset to deployment default",
+        "APPLY_HELP": "Saved changes apply on the next page load. Personal choices take priority.",
+        "CONFLICT": "Another administrator changed these defaults. Reload before saving.",
+        "UNAVAILABLE_CHOICE": "A saved choice is no longer available. Reset it before saving.",
+        "ERROR_SAVE": "Could not save system settings. Try again."
+    },
     "THEMES": {
         "LIGHT": "Light",
         "DARK": "Dark"

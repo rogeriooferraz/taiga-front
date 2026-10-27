@@ -8,6 +8,20 @@
 You can get the compiled version of this code in the
 [taiga-front-dist](http://github.com/taigaio/taiga-front-dist) repository
 
+Set `LANGUAGE_CODE` to a shipped locale code (for example `en` or `pt-br`) in
+both frontend and backend containers to share a deployment language fallback.
+The older frontend `DEFAULT_LANGUAGE` remains an alias and must agree when
+both variables are set. This frontend ships `taiga` and `taiga-dark` for
+account choice, with light `taiga` as its deployment fallback.
+Set `INSTANCE_DEFAULTS_ENABLED=true` only with a compatible backend that
+provides the public and administrator instance-defaults endpoints. The
+frontend then waits for the public settings response before selecting a locale
+or stylesheet, and its avatar menu shows System settings to instance
+administrators. Profile language and theme choices take priority over the
+instance defaults. Configure the backend's selectable languages and themes to
+match the locales and stylesheets shipped by the selected frontend image;
+otherwise an administrator can save a choice that the browser cannot load.
+
 ## Documentation
 
 Currently, we have authored three main documentation hubs:
