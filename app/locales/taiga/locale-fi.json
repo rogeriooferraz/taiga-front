@@ -1935,6 +1935,29 @@
             "RESULTS": "Hakutulokset"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Järjestelmäasetukset",
+        "DESCRIPTION": "Aseta oletusasetukset tileille ilman henkilökohtaista valintaa.",
+        "LANGUAGE_HEADING": "Kieli",
+        "DEFAULT_LANGUAGE": "Oletuskieli",
+        "APPEARANCE_HEADING": "Ulkonäkö",
+        "DEFAULT_THEME": "Oletusteema",
+        "USE_DEPLOYMENT_DEFAULT": "Käytä palvelimen oletusasetusta",
+        "EFFECTIVE_VALUE": "Todellinen arvo:",
+        "SOURCE_DEPLOYMENT": "Lähde: palvelimen oletusasetus",
+        "SOURCE_ADMIN": "Lähde: järjestelmänvalvojan tallentama asetus",
+        "LANGUAGE_HELP": "Käytetään käyttöliittymissä ja sähköpostissa, kun tilin kieltä ei ole asetettu.",
+        "THEME_HELP": "Käyttöliittymät käyttävät sitä, kun tilin teemaa ei ole asetettu.",
+        "RESET_DEFAULT": "Palauta palvelimen oletusarvo",
+        "APPLY_HELP": "Tallennetut muutokset tulevat voimaan seuraavan sivun latauksen yhteydessä. Henkilökohtaiset valinnat ovat etusijalla.",
+        "CONFLICT": "Toinen järjestelmänvalvoja muutti nämä oletusasetukset. Lataa uudelleen ennen tallentamista.",
+        "UNAVAILABLE_CHOICE": "Tallennettu valinta ei ole enää käytettävissä. Palauta se ennen tallentamista.",
+        "ERROR_SAVE": "Järjestelmäasetuksia ei voitu tallentaa. Yritä uudelleen."
+    },
+    "THEMES": {
+        "LIGHT": "Vaalea",
+        "DARK": "Tumma"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Compact",

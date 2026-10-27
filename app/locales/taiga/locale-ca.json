@@ -1967,6 +1967,29 @@
             "RESULTS": "Resultats de la cerca"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Configuració del sistema",
+        "DESCRIPTION": "Estableix valors predeterminats per als comptes sense una elecció personal.",
+        "LANGUAGE_HEADING": "Idioma",
+        "DEFAULT_LANGUAGE": "Idioma per defecte",
+        "APPEARANCE_HEADING": "Aparença",
+        "DEFAULT_THEME": "Tema predeterminat",
+        "USE_DEPLOYMENT_DEFAULT": "Utilitza la configuració predeterminada del servidor",
+        "EFFECTIVE_VALUE": "Valor efectiu:",
+        "SOURCE_DEPLOYMENT": "Font: configuració predeterminada del servidor",
+        "SOURCE_ADMIN": "Font: configuració desada de l'administrador",
+        "LANGUAGE_HELP": "S'utilitzen per interfícies i correu electrònic quan l'idioma del compte no està definit.",
+        "THEME_HELP": "S'utilitzen per interfícies quan no s'ha definit un tema de compte.",
+        "RESET_DEFAULT": "Restableix la configuració predeterminada del servidor",
+        "APPLY_HELP": "Els canvis desats s'apliquen a la càrrega de la pàgina següent. Les opcions personals tenen prioritat.",
+        "CONFLICT": "Un altre administrador ha canviat aquests valors predeterminats. Torneu a carregar abans de desar.",
+        "UNAVAILABLE_CHOICE": "Una opció desada ja no està disponible. Restableix-lo abans de desar-lo.",
+        "ERROR_SAVE": "No s'ha pogut desar la configuració del sistema. Torna-ho a provar."
+    },
+    "THEMES": {
+        "LIGHT": "Clar",
+        "DARK": "Fosc"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Compacte",

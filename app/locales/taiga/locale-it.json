@@ -1967,6 +1967,29 @@
             "RESULTS": "Risultati della ricerca"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Impostazioni di sistema",
+        "DESCRIPTION": "Imposta le impostazioni predefinite per gli account senza una scelta personale.",
+        "LANGUAGE_HEADING": "Lingua",
+        "DEFAULT_LANGUAGE": "Lingua predefinita",
+        "APPEARANCE_HEADING": "Aspetto",
+        "DEFAULT_THEME": "Tema predefinito",
+        "USE_DEPLOYMENT_DEFAULT": "Utilizza l'impostazione predefinita del server",
+        "EFFECTIVE_VALUE": "Valore effettivo:",
+        "SOURCE_DEPLOYMENT": "Origine: impostazione predefinita del server",
+        "SOURCE_ADMIN": "Origine: impostazione salvata dall’amministratore",
+        "LANGUAGE_HELP": "Utilizzato dalle interfacce e dalla posta elettronica quando non è impostata una lingua per l'account.",
+        "THEME_HELP": "Utilizzato dalle interfacce quando non è impostato un tema dell'account.",
+        "RESET_DEFAULT": "Ripristina il valore predefinito del server",
+        "APPLY_HELP": "Le modifiche salvate verranno applicate al caricamento della pagina successiva. Le scelte personali hanno la priorità.",
+        "CONFLICT": "Un altro amministratore ha modificato queste impostazioni predefinite. Ricarica prima di salvare.",
+        "UNAVAILABLE_CHOICE": "Una scelta salvata non è più disponibile. Reimpostalo prima di salvare.",
+        "ERROR_SAVE": "Impossibile salvare le impostazioni di sistema. Riprova."
+    },
+    "THEMES": {
+        "LIGHT": "Chiaro",
+        "DARK": "Scuro"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Compatto",

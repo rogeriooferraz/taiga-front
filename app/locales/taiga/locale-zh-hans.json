@@ -1942,6 +1942,29 @@
             "RESULTS": "搜索结果"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "系统设置",
+        "DESCRIPTION": "为帐户设置默认值，无需个人选择。",
+        "LANGUAGE_HEADING": "语言",
+        "DEFAULT_LANGUAGE": "默认语言",
+        "APPEARANCE_HEADING": "外观",
+        "DEFAULT_THEME": "默认主题",
+        "USE_DEPLOYMENT_DEFAULT": "使用服务器默认设置",
+        "EFFECTIVE_VALUE": "有效值：",
+        "SOURCE_DEPLOYMENT": "来源：服务器默认设置",
+        "SOURCE_ADMIN": "来源：管理员保存的设置",
+        "LANGUAGE_HELP": "未设置帐户语言时由界面和电子邮件使用。",
+        "THEME_HELP": "未设置帐户主题时由界面使用。",
+        "RESET_DEFAULT": "重置为服务器默认设置",
+        "APPLY_HELP": "保存的更改适用于下一页加载。个人选择优先。",
+        "CONFLICT": "另一位管理员更改了这些默认值。保存前重新加载。",
+        "UNAVAILABLE_CHOICE": "已保存的选择不再可用。保存前重置它。",
+        "ERROR_SAVE": "无法保存系统设置。再试一次。"
+    },
+    "THEMES": {
+        "LIGHT": "浅色",
+        "DARK": "深色"
+    },
     "ZOOM": {
         "TITLE": "缩放:",
         "ZOOM-1": "Compact",

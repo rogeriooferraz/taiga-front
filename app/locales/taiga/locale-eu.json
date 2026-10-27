@@ -1967,6 +1967,29 @@
             "RESULTS": "Bilatu emaitzetan"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Sistemaren ezarpenak",
+        "DESCRIPTION": "Ezarri aukera pertsonalik gabeko kontuen lehenetsiak.",
+        "LANGUAGE_HEADING": "Hizkuntza",
+        "DEFAULT_LANGUAGE": "Lehenetsitako hizkuntza",
+        "APPEARANCE_HEADING": "Itxura",
+        "DEFAULT_THEME": "Gai lehenetsia",
+        "USE_DEPLOYMENT_DEFAULT": "Erabili zerbitzariaren ezarpen lehenetsia",
+        "EFFECTIVE_VALUE": "Balio eraginkorra:",
+        "SOURCE_DEPLOYMENT": "Iturria: zerbitzariaren ezarpen lehenetsia",
+        "SOURCE_ADMIN": "Iturria: administratzaileak gordetako ezarpena",
+        "LANGUAGE_HELP": "Interfazeek eta posta elektronikoek erabiltzen dute kontuaren hizkuntza ezarrita ez dagoenean.",
+        "THEME_HELP": "Interfazeek erabiltzen dute kontuaren gaia ezarrita ez dagoenean.",
+        "RESET_DEFAULT": "Berrezarri zerbitzariaren ezarpen lehenetsira",
+        "APPLY_HELP": "Gordetako aldaketak hurrengo orrialdea kargatzean aplikatzen dira. Aukera pertsonalek lehentasuna dute.",
+        "CONFLICT": "Beste administratzaile batek lehenespen hauek aldatu ditu. Berriz kargatu gorde aurretik.",
+        "UNAVAILABLE_CHOICE": "Gordetako aukera bat jada ez dago erabilgarri. Berrezarri ezazu gorde aurretik.",
+        "ERROR_SAVE": "Ezin izan dira gorde sistemaren ezarpenak. Saiatu berriro."
+    },
+    "THEMES": {
+        "LIGHT": "Argia",
+        "DARK": "Iluna"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Trinkoa",

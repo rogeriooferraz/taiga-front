@@ -1958,6 +1958,29 @@
             "RESULTS": "検索結果"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "システム設定",
+        "DESCRIPTION": "個人的な選択なしにアカウントのデフォルトを設定します。",
+        "LANGUAGE_HEADING": "言語",
+        "DEFAULT_LANGUAGE": "デフォルトの言語",
+        "APPEARANCE_HEADING": "外観",
+        "DEFAULT_THEME": "デフォルトのテーマ",
+        "USE_DEPLOYMENT_DEFAULT": "サーバーのデフォルト設定を使用する",
+        "EFFECTIVE_VALUE": "実効値:",
+        "SOURCE_DEPLOYMENT": "ソース: サーバーのデフォルト設定",
+        "SOURCE_ADMIN": "ソース: 管理者が保存した設定",
+        "LANGUAGE_HELP": "アカウント言語が設定されていない場合に、インターフェイスと電子メールで使用されます。",
+        "THEME_HELP": "アカウントのテーマが設定されていない場合にインターフェイスによって使用されます。",
+        "RESET_DEFAULT": "サーバーのデフォルト設定にリセットする",
+        "APPLY_HELP": "保存された変更は、次のページの読み込み時に適用されます。個人の選択が優先されます。",
+        "CONFLICT": "別の管理者がこれらのデフォルトを変更しました。保存する前にリロードしてください。",
+        "UNAVAILABLE_CHOICE": "保存済みの選択肢は利用できなくなりました。保存する前にリセットしてください。",
+        "ERROR_SAVE": "システム設定を保存できませんでした。もう一度やり直してください。"
+    },
+    "THEMES": {
+        "LIGHT": "ライト",
+        "DARK": "ダーク"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Compact",

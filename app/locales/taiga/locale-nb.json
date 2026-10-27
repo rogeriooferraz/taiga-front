@@ -1967,6 +1967,29 @@
             "RESULTS": "Søkeresultater"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Systeminnstillinger",
+        "DESCRIPTION": "Angi standardinnstillinger for kontoer uten personlig valg.",
+        "LANGUAGE_HEADING": "Språk",
+        "DEFAULT_LANGUAGE": "Standardspråk",
+        "APPEARANCE_HEADING": "Utseende",
+        "DEFAULT_THEME": "Standard tema",
+        "USE_DEPLOYMENT_DEFAULT": "Bruk serverstandardinnstilling",
+        "EFFECTIVE_VALUE": "Effektiv verdi:",
+        "SOURCE_DEPLOYMENT": "Kilde: serverstandardinnstilling",
+        "SOURCE_ADMIN": "Kilde: administratorens lagrede innstilling",
+        "LANGUAGE_HELP": "Brukes av grensesnitt og e-post når et kontospråk ikke er angitt.",
+        "THEME_HELP": "Brukes av grensesnitt når et kontotema ikke er angitt.",
+        "RESET_DEFAULT": "Tilbakestill til serverens standardinnstilling",
+        "APPLY_HELP": "Lagrede endringer gjelder ved neste sideinnlasting. Personlige valg prioriteres.",
+        "CONFLICT": "En annen administrator endret disse standardinnstillingene. Last inn på nytt før du lagrer.",
+        "UNAVAILABLE_CHOICE": "Et lagret valg er ikke lenger tilgjengelig. Tilbakestill den før du lagrer.",
+        "ERROR_SAVE": "Kunne ikke lagre systeminnstillingene. Prøv igjen."
+    },
+    "THEMES": {
+        "LIGHT": "Lys",
+        "DARK": "Mørk"
+    },
     "ZOOM": {
         "TITLE": "Forstørr:",
         "ZOOM-1": "Kompakt",

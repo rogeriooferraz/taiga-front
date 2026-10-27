@@ -83,5 +83,28 @@
             "WARNING_DELETE_ROLE": "Hati-hati! Semua estimasi peran akan dihapus",
             "ERROR_DELETE_ALL": "Anda tidak dapat menghapus semua nilai"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Pengaturan sistem",
+        "DESCRIPTION": "Tetapkan default untuk akun tanpa pilihan pribadi.",
+        "LANGUAGE_HEADING": "Bahasa",
+        "DEFAULT_LANGUAGE": "Bahasa bawaan",
+        "APPEARANCE_HEADING": "Penampilan",
+        "DEFAULT_THEME": "Tema bawaan",
+        "USE_DEPLOYMENT_DEFAULT": "Gunakan pengaturan default server",
+        "EFFECTIVE_VALUE": "Nilai efektif:",
+        "SOURCE_DEPLOYMENT": "Sumber: pengaturan default server",
+        "SOURCE_ADMIN": "Sumber: pengaturan tersimpan administrator",
+        "LANGUAGE_HELP": "Digunakan oleh antarmuka dan email ketika bahasa akun tidak disetel.",
+        "THEME_HELP": "Digunakan oleh antarmuka ketika tema akun tidak disetel.",
+        "RESET_DEFAULT": "Reset ke pengaturan default server",
+        "APPLY_HELP": "Perubahan yang disimpan berlaku pada pemuatan halaman berikutnya. Pilihan pribadi menjadi prioritas.",
+        "CONFLICT": "Administrator lain mengubah pengaturan default ini. Muat ulang sebelum menyimpan.",
+        "UNAVAILABLE_CHOICE": "Pilihan yang disimpan tidak lagi tersedia. Setel ulang sebelum menyimpan.",
+        "ERROR_SAVE": "Tidak dapat menyimpan pengaturan sistem. Coba lagi."
+    },
+    "THEMES": {
+        "LIGHT": "Terang",
+        "DARK": "Gelap"
     }
 }

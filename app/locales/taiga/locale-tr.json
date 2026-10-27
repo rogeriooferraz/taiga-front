@@ -1967,6 +1967,29 @@
             "RESULTS": "Arama sonuçları"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Sistem ayarları",
+        "DESCRIPTION": "Kişisel tercihi olmayan hesaplar için varsayılanları ayarlayın.",
+        "LANGUAGE_HEADING": "Dil",
+        "DEFAULT_LANGUAGE": "Varsayılan dil",
+        "APPEARANCE_HEADING": "Görünüm",
+        "DEFAULT_THEME": "Varsayılan tema",
+        "USE_DEPLOYMENT_DEFAULT": "Sunucu varsayılan ayarını kullan",
+        "EFFECTIVE_VALUE": "Etkin değer:",
+        "SOURCE_DEPLOYMENT": "Kaynak: sunucu varsayılan ayarı",
+        "SOURCE_ADMIN": "Kaynak: yöneticinin kayıtlı ayarı",
+        "LANGUAGE_HELP": "Hesap dili ayarlanmadığında arayüzler ve e-posta tarafından kullanılır.",
+        "THEME_HELP": "Bir hesap teması ayarlanmadığında arayüzler tarafından kullanılır.",
+        "RESET_DEFAULT": "Sunucu varsayılan ayarına sıfırla",
+        "APPLY_HELP": "Kaydedilen değişiklikler bir sonraki sayfa yüklemesinde geçerli olur. Kişisel tercihler önceliklidir.",
+        "CONFLICT": "Başka bir yönetici bu varsayılanları değiştirdi. Kaydetmeden önce yeniden yükleyin.",
+        "UNAVAILABLE_CHOICE": "Kaydedilmiş bir seçim artık mevcut değil. Kaydetmeden önce sıfırlayın.",
+        "ERROR_SAVE": "Sistem ayarları kaydedilemedi. Tekrar deneyin."
+    },
+    "THEMES": {
+        "LIGHT": "Açık",
+        "DARK": "Koyu"
+    },
     "ZOOM": {
         "TITLE": "Yakınlaştır:",
         "ZOOM-1": "Sıkı",

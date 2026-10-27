@@ -1966,6 +1966,29 @@
             "RESULTS": "Search results"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Ustawienia systemowe",
+        "DESCRIPTION": "Ustaw wartości domyślne dla kont bez osobistego wyboru.",
+        "LANGUAGE_HEADING": "Język",
+        "DEFAULT_LANGUAGE": "Domyślny język",
+        "APPEARANCE_HEADING": "Wygląd",
+        "DEFAULT_THEME": "Domyślny szablon strony",
+        "USE_DEPLOYMENT_DEFAULT": "Użyj domyślnych ustawień serwera",
+        "EFFECTIVE_VALUE": "Efektywna wartość:",
+        "SOURCE_DEPLOYMENT": "Źródło: domyślne ustawienie serwera",
+        "SOURCE_ADMIN": "Źródło: ustawienie zapisane przez administratora",
+        "LANGUAGE_HELP": "Używany przez interfejsy i pocztę e-mail, gdy język konta nie jest ustawiony.",
+        "THEME_HELP": "Używany w interfejsie, gdy szablon strony konta nie jest ustawiony.",
+        "RESET_DEFAULT": "Przywróć wartość domyślną serwera",
+        "APPLY_HELP": "Zapisane zmiany obowiązują przy następnym załadowaniu strony. Osobiste wybory mają pierwszeństwo.",
+        "CONFLICT": "Inny administrator zmienił te ustawienia domyślne. Załaduj ponownie przed zapisaniem.",
+        "UNAVAILABLE_CHOICE": "Zapisany wybór nie jest już dostępny. Zresetuj go przed zapisaniem.",
+        "ERROR_SAVE": "Nie można zapisać ustawień systemowych. Spróbuj ponownie."
+    },
+    "THEMES": {
+        "LIGHT": "Jasny",
+        "DARK": "Ciemny"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Compact",

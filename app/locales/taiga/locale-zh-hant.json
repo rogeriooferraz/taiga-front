@@ -1956,6 +1956,29 @@
             "RESULTS": "搜尋結果"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "系統設定",
+        "DESCRIPTION": "為帳戶設定預設值，無需個人選擇。",
+        "LANGUAGE_HEADING": "語言",
+        "DEFAULT_LANGUAGE": "預設語言",
+        "APPEARANCE_HEADING": "外觀",
+        "DEFAULT_THEME": "預設主題",
+        "USE_DEPLOYMENT_DEFAULT": "使用伺服器預設設定",
+        "EFFECTIVE_VALUE": "有效值：",
+        "SOURCE_DEPLOYMENT": "來源：伺服器預設設定",
+        "SOURCE_ADMIN": "來源：管理員儲存的設定",
+        "LANGUAGE_HELP": "未設定帳戶語言時由介面和電子郵件使用。",
+        "THEME_HELP": "未設定帳戶主題時由介面使用。",
+        "RESET_DEFAULT": "重置為伺服器預設設定",
+        "APPLY_HELP": "儲存的變更適用於下一頁載入。個人選擇優先。",
+        "CONFLICT": "另一位管理員變更了這些預設值。儲存前重新載入。",
+        "UNAVAILABLE_CHOICE": "已儲存的選項不再可用。請先重設，再儲存。",
+        "ERROR_SAVE": "無法儲存系統設定。再試一次。"
+    },
+    "THEMES": {
+        "LIGHT": "淺色",
+        "DARK": "深色"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Compact",

@@ -1935,6 +1935,29 @@
             "RESULTS": "검색 결과"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "시스템 설정",
+        "DESCRIPTION": "개인적인 선택 없이 계정에 대한 기본값을 설정합니다.",
+        "LANGUAGE_HEADING": "언어",
+        "DEFAULT_LANGUAGE": "기본 언어",
+        "APPEARANCE_HEADING": "외관",
+        "DEFAULT_THEME": "기본 테마",
+        "USE_DEPLOYMENT_DEFAULT": "서버 기본 설정 사용",
+        "EFFECTIVE_VALUE": "유효 값:",
+        "SOURCE_DEPLOYMENT": "출처: 서버 기본 설정",
+        "SOURCE_ADMIN": "출처: 관리자가 저장한 설정",
+        "LANGUAGE_HELP": "계정 언어가 설정되지 않은 경우 인터페이스 및 이메일에서 사용됩니다.",
+        "THEME_HELP": "계정 테마가 설정되지 않은 경우 인터페이스에서 사용됩니다.",
+        "RESET_DEFAULT": "서버 기본 설정으로 재설정",
+        "APPLY_HELP": "저장된 변경사항은 다음 페이지 로드 시 적용됩니다. 개인의 선택이 우선입니다.",
+        "CONFLICT": "다른 관리자가 이러한 기본값을 변경했습니다. 저장하기 전에 새로고침하세요.",
+        "UNAVAILABLE_CHOICE": "저장된 선택사항은 더 이상 사용할 수 없습니다. 저장하기 전에 재설정하세요.",
+        "ERROR_SAVE": "시스템 설정을 저장할 수 없습니다. 다시 시도해 보세요."
+    },
+    "THEMES": {
+        "LIGHT": "밝은 테마",
+        "DARK": "어두운 테마"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Compact",

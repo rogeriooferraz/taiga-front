@@ -1935,6 +1935,29 @@
             "RESULTS": "Meklēšanas rezultāti"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Sistēmas iestatījumi",
+        "DESCRIPTION": "Iestatiet noklusējuma iestatījumus kontiem bez personīgas izvēles.",
+        "LANGUAGE_HEADING": "Valoda",
+        "DEFAULT_LANGUAGE": "Noklusējuma valoda",
+        "APPEARANCE_HEADING": "Izskats",
+        "DEFAULT_THEME": "Noklusējuma ādiņa",
+        "USE_DEPLOYMENT_DEFAULT": "Izmantojiet servera noklusējuma iestatījumu",
+        "EFFECTIVE_VALUE": "Efektīvā vērtība:",
+        "SOURCE_DEPLOYMENT": "Avots: servera noklusējuma iestatījums",
+        "SOURCE_ADMIN": "Avots: administratora saglabātais iestatījums",
+        "LANGUAGE_HELP": "Izmanto saskarnēs un e-pastā, ja konta valoda nav iestatīta.",
+        "THEME_HELP": "Izmanto saskarnē, ja konta ādiņa nav iestatīta.",
+        "RESET_DEFAULT": "Atiestatīt uz servera noklusējuma iestatījumu",
+        "APPLY_HELP": "Saglabātās izmaiņas tiek piemērotas nākamajā lapas ielādes reizē. Prioritāte ir personiskā izvēle.",
+        "CONFLICT": "Cits administrators mainīja šos noklusējuma iestatījumus. Pirms saglabāšanas atkārtoti ielādējiet.",
+        "UNAVAILABLE_CHOICE": "Saglabāta izvēle vairs nav pieejama. Pirms saglabāšanas atiestatiet to.",
+        "ERROR_SAVE": "Nevarēja saglabāt sistēmas iestatījumus. Mēģiniet vēlreiz."
+    },
+    "THEMES": {
+        "LIGHT": "Gaiša",
+        "DARK": "Tumša"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Compact",

@@ -1967,6 +1967,29 @@
             "RESULTS": "Résultats de la recherche"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Paramètres système",
+        "DESCRIPTION": "Définissez les valeurs par défaut pour les comptes sans choix personnel.",
+        "LANGUAGE_HEADING": "Langue",
+        "DEFAULT_LANGUAGE": "Langue par défaut",
+        "APPEARANCE_HEADING": "Apparence",
+        "DEFAULT_THEME": "Thème par défaut",
+        "USE_DEPLOYMENT_DEFAULT": "Utiliser les paramètres par défaut du serveur",
+        "EFFECTIVE_VALUE": "Valeur appliquée :",
+        "SOURCE_DEPLOYMENT": "Source : paramètre par défaut du serveur",
+        "SOURCE_ADMIN": "Source : paramètre enregistré par l'administrateur",
+        "LANGUAGE_HELP": "Utilisé par les interfaces et la messagerie électronique lorsqu'une langue de compte n'est pas définie.",
+        "THEME_HELP": "Utilisé par les interfaces lorsqu'un thème de compte n'est pas défini.",
+        "RESET_DEFAULT": "Rétablir la valeur par défaut du serveur",
+        "APPLY_HELP": "Les modifications enregistrées s’appliquent au prochain chargement de la page. Les choix personnels sont prioritaires.",
+        "CONFLICT": "Un autre administrateur a modifié ces valeurs par défaut. Rechargez avant de sauvegarder.",
+        "UNAVAILABLE_CHOICE": "Un choix enregistré n'est plus disponible. Réinitialisez-le avant de sauvegarder.",
+        "ERROR_SAVE": "Impossible d'enregistrer les paramètres système. Réessayez."
+    },
+    "THEMES": {
+        "LIGHT": "Clair",
+        "DARK": "Sombre"
+    },
     "ZOOM": {
         "TITLE": "Zoom :",
         "ZOOM-1": "Compact",

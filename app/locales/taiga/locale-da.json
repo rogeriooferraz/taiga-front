@@ -1935,6 +1935,29 @@
             "RESULTS": "Søge resultater"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Systemindstillinger",
+        "DESCRIPTION": "Indstil standardindstillinger for konti uden et personligt valg.",
+        "LANGUAGE_HEADING": "Sprog",
+        "DEFAULT_LANGUAGE": "Standardsprog",
+        "APPEARANCE_HEADING": "Udseende",
+        "DEFAULT_THEME": "Standard tema",
+        "USE_DEPLOYMENT_DEFAULT": "Brug serverens standardindstilling",
+        "EFFECTIVE_VALUE": "Effektiv værdi:",
+        "SOURCE_DEPLOYMENT": "Kilde: serverstandardindstilling",
+        "SOURCE_ADMIN": "Kilde: administratorens gemte indstilling",
+        "LANGUAGE_HELP": "Bruges af grænseflader og e-mail, når et kontosprog ikke er indstillet.",
+        "THEME_HELP": "Bruges af grænseflader, når et kontotema ikke er indstillet.",
+        "RESET_DEFAULT": "Nulstil til serverens standardindstilling",
+        "APPLY_HELP": "Gemte ændringer gælder ved næste sideindlæsning. Personlige valg har prioritet.",
+        "CONFLICT": "En anden administrator ændrede disse standardindstillinger. Genindlæs før du gemmer.",
+        "UNAVAILABLE_CHOICE": "Et gemt valg er ikke længere tilgængeligt. Nulstil det før du gemmer.",
+        "ERROR_SAVE": "Systemindstillingerne kunne ikke gemmes. Prøv igen."
+    },
+    "THEMES": {
+        "LIGHT": "Lys",
+        "DARK": "Mørk"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Compact",

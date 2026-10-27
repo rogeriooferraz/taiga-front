@@ -1935,6 +1935,29 @@
             "RESULTS": "Kết quả tìm kiếm"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Cài đặt hệ thống",
+        "DESCRIPTION": "Đặt mặc định cho các tài khoản mà không có sự lựa chọn cá nhân.",
+        "LANGUAGE_HEADING": "Ngôn ngữ",
+        "DEFAULT_LANGUAGE": "Ngôn ngữ mặc định",
+        "APPEARANCE_HEADING": "Ngoại hình",
+        "DEFAULT_THEME": "Chủ đề mặc định",
+        "USE_DEPLOYMENT_DEFAULT": "Sử dụng cài đặt mặc định của máy chủ",
+        "EFFECTIVE_VALUE": "Giá trị hiệu quả:",
+        "SOURCE_DEPLOYMENT": "Nguồn: cài đặt mặc định của máy chủ",
+        "SOURCE_ADMIN": "Nguồn: cài đặt đã lưu của quản trị viên",
+        "LANGUAGE_HELP": "Được sử dụng bởi các giao diện và email khi ngôn ngữ tài khoản không được đặt.",
+        "THEME_HELP": "Được sử dụng bởi các giao diện khi chủ đề tài khoản không được đặt.",
+        "RESET_DEFAULT": "Đặt lại về cài đặt mặc định của máy chủ",
+        "APPLY_HELP": "Những thay đổi đã lưu áp dụng cho lần tải trang tiếp theo. Lựa chọn cá nhân được ưu tiên.",
+        "CONFLICT": "Một quản trị viên khác đã thay đổi các giá trị mặc định này. Tải lại trước khi lưu.",
+        "UNAVAILABLE_CHOICE": "Lựa chọn đã lưu không còn nữa. Đặt lại nó trước khi lưu.",
+        "ERROR_SAVE": "Không thể lưu cài đặt hệ thống. Hãy thử lại."
+    },
+    "THEMES": {
+        "LIGHT": "Sáng",
+        "DARK": "Tối"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Compact",

@@ -1935,6 +1935,29 @@
             "RESULTS": "Sökresultat"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Systeminställningar",
+        "DESCRIPTION": "Ställ in standardinställningar för konton utan personligt val.",
+        "LANGUAGE_HEADING": "Språk",
+        "DEFAULT_LANGUAGE": "Standardspråk",
+        "APPEARANCE_HEADING": "Utseende",
+        "DEFAULT_THEME": "Standardtema",
+        "USE_DEPLOYMENT_DEFAULT": "Använd serverns standardinställning",
+        "EFFECTIVE_VALUE": "Effektivt värde:",
+        "SOURCE_DEPLOYMENT": "Källa: serverns standardinställning",
+        "SOURCE_ADMIN": "Källa: administratörens sparade inställning",
+        "LANGUAGE_HELP": "Används av gränssnitt och e-post när ett kontospråk inte är inställt.",
+        "THEME_HELP": "Används av gränssnitt när ett kontotema inte är inställt.",
+        "RESET_DEFAULT": "Återställ till serverns standardinställning",
+        "APPLY_HELP": "Sparade ändringar gäller vid nästa sidladdning. Personliga val prioriteras.",
+        "CONFLICT": "En annan administratör ändrade dessa standardinställningar. Ladda om innan du sparar.",
+        "UNAVAILABLE_CHOICE": "Ett sparat val är inte längre tillgängligt. Återställ den innan du sparar.",
+        "ERROR_SAVE": "Det gick inte att spara systeminställningarna. Försök igen."
+    },
+    "THEMES": {
+        "LIGHT": "Ljust tema",
+        "DARK": "Mörkt tema"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Compact",

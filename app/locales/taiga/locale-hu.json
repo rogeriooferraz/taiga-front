@@ -1602,6 +1602,29 @@
         "EMPTY": "Nincs megjeleníthető projekt ezzel a keresési feltétellel.<br> Próbáld újra!",
         "DISCOVER_SUBTITLE": "{projects, plural, =1{Egy felfedezésre váró nyilvános projekt} other{# felfedezésre váró nyilvános projekt}}"
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Rendszerbeállítások",
+        "DESCRIPTION": "A fiókok alapértelmezett beállításai személyes választás nélkül.",
+        "LANGUAGE_HEADING": "Nyelv",
+        "DEFAULT_LANGUAGE": "Alapértelmezett nyelv",
+        "APPEARANCE_HEADING": "Megjelenés",
+        "DEFAULT_THEME": "Alapértelmezett téma",
+        "USE_DEPLOYMENT_DEFAULT": "A szerver alapértelmezett beállításának használata",
+        "EFFECTIVE_VALUE": "Érvényes érték:",
+        "SOURCE_DEPLOYMENT": "Forrás: szerver alapértelmezett beállítása",
+        "SOURCE_ADMIN": "Forrás: a rendszergazda mentett beállítása",
+        "LANGUAGE_HELP": "Az interfészek és az e-mailek használják, ha a fiók nyelve nincs beállítva.",
+        "THEME_HELP": "Az interfészek akkor használják, ha nincs beállítva fióktéma.",
+        "RESET_DEFAULT": "Állítsa vissza a szerver alapértelmezett beállítását",
+        "APPLY_HELP": "A mentett módosítások a következő oldalbetöltéskor érvényesek. A személyes döntések elsőbbséget élveznek.",
+        "CONFLICT": "Egy másik rendszergazda megváltoztatta ezeket az alapértelmezéseket. Mentés előtt töltse be újra.",
+        "UNAVAILABLE_CHOICE": "Mentett választás már nem érhető el. Mentés előtt állítsa vissza.",
+        "ERROR_SAVE": "Nem sikerült menteni a rendszerbeállításokat. Próbáld újra."
+    },
+    "THEMES": {
+        "LIGHT": "Világos",
+        "DARK": "Sötét"
+    },
     "ZOOM": {
         "TITLE": "Nagyítás:",
         "ZOOM-1": "Kompakt",

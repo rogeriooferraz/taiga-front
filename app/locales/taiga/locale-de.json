@@ -1967,6 +1967,29 @@
             "RESULTS": "Suchergebnisse"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Systemeinstellungen",
+        "DESCRIPTION": "Legen Sie Standardeinstellungen für Konten ohne persönliche Auswahl fest.",
+        "LANGUAGE_HEADING": "Sprache",
+        "DEFAULT_LANGUAGE": "Standardsprache",
+        "APPEARANCE_HEADING": "Aussehen",
+        "DEFAULT_THEME": "Standardthema",
+        "USE_DEPLOYMENT_DEFAULT": "Verwenden Sie die Standardeinstellung des Servers",
+        "EFFECTIVE_VALUE": "Effektiver Wert:",
+        "SOURCE_DEPLOYMENT": "Quelle: Server-Standardeinstellung",
+        "SOURCE_ADMIN": "Quelle: Gespeicherte Einstellung des Administrators",
+        "LANGUAGE_HELP": "Wird von Schnittstellen und E-Mail verwendet, wenn keine Kontosprache festgelegt ist.",
+        "THEME_HELP": "Wird von Schnittstellen verwendet, wenn kein Kontothema festgelegt ist.",
+        "RESET_DEFAULT": "Zurücksetzen auf die Server-Standardeinstellung",
+        "APPLY_HELP": "Gespeicherte Änderungen werden beim nächsten Laden der Seite übernommen. Persönliche Entscheidungen haben Vorrang.",
+        "CONFLICT": "Ein anderer Administrator hat diese Standardeinstellungen geändert. Vor dem Speichern neu laden.",
+        "UNAVAILABLE_CHOICE": "Eine gespeicherte Auswahl ist nicht mehr verfügbar. Setzen Sie es vor dem Speichern zurück.",
+        "ERROR_SAVE": "Systemeinstellungen konnten nicht gespeichert werden. Versuchen Sie es erneut."
+    },
+    "THEMES": {
+        "LIGHT": "Hell",
+        "DARK": "Dunkel"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Kompakt",

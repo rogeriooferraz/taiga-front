@@ -1958,6 +1958,29 @@
             "RESULTS": "Search results"
         }
     },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Systeeminstellingen",
+        "DESCRIPTION": "Stel standaardinstellingen in voor accounts zonder een persoonlijke keuze.",
+        "LANGUAGE_HEADING": "Taal",
+        "DEFAULT_LANGUAGE": "Standaardtaal",
+        "APPEARANCE_HEADING": "Uiterlijk",
+        "DEFAULT_THEME": "Standaardthema",
+        "USE_DEPLOYMENT_DEFAULT": "Gebruik de standaardserverinstelling",
+        "EFFECTIVE_VALUE": "Effectieve waarde:",
+        "SOURCE_DEPLOYMENT": "Bron: standaardinstelling van de server",
+        "SOURCE_ADMIN": "Bron: opgeslagen instelling van de beheerder",
+        "LANGUAGE_HELP": "Wordt gebruikt door interfaces en e-mail wanneer er geen accounttaal is ingesteld.",
+        "THEME_HELP": "Wordt gebruikt door interfaces wanneer er geen accountthema is ingesteld.",
+        "RESET_DEFAULT": "Reset naar de standaardserverinstelling",
+        "APPLY_HELP": "Opgeslagen wijzigingen zijn van toepassing bij het laden van de volgende pagina. Persoonlijke keuzes hebben prioriteit.",
+        "CONFLICT": "Een andere beheerder heeft deze standaardwaarden gewijzigd. Herladen voordat u opslaat.",
+        "UNAVAILABLE_CHOICE": "Een opgeslagen keuze is niet langer beschikbaar. Reset het voordat u het opslaat.",
+        "ERROR_SAVE": "Kan systeeminstellingen niet opslaan. Probeer het opnieuw."
+    },
+    "THEMES": {
+        "LIGHT": "Licht",
+        "DARK": "Donker"
+    },
     "ZOOM": {
         "TITLE": "Zoom:",
         "ZOOM-1": "Compact",
