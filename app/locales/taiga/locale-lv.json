@@ -835,6 +835,10 @@
                 "PUBLIC": "Lūdzu, atcerieties, ka Jūs varat vadīt ne vairāk kā <strong>{{maxProjects}}</strong> publiskus projektus. Pašlaik Jūs vadāt <strong>{{currentProjects}}</strong> publiskus projektus"
             },
             "CANT_BE_OWNED": "Pašlaik jūs nevarat kļūt par šāda veida projekta vadītāju. Ja vēlaties kļūt par šī projekta vadītāju, lūdzu, sazinieties ar administratoru, lai viņš mainītu Jūsu konta iestatījumus, dodot iespēju kļūt par šī par projekta vadītāju."
+        },
+        "PROJECT_PRESETS": {
+            "TITLE": "Noklusētās vērtības",
+            "SUBTITLE": "Norādiet noklusētās vērtības visiem atlases ievades laukiem."
         }
     },
     "USER": {
