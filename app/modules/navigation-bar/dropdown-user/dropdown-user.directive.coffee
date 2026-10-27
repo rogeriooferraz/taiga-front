@@ -7,7 +7,7 @@
 ###
 
 DropdownUserDirective = (authService, configService, locationService,
-        navUrlsService, $rootScope) ->
+        navUrlsService, $rootScope, httpService) ->
 
     link = (scope, el, attrs, ctrl) ->
         scope.vm = {}
@@ -21,6 +21,22 @@ DropdownUserDirective = (authService, configService, locationService,
             locationService.search({})
 
         scope.vm.userSettingsPlugins = _.filter($rootScope.userSettingsPlugins, {userMenu: true})
+        scope.vm.canManageInstance = false
+        capabilityRequest = 0
+        checkCapability = ->
+            request = ++capabilityRequest
+            scope.vm.canManageInstance = false
+            return if !configService.get("instanceDefaultsEnabled") or
+                      !authService.isAuthenticated()
+            httpService.get("#{configService.get('api')}instance-defaults/admin")
+            .then (-> scope.vm.canManageInstance = true if request == capabilityRequest), (-> null)
+
+        checkCapability()
+        scope.$on("auth:login", checkCapability)
+        scope.$on("auth:refresh", checkCapability)
+        scope.$on("auth:logout", ->
+            capabilityRequest++
+            scope.vm.canManageInstance = false)
 
     directive = {
         templateUrl: "navigation-bar/dropdown-user/dropdown-user.html"
@@ -35,7 +51,8 @@ DropdownUserDirective.$inject = [
     "$tgConfig",
     "$tgLocation",
     "$tgNavUrls",
-    "$rootScope"
+    "$rootScope",
+    "$tgHttp"
 ]
 
 angular.module("taigaNavigationBar").directive("tgDropdownUser", DropdownUserDirective)
