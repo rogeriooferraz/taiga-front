@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Wiki bağlantıları ekle",
                 "DELETE_WIKI_LINKS": "Wiki bağlantılarını sil"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Bu proje arşivlendi. Artık salt okunur durumdadır."
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Etiket sil"
         },
         "HELP": "Yardıma mı ihtiyacın var? Destek sayfamızı kontrol edin!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Varsayılan Değerler",
-            "SUBTITLE": "Tüm seçici girdiler için varsayılan değerleri seçin."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Üyeleri yönet",
             "PAGE_TITLE": "Üyelikler - {{projectName}}",
@@ -850,7 +849,7 @@
             "MENU_TITLE": "Ön Ayarlar"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Eklentiler  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Eklentiler - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +938,6 @@
             "TITLE_CREATE_PROJECT": "Proje oluştur",
             "HELP_TITLE": "Yardım",
             "HOMEPAGE": "Ana sayfa",
-            "TAIGA_RESOURCES_TITLE": "Taiga kaynaklarına git",
-            "TAIGA_RESOURCES": "Taiga Kaynakları",
             "FEEDBACK_TITLE": "Geri bildirimlerinizi bize yazın",
             "FEEDBACK": "Bir soru sorun",
             "NOTIFICATIONS_TITLE": "Bildirim ayarlarını düzenle",

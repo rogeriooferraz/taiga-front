@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "新增维基链接",
                 "DELETE_WIKI_LINKS": "删除维基链接"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "此项目已归档。现在为只读状态。"
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "删除标签"
         },
         "HELP": "需要帮助吗？看看我们的帮助页面吧！",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "预设值",
-            "SUBTITLE": "将所有选项设为预设值"
-        },
         "MEMBERSHIPS": {
             "TITLE": "管理成员",
             "PAGE_TITLE": "成员资格 - {{projectName}}",
@@ -838,7 +837,9 @@
             "UNLIMITED_PROJECTS": "无线的",
             "OWNER_MESSAGE": {
                 "PRIVATE": "请记住你可以拥有最多 <strong>{{maxProjects}}</strong> 个私有项目。你当前拥有 <strong>{{currentProjects}}</strong> 个私有项目",
-                "PUBLIC": "请记住你最多可以拥有 <strong>{{maxProjects}}</strong> 个公开项目。你当前拥有 <strong>{{currentProjects}}</strong> 个公开项目"
+                "PRIVATE_EXCEEDED": "您的私有项目数量为<strong>{{currentProjects}}</strong>，已达到订阅方案允许的上限。",
+                "PUBLIC": "请记住你最多可以拥有 <strong>{{maxProjects}}</strong> 个公开项目。你当前拥有 <strong>{{currentProjects}}</strong> 个公开项目",
+                "PUBLIC_EXCEEDED": "您的公开项目数量为<strong>{{currentProjects}}</strong>，已达到订阅方案允许的上限。"
             },
             "CANT_BE_OWNED": "目前你不能成为这类项目的所有者。如果你希望成为这个项目的所有者，请联系管理员，请其在你的账户设置中启用项目所有权。"
         },
@@ -846,6 +847,9 @@
             "TITLE": "默认值",
             "SUBTITLE": "为所有选择器输入设置的默认值。",
             "MENU_TITLE": "预设"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - 插件 - {{projectName}}"
         }
     },
     "USER": {
@@ -933,9 +937,9 @@
             "MANAGE_PROJECTS": "管理项目",
             "TITLE_CREATE_PROJECT": "创建项目",
             "HELP_TITLE": "帮助",
+            "TAIGA_COMMUNITY_TITLE": "前往 Taiga 社区",
+            "TAIGA_COMMUNITY": "Taiga 社区",
             "HOMEPAGE": "主页",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "给我们提供建议",
             "FEEDBACK": "问一个问题",
             "NOTIFICATIONS_TITLE": "编辑个人通知设定",
@@ -1117,6 +1121,18 @@
                 "CREATE_NEW_ISSUES": "将子问题转换为Taiga问题",
                 "NOT_CREATE_NEW_ISSUES": "不导入子问题"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "我们重视你的隐私（请查看我们的<a href=\"https://www.taiga.io/privacy-policy\" title=\"前往隐私政策\" target=\"_blank\">隐私政策</a>）。",
+            "OPT_OUT": "我们只会向你发送相关电子邮件（每年少于 6 封）。你可以随时向 <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> 发送主题为“unsubscribe”的电子邮件，或使用我们任一期新闻邮件中的链接取消订阅。",
+            "DONT_ASK": "不再询问",
+            "SUBSCRIBE": "订阅",
+            "SUBSCRIBED": "已订阅",
+            "LIGHTBOX_TITLE": "你想接收有关 Taiga 的公告吗？",
+            "CONFIRMATION": "是的，请向我发送有关 Taiga 的新闻、产品更新和推荐内容。",
+            "SAVE_PREFERENCE": "保存偏好设置",
+            "NOTIFY_EXPLANATION": "我们会向你发送有关 Taiga 的新闻、产品更新和推荐内容。",
+            "SAVED_PREFERENCE": "你的偏好设置已成功保存"
         }
     },
     "LIGHTBOX": {
@@ -1159,7 +1175,9 @@
             "CREATE": "在此创建一个问题",
             "PUBLIC": "公开的Taiga项目",
             "EMAIL": "给我们发送邮件到",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "查看 ",
+            "FAQ": "常见问题"
         },
         "SEARCH": {
             "TITLE": "搜索",
@@ -1195,7 +1213,10 @@
             "SELECT_STATUS": "选择状态",
             "DEFAULT": "默认",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "位置",
+            "CREATE_TOP": "最上方",
+            "CREATE_BOTTOM": "最下方"
         },
         "DISABLE_KANBAN": {
             "TITLE": "停用看板",
@@ -1550,6 +1571,7 @@
         "WARNING_TEXT": "修改未能保存！",
         "SAVED": "修改已保存",
         "CLOSE": "关闭通知",
+        "COMMUNICATION": "Taiga 消息",
         "MAIL": "通过邮件通知",
         "DESKTOP": "使用浏览器警告作为桌面提醒",
         "ASK_DELETE": "你确定要删除吗？"

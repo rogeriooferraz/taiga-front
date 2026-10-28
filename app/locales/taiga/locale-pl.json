@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Dodawaj linki Wiki",
                 "DELETE_WIKI_LINKS": "Usuwaj linki Wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Ten projekt został zarchiwizowany. Jest teraz tylko do odczytu."
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Usuń tag"
         },
         "HELP": "Potrzebujesz pomocy? Sprawdź naszą stronę wsparcia!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Domyślne wartości",
-            "SUBTITLE": "Ustaw wartości domyślne dla wszystkich pól wyboru."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Zarządzaj członkami",
             "PAGE_TITLE": "Członkostwa - {{projectName}}",
@@ -839,8 +838,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Pamiętaj, że możesz posiadać maksymalnie <strong>{{maxProjects}}</strong> projektów prywatnych. Obecnie posiadasz <strong>{{currentProjects}}</strong> projektów prywatnych.",
                 "PUBLIC": "Pamiętaj, że możesz posiadać maksymalnie <strong>{{maxProjects}}</strong> projektów publicznych. Obecnie posiadasz <strong>{{currentProjects}}</strong> projektów publicznych.",
-                "PRIVATE_EXCEEDED": "Obecnie posiadasz <strong>{{currentProjects}} projektów prywatnych</strong> maksymalnie tyle, na ile pozwala Twój plan.",
-                "PUBLIC_EXCEEDED": "Obecnie posiadasz <strong>{{currentProjects}} projektów publicznych</strong> maksymalnie tyle, na ile pozwala Twój plan."
+                "PRIVATE_EXCEEDED": "Liczba Twoich projektów prywatnych wynosi <strong>{{currentProjects}}</strong> i osiągnęła limit dozwolony w Twoim abonamencie.",
+                "PUBLIC_EXCEEDED": "Liczba Twoich projektów publicznych wynosi <strong>{{currentProjects}}</strong> i osiągnęła limit dozwolony w Twoim abonamencie."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },
@@ -850,7 +849,7 @@
             "SUBTITLE": "Ustaw wartości domyślne dla wszystkich pól wyboru."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Wtyczki  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Wtyczki - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +938,6 @@
             "TITLE_CREATE_PROJECT": "Utwórz projekt",
             "HELP_TITLE": "Pomoc",
             "HOMEPAGE": "Strona startowa",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Edytuj ustawienia powiadomień",
@@ -1574,6 +1571,7 @@
         "WARNING_TEXT": "Twoje zmiany nie zostały zapisane!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Zamknij powiadomienie",
+        "COMMUNICATION": "Wiadomości od Taigi",
         "MAIL": "Aktywność",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Czy na pewno chcesz usunąć?"

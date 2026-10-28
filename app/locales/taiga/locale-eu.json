@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Gehitu wiki estekak",
                 "DELETE_WIKI_LINKS": "Ezabatu wiki esteka"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Proiektu hau artxibatu egin da. Orain irakurtzeko soilik da."
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Ezabatu etiketa"
         },
         "HELP": "Laguntza behar duzu? Begiratu gure laguntza orrira!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Balio lehenetsiak",
-            "SUBTITLE": "Ezarri balio lehenetsiak hautatutako guztiei"
-        },
         "MEMBERSHIPS": {
             "TITLE": "Kudeatu lankideak",
             "PAGE_TITLE": "Lankidetasuna - {{projectName}}",
@@ -839,8 +838,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Gogoan izan <strong>{{maxProjects}}</strong> proiektu pribaturen jabe izan zaitezke gehienez. Gaur gaurkoz <strong>{{currentProjects}}</strong> proiektu pribaturen jabe zara.",
                 "PUBLIC": "Gogoan izan, mesedez, <strong>{{maxProjects}}</strong> proiektu publikoren jabe izan zaitezke gehienez. Gaur gaurkoz <strong>{{currentProjects}}</strong> proiektu publikoren jabe zara.",
-                "PRIVATE_EXCEEDED": "Une honetan <strong>{{currentProjects}} proiektu pribatua</strong> dituzu, zure planak onartzen duen maximoa.",
-                "PUBLIC_EXCEEDED": "Une honetan <strong>{{currentProjects}} proiektu publiko</strong> dituzu, zure planak onartzen duen maximoa."
+                "PRIVATE_EXCEEDED": "Zure proiektu pribatuen kopurua <strong>{{currentProjects}}</strong> da, hau da, zure harpidetzak onartzen duen gehieneko kopurua.",
+                "PUBLIC_EXCEEDED": "Zure proiektu publikoen kopurua <strong>{{currentProjects}}</strong> da, hau da, zure harpidetzak onartzen duen gehieneko kopurua."
             },
             "CANT_BE_OWNED": "Orain ezin duzu halako proiektu baten jabe izan. Nahi baduzu proiektuaren jabe berria izan, jar zatez harremanetan administratzailearekin, zure kontuaren ezarpenak alda ditzan, proiektuaren jabe izan ahal izateko."
         },
@@ -850,7 +849,7 @@
             "SUBTITLE": "Ezarri balio lehenetsiak hautatzaile-sarrera guztientzat."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugins  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +938,6 @@
             "TITLE_CREATE_PROJECT": "Sortu proiektu bat",
             "HELP_TITLE": "Laguntza",
             "HOMEPAGE": "Hasiera",
-            "TAIGA_RESOURCES_TITLE": "Ikusi Taigaren baliabideak",
-            "TAIGA_RESOURCES": "Taiga baliabideak",
             "FEEDBACK_TITLE": "Bidali zure iritzia",
             "FEEDBACK": "Egin galdera bat",
             "NOTIFICATIONS_TITLE": "Editatu jakinarazpen ezarpenak",

@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Afegir link de wiki",
                 "DELETE_WIKI_LINKS": "Esborrar enllaços de wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Aquest projecte s'ha arxivat. Ara és de només lectura."
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Elimina l'etiqueta"
         },
         "HELP": "Necessites ajuda? Mira la nosta pàgina de suport!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Valors per defecte",
-            "SUBTITLE": "Selecciona els valors per defecte per a tots els selectors"
-        },
         "MEMBERSHIPS": {
             "TITLE": "Gestió de Membres",
             "PAGE_TITLE": "Afiliacions - {{projectName}}",
@@ -839,8 +838,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Recordeu que podeu tenir fins a <strong>{{maxProjects}}</strong> projectes privats. Actualment sou propietari de <strong>{{currentProjects}}</strong> projectes privats.",
                 "PUBLIC": "Recordeu que podeu tenir fins a <strong>{{maxProjects}}</strong> projectes públics. Actualment sou propietari de <strong>{{currentProjects}}</strong> projectes públics.",
-                "PRIVATE_EXCEEDED": "Actualment té <strong>{{currentProjects}} projectes privats</strong>, el màxim que el teu pla permet.",
-                "PUBLIC_EXCEEDED": "Actualment té <strong>{{currentProjects}} projectes públics</strong>, el màxim que el teu pla permet."
+                "PRIVATE_EXCEEDED": "El nombre de projectes privats que teniu és <strong>{{currentProjects}}</strong>, el màxim que permet la vostra subscripció.",
+                "PUBLIC_EXCEEDED": "El nombre de projectes públics que teniu és <strong>{{currentProjects}}</strong>, el màxim que permet la vostra subscripció."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },
@@ -850,7 +849,7 @@
             "SUBTITLE": "Estableix els valors predeterminats per a totes les entrades del selector."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{NomConnector}} - Connectors  - {{NomProjecte}}"
+            "PAGE_TITLE": "{{pluginName}} - Connectors - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +938,6 @@
             "TITLE_CREATE_PROJECT": "Crear projecte",
             "HELP_TITLE": "Ajuda",
             "HOMEPAGE": "Inici",
-            "TAIGA_RESOURCES_TITLE": "Anar a Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Escriu-nos amb el teu feedback",
             "FEEDBACK": "Fes una pregunta",
             "NOTIFICATIONS_TITLE": "Edita la configuració de les teves notificacions",

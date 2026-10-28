@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "新增維基連結",
                 "DELETE_WIKI_LINKS": "刪除維基連結"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "此專案已經歸檔。目前僅能讀取。"
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "刪除Tag"
         },
         "HELP": "需要幫助嗎？看看我們的支援頁面吧！",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "預設值",
-            "SUBTITLE": "將所有選項設為預設值"
-        },
         "MEMBERSHIPS": {
             "TITLE": "管理成員",
             "PAGE_TITLE": "成員資格 - {{projectName}}",
@@ -838,7 +837,9 @@
             "UNLIMITED_PROJECTS": "Unlimited",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Please remember that you can own up to <strong>{{maxProjects}}</strong> private projects. You currently own <strong>{{currentProjects}}</strong> private projects",
-                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects"
+                "PRIVATE_EXCEEDED": "您的不公開專案數量為<strong>{{currentProjects}}</strong>，已達到訂閱方案允許的上限。",
+                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects",
+                "PUBLIC_EXCEEDED": "您的公開專案數量為<strong>{{currentProjects}}</strong>，已達到訂閱方案允許的上限。"
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },
@@ -846,6 +847,9 @@
             "MENU_TITLE": "預設選項",
             "TITLE": "預設值",
             "SUBTITLE": "設置所有選擇器輸入的默認值。"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - 外掛 - {{projectName}}"
         }
     },
     "USER": {
@@ -934,8 +938,6 @@
             "TITLE_CREATE_PROJECT": "創建專案",
             "HELP_TITLE": "幫助",
             "HOMEPAGE": "首頁",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "編輯個人通知設定",
@@ -1121,12 +1123,16 @@
             }
         },
         "NEWSLETTER_OPENING": {
+            "NO_SHARE": "我們重視你的隱私（請參閱我們的<a href=\"https://www.taiga.io/privacy-policy\" title=\"前往隱私政策\" target=\"_blank\">隱私政策</a>）。",
             "SUBSCRIBED": "已訂閱",
             "LIGHTBOX_TITLE": "你想接收Taiga的新訊息嗎？",
             "DONT_ASK": "不再詢問",
             "SUBSCRIBE": "訂閲",
-            "OPT_OUT": "我們只會向你發送相關電子郵件（每年少於 6 封）。你可以隨時發送以「unsubscribe」題的電子郵件到 <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a>，或通訊中的連結來取消訂閱。",
-            "SAVE_PREFERENCE": "儲存選項"
+            "OPT_OUT": "我們只會向你發送相關電子郵件（每年少於 6 封）。你可以隨時寄送主旨為「unsubscribe」的電子郵件至 <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a>，或使用我們任何一封電子報中的連結取消訂閱。",
+            "SAVE_PREFERENCE": "儲存選項",
+            "CONFIRMATION": "是的，請向我傳送有關 Taiga 的新聞、產品更新和推薦內容。",
+            "NOTIFY_EXPLANATION": "我們會向你傳送有關 Taiga 的新聞、產品更新和推薦內容。",
+            "SAVED_PREFERENCE": "你的偏好設定已成功儲存。"
         }
     },
     "LIGHTBOX": {
@@ -1170,7 +1176,8 @@
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
             "SUPPORT": "support@taiga.io",
-            "FAQ": "常見問題"
+            "FAQ": "常見問題",
+            "VISIT": "參閱 "
         },
         "SEARCH": {
             "TITLE": "搜尋",
@@ -1564,6 +1571,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "關閉通知",
+        "COMMUNICATION": "Taiga 訊息",
         "MAIL": "透過郵件通知",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "你確定要刪除嗎？"

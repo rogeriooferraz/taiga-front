@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Nhật kí người dùng liên quan",
         "CARD": {
             "ASSIGN_TO": "Phân chia cho",
+            "MOVE_TO_TOP": "Di chuyển lên đầu",
             "EDIT": "Chỉnh sửa thẻ",
             "DELETE": "Delete card",
             "DELETE_ISSUE": "Xóa issue",
@@ -319,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Thêm liên kết wiki",
                 "DELETE_WIKI_LINKS": "Xóa liên kết wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Dự án này đã được lưu trữ. Hiện ở chế độ chỉ đọc."
         }
     },
     "LOGIN": {
@@ -489,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Xóa thẻ"
         },
         "HELP": "Bạn cần hỗ trợ? Tham khảo trang trợ giúp của chúng tôi!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Giá trị mặc định",
-            "SUBTITLE": "Đặt giá trị mặc định cho tất cả nguồn vào được chọn"
-        },
         "MEMBERSHIPS": {
             "TITLE": "Quản lý thành viên",
             "PAGE_TITLE": "Thành viên - {{Tên dự án}}",
@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Dự án vượt quá số lượng  thành viên tối đa cho các dự án công khai",
             "PROJECT_OWNER": "Chủ dự án",
             "REQUEST_OWNERSHIP": "Yêu cầu quyền sở hữu",
+            "REQUEST_OWNERSHIP_LIMIT": "Bạn đã đạt giới hạn số dự án riêng tư ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Bạn có muốn trở thành chủ dự án mới?",
             "REQUEST_OWNERSHIP_DESC": "Yêu cầu chủ dự án gần đây {{name}} trao quyền sở hữu dự án này cho bạn.",
             "REQUEST_OWNERSHIP_BUTTON": "Yêu cầu",
@@ -836,9 +837,19 @@
             "UNLIMITED_PROJECTS": "Không giới hạn",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Hãy nhớ rằng bạn có thể sở hữu tới <strong>{{maxProjects}}</strong> dự án riêng tư. Bạn hiện đang sở hữu <strong>{{currentProjects}}</strong> dự án riêng tư",
-                "PUBLIC": "Hãy nhớ rằng bạn có thể sở hữu tới <strong>{{maxProjects}}</strong> dự án riêng tư. Bạn hiện đang sở hữu <strong>{{currentProjects}}</strong> dự án riêng tư"
+                "PRIVATE_EXCEEDED": "Số lượng dự án riêng tư của bạn là <strong>{{currentProjects}}</strong>, đã đạt đến mức tối đa mà gói đăng ký của bạn cho phép.",
+                "PUBLIC": "Hãy nhớ rằng bạn có thể sở hữu tới <strong>{{maxProjects}}</strong> dự án công khai. Bạn hiện đang sở hữu <strong>{{currentProjects}}</strong> dự án công khai",
+                "PUBLIC_EXCEEDED": "Số lượng dự án công khai của bạn là <strong>{{currentProjects}}</strong>, đã đạt đến mức tối đa mà gói đăng ký của bạn cho phép."
             },
             "CANT_BE_OWNED": "Tại thời điểm này bạn không thể trở thành chủ sở hữu của loại dự án này. Nếu bạn muốn trở thành chủ sở hữu của dự án này, xin vui lòng liên hệ với quản trị viên để thay đổi cài đặt tài khoản của bạn và cho phép quyền sở hữu dự án."
+        },
+        "PROJECT_PRESETS": {
+            "TITLE": "Giá trị mặc định",
+            "MENU_TITLE": "Cài đặt sẵn",
+            "SUBTITLE": "Đặt giá trị mặc định cho tất cả các trường chọn."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Plugin - {{projectName}}"
         }
     },
     "USER": {
@@ -926,9 +937,9 @@
             "MANAGE_PROJECTS": "Quản lí dự án",
             "TITLE_CREATE_PROJECT": "Tạo dự án",
             "HELP_TITLE": "Trợ giúp",
+            "TAIGA_COMMUNITY_TITLE": "Đi đến cộng đồng Taiga",
+            "TAIGA_COMMUNITY": "Cộng đồng Taiga",
             "HOMEPAGE": "Trang chủ",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Chỉnh sửa cài đặt thông báo",
@@ -1110,6 +1121,18 @@
                 "CREATE_NEW_ISSUES": "Chuyển đổi sub-issue thành issue mới ở Taiga",
                 "NOT_CREATE_NEW_ISSUES": "Không nhập các sub-issues"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Quyền riêng tư của bạn rất quan trọng đối với chúng tôi (xem <a href=\"https://www.taiga.io/privacy-policy\" title=\"Đi đến chính sách quyền riêng tư\" target=\"_blank\">chính sách quyền riêng tư</a> của chúng tôi).",
+            "OPT_OUT": "Chúng tôi chỉ gửi cho bạn những email có liên quan (ít hơn 6 email mỗi năm). Bạn có thể hủy đăng ký bất kỳ lúc nào bằng cách gửi email đến <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> với tiêu đề “unsubscribe” hoặc qua liên kết trong bất kỳ bản tin nào của chúng tôi.",
+            "DONT_ASK": "Đừng hỏi lại",
+            "SUBSCRIBE": "Đăng ký",
+            "SUBSCRIBED": "Bạn đã đăng ký",
+            "LIGHTBOX_TITLE": "Bạn có muốn nhận thông báo về Taiga không?",
+            "CONFIRMATION": "Có, hãy gửi cho tôi tin tức, cập nhật sản phẩm và đề xuất về Taiga.",
+            "SAVE_PREFERENCE": "LƯU TÙY CHỌN",
+            "NOTIFY_EXPLANATION": "Chúng tôi sẽ gửi cho bạn tin tức, cập nhật sản phẩm và đề xuất về Taiga.",
+            "SAVED_PREFERENCE": "Tùy chọn của bạn đã được lưu thành công"
         }
     },
     "LIGHTBOX": {
@@ -1152,7 +1175,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "Xem mục ",
+            "FAQ": "Câu hỏi thường gặp"
         },
         "SEARCH": {
             "TITLE": "Tìm kiếm",
@@ -1188,7 +1213,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "Default",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "Vị trí",
+            "CREATE_TOP": "Trên cùng",
+            "CREATE_BOTTOM": "Dưới cùng"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1543,6 +1571,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Đóng thông báo",
+        "COMMUNICATION": "Thông tin từ Taiga",
         "MAIL": "Thông báo qua mail",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Bạn có chắc chắn muốn xóa không?"

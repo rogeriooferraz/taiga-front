@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Beslægtede brugerhistorier",
         "CARD": {
             "ASSIGN_TO": "Tildel Til",
+            "MOVE_TO_TOP": "Flyt til toppen",
             "EDIT": "Rediger kort",
             "DELETE": "Slet kort",
             "DELETE_ISSUE": "Slet problem",
@@ -319,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Tilføj wiki links",
                 "DELETE_WIKI_LINKS": "Slet wiki links"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Dette projekt er arkiveret. Det er nu skrivebeskyttet."
         }
     },
     "LOGIN": {
@@ -489,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Slet tag"
         },
         "HELP": "Har du brug for hjælp? Tjek vores support side!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Default værdi",
-            "SUBTITLE": "Sæt default værdien for alle valgte inddata."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Håndter medlemmer",
             "PAGE_TITLE": "Medlemskab - {{projectName}}",
@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Projektet overstiger dit maksimale antal medlemmer for offentlige projekter",
             "PROJECT_OWNER": "Projekt ejer",
             "REQUEST_OWNERSHIP": "Bed om ejerskab",
+            "REQUEST_OWNERSHIP_LIMIT": "Du har nået grænsen for private projekter ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Ønsker du at blive den nye projekt ejer?",
             "REQUEST_OWNERSHIP_DESC": "Anmod om, at den nuværende projekt ejer {{name}} overfører ejerskab af dette projekt til dig.",
             "REQUEST_OWNERSHIP_BUTTON": "Forespørgsel",
@@ -836,9 +837,19 @@
             "UNLIMITED_PROJECTS": "Ubegrænset",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Husk at du kan eje op til <strong>{{maxProjects}}</strong> private projekter. Du ejer for tiden <strong>{{currentProjects}}</strong> private projekter",
-                "PUBLIC": "Husk at du kan eje op til <strong>{{maxProjects}}</strong> offentlige projekter. Du ejer for tiden <strong>{{currentProjects}}</strong> offentlige projekter"
+                "PRIVATE_EXCEEDED": "Antallet af dine private projekter er <strong>{{currentProjects}}</strong>, hvilket er det maksimale antal, dit abonnement tillader.",
+                "PUBLIC": "Husk at du kan eje op til <strong>{{maxProjects}}</strong> offentlige projekter. Du ejer for tiden <strong>{{currentProjects}}</strong> offentlige projekter",
+                "PUBLIC_EXCEEDED": "Antallet af dine offentlige projekter er <strong>{{currentProjects}}</strong>, hvilket er det maksimale antal, dit abonnement tillader."
             },
             "CANT_BE_OWNED": "I øjeblikket kan du ikke blive ejer af et projekt af denne type. Hvis du gerne vil blive ejer af dette projekt, bedes du kontakte administratoren, så kan de ændrer dine kontoindstillinger for at aktivere projektets ejerskab."
+        },
+        "PROJECT_PRESETS": {
+            "MENU_TITLE": "Forudindstillinger",
+            "TITLE": "Standardværdier",
+            "SUBTITLE": "Angiv standardværdier for alle valgfelter."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -926,9 +937,9 @@
             "MANAGE_PROJECTS": "Håndter projekter",
             "TITLE_CREATE_PROJECT": "Opret projekt",
             "HELP_TITLE": "Hjælp",
+            "TAIGA_COMMUNITY_TITLE": "Gå til Taiga-fællesskabet",
+            "TAIGA_COMMUNITY": "Taiga-fællesskabet",
             "HOMEPAGE": "Hjemmeside",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Rediger dine notifikations indstillinger",
@@ -1110,6 +1121,18 @@
                 "CREATE_NEW_ISSUES": "Konverter under-problem til ny Taiga problem",
                 "NOT_CREATE_NEW_ISSUES": "Importer ikke under-problemer"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Dit privatliv er vigtigt for os (se vores <a href=\"https://www.taiga.io/privacy-policy\" title=\"Gå til privatlivspolitikken\" target=\"_blank\">privatlivspolitik</a>).",
+            "OPT_OUT": "Vi sender dig kun relevante e-mails (færre end 6 om året). Du kan til enhver tid afmelde dig ved at sende en e-mail til <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> med emnet “unsubscribe” eller via linket i et af vores nyhedsbreve.",
+            "DONT_ASK": "Spørg ikke igen",
+            "SUBSCRIBE": "Tilmeld dig",
+            "SUBSCRIBED": "Du er tilmeldt",
+            "LIGHTBOX_TITLE": "Vil du modtage meddelelser om Taiga?",
+            "CONFIRMATION": "Ja, send mig nyheder, produktopdateringer og anbefalinger om Taiga.",
+            "SAVE_PREFERENCE": "GEM INDSTILLINGER",
+            "NOTIFY_EXPLANATION": "Vi sender dig nyheder, produktopdateringer og anbefalinger om Taiga.",
+            "SAVED_PREFERENCE": "Dine indstillinger er blevet gemt"
         }
     },
     "LIGHTBOX": {
@@ -1152,7 +1175,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "Læs vores ",
+            "FAQ": "ofte stillede spørgsmål"
         },
         "SEARCH": {
             "TITLE": "Søg",
@@ -1188,7 +1213,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "Default",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "Placering",
+            "CREATE_TOP": "øverst",
+            "CREATE_BOTTOM": "nederst"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1543,6 +1571,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Luk notifikation",
+        "COMMUNICATION": "Meddelelser fra Taiga",
         "MAIL": "Email notifikation",
         "DESKTOP": "Desktop notifikationer ved hjælp af browser advarsler",
         "ASK_DELETE": "Er du sikker på at du vil slette?"

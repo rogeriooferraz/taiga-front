@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Add wiki links",
                 "DELETE_WIKI_LINKS": "Delete wiki links"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "تمت أرشفة هذا المشروع. أصبح الآن للقراءة فقط."
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Delete tag"
         },
         "HELP": "Do you need help? Check out our support page!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Default Values",
-            "SUBTITLE": "Set default values for all selector inputs."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Manage members",
             "PAGE_TITLE": "Memberships - {{projectName}}",
@@ -564,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "The project exceeds your maximum number of members for public projects",
             "PROJECT_OWNER": "Project owner",
             "REQUEST_OWNERSHIP": "Request ownership",
+            "REQUEST_OWNERSHIP_LIMIT": "لقد بلغت الحد الأقصى لعدد مشاريعك الخاصة ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Do you want to become the new project owner?",
             "REQUEST_OWNERSHIP_DESC": "Request that current project owner {{name}} transfer ownership of this project to you.",
             "REQUEST_OWNERSHIP_BUTTON": "Request",
@@ -837,9 +837,19 @@
             "UNLIMITED_PROJECTS": "Unlimited",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Please remember that you can own up to <strong>{{maxProjects}}</strong> private projects. You currently own <strong>{{currentProjects}}</strong> private projects",
-                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects"
+                "PRIVATE_EXCEEDED": "بلغ عدد مشاريعك الخاصة <strong>{{currentProjects}}</strong>، وهو الحد الأقصى الذي تسمح به خطة اشتراكك.",
+                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects",
+                "PUBLIC_EXCEEDED": "بلغ عدد مشاريعك العامة <strong>{{currentProjects}}</strong>، وهو الحد الأقصى الذي تسمح به خطة اشتراكك."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
+        },
+        "PROJECT_PRESETS": {
+            "MENU_TITLE": "الإعدادات المسبقة",
+            "TITLE": "القيم الافتراضية",
+            "SUBTITLE": "حدّد القيم الافتراضية لجميع حقول الاختيار."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - الإضافات - {{projectName}}"
         }
     },
     "USER": {
@@ -928,8 +938,6 @@
             "TITLE_CREATE_PROJECT": "Create project",
             "HELP_TITLE": "Help",
             "HOMEPAGE": "Homepage",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Edit your notification settings",
@@ -942,7 +950,9 @@
             "CHANGE_PASSWORD": "Change password",
             "DASHBOARD_TITLE": "Dashboard",
             "DISCOVER_TITLE": "Discover trending projects",
-            "DISCOVER": "Discover"
+            "DISCOVER": "Discover",
+            "TAIGA_COMMUNITY": "مجتمع Taiga",
+            "TAIGA_COMMUNITY_TITLE": "الذهاب إلى مجتمع Taiga"
         },
         "LIKE_BUTTON": {
             "LIKE": "Like",
@@ -1111,6 +1121,18 @@
                 "CREATE_NEW_ISSUES": "Convert sub-issues to new Taiga issues",
                 "NOT_CREATE_NEW_ISSUES": "Do not import sub-issues"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "خصوصيتك تهمنا (اطّلع على <a href=\"https://www.taiga.io/privacy-policy\" title=\"الانتقال إلى سياسة الخصوصية\" target=\"_blank\">سياسة الخصوصية</a>).",
+            "OPT_OUT": "سنرسل إليك رسائل إلكترونية ذات صلة فقط (أقل من 6 رسائل سنويًا). يمكنك إلغاء الاشتراك في أي وقت بإرسال رسالة إلى <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> بعنوان “unsubscribe” أو باستخدام الرابط الموجود في أي من نشراتنا الإخبارية.",
+            "DONT_ASK": "لا تسأل مرة أخرى",
+            "SUBSCRIBE": "اشترك",
+            "SUBSCRIBED": "أنت مشترك",
+            "LIGHTBOX_TITLE": "هل تريد تلقي إعلانات عن Taiga؟",
+            "CONFIRMATION": "نعم، أرسلوا إليّ أخبارًا وتحديثات للمنتج وتوصيات حول Taiga.",
+            "SAVE_PREFERENCE": "حفظ التفضيلات",
+            "NOTIFY_EXPLANATION": "سنرسل إليك أخبارًا وتحديثات للمنتج وتوصيات حول Taiga.",
+            "SAVED_PREFERENCE": "تم حفظ تفضيلاتك بنجاح"
         }
     },
     "LIGHTBOX": {
@@ -1153,7 +1175,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "اطّلع على ",
+            "FAQ": "الأسئلة الشائعة"
         },
         "SEARCH": {
             "TITLE": "Search",
@@ -1189,7 +1213,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "Default",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "الموضع",
+            "CREATE_TOP": "في الأعلى",
+            "CREATE_BOTTOM": "في الأسفل"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1544,6 +1571,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Close notification",
+        "COMMUNICATION": "مراسلات Taiga",
         "MAIL": "Notifications By Mail",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Are you sure you want to delete?"

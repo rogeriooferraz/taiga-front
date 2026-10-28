@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Wikiリンクを追加",
                 "DELETE_WIKI_LINKS": "Wikiリンクの削除"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "このプロジェクトはアーカイブされました。現在は読み取り専用になっています。"
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "タグを削除"
         },
         "HELP": "手助けが必要な場合はサポートページをチェックしてください！",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "初期値設定",
-            "SUBTITLE": "プルダウン項目の初期値を設定してください。"
-        },
         "MEMBERSHIPS": {
             "TITLE": "メンバー管理",
             "PAGE_TITLE": "メンバーシップ - {{projectName}}",
@@ -838,7 +837,9 @@
             "UNLIMITED_PROJECTS": "無制限",
             "OWNER_MESSAGE": {
                 "PRIVATE": "あなたが持てる非公開プロジェクトは最大<strong>{{maxProjects}}</strong>個までです。現在<strong>{{currentProjects}}</strong>個持っています",
-                "PUBLIC": "あなたが持てる公開プロジェクトは最大<strong>{{maxProjects}}</strong>個までです。現在<strong>{{currentProjects}}</strong>個持っています"
+                "PRIVATE_EXCEEDED": "非公開プロジェクトの数は<strong>{{currentProjects}}</strong>個で、サブスクリプションプランで許可されている上限に達しています。",
+                "PUBLIC": "あなたが持てる公開プロジェクトは最大<strong>{{maxProjects}}</strong>個までです。現在<strong>{{currentProjects}}</strong>個持っています",
+                "PUBLIC_EXCEEDED": "公開プロジェクトの数は<strong>{{currentProjects}}</strong>個で、サブスクリプションプランで許可されている上限に達しています。"
             },
             "CANT_BE_OWNED": "現在あなたはこのタイプのプロジェクトのオーナーにはなれません。このプロジェクトのオーナーになりたい場合は管理者に問い合わせてオーナー権限を変更してもらってください。"
         },
@@ -846,6 +847,9 @@
             "SUBTITLE": "プルダウン項目の初期値を設定できます。",
             "TITLE": "初期値",
             "MENU_TITLE": "設定"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - プラグイン - {{projectName}}"
         }
     },
     "USER": {
@@ -933,9 +937,9 @@
             "MANAGE_PROJECTS": "プロジェクト管理",
             "TITLE_CREATE_PROJECT": "プロジェクトを作成",
             "HELP_TITLE": "ヘルプ",
+            "TAIGA_COMMUNITY_TITLE": "Taigaコミュニティへ移動",
+            "TAIGA_COMMUNITY": "Taigaコミュニティ",
             "HOMEPAGE": "ホームページ",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "通知設定を編集",
@@ -1171,7 +1175,9 @@
             "CREATE": "課題を作成する: ",
             "PUBLIC": "public Taiga project",
             "EMAIL": "直接メールする: ",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "こちらをご覧ください： ",
+            "FAQ": "よくある質問"
         },
         "SEARCH": {
             "TITLE": "検索",

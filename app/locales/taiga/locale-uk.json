@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Додати посилання вікі",
                 "DELETE_WIKI_LINKS": "Видалити посилання вікі"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Цей проект було заархівовано. Тепер він доступний лише для читання."
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Видалити мітку"
         },
         "HELP": "Потрібна допомога? Завітайте на нашу сторінку підтримки!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Типові значення",
-            "SUBTITLE": "Встановити типові значення для всіх полів вибору."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Керувати учасниками",
             "PAGE_TITLE": "Членство - {{projectName}}",
@@ -850,7 +849,7 @@
             "MENU_TITLE": "Переднабори"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Додатки  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Додатки - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +938,6 @@
             "TITLE_CREATE_PROJECT": "Створити проєкт",
             "HELP_TITLE": "Допомога",
             "HOMEPAGE": "Домашня сторінка",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Відредагуйте Ваші налаштування повідомлень",

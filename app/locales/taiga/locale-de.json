@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Wiki Links hinzufügen",
                 "DELETE_WIKI_LINKS": "Wiki Links löschen"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Dieses Projekt wurde archiviert. Es kann jetzt nur noch gelesen werden."
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Schlagwort löschen"
         },
         "HELP": "Wenn Sie Hilfe benötigen, besuchen Sie unsere Support-Seite!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Vorgabewerte",
-            "SUBTITLE": "Standardwerte für alle ausgewählten Eingaben setzen."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Mitglieder verwalten",
             "PAGE_TITLE": "Mitgliedschaften - {{projectName}}",
@@ -839,8 +838,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Bitte denken Sie daran, dass Sie bis zu <strong>{{maxProjects}}</strong> private Projekte besitzen können. Derzeit besitzen Sie <strong>{{currentProjects}}</strong> private Projekte.",
                 "PUBLIC": "Bitte denken Sie daran, dass Sie bis zu <strong>{{maxProjects}}</strong> öffentliche Projekte besitzen können. Sie besitzen derzeit <strong>{{currentProjects}}</strong> öffentliche Projekte.",
-                "PUBLIC_EXCEEDED": "Sie haben derzeit <strong>{{currentProjects}} öffentliche Projekte</strong>, das Maximum, das Ihr Plan erlaubt.",
-                "PRIVATE_EXCEEDED": "Sie haben derzeit <strong>{{currentProjects}} private Projekte</strong>, das Maximum, das Ihr Plan erlaubt."
+                "PUBLIC_EXCEEDED": "Die Anzahl Ihrer öffentlichen Projekte beträgt <strong>{{currentProjects}}</strong> und hat damit die in Ihrem Abonnement zulässige Höchstzahl erreicht.",
+                "PRIVATE_EXCEEDED": "Die Anzahl Ihrer privaten Projekte beträgt <strong>{{currentProjects}}</strong> und hat damit die in Ihrem Abonnement zulässige Höchstzahl erreicht."
             },
             "CANT_BE_OWNED": "Zurzeit können Sie kein Projektleiter für diesen Projekt-Typ werden. Wenn Sie Projektleiter für dieses Projekt werden möchten, kontaktieren Sie bitte den Administrator, damit er Ihre Benutzerkonto-Einstellungen anpassen kann, damit Sie Projektleiter werden zu können."
         },
@@ -850,7 +849,7 @@
             "SUBTITLE": "Standardwerte für alle Selektoreingänge setzen."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugins  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +938,6 @@
             "TITLE_CREATE_PROJECT": "Projekt anlegen",
             "HELP_TITLE": "Hilfe",
             "HOMEPAGE": "Homepage",
-            "TAIGA_RESOURCES_TITLE": "Wechseln Sie zu den Taiga-Ressourcen",
-            "TAIGA_RESOURCES": "Taiga-Ressourcen",
             "FEEDBACK_TITLE": "Schreiben Sie uns Ihr Feedback",
             "FEEDBACK": "Eine Frage stellen",
             "NOTIFICATIONS_TITLE": "Benachrichtigungseinstellungen bearbeiten",

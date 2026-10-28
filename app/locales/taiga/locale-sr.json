@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Повезане корисничке приче",
         "CARD": {
             "ASSIGN_TO": "Додели",
+            "MOVE_TO_TOP": "Премести на врх",
             "EDIT": "Уреди карту",
             "DELETE": "Delete card",
             "DELETE_ISSUE": "Уклони захтев",
@@ -319,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Додај вики-везе",
                 "DELETE_WIKI_LINKS": "Уклони вики-везе"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Овај пројекат је архивиран. Сада је само за читање."
         }
     },
     "LOGIN": {
@@ -489,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Уклони ознаку"
         },
         "HELP": "Да ли вам је потребна помоћ? Прегледајте нашу страницу за подршку!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Подразумеване врености",
-            "SUBTITLE": "Постави почетне вредности за сва поља."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Уреди чланове",
             "PAGE_TITLE": "Чланства - {{projectName}}",
@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Пројекат је превазишао максимум чланова за јавне пројекте",
             "PROJECT_OWNER": "Власник пројекта",
             "REQUEST_OWNERSHIP": "Потражи власништво",
+            "REQUEST_OWNERSHIP_LIMIT": "Достигли сте ограничење броја приватних пројеката ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Да ли желите да постанете нови власници пројекта?",
             "REQUEST_OWNERSHIP_DESC": "Поднесите захтев да власник прокета преда вама власништво.",
             "REQUEST_OWNERSHIP_BUTTON": "Потражи",
@@ -836,9 +837,19 @@
             "UNLIMITED_PROJECTS": "Неограничено",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Имате право на <strong>{{maxProjects}}</strong> приватних пројекта. Тренутно имате <strong>{{currentProjects}}</strong> приватних пројекта.",
-                "PUBLIC": "Имате право на <strong>{{maxProjects}}</strong> јавних пројекта. Тренутно имате <strong>{{currentProjects}}</strong> јавних пројекта."
+                "PRIVATE_EXCEEDED": "Број ваших приватних пројеката је <strong>{{currentProjects}}</strong>, што је максималан број који дозвољава ваша претплата.",
+                "PUBLIC": "Имате право на <strong>{{maxProjects}}</strong> јавних пројекта. Тренутно имате <strong>{{currentProjects}}</strong> јавних пројекта.",
+                "PUBLIC_EXCEEDED": "Број ваших јавних пројеката је <strong>{{currentProjects}}</strong>, што је максималан број који дозвољава ваша претплата."
             },
             "CANT_BE_OWNED": "Тренутно неможете преузети власништво пројекта овог типа. Ако желите да постанете власник овог пројекта, молимо вас, контактирајте администратора да преко подешавања додели вама власништво."
+        },
+        "PROJECT_PRESETS": {
+            "MENU_TITLE": "Унапред подешене вредности",
+            "TITLE": "Подразумеване вредности",
+            "SUBTITLE": "Подесите подразумеване вредности за сва поља за избор."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Плагини - {{projectName}}"
         }
     },
     "USER": {
@@ -926,9 +937,9 @@
             "MANAGE_PROJECTS": "Управљање пројектима",
             "TITLE_CREATE_PROJECT": "Креирај пројекат",
             "HELP_TITLE": "Помоћ",
+            "TAIGA_COMMUNITY_TITLE": "Иди у Taiga заједницу",
+            "TAIGA_COMMUNITY": "Taiga заједница",
             "HOMEPAGE": "Главна страна",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Уреди подешавања обавештајима",
@@ -1110,6 +1121,18 @@
                 "CREATE_NEW_ISSUES": "Convert sub-issues to new Taiga issues",
                 "NOT_CREATE_NEW_ISSUES": "Do not import sub-issues"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Ваша приватност нам је важна (погледајте нашу <a href=\"https://www.taiga.io/privacy-policy\" title=\"Иди на политику приватности\" target=\"_blank\">политику приватности</a>).",
+            "OPT_OUT": "Слаћемо вам само релевантне имејлове (мање од 6 годишње). Можете се одјавити у било ком тренутку слањем имејла на <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> са насловом “unsubscribe” или путем везе у било ком од наших билтена.",
+            "DONT_ASK": "Не питај поново",
+            "SUBSCRIBE": "Претплати се",
+            "SUBSCRIBED": "Претплаћени сте",
+            "LIGHTBOX_TITLE": "Желите ли да примате обавештења о Taiga-и?",
+            "CONFIRMATION": "Да, шаљите ми вести, ажурирања производа и препоруке у вези са Taiga-ом.",
+            "SAVE_PREFERENCE": "САЧУВАЈ ПОДЕШАВАЊА",
+            "NOTIFY_EXPLANATION": "Слаћемо вам вести, ажурирања производа и препоруке у вези са Taiga-ом.",
+            "SAVED_PREFERENCE": "Ваша подешавања су успешно сачувана"
         }
     },
     "LIGHTBOX": {
@@ -1152,7 +1175,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "Погледајте ",
+            "FAQ": "Често постављана питања"
         },
         "SEARCH": {
             "TITLE": "Претрага",
@@ -1188,7 +1213,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "Default",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "Положај",
+            "CREATE_TOP": "На почетку",
+            "CREATE_BOTTOM": "На крају"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1543,6 +1571,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Затвори обавештење",
+        "COMMUNICATION": "Поруке од Taiga",
         "MAIL": "Обавештења поштом",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Да ли сте сигурни да желите да уклоните?"

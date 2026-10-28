@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "연결된 유저 스토리",
         "CARD": {
             "ASSIGN_TO": "다음으로 할당",
+            "MOVE_TO_TOP": "맨 위로 이동",
             "EDIT": "카드 수정",
             "DELETE": "Delete card",
             "DELETE_ISSUE": "이슈 삭제",
@@ -319,6 +320,9 @@
                 "ADD_WIKI_LINKS": "위키 링크 추가하기",
                 "DELETE_WIKI_LINKS": "위키 링크 삭제하기"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "이 프로젝트는 보관되었습니다. 이제 읽기 전용입니다."
         }
     },
     "LOGIN": {
@@ -489,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "태그 삭제하기"
         },
         "HELP": "도움이 필요하다면 고객 지원 페이지를 확인하세요",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "기본 값",
-            "SUBTITLE": "선택된 모든 항목을 모두 초기값으로 설정"
-        },
         "MEMBERSHIPS": {
             "TITLE": "회원 관리",
             "PAGE_TITLE": "팀원 - {{projectName}}",
@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "프로젝트가 공개 프로젝트의 최대 회원 수를 초과했습니다.",
             "PROJECT_OWNER": "프로젝트 소유자",
             "REQUEST_OWNERSHIP": "소유권 요청",
+            "REQUEST_OWNERSHIP_LIMIT": "비공개 프로젝트 한도({{maxProjects}})에 도달했습니다.",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "새 프로젝트의 소유자가 되고 싶습니까?",
             "REQUEST_OWNERSHIP_DESC": "현재 프로젝트 소유자 {{name}}에게 이 프로젝트의 소유권을 당신에게 양도하도록 요청합니다.",
             "REQUEST_OWNERSHIP_BUTTON": "요청하기",
@@ -835,10 +836,20 @@
             "ADD_COMMENT": "프로젝트 소유자에 대한 의견을 추가 하시겠습니까?",
             "UNLIMITED_PROJECTS": "제한 없음",
             "OWNER_MESSAGE": {
-                "PRIVATE": "<strong>{{maxProjects}}</ strong>개의 비공개 프로젝트를 소유 할 수 있음을 기억하십시오. 현재 당신은 <strong>{{currentProjects}}</ strong>개의 비공개 프로젝트를 소유하고 있습니다.",
-                "PUBLIC": "<strong>{{maxProjects}}</ strong>개의 공공 프로젝트를 소유 할 수 있음을 기억하십시오. 현재 당신은 <strong>{{currentProjects}}</ strong>개의 공공 프로젝트를 소유하고 있습니다."
+                "PRIVATE": "<strong>{{maxProjects}}</strong>개의 비공개 프로젝트를 소유 할 수 있음을 기억하십시오. 현재 당신은 <strong>{{currentProjects}}</strong>개의 비공개 프로젝트를 소유하고 있습니다.",
+                "PRIVATE_EXCEEDED": "비공개 프로젝트 수는 <strong>{{currentProjects}}</strong>개로, 구독 요금제에서 허용하는 최대 개수에 도달했습니다.",
+                "PUBLIC": "<strong>{{maxProjects}}</strong>개의 공개 프로젝트를 소유 할 수 있음을 기억하십시오. 현재 당신은 <strong>{{currentProjects}}</strong>개의 공개 프로젝트를 소유하고 있습니다.",
+                "PUBLIC_EXCEEDED": "공개 프로젝트 수는 <strong>{{currentProjects}}</strong>개로, 구독 요금제에서 허용하는 최대 개수에 도달했습니다."
             },
             "CANT_BE_OWNED": "현재 이 유형의 프로젝트 소유자가 될 수 없습니다. 이 프로젝트의 소유자가되고 싶다면 관리자에게 문의하여 프로젝트 소유권을 사용하도록 계정 설정을 변경하십시오."
+        },
+        "PROJECT_PRESETS": {
+            "MENU_TITLE": "사전 설정",
+            "TITLE": "기본값",
+            "SUBTITLE": "모든 선택 필드의 기본값을 설정합니다."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - 플러그인 - {{projectName}}"
         }
     },
     "USER": {
@@ -926,9 +937,9 @@
             "MANAGE_PROJECTS": "프로젝트 관리하기",
             "TITLE_CREATE_PROJECT": "프로젝트 생성하기",
             "HELP_TITLE": "도움말",
+            "TAIGA_COMMUNITY_TITLE": "Taiga 커뮤니티로 이동",
+            "TAIGA_COMMUNITY": "Taiga 커뮤니티",
             "HOMEPAGE": "홈페이지",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "알림 설정 수정",
@@ -1110,6 +1121,18 @@
                 "CREATE_NEW_ISSUES": "하위 이슈를 새로운 타이가 이슈로 변경",
                 "NOT_CREATE_NEW_ISSUES": "하위 이슈를 가져오지 마십시오."
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "고객님의 개인정보는 저희에게 중요합니다(<a href=\"https://www.taiga.io/privacy-policy\" title=\"개인정보 처리방침으로 이동\" target=\"_blank\">개인정보 처리방침</a>을 확인해 주세요).",
+            "OPT_OUT": "관련 있는 이메일만 보내 드립니다(연간 6통 미만). 언제든지 <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a>로 제목이 “unsubscribe”인 이메일을 보내거나 뉴스레터에 있는 링크를 이용해 구독을 취소할 수 있습니다.",
+            "DONT_ASK": "다시 묻지 않기",
+            "SUBSCRIBE": "구독하기",
+            "SUBSCRIBED": "구독 중",
+            "LIGHTBOX_TITLE": "Taiga에 관한 소식을 받으시겠습니까?",
+            "CONFIRMATION": "예, Taiga에 관한 뉴스, 제품 업데이트 및 추천 정보를 보내주세요.",
+            "SAVE_PREFERENCE": "환경설정 저장",
+            "NOTIFY_EXPLANATION": "Taiga에 관한 뉴스, 제품 업데이트 및 추천 정보를 보내드립니다.",
+            "SAVED_PREFERENCE": "환경설정이 저장되었습니다"
         }
     },
     "LIGHTBOX": {
@@ -1152,7 +1175,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "확인해 보세요: ",
+            "FAQ": "자주 묻는 질문"
         },
         "SEARCH": {
             "TITLE": "검색",
@@ -1188,7 +1213,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "Default",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "위치",
+            "CREATE_TOP": "맨 위",
+            "CREATE_BOTTOM": "맨 아래"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1543,6 +1571,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "알림 닫기",
+        "COMMUNICATION": "Taiga 소식",
         "MAIL": "메일로 알림",
         "DESKTOP": "브라우저 경고를 통한 데스크탑 알림",
         "ASK_DELETE": "정말 삭제하실 건가요?"

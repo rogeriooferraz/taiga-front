@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "اضافه کردن لینک‌های ویکی",
                 "DELETE_WIKI_LINKS": "حذف لینک‌های ویکی"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "این پروژه بایگانی شده است. اکنون فقط قابل خواندن است."
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "حذف برچسب"
         },
         "HELP": "نیازمند کمک هستید؟ به صفحه‌ی پشتیبانی ما مراجعه کنید!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "حذف کردن مقدار",
-            "SUBTITLE": "مقدار پیش‌فرض برای تمام ورودی‌های انتخابی را تنظیم کنید."
-        },
         "MEMBERSHIPS": {
             "TITLE": "مدیریت اعضا",
             "PAGE_TITLE": "عضویت‌ها - {{projectName}}",
@@ -564,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "پروژه به حداکثر تعداد اعضای پروژه‌های عمومی رسیده است",
             "PROJECT_OWNER": "مالکیت پروژه",
             "REQUEST_OWNERSHIP": "درخواست مالکیت",
+            "REQUEST_OWNERSHIP_LIMIT": "شما به سقف تعداد پروژه‌های خصوصی خود ({{maxProjects}}) رسیده‌اید.",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "آیا می‌خواهید مالک جدید پروژه شوید؟",
             "REQUEST_OWNERSHIP_DESC": "درخواست از مالک پروژه‌ {{name}} برای انتقال مالکیت این پروژه به شما",
             "REQUEST_OWNERSHIP_BUTTON": "درخواست",
@@ -837,13 +837,19 @@
             "UNLIMITED_PROJECTS": "نامحدود",
             "OWNER_MESSAGE": {
                 "PRIVATE": "به خاطر داشته باشید که شما می‌توانید مالک حداکثر <strong>{{maxProjects}}</strong> پروژه‌ی شخصی باشید. در حال حاضر <strong>{{currentProjects}}</strong> پروژه‌ی شخصی دارید",
-                "PUBLIC": "به خاطر داشته باشید که شما می‌توانید مالک حداکثر <strong>{{maxProjects}}</strong> پروژه‌ی عمومی باشید. در حال حاضر <strong>{{currentProjects}}</strong> پروژه‌ی عمومی دارید"
+                "PRIVATE_EXCEEDED": "تعداد پروژه‌های خصوصی شما <strong>{{currentProjects}}</strong> است که به سقف مجاز طرح اشتراک شما رسیده است.",
+                "PUBLIC": "به خاطر داشته باشید که شما می‌توانید مالک حداکثر <strong>{{maxProjects}}</strong> پروژه‌ی عمومی باشید. در حال حاضر <strong>{{currentProjects}}</strong> پروژه‌ی عمومی دارید",
+                "PUBLIC_EXCEEDED": "تعداد پروژه‌های عمومی شما <strong>{{currentProjects}}</strong> است که به سقف مجاز طرح اشتراک شما رسیده است."
             },
             "CANT_BE_OWNED": "در حال حاضر نمی‌توانید مالک پروژه‌ای از این نوع شوید. اگر می‌خواهید مالک این پروژه شوید، لطفاً با ادمین تماس بگیرید تا تنظیمات حساب شما را برای فعالسازی مالکیت پروژه تغییر دهد."
         },
         "PROJECT_PRESETS": {
             "TITLE": "مقادیر پیش‌فرض",
-            "SUBTITLE": "مقادیر پیش‌فرض را برای همهۀ ورودی‌های انتخابگر تنظیم کنید."
+            "SUBTITLE": "مقادیر پیش‌فرض را برای همهٔ فیلدهای انتخابی تعیین کنید.",
+            "MENU_TITLE": "پیش‌تنظیم‌ها"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - پلاگین‌ها - {{projectName}}"
         }
     },
     "USER": {
@@ -931,9 +937,9 @@
             "MANAGE_PROJECTS": "مدیریت پروژه‌ها",
             "TITLE_CREATE_PROJECT": "ایجاد پروژه",
             "HELP_TITLE": "راهنمایی",
+            "TAIGA_COMMUNITY_TITLE": "رفتن به جامعهٔ تایگا",
+            "TAIGA_COMMUNITY": "جامعهٔ تایگا",
             "HOMEPAGE": "صفحه‌ی خانه",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "ویرایش تنظیمات نوتیفیکیشن",
@@ -1115,6 +1121,18 @@
                 "CREATE_NEW_ISSUES": "تبدیل موضوعات زیرمجموعه به موضوعات تایگا",
                 "NOT_CREATE_NEW_ISSUES": "موضوعات زیرمجموعه را وارد نکن"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "حریم خصوصی شما برای ما مهم است (<a href=\"https://www.taiga.io/privacy-policy\" title=\"رفتن به سیاست حفظ حریم خصوصی\" target=\"_blank\">سیاست حفظ حریم خصوصی</a> ما را ببینید).",
+            "OPT_OUT": "ما فقط ایمیل‌های مرتبط برای شما ارسال می‌کنیم (کمتر از ۶ ایمیل در سال). می‌توانید هر زمان با ارسال ایمیل به <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> با موضوع “unsubscribe” یا از طریق پیوند موجود در هر یک از خبرنامه‌های ما، اشتراک خود را لغو کنید.",
+            "DONT_ASK": "دیگر نپرسید",
+            "SUBSCRIBE": "مشترک شوید",
+            "SUBSCRIBED": "مشترک هستید",
+            "LIGHTBOX_TITLE": "آیا می‌خواهید اطلاعیه‌های Taiga را دریافت کنید؟",
+            "CONFIRMATION": "بله، اخبار، به‌روزرسانی‌های محصول و پیشنهادهای مربوط به Taiga را برای من بفرستید.",
+            "SAVE_PREFERENCE": "ذخیره تنظیمات",
+            "NOTIFY_EXPLANATION": "اخبار، به‌روزرسانی‌های محصول و پیشنهادهای مربوط به Taiga را برای شما می‌فرستیم.",
+            "SAVED_PREFERENCE": "تنظیمات شما با موفقیت ذخیره شد"
         }
     },
     "LIGHTBOX": {
@@ -1157,7 +1175,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "مشاهده کنید: ",
+            "FAQ": "پرسش‌های متداول"
         },
         "SEARCH": {
             "TITLE": "جست‌وجو",
@@ -1193,7 +1213,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "پیش فرض",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "جایگاه",
+            "CREATE_TOP": "در بالای فهرست",
+            "CREATE_BOTTOM": "در پایین فهرست"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1548,6 +1571,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "بستن نوتیفیکیشن",
+        "COMMUNICATION": "پیام‌های تایگا",
         "MAIL": "نوتیفیکیشن از طریق ایمیل",
         "DESKTOP": "اعلانهای دسکتاپ با استفاده از هشدار مرورگر",
         "ASK_DELETE": "آیا در مورد حذف کردن، مطمئن هستید؟"

@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Adicionar links da wiki",
                 "DELETE_WIKI_LINKS": "Excluir links da wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Este projeto foi arquivado. Agora está em modo apenas leitura."
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Excluir tag"
         },
         "HELP": "Você precisa de ajuda? Verifique nossa pagina de suporte!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Valores Padrão",
-            "SUBTITLE": "Seleciona valores default para todos os seletores"
-        },
         "MEMBERSHIPS": {
             "TITLE": "Gerenciar Membros",
             "PAGE_TITLE": "Membros - {{projectName}}",
@@ -839,8 +838,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Por favor, lembre-se que você pode ser dono de até <strong>{{maxProjects}}</strong> projetos privados. Você, atualmente, é dono de <strong>{{currentProjects}}</strong> projetos privados.",
                 "PUBLIC": "Por favor, lembre-se de que você pode ser dono de até <strong>{{maxProjects}}</strong> projetos públicos. Você atualmente é dono de <strong>{{currentProjects}}</strong> projetos públicos.",
-                "PUBLIC_EXCEEDED": "Atualmente você tem <strong>{{currentProjects}} projetos públicos</strong> do máximo que seu plano permite.",
-                "PRIVATE_EXCEEDED": "Atualmente você tem <strong>{{currentProjects}} projetos privados </strong> do máximo que seu plano permite."
+                "PUBLIC_EXCEEDED": "Seu total de projetos públicos é <strong>{{currentProjects}}</strong>, o máximo permitido pelo seu plano de assinatura.",
+                "PRIVATE_EXCEEDED": "Seu total de projetos privados é <strong>{{currentProjects}}</strong>, o máximo permitido pelo seu plano de assinatura."
             },
             "CANT_BE_OWNED": "No momento, você não pode se tornar dono de um projeto desse tipo. Se você quiser se tornar dono desse projeto, por favor, entre em contato com os administradores para mudarem as configurações da sua conta para habilitar a propriedade do projeto."
         },
@@ -850,7 +849,7 @@
             "MENU_TITLE": "Predefinições"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "As pessoas com a qual você  na Taiga serão seus contatos automaticamente"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +938,6 @@
             "TITLE_CREATE_PROJECT": "Criar projeto",
             "HELP_TITLE": "Ajuda",
             "HOMEPAGE": "Página pessoal",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Pergunte algo",
             "NOTIFICATIONS_TITLE": "Editar suas configurações de notificações",

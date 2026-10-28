@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "סיפורי משתמש שייכים",
         "CARD": {
             "ASSIGN_TO": "שייך אל",
+            "MOVE_TO_TOP": "העבר לראש",
             "EDIT": "ערוך כרטיס",
             "DELETE": "מחק כרטיס",
             "DELETE_ISSUE": "מחק תקלה",
@@ -319,6 +320,9 @@
                 "ADD_WIKI_LINKS": "הוסף קישורי ויקי",
                 "DELETE_WIKI_LINKS": "מחק קישורי ויקי"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "הפרויקט הזה הועבר לארכיון. כעת הוא זמין לקריאה בלבד."
         }
     },
     "LOGIN": {
@@ -489,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "מחק תגית"
         },
         "HELP": "זקוק לעזרה? גש לעמוד התמיכה!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "ערכי ברירת מחדל",
-            "SUBTITLE": "קבע ערכי ברירת מחדל לכל השדות."
-        },
         "MEMBERSHIPS": {
             "TITLE": "נהל משתתפים",
             "PAGE_TITLE": "חברויות - {{projectName}}",
@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "הפרוייקט עבר את מספר המשתמשים המירבי המותר לפרוייקטים פרטיים.",
             "PROJECT_OWNER": "בעלי הפרוייקט",
             "REQUEST_OWNERSHIP": "בקשת בעלות",
+            "REQUEST_OWNERSHIP_LIMIT": "הגעת למגבלת הפרויקטים הפרטיים שלך ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "האם אתה חפץ להיות בעלי הפרוייקט הבאים?",
             "REQUEST_OWNERSHIP_DESC": "בקש שבעלי הפרוייקט הנוכחי:  {{name}}, יעביר הבעלות לפרוייקט אליך",
             "REQUEST_OWNERSHIP_BUTTON": "בקשה",
@@ -835,10 +836,20 @@
             "ADD_COMMENT": "האם אתה רוצה להוסיף תגובה לבעלים?",
             "UNLIMITED_PROJECTS": "בלתי מוגבל",
             "OWNER_MESSAGE": {
-                "PRIVATE": "זכור, יש באפשרותך להיות בעלים של  <strong>{{maxProjects}}</strong> פרוייקטים ציבוריים. כרגע כבר יש לך <strong>{{currentProjects}}</strong> פרוייקטים כאלה.",
-                "PUBLIC": "זכור, יש באפשרותך להיות בעלים של  <strong>{{maxProjects}}</strong> פרוייקטים ציבוריים. כרגע כבר יש לך <strong>{{currentProjects}}</strong> פרוייקטים כאלה."
+                "PRIVATE": "זכור, יש באפשרותך להיות בעלים של  <strong>{{maxProjects}}</strong> פרוייקטים פרטיים. כרגע כבר יש לך <strong>{{currentProjects}}</strong> פרוייקטים כאלה.",
+                "PRIVATE_EXCEEDED": "מספר הפרויקטים הפרטיים שלך הוא <strong>{{currentProjects}}</strong>, המספר המרבי שתוכנית המינוי שלך מאפשרת.",
+                "PUBLIC": "זכור, יש באפשרותך להיות בעלים של  <strong>{{maxProjects}}</strong> פרוייקטים ציבוריים. כרגע כבר יש לך <strong>{{currentProjects}}</strong> פרוייקטים כאלה.",
+                "PUBLIC_EXCEEDED": "מספר הפרויקטים הציבוריים שלך הוא <strong>{{currentProjects}}</strong>, המספר המרבי שתוכנית המינוי שלך מאפשרת."
             },
             "CANT_BE_OWNED": "כרגע אינך יכול להפוך ךהיות בעלי הפרויקט מסוג זה. אם תרצה להפוך כזה, אנא צור קשר עם המנהל כדי שישנו את הגדרת החשבון שלך כדי לאפשר לך בעלות על הפרויקט"
+        },
+        "PROJECT_PRESETS": {
+            "TITLE": "ערכי ברירת מחדל",
+            "MENU_TITLE": "הגדרות קבועות מראש",
+            "SUBTITLE": "הגדר ערכי ברירת מחדל לכל שדות הבחירה."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - תוספים - {{projectName}}"
         }
     },
     "USER": {
@@ -926,9 +937,9 @@
             "MANAGE_PROJECTS": "נהל פרוייקטים",
             "TITLE_CREATE_PROJECT": "צור פרוייקט",
             "HELP_TITLE": "עזרה",
+            "TAIGA_COMMUNITY_TITLE": "מעבר לקהילת Taiga",
+            "TAIGA_COMMUNITY": "קהילת Taiga",
             "HOMEPAGE": "דף הבית",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "ערוך את הגדרות ההתראות שלך",
@@ -1110,6 +1121,18 @@
                 "CREATE_NEW_ISSUES": "המר תת-תקלה לנושא טאיגה חדש",
                 "NOT_CREATE_NEW_ISSUES": "אל תייבא תת-תקלות"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "הפרטיות שלך חשובה לנו (אפשר לעיין ב<a href=\"https://www.taiga.io/privacy-policy\" title=\"מעבר למדיניות הפרטיות\" target=\"_blank\">מדיניות הפרטיות</a> שלנו).",
+            "OPT_OUT": "נשלח לך רק הודעות דוא״ל רלוונטיות (פחות מ־6 בשנה). אפשר לבטל את ההרשמה בכל עת על ידי שליחת הודעת דוא״ל אל <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> עם הנושא “unsubscribe” או באמצעות הקישור בכל אחד מהניוזלטרים שלנו.",
+            "DONT_ASK": "אל תשאל שוב",
+            "SUBSCRIBE": "הירשם",
+            "SUBSCRIBED": "המינוי פעיל",
+            "LIGHTBOX_TITLE": "האם ברצונך לקבל הודעות על Taiga?",
+            "CONFIRMATION": "כן, שלחו לי חדשות, עדכוני מוצר והמלצות על Taiga.",
+            "SAVE_PREFERENCE": "שמירת העדפות",
+            "NOTIFY_EXPLANATION": "נשלח לך חדשות, עדכוני מוצר והמלצות על Taiga.",
+            "SAVED_PREFERENCE": "ההעדפות שלך נשמרו בהצלחה"
         }
     },
     "LIGHTBOX": {
@@ -1152,7 +1175,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "למידע נוסף: ",
+            "FAQ": "שאלות נפוצות"
         },
         "SEARCH": {
             "TITLE": "חיפוש",
@@ -1188,7 +1213,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "ברירת מחדל",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "מיקום",
+            "CREATE_TOP": "בראש הרשימה",
+            "CREATE_BOTTOM": "בסוף הרשימה"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1543,6 +1571,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "סגור התראה",
+        "COMMUNICATION": "הודעות מ-Taiga",
         "MAIL": "התראות בדוא\"ל",
         "DESKTOP": "התראות שולחן עבודה בעזרת הדפדפן",
         "ASK_DELETE": "האם אתה בטוח שברצונך למחוק?"

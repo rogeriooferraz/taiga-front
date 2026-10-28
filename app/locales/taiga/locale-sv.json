@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Relaterade användarhistorier",
         "CARD": {
             "ASSIGN_TO": "Tilldela Till",
+            "MOVE_TO_TOP": "Flytta längst upp",
             "EDIT": "Ändra kort",
             "DELETE": "Delete card",
             "DELETE_ISSUE": "Ta bort ärende",
@@ -319,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Lägg till wiki-länkar",
                 "DELETE_WIKI_LINKS": "Ta bort wiki-länkar"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Det här projektet har arkiverats. Det är nu skrivskyddat."
         }
     },
     "LOGIN": {
@@ -489,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Ta bort etikett"
         },
         "HELP": "Behöver du hjälp? Besök hjälpsidorna!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Standardvärden",
-            "SUBTITLE": "Sätt standardvärden för alla ingångsval."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Hantera medlemmar",
             "PAGE_TITLE": "Medlemskap - {{projectName}}",
@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Projektet överstiger antalet tillåtna medlemmar för ett publikt projekt",
             "PROJECT_OWNER": "Projektägare",
             "REQUEST_OWNERSHIP": "Efterfråga ägareskap",
+            "REQUEST_OWNERSHIP_LIMIT": "Du har nått gränsen för privata projekt ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Do you want to become the new project owner?",
             "REQUEST_OWNERSHIP_DESC": "Begär att den nuvarande projektägaren {{namn}} överför ägarskap av det här projektet till dig.",
             "REQUEST_OWNERSHIP_BUTTON": "Förfrågan",
@@ -836,9 +837,19 @@
             "UNLIMITED_PROJECTS": "Obegränsad",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Please remember that you can own up to <strong>{{maxProjects}}</strong> private projects. You currently own <strong>{{currentProjects}}</strong> private projects",
-                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects"
+                "PRIVATE_EXCEEDED": "Antalet privata projekt du har är <strong>{{currentProjects}}</strong>, vilket är det högsta antal som ditt abonnemang tillåter.",
+                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects",
+                "PUBLIC_EXCEEDED": "Antalet offentliga projekt du har är <strong>{{currentProjects}}</strong>, vilket är det högsta antal som ditt abonnemang tillåter."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
+        },
+        "PROJECT_PRESETS": {
+            "TITLE": "Standardvärden",
+            "MENU_TITLE": "Förinställningar",
+            "SUBTITLE": "Ange standardvärden för alla valfält."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Insticksprogram - {{projectName}}"
         }
     },
     "USER": {
@@ -926,9 +937,9 @@
             "MANAGE_PROJECTS": "Hantera projekt",
             "TITLE_CREATE_PROJECT": "Skapa projekt",
             "HELP_TITLE": "Hjälp",
+            "TAIGA_COMMUNITY_TITLE": "Gå till Taiga-gemenskapen",
+            "TAIGA_COMMUNITY": "Taiga-gemenskapen",
             "HOMEPAGE": "Webbplats",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Ändra inställningar för dina notifieringar",
@@ -1110,6 +1121,18 @@
                 "CREATE_NEW_ISSUES": "Convert sub-issues to new Taiga issues",
                 "NOT_CREATE_NEW_ISSUES": "Do not import sub-issues"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Din integritet är viktig för oss (se vår <a href=\"https://www.taiga.io/privacy-policy\" title=\"Gå till integritetspolicyn\" target=\"_blank\">integritetspolicy</a>).",
+            "OPT_OUT": "Vi skickar bara relevanta e-postmeddelanden till dig (färre än 6 per år). Du kan när som helst avsluta prenumerationen genom att skicka ett e-postmeddelande till <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> med ämnet “unsubscribe” eller via länken i något av våra nyhetsbrev.",
+            "DONT_ASK": "Fråga inte igen",
+            "SUBSCRIBE": "Prenumerera",
+            "SUBSCRIBED": "Du prenumererar",
+            "LIGHTBOX_TITLE": "Vill du få meddelanden om Taiga?",
+            "CONFIRMATION": "Ja, skicka mig nyheter, produktuppdateringar och rekommendationer om Taiga.",
+            "SAVE_PREFERENCE": "SPARA INSTÄLLNINGAR",
+            "NOTIFY_EXPLANATION": "Vi skickar dig nyheter, produktuppdateringar och rekommendationer om Taiga.",
+            "SAVED_PREFERENCE": "Dina inställningar har sparats"
         }
     },
     "LIGHTBOX": {
@@ -1152,7 +1175,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "Läs våra ",
+            "FAQ": "vanliga frågor"
         },
         "SEARCH": {
             "TITLE": "Sök",
@@ -1188,7 +1213,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "Default",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "Placering",
+            "CREATE_TOP": "längst upp",
+            "CREATE_BOTTOM": "längst ner"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1543,6 +1571,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Stäng avisering",
+        "COMMUNICATION": "Meddelanden från Taiga",
         "MAIL": "Notifieringar via e-post",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Är du säker på att du vill radera?"

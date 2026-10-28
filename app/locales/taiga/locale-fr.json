@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Ajouter des liens wiki",
                 "DELETE_WIKI_LINKS": "Supprimer des liens wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Ce projet a été archivé. Il est désormais en lecture seule."
         }
     },
     "LOGIN": {
@@ -490,10 +493,6 @@
             "TITLE_ACTION_DELETE_TAG": "Supprimer le mot-clé"
         },
         "HELP": "Avez-vous besoin d'aide ? Consultez notre page d'assistance !",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Valeurs par défaut",
-            "SUBTITLE": "Définir les valeurs par défaut pour toutes les listes de sélection."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Gérer les membres",
             "PAGE_TITLE": "Membres - {{projectName}}",
@@ -850,7 +849,7 @@
             "TITLE": "Valeurs par défaut"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugins  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +938,6 @@
             "TITLE_CREATE_PROJECT": "Créer un projet",
             "HELP_TITLE": "Aide",
             "HOMEPAGE": "Page d'accueil",
-            "TAIGA_RESOURCES_TITLE": "Aller aux ressources Taiga",
-            "TAIGA_RESOURCES": "Ressources Taiga",
             "FEEDBACK_TITLE": "Écrivez-nous vos commentaires",
             "FEEDBACK": "Posez une question",
             "NOTIFICATIONS_TITLE": "Modifier vos réglages de notification",
