@@ -1193,7 +1193,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "Default",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "Sijainti",
+            "CREATE_TOP": "Ylimpänä",
+            "CREATE_BOTTOM": "Alimpana"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",

@@ -1193,7 +1193,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "پیش فرض",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "جایگاه",
+            "CREATE_TOP": "در بالای فهرست",
+            "CREATE_BOTTOM": "در پایین فهرست"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",

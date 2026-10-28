@@ -1193,7 +1193,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "ברירת מחדל",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "מיקום",
+            "CREATE_TOP": "בראש הרשימה",
+            "CREATE_BOTTOM": "בסוף הרשימה"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",

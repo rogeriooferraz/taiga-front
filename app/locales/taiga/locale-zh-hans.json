@@ -1194,7 +1194,10 @@
             "SELECT_STATUS": "选择状态",
             "DEFAULT": "默认",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "位置",
+            "CREATE_TOP": "最上方",
+            "CREATE_BOTTOM": "最下方"
         },
         "DISABLE_KANBAN": {
             "TITLE": "停用看板",
