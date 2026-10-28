@@ -621,6 +621,7 @@ AdminProjectRequestOwnershipDirective = (lightboxFactory) ->
                         "class": "lightbox lightbox-request-ownership"
                     }, {
                         projectId: scope.projectId
+                        name: scope.owner.full_name_display
                     })
 
         scope: {
