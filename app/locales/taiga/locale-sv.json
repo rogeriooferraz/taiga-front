@@ -1555,6 +1555,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Stäng avisering",
+        "COMMUNICATION": "Meddelanden från Taiga",
         "MAIL": "Notifieringar via e-post",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Är du säker på att du vill radera?"

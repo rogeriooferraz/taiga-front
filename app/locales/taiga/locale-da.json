@@ -1555,6 +1555,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Luk notifikation",
+        "COMMUNICATION": "Meddelelser fra Taiga",
         "MAIL": "Email notifikation",
         "DESKTOP": "Desktop notifikationer ved hjælp af browser advarsler",
         "ASK_DELETE": "Er du sikker på at du vil slette?"

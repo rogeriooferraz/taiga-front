@@ -1555,6 +1555,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "알림 닫기",
+        "COMMUNICATION": "Taiga 소식",
         "MAIL": "메일로 알림",
         "DESKTOP": "브라우저 경고를 통한 데스크탑 알림",
         "ASK_DELETE": "정말 삭제하실 건가요?"

@@ -1556,6 +1556,7 @@
         "WARNING_TEXT": "修改未能保存！",
         "SAVED": "修改已保存",
         "CLOSE": "关闭通知",
+        "COMMUNICATION": "Taiga 消息",
         "MAIL": "通过邮件通知",
         "DESKTOP": "使用浏览器警告作为桌面提醒",
         "ASK_DELETE": "你确定要删除吗？"

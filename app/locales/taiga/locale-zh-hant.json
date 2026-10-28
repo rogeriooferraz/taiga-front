@@ -1564,6 +1564,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "關閉通知",
+        "COMMUNICATION": "Taiga 訊息",
         "MAIL": "透過郵件通知",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "你確定要刪除嗎？"

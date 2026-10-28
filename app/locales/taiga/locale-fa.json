@@ -1555,6 +1555,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "بستن نوتیفیکیشن",
+        "COMMUNICATION": "پیام‌های تایگا",
         "MAIL": "نوتیفیکیشن از طریق ایمیل",
         "DESKTOP": "اعلانهای دسکتاپ با استفاده از هشدار مرورگر",
         "ASK_DELETE": "آیا در مورد حذف کردن، مطمئن هستید؟"

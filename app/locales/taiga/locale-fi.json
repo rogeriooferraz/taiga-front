@@ -1555,6 +1555,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Sulje ilmoitus",
+        "COMMUNICATION": "Taigan viestit",
         "MAIL": "Ilmoitukset sähköpostilla",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Oletko varma että haluat poistaa tämän?"

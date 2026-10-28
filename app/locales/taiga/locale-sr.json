@@ -1555,6 +1555,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Затвори обавештење",
+        "COMMUNICATION": "Поруке од Taiga",
         "MAIL": "Обавештења поштом",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Да ли сте сигурни да желите да уклоните?"

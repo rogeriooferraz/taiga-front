@@ -1571,6 +1571,7 @@
         "WARNING_TEXT": "Twoje zmiany nie zostały zapisane!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Zamknij powiadomienie",
+        "COMMUNICATION": "Wiadomości od Taigi",
         "MAIL": "Aktywność",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Czy na pewno chcesz usunąć?"

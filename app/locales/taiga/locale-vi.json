@@ -1555,6 +1555,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Đóng thông báo",
+        "COMMUNICATION": "Thông tin từ Taiga",
         "MAIL": "Thông báo qua mail",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Bạn có chắc chắn muốn xóa không?"

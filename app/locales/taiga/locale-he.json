@@ -1555,6 +1555,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "סגור התראה",
+        "COMMUNICATION": "הודעות מ-Taiga",
         "MAIL": "התראות בדוא\"ל",
         "DESKTOP": "התראות שולחן עבודה בעזרת הדפדפן",
         "ASK_DELETE": "האם אתה בטוח שברצונך למחוק?"
