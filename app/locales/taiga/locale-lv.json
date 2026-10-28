@@ -840,7 +840,8 @@
         },
         "PROJECT_PRESETS": {
             "TITLE": "Noklusētās vērtības",
-            "SUBTITLE": "Norādiet noklusētās vērtības visiem atlases ievades laukiem."
+            "SUBTITLE": "Norādiet noklusētās vērtības visiem atlases ievades laukiem.",
+            "MENU_TITLE": "Iepriekš definēti iestatījumi"
         }
     },
     "USER": {

@@ -839,7 +839,9 @@
             "CANT_BE_OWNED": "Tại thời điểm này bạn không thể trở thành chủ sở hữu của loại dự án này. Nếu bạn muốn trở thành chủ sở hữu của dự án này, xin vui lòng liên hệ với quản trị viên để thay đổi cài đặt tài khoản của bạn và cho phép quyền sở hữu dự án."
         },
         "PROJECT_PRESETS": {
-            "TITLE": "Giá trị mặc định"
+            "TITLE": "Giá trị mặc định",
+            "MENU_TITLE": "Cài đặt sẵn",
+            "SUBTITLE": "Đặt giá trị mặc định cho tất cả các trường chọn."
         }
     },
     "USER": {

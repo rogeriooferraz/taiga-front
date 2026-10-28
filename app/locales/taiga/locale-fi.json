@@ -839,7 +839,9 @@
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },
         "PROJECT_PRESETS": {
-            "TITLE": "Oletusarvot"
+            "TITLE": "Oletusarvot",
+            "MENU_TITLE": "Esiasetukset",
+            "SUBTITLE": "Aseta oletusarvot kaikille valintakentille."
         }
     },
     "USER": {

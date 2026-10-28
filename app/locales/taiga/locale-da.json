@@ -837,6 +837,11 @@
                 "PUBLIC_EXCEEDED": "Antallet af dine offentlige projekter er <strong>{{currentProjects}}</strong>, hvilket er det maksimale antal, dit abonnement tillader."
             },
             "CANT_BE_OWNED": "I øjeblikket kan du ikke blive ejer af et projekt af denne type. Hvis du gerne vil blive ejer af dette projekt, bedes du kontakte administratoren, så kan de ændrer dine kontoindstillinger for at aktivere projektets ejerskab."
+        },
+        "PROJECT_PRESETS": {
+            "MENU_TITLE": "Forudindstillinger",
+            "TITLE": "Standardværdier",
+            "SUBTITLE": "Angiv standardværdier for alle valgfelter."
         }
     },
     "USER": {
