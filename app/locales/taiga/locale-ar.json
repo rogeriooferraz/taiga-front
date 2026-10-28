@@ -1121,7 +1121,12 @@
         "NEWSLETTER_OPENING": {
             "DONT_ASK": "لا تسأل مرة أخرى",
             "SUBSCRIBE": "اشترك",
-            "SUBSCRIBED": "أنت مشترك"
+            "SUBSCRIBED": "أنت مشترك",
+            "LIGHTBOX_TITLE": "هل تريد تلقي إعلانات عن Taiga؟",
+            "CONFIRMATION": "نعم، أرسلوا إليّ أخبارًا وتحديثات للمنتج وتوصيات حول Taiga.",
+            "SAVE_PREFERENCE": "حفظ التفضيلات",
+            "NOTIFY_EXPLANATION": "سنرسل إليك أخبارًا وتحديثات للمنتج وتوصيات حول Taiga.",
+            "SAVED_PREFERENCE": "تم حفظ تفضيلاتك بنجاح"
         }
     },
     "LIGHTBOX": {

@@ -1121,7 +1121,12 @@
         "NEWSLETTER_OPENING": {
             "DONT_ASK": "אל תשאל שוב",
             "SUBSCRIBE": "הירשם",
-            "SUBSCRIBED": "המינוי פעיל"
+            "SUBSCRIBED": "המינוי פעיל",
+            "LIGHTBOX_TITLE": "האם ברצונך לקבל הודעות על Taiga?",
+            "CONFIRMATION": "כן, שלחו לי חדשות, עדכוני מוצר והמלצות על Taiga.",
+            "SAVE_PREFERENCE": "שמירת העדפות",
+            "NOTIFY_EXPLANATION": "נשלח לך חדשות, עדכוני מוצר והמלצות על Taiga.",
+            "SAVED_PREFERENCE": "ההעדפות שלך נשמרו בהצלחה"
         }
     },
     "LIGHTBOX": {

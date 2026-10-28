@@ -1121,7 +1121,12 @@
         "NEWSLETTER_OPENING": {
             "DONT_ASK": "Не питај поново",
             "SUBSCRIBE": "Претплати се",
-            "SUBSCRIBED": "Претплаћени сте"
+            "SUBSCRIBED": "Претплаћени сте",
+            "LIGHTBOX_TITLE": "Желите ли да примате обавештења о Taiga-и?",
+            "CONFIRMATION": "Да, шаљите ми вести, ажурирања производа и препоруке у вези са Taiga-ом.",
+            "SAVE_PREFERENCE": "САЧУВАЈ ПОДЕШАВАЊА",
+            "NOTIFY_EXPLANATION": "Слаћемо вам вести, ажурирања производа и препоруке у вези са Taiga-ом.",
+            "SAVED_PREFERENCE": "Ваша подешавања су успешно сачувана"
         }
     },
     "LIGHTBOX": {

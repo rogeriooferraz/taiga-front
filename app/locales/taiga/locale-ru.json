@@ -1122,7 +1122,12 @@
         "NEWSLETTER_OPENING": {
             "DONT_ASK": "Больше не спрашивать",
             "SUBSCRIBE": "Подписаться",
-            "SUBSCRIBED": "Вы подписаны"
+            "SUBSCRIBED": "Вы подписаны",
+            "LIGHTBOX_TITLE": "Хотите получать объявления о Taiga?",
+            "CONFIRMATION": "Да, присылайте мне новости, обновления продукта и рекомендации о Taiga.",
+            "SAVE_PREFERENCE": "СОХРАНИТЬ НАСТРОЙКИ",
+            "NOTIFY_EXPLANATION": "Мы будем присылать вам новости, обновления продукта и рекомендации о Taiga.",
+            "SAVED_PREFERENCE": "Ваши настройки успешно сохранены"
         }
     },
     "LIGHTBOX": {

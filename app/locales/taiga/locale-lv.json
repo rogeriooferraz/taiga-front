@@ -1121,7 +1121,12 @@
         "NEWSLETTER_OPENING": {
             "DONT_ASK": "Vairs nejautāt",
             "SUBSCRIBE": "Abonēt",
-            "SUBSCRIBED": "Abonements ir aktīvs"
+            "SUBSCRIBED": "Abonements ir aktīvs",
+            "LIGHTBOX_TITLE": "Vai vēlaties saņemt paziņojumus par Taiga?",
+            "CONFIRMATION": "Jā, sūtiet man ziņas, produkta atjauninājumus un ieteikumus par Taiga.",
+            "SAVE_PREFERENCE": "SAGLABĀT IZVĒLES",
+            "NOTIFY_EXPLANATION": "Mēs jums sūtīsim ziņas, produkta atjauninājumus un ieteikumus par Taiga.",
+            "SAVED_PREFERENCE": "Jūsu izvēles ir veiksmīgi saglabātas"
         }
     },
     "LIGHTBOX": {

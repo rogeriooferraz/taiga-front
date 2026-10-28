@@ -1121,7 +1121,12 @@
         "NEWSLETTER_OPENING": {
             "DONT_ASK": "Fråga inte igen",
             "SUBSCRIBE": "Prenumerera",
-            "SUBSCRIBED": "Du prenumererar"
+            "SUBSCRIBED": "Du prenumererar",
+            "LIGHTBOX_TITLE": "Vill du få meddelanden om Taiga?",
+            "CONFIRMATION": "Ja, skicka mig nyheter, produktuppdateringar och rekommendationer om Taiga.",
+            "SAVE_PREFERENCE": "SPARA INSTÄLLNINGAR",
+            "NOTIFY_EXPLANATION": "Vi skickar dig nyheter, produktuppdateringar och rekommendationer om Taiga.",
+            "SAVED_PREFERENCE": "Dina inställningar har sparats"
         }
     },
     "LIGHTBOX": {

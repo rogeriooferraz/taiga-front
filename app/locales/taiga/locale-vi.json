@@ -1121,7 +1121,12 @@
         "NEWSLETTER_OPENING": {
             "DONT_ASK": "Đừng hỏi lại",
             "SUBSCRIBE": "Đăng ký",
-            "SUBSCRIBED": "Bạn đã đăng ký"
+            "SUBSCRIBED": "Bạn đã đăng ký",
+            "LIGHTBOX_TITLE": "Bạn có muốn nhận thông báo về Taiga không?",
+            "CONFIRMATION": "Có, hãy gửi cho tôi tin tức, cập nhật sản phẩm và đề xuất về Taiga.",
+            "SAVE_PREFERENCE": "LƯU TÙY CHỌN",
+            "NOTIFY_EXPLANATION": "Chúng tôi sẽ gửi cho bạn tin tức, cập nhật sản phẩm và đề xuất về Taiga.",
+            "SAVED_PREFERENCE": "Tùy chọn của bạn đã được lưu thành công"
         }
     },
     "LIGHTBOX": {

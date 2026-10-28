@@ -1121,7 +1121,12 @@
         "NEWSLETTER_OPENING": {
             "DONT_ASK": "Älä kysy uudelleen",
             "SUBSCRIBE": "Tilaa",
-            "SUBSCRIBED": "Olet tilannut"
+            "SUBSCRIBED": "Olet tilannut",
+            "LIGHTBOX_TITLE": "Haluatko saada Taigaa koskevia tiedotteita?",
+            "CONFIRMATION": "Kyllä, lähettäkää minulle uutisia, tuotepäivityksiä ja suosituksia Taigasta.",
+            "SAVE_PREFERENCE": "TALLENNA ASETUKSET",
+            "NOTIFY_EXPLANATION": "Lähetämme sinulle uutisia, tuotepäivityksiä ja suosituksia Taigasta.",
+            "SAVED_PREFERENCE": "Asetuksesi tallennettiin onnistuneesti"
         }
     },
     "LIGHTBOX": {

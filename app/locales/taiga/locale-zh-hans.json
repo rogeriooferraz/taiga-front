@@ -1122,7 +1122,12 @@
         "NEWSLETTER_OPENING": {
             "DONT_ASK": "不再询问",
             "SUBSCRIBE": "订阅",
-            "SUBSCRIBED": "已订阅"
+            "SUBSCRIBED": "已订阅",
+            "LIGHTBOX_TITLE": "你想接收有关 Taiga 的公告吗？",
+            "CONFIRMATION": "是的，请向我发送有关 Taiga 的新闻、产品更新和推荐内容。",
+            "SAVE_PREFERENCE": "保存偏好设置",
+            "NOTIFY_EXPLANATION": "我们会向你发送有关 Taiga 的新闻、产品更新和推荐内容。",
+            "SAVED_PREFERENCE": "你的偏好设置已成功保存"
         }
     },
     "LIGHTBOX": {

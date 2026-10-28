@@ -1125,7 +1125,10 @@
             "DONT_ASK": "不再詢問",
             "SUBSCRIBE": "訂閲",
             "OPT_OUT": "我們只會向你發送相關電子郵件（每年少於 6 封）。你可以隨時發送以「unsubscribe」題的電子郵件到 <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a>，或通訊中的連結來取消訂閱。",
-            "SAVE_PREFERENCE": "儲存選項"
+            "SAVE_PREFERENCE": "儲存選項",
+            "CONFIRMATION": "是的，請向我傳送有關 Taiga 的新聞、產品更新和推薦內容。",
+            "NOTIFY_EXPLANATION": "我們會向你傳送有關 Taiga 的新聞、產品更新和推薦內容。",
+            "SAVED_PREFERENCE": "你的偏好設定已成功儲存。"
         }
     },
     "LIGHTBOX": {

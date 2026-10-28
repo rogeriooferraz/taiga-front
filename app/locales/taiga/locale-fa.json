@@ -1121,7 +1121,12 @@
         "NEWSLETTER_OPENING": {
             "DONT_ASK": "دیگر نپرسید",
             "SUBSCRIBE": "مشترک شوید",
-            "SUBSCRIBED": "مشترک هستید"
+            "SUBSCRIBED": "مشترک هستید",
+            "LIGHTBOX_TITLE": "آیا می‌خواهید اطلاعیه‌های Taiga را دریافت کنید؟",
+            "CONFIRMATION": "بله، اخبار، به‌روزرسانی‌های محصول و پیشنهادهای مربوط به Taiga را برای من بفرستید.",
+            "SAVE_PREFERENCE": "ذخیره تنظیمات",
+            "NOTIFY_EXPLANATION": "اخبار، به‌روزرسانی‌های محصول و پیشنهادهای مربوط به Taiga را برای شما می‌فرستیم.",
+            "SAVED_PREFERENCE": "تنظیمات شما با موفقیت ذخیره شد"
         }
     },
     "LIGHTBOX": {
