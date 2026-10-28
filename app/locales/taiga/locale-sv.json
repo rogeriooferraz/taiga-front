@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Relaterade användarhistorier",
         "CARD": {
             "ASSIGN_TO": "Tilldela Till",
+            "MOVE_TO_TOP": "Flytta längst upp",
             "EDIT": "Ändra kort",
             "DELETE": "Delete card",
             "DELETE_ISSUE": "Ta bort ärende",

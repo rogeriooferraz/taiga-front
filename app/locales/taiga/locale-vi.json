@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Nhật kí người dùng liên quan",
         "CARD": {
             "ASSIGN_TO": "Phân chia cho",
+            "MOVE_TO_TOP": "Di chuyển lên đầu",
             "EDIT": "Chỉnh sửa thẻ",
             "DELETE": "Delete card",
             "DELETE_ISSUE": "Xóa issue",

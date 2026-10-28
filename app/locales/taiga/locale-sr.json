@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Повезане корисничке приче",
         "CARD": {
             "ASSIGN_TO": "Додели",
+            "MOVE_TO_TOP": "Премести на врх",
             "EDIT": "Уреди карту",
             "DELETE": "Delete card",
             "DELETE_ISSUE": "Уклони захтев",

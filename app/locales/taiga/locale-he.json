@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "סיפורי משתמש שייכים",
         "CARD": {
             "ASSIGN_TO": "שייך אל",
+            "MOVE_TO_TOP": "העבר לראש",
             "EDIT": "ערוך כרטיס",
             "DELETE": "מחק כרטיס",
             "DELETE_ISSUE": "מחק תקלה",

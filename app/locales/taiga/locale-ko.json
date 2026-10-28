@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "연결된 유저 스토리",
         "CARD": {
             "ASSIGN_TO": "다음으로 할당",
+            "MOVE_TO_TOP": "맨 위로 이동",
             "EDIT": "카드 수정",
             "DELETE": "Delete card",
             "DELETE_ISSUE": "이슈 삭제",

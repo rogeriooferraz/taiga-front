@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Liittyvät käyttäjätarinat",
         "CARD": {
             "ASSIGN_TO": "Valitse tekijä",
+            "MOVE_TO_TOP": "Siirrä ylimmäksi",
             "EDIT": "Muokkaa korttia",
             "DELETE": "Delete card",
             "DELETE_ISSUE": "Poista pyyntö",

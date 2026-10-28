@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Beslægtede brugerhistorier",
         "CARD": {
             "ASSIGN_TO": "Tildel Til",
+            "MOVE_TO_TOP": "Flyt til toppen",
             "EDIT": "Rediger kort",
             "DELETE": "Slet kort",
             "DELETE_ISSUE": "Slet problem",

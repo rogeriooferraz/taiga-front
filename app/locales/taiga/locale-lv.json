@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Saistītās vajadzības",
         "CARD": {
             "ASSIGN_TO": "Piešķirt",
+            "MOVE_TO_TOP": "Pārvietot uz pašu augšu",
             "EDIT": "Rediģēt karti",
             "DELETE": "Dzēst karti",
             "DELETE_ISSUE": "Dzēst izmaiņas pieprasījumu",
