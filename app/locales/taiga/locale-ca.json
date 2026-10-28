@@ -128,7 +128,7 @@
                 "SAT": "Ds"
             }
         },
-        "SEE_USER_PROFILE": "Veure el perfil de {{usuari}}",
+        "SEE_USER_PROFILE": "Veure el perfil de {{username}}",
         "USER_STORY": "Història d'usuari",
         "TASK": "Tasca",
         "ISSUE": "incidència",
@@ -860,7 +860,7 @@
             "PROJECTS": "Projectes",
             "PROJECTS_EMPTY": "{{username}} encara no te cap projecte",
             "CONTACTS": "Contactes",
-            "CONTACTS_EMPTY": "{{Usuari}} no té contactes encara",
+            "CONTACTS_EMPTY": "{{username}} no té contactes encara",
             "CURRENT_USER_CONTACTS_EMPTY": "No tens contactes encara",
             "CURRENT_USER_CONTACTS_EMPTY_EXPLAIN": "Les persones amb les que treballa a Taiga seran els seus contactes de forma automàtica",
             "TABS": {
@@ -1482,7 +1482,7 @@
             "TITLE": "SPRINTS",
             "DATE": "DD MMM YYYY",
             "LINK_TASKBOARD": "Anar al panell de sprint",
-            "TITLE_LINK_TASKBOARD": "Anar al panell de {{::name}}",
+            "TITLE_LINK_TASKBOARD": "Anar al panell de {{name}}",
             "EMPTY": "There are no sprints yet",
             "WARNING_EMPTY_SPRINT_ANONYMOUS": "This sprint has no user stories",
             "WARNING_EMPTY_SPRINT": "Drop here Stories from your backlog to start a new sprint",

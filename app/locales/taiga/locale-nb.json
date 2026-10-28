@@ -752,7 +752,7 @@
             "WEBHOOK_NAME": "Webkobling \"{{name}}\""
         },
         "CUSTOM_ATTRIBUTES": {
-            "PAGE_TITLE": "{{Seksjon navn}} - Egendefinerte felter - {{prosjekt Name}}",
+            "PAGE_TITLE": "{{sectionName}} - Egendefinerte felter - {{projectName}}",
             "ADD": "Legg til et egendefinert felt",
             "EDIT": "Rediger egendefinert felt",
             "DELETE": "Slett egendefinert felt",
@@ -776,7 +776,7 @@
             "SUCCESS_SEND_INVITATION": "Vi har sendt invitasjonen på nytt til '{{email}}'.",
             "SUCCESS_DELETE": "Vi har slettet {{message}}.",
             "ERROR_DELETE": "Vi har ikke vært i stand til å slette {{message}}.",
-            "DEFAULT_DELETE_MESSAGE": "invitasjonen til {{epost}}"
+            "DEFAULT_DELETE_MESSAGE": "invitasjonen til {{email}}"
         },
         "DEFAULT_VALUES": {
             "LABEL_EPIC_STATUS": "Epos-statusvelger",
@@ -1438,7 +1438,7 @@
             "OPTIMAL": "Optimal mengde avventede poeng for sprint \"{{sprintName}}\" skal være {{value}}",
             "REAL": "Ekte avventende poeng for sprint \"{{sprintName}}\" er {{value}}",
             "INCREMENT_TEAM": "Inkrementelle poeng ved gruppekrav for sprint \"{{sprintName}}\" er {{value}}",
-            "INCREMENT_CLIENT": "Inkrementelle poeng med kundekrav for sprint \"{{sprintNam}}\" er {{verdi}}"
+            "INCREMENT_CLIENT": "Inkrementelle poeng med kundekrav for sprint \"{{sprintName}}\" er {{value}}"
         },
         "TAGS": {
             "TOGGLE": "Endre synligheten til etiketter",

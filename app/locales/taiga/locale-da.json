@@ -463,7 +463,7 @@
     },
     "ATTACHMENT": {
         "SECTION_NAME": "Attachments",
-        "TITLE": "{{ filNavn }} uploadet den {{ dato }}",
+        "TITLE": "{{ fileName }} uploadet den {{ date }}",
         "LIST_VIEW_MODE": "Liste visnings tilstand",
         "GALLERY_VIEW_MODE": "Galleri visnings tilstand",
         "DESCRIPTION": "Indtast en kort beskrivelse",
@@ -901,7 +901,7 @@
         }
     },
     "PROJECT": {
-        "PAGE_TITLE": "{{projektnavn}}",
+        "PAGE_TITLE": "{{projectName}}",
         "HELP": "Reorder your projects to set at the top the most used ones.<br/> The top 4 projects will appear in the top navigation bar project list",
         "PRIVATE": "Privat projekt",
         "LOOKING_FOR_PEOPLE": "Dette projekt søger folk",
@@ -1064,7 +1064,7 @@
                     "DESC": "Det projekt, du forsøger at importere, er privat og har {{members}} medlemmer."
                 },
                 "PUBLIC_PROJECTS_SPACE_MEMBERS": {
-                    "TITLE": "Desværre tillader din nuværende plan ikke yderligere offentlige projekter eller en stigning på mere end {{max_membership}} medlemmer pr. offentligt projekt",
+                    "TITLE": "Desværre tillader din nuværende plan ikke yderligere offentlige projekter eller en stigning på mere end {{max_memberships}} medlemmer pr. offentligt projekt",
                     "DESC": "Det projekt, du forsøger at importere, er offentligt og har mere end {{members}} medlemmer."
                 }
             },
@@ -1815,7 +1815,7 @@
         "EPIC_CREATED": "{{username}} har oprettet en ny episk {{obj_name}} i {{project_name}}",
         "EPIC_RELATED_USERSTORY_CREATED": "{{username}} has related the user story {{related_us_name}} to the epic {{epic_name}} in {{project_name}}",
         "NEW_PROJECT": "{{username}} oprettede projektet {{project_name}}",
-        "MILESTONE_UPDATED": "{{brugernavn}} har opdateret sprint'en {{obj_name}}",
+        "MILESTONE_UPDATED": "{{username}} har opdateret sprint'en {{obj_name}}",
         "US_UPDATED": "{{username}} has updated the attribute \"{{field_name}}\" of the user story {{obj_name}}",
         "US_UPDATED_WITH_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the user story {{obj_name}} to {{new_value}}",
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
@@ -1831,14 +1831,14 @@
         "EPIC_UPDATED_WITH_NEW_COLOR": "{{username}} har opdateret \"{{field_name}}\" af epic'en {{obj_name}} til <span class=\"new-color\" style=\"background: {{new_value}}\"></span>",
         "NEW_COMMENT_US": "{{username}} has commented in the user story {{obj_name}}",
         "NEW_COMMENT_ISSUE": "{{username}} har kommenteret i problem beskrivelsen for {{obj_name}}",
-        "NEW_COMMENT_TASK": "{{brugernavn}} har kommenteret opgaven {{obj_name}}",
+        "NEW_COMMENT_TASK": "{{username}} har kommenteret opgaven {{obj_name}}",
         "NEW_COMMENT_EPIC": "{{username}} har kommenteret epic'en {{obj_name}}",
         "NEW_MEMBER": "{{project_name}} har et nyt medlem",
         "US_ADDED_MILESTONE": "{{username}} has added the user story {{obj_name}} to {{sprint_name}}",
         "US_MOVED": "{{username}} has moved the user story {{obj_name}}",
         "US_REMOVED_FROM_MILESTONE": "{{username}} has added the user story {{obj_name}} to the backlog",
-        "BLOCKED": "{{brugernavn}} har blokeret {{obj_name}}",
-        "UNBLOCKED": "{{brugernavn}} har fjernet blokering på {{obj_name}}",
+        "BLOCKED": "{{username}} har blokeret {{obj_name}}",
+        "UNBLOCKED": "{{username}} har fjernet blokering på {{obj_name}}",
         "NEW_USER": "{{username}} er tilmeldt Taiga",
         "ITEM_TYPES": {
             "USERSTORY": "User Story",

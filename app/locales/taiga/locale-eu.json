@@ -775,7 +775,7 @@
             "RESEND": "Berriro bidali",
             "SUCCESS_SEND_INVITATION": "Berriro bidali dugu gonbidapena helbide honetara: '{{email}}'.",
             "SUCCESS_DELETE": "Ezabatu dugu mezu hau: {{message}}.",
-            "ERROR_DELETE": "Ezin izan dugu ezabatu: {{errorMessage}}.",
+            "ERROR_DELETE": "Ezin izan dugu ezabatu: {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "gonbidapena helbide honetara: {{email}}"
         },
         "DEFAULT_VALUES": {
@@ -1435,7 +1435,7 @@
         "CHART": {
             "XAXIS_LABEL": "Urratsak",
             "YAXIS_LABEL": "Puntuak",
-            "OPTIMAL": "\"{{sprintName}}\" urratsean eman beharreko puntu kopuru optimoa izango litzateke {{Value}}",
+            "OPTIMAL": "\"{{sprintName}}\" urratsean eman beharreko puntu kopuru optimoa izango litzateke {{value}}",
             "REAL": "\"{{sprintName}}\" urratsean benetan eman beharreko puntu kopuru izango litzateke {{value}}",
             "INCREMENT_TEAM": "Emendatutako puntuak dira {{value}} lantaldearen eskakizunengatik urrats honetan: \"{{sprintName}}\"",
             "INCREMENT_CLIENT": "Emendatutako puntuak dira {{value}} lantaldearen eskakizunengatik urrats honetan: \"{{sprintName}}\""
@@ -1482,7 +1482,7 @@
             "TITLE": "Urratsak",
             "DATE": "DD MMM YYYY",
             "LINK_TASKBOARD": "Urratsen arbela",
-            "TITLE_LINK_TASKBOARD": "Joan honen ataza arbelera: {{::name}}",
+            "TITLE_LINK_TASKBOARD": "Joan honen ataza arbelera: {{name}}",
             "EMPTY": "Ez dago urratsik oraingoz",
             "WARNING_EMPTY_SPRINT_ANONYMOUS": "Urrats honek ez du zereginik",
             "WARNING_EMPTY_SPRINT": "Ekarri hona zereginak zure atzeratutako lanetatik, urrats berri bat sortzeko",

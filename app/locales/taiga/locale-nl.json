@@ -1437,8 +1437,8 @@
             "YAXIS_LABEL": "Punten",
             "OPTIMAL": "Optimaal aantal openstaande punten voor sprint \"{{sprintName}}\" zou {{value}} moeten zijn",
             "REAL": "Reële openstaande punten voor sprint \"{{sprintName}}\" is {{value}}",
-            "INCREMENT_TEAM": "Toegevoegde aantal punten door team vereisten voor sprint \"{{sprintName}}\" is {{vallue}}",
-            "INCREMENT_CLIENT": "Toegevoegde aantal punten door klant vereisten voor sprint \"{{sprintName}}\" is {{vallue}}"
+            "INCREMENT_TEAM": "Toegevoegde aantal punten door team vereisten voor sprint \"{{sprintName}}\" is {{value}}",
+            "INCREMENT_CLIENT": "Toegevoegde aantal punten door klant vereisten voor sprint \"{{sprintName}}\" is {{value}}"
         },
         "TAGS": {
             "TOGGLE": "Zet de tag zichtbaarheid aan of af",

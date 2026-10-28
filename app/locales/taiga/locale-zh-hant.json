@@ -1482,7 +1482,7 @@
             "TITLE": "衝刺任務",
             "DATE": "DD MMM YYYY",
             "LINK_TASKBOARD": "衝刺任務板",
-            "TITLE_LINK_TASKBOARD": "到任務板 {{spring.name}}",
+            "TITLE_LINK_TASKBOARD": "到任務板 {{name}}",
             "EMPTY": "尚無衝刺任務",
             "WARNING_EMPTY_SPRINT_ANONYMOUS": "This sprint has no user stories",
             "WARNING_EMPTY_SPRINT": "Drop here Stories from your backlog to start a new sprint",

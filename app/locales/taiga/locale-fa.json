@@ -1236,7 +1236,7 @@
         "CREATE_MEMBER": {
             "PLACEHOLDER_INVITATION_TEXT": "(اختیاری) متنی برای دعوت‌نامه اضافه کنید و جملات جالبی برای اعضای جدید بنویسید  ;-)",
             "PLACEHOLDER_TYPE_EMAIL": "ایمیلی تایپ کنید",
-            "LIMIT_USERS_WARNING_MESSAGE_FOR_OWNER": "به محدودیت تعداد اعضای این پروژه که <strong>({{maxFileSize}})</strong> است، نزدیک شده‌اید. برای افزایش سقف تعداد اعضا با ادمین تماس بگیرید.",
+            "LIMIT_USERS_WARNING_MESSAGE_FOR_OWNER": "به محدودیت تعداد اعضای این پروژه که <strong>({{maxMembers}})</strong> است، نزدیک شده‌اید. برای افزایش سقف تعداد اعضا با ادمین تماس بگیرید.",
             "LIMIT_USERS_WARNING_MESSAGE": "به محدودیت <strong>{{maxMembers}}</strong> عضو این پروژه نزدیک می‌شوید."
         },
         "LEAVE_PROJECT_WARNING": {

@@ -774,7 +774,7 @@
             "DELETE_MEMBER": "Üye sil",
             "RESEND": "Yeniden gönder",
             "SUCCESS_SEND_INVITATION": "Davetiyeyi '{{email}}' adresine tekrar gönderdik.",
-            "SUCCESS_DELETE": "{{mesaj}} mesajını sildik.",
+            "SUCCESS_DELETE": "{{message}} mesajını sildik.",
             "ERROR_DELETE": "{{message}} mesajını silemedik.",
             "DEFAULT_DELETE_MESSAGE": "{{email}} davetiyesi"
         },

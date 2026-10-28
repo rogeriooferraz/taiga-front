@@ -1435,7 +1435,7 @@
         "CHART": {
             "XAXIS_LABEL": "ספרינטים",
             "YAXIS_LABEL": "נקודות",
-            "OPTIMAL": "מספר הנקודות הממתינות המיטבי לספרינט {{formattedDate}} צריך להיות {{roundedValue}}",
+            "OPTIMAL": "מספר הנקודות הממתינות המיטבי לספרינט {{sprintName}} צריך להיות {{value}}",
             "REAL": "מספר הנקודות הממתינות לספרינט \"{{sprintName}}\" הוא {{value}}",
             "INCREMENT_TEAM": "מספר תגבורת הנקודות לספרינט \"{{sprintName}}\" הוא {{value}}",
             "INCREMENT_CLIENT": "מספר תגבורת הנקודות עבור דרישות לוקח לספרינט \"{{sprintName}}\" הוא {{value}}"

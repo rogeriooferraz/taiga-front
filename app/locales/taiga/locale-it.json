@@ -1029,7 +1029,7 @@
             "WRITE_EMAIL_LABEL": "Scrivi la mail che questo utente utilizza in Taiga",
             "ACCEEDE": "Accesso",
             "PROJECT_MEMBERS": "Membri del Progetto",
-            "PROCESS_DESCRIPTION": "Dicci a quale membro di Taiga vuoi assegnare i compiti di {{piattaforma}}",
+            "PROCESS_DESCRIPTION": "Dicci a quale membro di Taiga vuoi assegnare i compiti di {{platform}}",
             "MATCH": "<strong>{{user_external}}</strong> e <strong>{{user_internal}}</strong> sono la stessa persona?",
             "CHOOSE": "Seleziona un utente",
             "LINKS": "Collega con {{platform}}",
@@ -1042,8 +1042,8 @@
                 "ACTION_BACK": "Indietro"
             },
             "PROJECT_RESTRICTIONS": {
-                "PROJECT_MEMBERS_DESC_PRIVATE": "Il progetto che stai cercando di importare ha {{membri}} membri incluso te. Sfortunatamente, il tuo piano attuale permette un massimo di {{max_membri}} membri per progetto privato. Se vuoi aumentare questo limite, contatta l'amministratore.",
-                "PROJECT_MEMBERS_DESC_PUBLIC": "Il progetto che stai cercando di importare ha {{membri}} membri incluso te. Sfortunatamente, il tuo piano attuale permette un massimo di {{max_memberships}} membri per progetto pubblico. Se vuoi aumentare questo limite, contatta l'amministratore.",
+                "PROJECT_MEMBERS_DESC_PRIVATE": "Il progetto che stai cercando di importare ha {{members}} membri incluso te. Sfortunatamente, il tuo piano attuale permette un massimo di {{max_memberships}} membri per progetto privato. Se vuoi aumentare questo limite, contatta l'amministratore.",
+                "PROJECT_MEMBERS_DESC_PUBLIC": "Il progetto che stai cercando di importare ha {{members}} membri incluso te. Sfortunatamente, il tuo piano attuale permette un massimo di {{max_memberships}} membri per progetto pubblico. Se vuoi aumentare questo limite, contatta l'amministratore.",
                 "ACCOUNT_ALLOW_MEMBERS": "Il tuo account permette solo {{members}} membri",
                 "PRIVATE_PROJECTS_SPACE": {
                     "TITLE": "Sfortunatamente, il tuo attuale abbonamento non permette altri progetti privati",
@@ -1301,10 +1301,10 @@
     },
     "EPIC": {
         "PAGE_TITLE": "{{epicSubject}} - Epico {{epicRef}} - {{projectName}}",
-        "PAGE_DESCRIPTION": "Stato: {{taskStatus }}. Descrizione: {{taskDescription}}",
+        "PAGE_DESCRIPTION": "Stato: {{epicStatus }}. Descrizione: {{epicDescription}}",
         "EPIC_COLOR": "Colore Epico:",
         "SECTION_NAME": "Epico",
-        "ERROR_UNLINK_RELATED_USERSTORY": "Non siamo riusciti a scollegare: {{erroreMessage}}",
+        "ERROR_UNLINK_RELATED_USERSTORY": "Non siamo riusciti a scollegare: {{errorMessage}}",
         "CREATE_RELATED_USERSTORIES": "Crea una relazione con",
         "NEW_USERSTORY": "Nuova storia utente",
         "EXISTING_USERSTORY": "Storia utente esistente",
@@ -1372,7 +1372,7 @@
     },
     "ACTIVITY": {
         "TITLE": "Attività",
-        "ACTIVITIES_COUNT": "{{Activities}} Attività",
+        "ACTIVITIES_COUNT": "{{activities}} Attività",
         "TAGS_ADDED": "etichette aggiunte:",
         "TAGS_REMOVED": "etichette rimosse:",
         "US_POINTS": "{{role}} punti",

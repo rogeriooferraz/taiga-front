@@ -500,7 +500,7 @@
             "ADD_BUTTON_TITLE": "Pievienot jaunu dalībnieku",
             "UPGRADE_BUTTON": "Aktualizējiet savu plānu",
             "LIMIT_USERS_WARNING_MESSAGE_FOR_ADMIN": "Ja vēlaties <strong>pievienot vēl kādu dalībnieku </strong>, lūdzu, sazinieties ar projekta vadītāju <a href='mailto:{{ owner_email }}' title='{{ owner_email }}'>{{ owner_email }}</a>",
-            "LIMIT_USERS_WARNING_MESSAGE_FOR_OWNER": "Šis projekts ir sasniedzis maksimālo pieļauto <strong>({{Members}})</strong> dalībnieku skaitu. Ja vēlaties palielināt šo limitu, lūdzu, sazinieties ar administratoru."
+            "LIMIT_USERS_WARNING_MESSAGE_FOR_OWNER": "Šis projekts ir sasniedzis maksimālo pieļauto <strong>({{members}})</strong> dalībnieku skaitu. Ja vēlaties palielināt šo limitu, lūdzu, sazinieties ar administratoru."
         },
         "PROJECT_EXPORT": {
             "TITLE": "Eksportēt",
@@ -1502,7 +1502,7 @@
     },
     "TASKBOARD": {
         "PAGE_TITLE": "{{sprintName}} - Sprinta panelis - {{projectName}}",
-        "PAGE_DESCRIPTION": "Sprints {{sprintName}} (no {{startDate}} līdz {{endDate}}) no {{projectName}}. Izpildīti {{completePercentage}}% ({{completePoints}} no {{totalPoints}} punktiem). {{openTasks}} atvērti uzdevumi no {{totalTasks}}.",
+        "PAGE_DESCRIPTION": "Sprints {{sprintName}} (no {{startDate}} līdz {{endDate}}) no {{projectName}}. Izpildīti {{completedPercentage}}% ({{completedPoints}} no {{totalPoints}} punktiem). {{openTasks}} atvērti uzdevumi no {{totalTasks}}.",
         "SECTION_NAME": "Uzdevumu panelis",
         "TITLE_ACTION_ADD": "Izveidot uzdevumu",
         "TITLE_ACTION_ADD_BULK": "Pievienot izmaiņu pieprasījumus vairumā (paketi)",
@@ -1831,12 +1831,12 @@
         "EPIC_UPDATED_WITH_NEW_COLOR": "{{username}} aktualizēja EPOSA {{obj_name}} \"{{field_name}}\" uz <span class=\"new-color\" style=\"background: {{new_value}}\"></span>",
         "NEW_COMMENT_US": "{{username}} komentēja izmaiņas pieprasījumu {{obj_name}}",
         "NEW_COMMENT_ISSUE": "{{username}} komentēja izmaiņas pieprasījumu {{obj_name}}",
-        "NEW_COMMENT_TASK": "{{lietotājvārds}} komentēja UZDEVUMU {{obj_name}}",
-        "NEW_COMMENT_EPIC": "{{lietotājvārds}} komentēja EPOSU {{obj_name}}",
+        "NEW_COMMENT_TASK": "{{username}} komentēja UZDEVUMU {{obj_name}}",
+        "NEW_COMMENT_EPIC": "{{username}} komentēja EPOSU {{obj_name}}",
         "NEW_MEMBER": "{{project_name}} ir jauns dalībnieks",
-        "US_ADDED_MILESTONE": "{{lietotājvārds}} pievienoja VAJADZĪBU {{obj_name}} sprintam {{sprint_name}}",
+        "US_ADDED_MILESTONE": "{{username}} pievienoja VAJADZĪBU {{obj_name}} sprintam {{sprint_name}}",
         "US_MOVED": "{{username}} ir pārvietojis vajadzību {{obj_name}}",
-        "US_REMOVED_FROM_MILESTONE": "{{lietotājvārds}} darbu klāstam pievienoja VAJADZĪBU {{obj_name}}",
+        "US_REMOVED_FROM_MILESTONE": "{{username}} darbu klāstam pievienoja VAJADZĪBU {{obj_name}}",
         "BLOCKED": "{{username}} ir bloķējis {{obj_name}}",
         "UNBLOCKED": "{{username}} ir atbloķējis {{obj_name}}",
         "NEW_USER": "{{username}} ir pievienojies Taigai",

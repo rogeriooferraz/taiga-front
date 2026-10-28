@@ -1482,7 +1482,7 @@
             "TITLE": "冲刺任务",
             "DATE": "DD MMM YYYY",
             "LINK_TASKBOARD": "冲刺任务板",
-            "TITLE_LINK_TASKBOARD": "到任务板 {{spring.name}}",
+            "TITLE_LINK_TASKBOARD": "到任务板 {{name}}",
             "EMPTY": "还没有冲刺",
             "WARNING_EMPTY_SPRINT_ANONYMOUS": "This sprint has no user stories",
             "WARNING_EMPTY_SPRINT": "从你的待办事项中拖拽一个用户故事到这里来开启一个新的冲刺",

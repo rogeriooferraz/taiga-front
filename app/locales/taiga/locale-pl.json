@@ -463,7 +463,7 @@
     },
     "ATTACHMENT": {
         "SECTION_NAME": "Attachments",
-        "TITLE": "{{ plik }} załadowany dnia {{ data }}",
+        "TITLE": "{{ fileName }} załadowany dnia {{ date }}",
         "LIST_VIEW_MODE": "Tryb listy",
         "GALLERY_VIEW_MODE": "Tryb galerii",
         "DESCRIPTION": "Wpisz krótki opis",
@@ -773,10 +773,10 @@
             "STATUS_PENDING": "Nieaktywny",
             "DELETE_MEMBER": "Usuń członka",
             "RESEND": "Wyślij ponownie",
-            "SUCCESS_SEND_INVITATION": "Ponownie wysłano zaproszenie do '{{e-mail}}'.",
+            "SUCCESS_SEND_INVITATION": "Ponownie wysłano zaproszenie do '{{email}}'.",
             "SUCCESS_DELETE": "Usunięto {{message}}.",
             "ERROR_DELETE": "Nie usunięto {{message}}.",
-            "DEFAULT_DELETE_MESSAGE": "zaproszenie do {{e-mail}}"
+            "DEFAULT_DELETE_MESSAGE": "zaproszenie do {{email}}"
         },
         "DEFAULT_VALUES": {
             "LABEL_EPIC_STATUS": "Default value for epic status selector",
@@ -1435,10 +1435,10 @@
         "CHART": {
             "XAXIS_LABEL": "Sprinty",
             "YAXIS_LABEL": "Punkty",
-            "OPTIMAL": "Optymalna ilość puntów oczekujących w sprincie {{xval}} to {{yval}}",
-            "REAL": "Faktyczna ilość punktów oczekujących w sprincie {{xval}} to {{yval}}",
-            "INCREMENT_TEAM": "Punkty dodane na podstawie wymagań zespołu w sprincie {{xval}} to {{yval}}",
-            "INCREMENT_CLIENT": "Punkty dodane na podstawie wymagań klienta w sprincie {{xval}} to {{yval}}"
+            "OPTIMAL": "Optymalna ilość puntów oczekujących w sprincie {{sprintName}} to {{value}}",
+            "REAL": "Faktyczna ilość punktów oczekujących w sprincie {{sprintName}} to {{value}}",
+            "INCREMENT_TEAM": "Punkty dodane na podstawie wymagań zespołu w sprincie {{sprintName}} to {{value}}",
+            "INCREMENT_CLIENT": "Punkty dodane na podstawie wymagań klienta w sprincie {{sprintName}} to {{value}}"
         },
         "TAGS": {
             "TOGGLE": "Przełącz widoczność tagów",

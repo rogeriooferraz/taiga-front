@@ -1301,7 +1301,7 @@
     },
     "EPIC": {
         "PAGE_TITLE": "{{epicSubject}} - Épica {{epicRef}} - {{projectName}}",
-        "PAGE_DESCRIPTION": "Estado: {{taskStatus}}. Descripción: {{taskDescription}}",
+        "PAGE_DESCRIPTION": "Estado: {{epicStatus}}. Descripción: {{epicDescription}}",
         "EPIC_COLOR": "Color de la épica",
         "SECTION_NAME": "Épica",
         "ERROR_UNLINK_RELATED_USERSTORY": "No se ha podido desvincular: {{errorMessage}}",
@@ -1866,7 +1866,7 @@
     "EXTERNAL_APP": {
         "PAGE_TITLE": "Una aplicación externa requiere autenticación",
         "PAGE_DESCRIPTION": "Una aplicación externa requiere autenticación",
-        "AUTHORIZATION_REQUEST": "¿Autoriza {{aplicación}} para que utilice tu cuenta de Taiga?",
+        "AUTHORIZATION_REQUEST": "¿Autoriza {{application}} para que utilice tu cuenta de Taiga?",
         "LOGIN_WITH_ANOTHER_USER": "Ingresar con otro usuario",
         "AUTHORIZE_APP": "Autorizar aplicación",
         "CANCEL": "Cancelar"

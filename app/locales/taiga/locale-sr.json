@@ -500,7 +500,7 @@
             "ADD_BUTTON_TITLE": "Додај новог члана",
             "UPGRADE_BUTTON": "Upgrade your plan",
             "LIMIT_USERS_WARNING_MESSAGE_FOR_ADMIN": "If you would like to <strong>add more members</strong>, please contact the project owner <a href='mailto:{{ owner_email }}' title='{{ owner_email }}'>{{ owner_email }}</a>",
-            "LIMIT_USERS_WARNING_MESSAGE_FOR_OWNER": "Овај пројекат има максимални број чланова <strong>({{maxMembers}})</strong>. Контактирајте администратора ако желите да повећате тај број."
+            "LIMIT_USERS_WARNING_MESSAGE_FOR_OWNER": "Овај пројекат има максимални број чланова <strong>({{members}})</strong>. Контактирајте администратора ако желите да повећате тај број."
         },
         "PROJECT_EXPORT": {
             "TITLE": "Извоз",
@@ -1321,7 +1321,7 @@
     },
     "US": {
         "PAGE_TITLE": "{{userStorySubject}} - Корисничка Прича {{userStoryRef}} - {{projectName}}",
-        "PAGE_DESCRIPTION": "Стање: {{userStoryStatus }}. Решено {{userStoryProgressPercentage}}% ({{userStoryClosedStories}} од {{userStoryTotalStories}} затворених задатака). Појена: {{userStoryPoints}}. Опис: {{userStoryDescription}}",
+        "PAGE_DESCRIPTION": "Стање: {{userStoryStatus }}. Решено {{userStoryProgressPercentage}}% ({{userStoryClosedTasks}} од {{userStoryTotalTasks}} затворених задатака). Појена: {{userStoryPoints}}. Опис: {{userStoryDescription}}",
         "SECTION_NAME": "Корисничка прича",
         "LINK_TASKBOARD": "Панела задатка",
         "TITLE_LINK_TASKBOARD": "Отиђи на списак задатака",
@@ -1502,7 +1502,7 @@
     },
     "TASKBOARD": {
         "PAGE_TITLE": "{{sprintName}} - Списак задатака шпринта - {{projectName}}",
-        "PAGE_DESCRIPTION": "Шпринт {{sprintName}} (од {{startDate}} до {{endDate}}) од {{projectName}}. Завршено {{completedPercentage}}% ({{completedPoints}} од {{totalPoints}} појена). {{openStories}} отворених задатака од {{totalStories}}.",
+        "PAGE_DESCRIPTION": "Шпринт {{sprintName}} (од {{startDate}} до {{endDate}}) од {{projectName}}. Завршено {{completedPercentage}}% ({{completedPoints}} од {{totalPoints}} појена). {{openTasks}} отворених задатака од {{totalTasks}}.",
         "SECTION_NAME": "Списак задатака",
         "TITLE_ACTION_ADD": "Add a new task",
         "TITLE_ACTION_ADD_BULK": "Add some new tasks in bulk",
@@ -1649,7 +1649,7 @@
     },
     "ISSUE": {
         "PAGE_TITLE": "{{issueSubject}} - Захтев {{issueRef}} - {{projectName}}",
-        "PAGE_DESCRIPTION": "Стање: {{issueStatus }}. Тип: {{issueType}}, Приоритет: {{issuePriority}}. Важност: {{issueВажност}}. Опис: {{issueDescription}}"
+        "PAGE_DESCRIPTION": "Стање: {{issueStatus }}. Тип: {{issueType}}, Приоритет: {{issuePriority}}. Важност: {{issueSeverity}}. Опис: {{issueDescription}}"
     },
     "KANBAN": {
         "PAGE_TITLE": "Kanban - {{projectName}}",
@@ -1765,7 +1765,7 @@
     },
     "WIKI": {
         "PAGE_TITLE": "{{wikiPageName}} - Вики - {{projectName}}",
-        "PAGE_DESCRIPTION": "Задње издање {{lastModifiedDate}} ({{totalRevisions}} укупних издања) Садржај: {{ wikiPageContent }}",
+        "PAGE_DESCRIPTION": "Задње издање {{lastModifiedDate}} ({{totalEditions}} укупних издања) Садржај: {{ wikiPageContent }}",
         "DATETIME": "DD/MM/YYYY HH:mm",
         "REMOVE": "Уклони ову вики-страницу",
         "DELETE_LIGHTBOX_TITLE": "Уклони вики-страниву",
