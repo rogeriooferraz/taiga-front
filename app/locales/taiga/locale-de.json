@@ -849,7 +849,7 @@
             "SUBTITLE": "Standardwerte für alle Selektoreingänge setzen."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugins  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {

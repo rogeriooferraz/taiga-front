@@ -847,6 +847,9 @@
             "MENU_TITLE": "預設選項",
             "TITLE": "預設值",
             "SUBTITLE": "設置所有選擇器輸入的默認值。"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - 外掛 - {{projectName}}"
         }
     },
     "USER": {

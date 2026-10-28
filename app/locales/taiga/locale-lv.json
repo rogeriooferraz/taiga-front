@@ -847,6 +847,9 @@
             "TITLE": "Noklusētās vērtības",
             "SUBTITLE": "Norādiet noklusētās vērtības visiem atlases ievades laukiem.",
             "MENU_TITLE": "Iepriekš definēti iestatījumi"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Spraudņi - {{projectName}}"
         }
     },
     "USER": {

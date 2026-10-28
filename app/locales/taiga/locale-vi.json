@@ -847,6 +847,9 @@
             "TITLE": "Giá trị mặc định",
             "MENU_TITLE": "Cài đặt sẵn",
             "SUBTITLE": "Đặt giá trị mặc định cho tất cả các trường chọn."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Plugin - {{projectName}}"
         }
     },
     "USER": {

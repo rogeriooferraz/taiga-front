@@ -849,7 +849,7 @@
             "SUBTITLE": "Ustaw wartości domyślne dla wszystkich pól wyboru."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Wtyczki  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Wtyczki - {{projectName}}"
         }
     },
     "USER": {

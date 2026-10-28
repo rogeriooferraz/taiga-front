@@ -849,7 +849,7 @@
             "MENU_TITLE": "Predefinições"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "As pessoas com a qual você  na Taiga serão seus contatos automaticamente"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {

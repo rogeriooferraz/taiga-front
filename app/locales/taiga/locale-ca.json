@@ -849,7 +849,7 @@
             "SUBTITLE": "Estableix els valors predeterminats per a totes les entrades del selector."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{NomConnector}} - Connectors  - {{NomProjecte}}"
+            "PAGE_TITLE": "{{pluginName}} - Connectors - {{projectName}}"
         }
     },
     "USER": {

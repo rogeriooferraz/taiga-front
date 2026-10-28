@@ -847,6 +847,9 @@
             "TITLE": "默认值",
             "SUBTITLE": "为所有选择器输入设置的默认值。",
             "MENU_TITLE": "预设"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - 插件 - {{projectName}}"
         }
     },
     "USER": {

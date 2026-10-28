@@ -847,6 +847,9 @@
             "SUBTITLE": "プルダウン項目の初期値を設定できます。",
             "TITLE": "初期値",
             "MENU_TITLE": "設定"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - プラグイン - {{projectName}}"
         }
     },
     "USER": {

@@ -849,7 +849,7 @@
             "SUBTITLE": "Ezarri balio lehenetsiak hautatzaile-sarrera guztientzat."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugins  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {

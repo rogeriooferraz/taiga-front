@@ -847,6 +847,9 @@
             "MENU_TITLE": "الإعدادات المسبقة",
             "TITLE": "القيم الافتراضية",
             "SUBTITLE": "حدّد القيم الافتراضية لجميع حقول الاختيار."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - الإضافات - {{projectName}}"
         }
     },
     "USER": {

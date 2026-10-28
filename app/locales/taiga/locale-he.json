@@ -847,6 +847,9 @@
             "TITLE": "ערכי ברירת מחדל",
             "MENU_TITLE": "הגדרות קבועות מראש",
             "SUBTITLE": "הגדר ערכי ברירת מחדל לכל שדות הבחירה."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - תוספים - {{projectName}}"
         }
     },
     "USER": {

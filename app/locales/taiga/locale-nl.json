@@ -847,6 +847,9 @@
             "TITLE": "Standaard Waardes",
             "SUBTITLE": "Zet standaard waardes voor alle selectie ingangen.",
             "MENU_TITLE": "Voorinstellingen"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {

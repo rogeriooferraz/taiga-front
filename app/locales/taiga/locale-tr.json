@@ -849,7 +849,7 @@
             "MENU_TITLE": "Ön Ayarlar"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Eklentiler  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Eklentiler - {{projectName}}"
         }
     },
     "USER": {

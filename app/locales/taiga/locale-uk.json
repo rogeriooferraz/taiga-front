@@ -849,7 +849,7 @@
             "MENU_TITLE": "Переднабори"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Додатки  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Додатки - {{projectName}}"
         }
     },
     "USER": {

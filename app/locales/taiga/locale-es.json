@@ -849,7 +849,7 @@
             "SUBTITLE": "Establecer los valores por defecto para todas las entradas del selector."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugins  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {

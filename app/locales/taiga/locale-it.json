@@ -849,7 +849,7 @@
             "MENU_TITLE": "Preimpostati"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugin  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugin - {{projectName}}"
         }
     },
     "USER": {

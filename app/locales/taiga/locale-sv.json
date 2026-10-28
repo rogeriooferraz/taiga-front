@@ -847,6 +847,9 @@
             "TITLE": "Standardvärden",
             "MENU_TITLE": "Förinställningar",
             "SUBTITLE": "Ange standardvärden för alla valfält."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Insticksprogram - {{projectName}}"
         }
     },
     "USER": {
