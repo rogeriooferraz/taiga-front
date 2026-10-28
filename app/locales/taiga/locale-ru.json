@@ -1118,6 +1118,11 @@
                 "CREATE_NEW_ISSUES": "Конвертировать подзадачи в новые задачи Taiga",
                 "NOT_CREATE_NEW_ISSUES": "Не импортировать подзадачи"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "DONT_ASK": "Больше не спрашивать",
+            "SUBSCRIBE": "Подписаться",
+            "SUBSCRIBED": "Вы подписаны"
         }
     },
     "LIGHTBOX": {

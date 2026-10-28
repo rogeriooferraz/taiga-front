@@ -1118,6 +1118,11 @@
                 "CREATE_NEW_ISSUES": "将子问题转换为Taiga问题",
                 "NOT_CREATE_NEW_ISSUES": "不导入子问题"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "DONT_ASK": "不再询问",
+            "SUBSCRIBE": "订阅",
+            "SUBSCRIBED": "已订阅"
         }
     },
     "LIGHTBOX": {

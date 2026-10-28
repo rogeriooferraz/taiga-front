@@ -1117,6 +1117,11 @@
                 "CREATE_NEW_ISSUES": "하위 이슈를 새로운 타이가 이슈로 변경",
                 "NOT_CREATE_NEW_ISSUES": "하위 이슈를 가져오지 마십시오."
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "DONT_ASK": "다시 묻지 않기",
+            "SUBSCRIBE": "구독하기",
+            "SUBSCRIBED": "구독 중"
         }
     },
     "LIGHTBOX": {

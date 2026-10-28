@@ -1117,6 +1117,11 @@
                 "CREATE_NEW_ISSUES": "המר תת-תקלה לנושא טאיגה חדש",
                 "NOT_CREATE_NEW_ISSUES": "אל תייבא תת-תקלות"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "DONT_ASK": "אל תשאל שוב",
+            "SUBSCRIBE": "הירשם",
+            "SUBSCRIBED": "המינוי פעיל"
         }
     },
     "LIGHTBOX": {

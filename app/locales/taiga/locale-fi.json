@@ -1117,6 +1117,11 @@
                 "CREATE_NEW_ISSUES": "Convert sub-issues to new Taiga issues",
                 "NOT_CREATE_NEW_ISSUES": "Do not import sub-issues"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "DONT_ASK": "Älä kysy uudelleen",
+            "SUBSCRIBE": "Tilaa",
+            "SUBSCRIBED": "Olet tilannut"
         }
     },
     "LIGHTBOX": {

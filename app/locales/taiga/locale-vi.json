@@ -1117,6 +1117,11 @@
                 "CREATE_NEW_ISSUES": "Chuyển đổi sub-issue thành issue mới ở Taiga",
                 "NOT_CREATE_NEW_ISSUES": "Không nhập các sub-issues"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "DONT_ASK": "Đừng hỏi lại",
+            "SUBSCRIBE": "Đăng ký",
+            "SUBSCRIBED": "Bạn đã đăng ký"
         }
     },
     "LIGHTBOX": {

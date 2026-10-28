@@ -1117,6 +1117,11 @@
                 "CREATE_NEW_ISSUES": "تبدیل موضوعات زیرمجموعه به موضوعات تایگا",
                 "NOT_CREATE_NEW_ISSUES": "موضوعات زیرمجموعه را وارد نکن"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "DONT_ASK": "دیگر نپرسید",
+            "SUBSCRIBE": "مشترک شوید",
+            "SUBSCRIBED": "مشترک هستید"
         }
     },
     "LIGHTBOX": {

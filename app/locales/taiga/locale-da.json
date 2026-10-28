@@ -1117,6 +1117,11 @@
                 "CREATE_NEW_ISSUES": "Konverter under-problem til ny Taiga problem",
                 "NOT_CREATE_NEW_ISSUES": "Importer ikke under-problemer"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "DONT_ASK": "Spørg ikke igen",
+            "SUBSCRIBE": "Tilmeld dig",
+            "SUBSCRIBED": "Du er tilmeldt"
         }
     },
     "LIGHTBOX": {

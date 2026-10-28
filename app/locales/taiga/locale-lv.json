@@ -1117,6 +1117,11 @@
                 "CREATE_NEW_ISSUES": "Pārvērst apakš-izmaiņu pieprasījumus par jauniem Taigas izmaiņu pieprasījumiem ",
                 "NOT_CREATE_NEW_ISSUES": "Neimportēt apakš-izmaiņu pieprasījumus"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "DONT_ASK": "Vairs nejautāt",
+            "SUBSCRIBE": "Abonēt",
+            "SUBSCRIBED": "Abonements ir aktīvs"
         }
     },
     "LIGHTBOX": {
