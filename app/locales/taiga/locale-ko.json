@@ -933,6 +933,8 @@
             "MANAGE_PROJECTS": "프로젝트 관리하기",
             "TITLE_CREATE_PROJECT": "프로젝트 생성하기",
             "HELP_TITLE": "도움말",
+            "TAIGA_COMMUNITY_TITLE": "Taiga 커뮤니티로 이동",
+            "TAIGA_COMMUNITY": "Taiga 커뮤니티",
             "HOMEPAGE": "홈페이지",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
