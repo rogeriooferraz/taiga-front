@@ -1119,6 +1119,8 @@
             }
         },
         "NEWSLETTER_OPENING": {
+            "NO_SHARE": "הפרטיות שלך חשובה לנו (אפשר לעיין ב<a href=\"https://www.taiga.io/privacy-policy\" title=\"מעבר למדיניות הפרטיות\" target=\"_blank\">מדיניות הפרטיות</a> שלנו).",
+            "OPT_OUT": "נשלח לך רק הודעות דוא״ל רלוונטיות (פחות מ־6 בשנה). אפשר לבטל את ההרשמה בכל עת על ידי שליחת הודעת דוא״ל אל <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> עם הנושא “unsubscribe” או באמצעות הקישור בכל אחד מהניוזלטרים שלנו.",
             "DONT_ASK": "אל תשאל שוב",
             "SUBSCRIBE": "הירשם",
             "SUBSCRIBED": "המינוי פעיל",

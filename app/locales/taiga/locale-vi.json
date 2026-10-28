@@ -1119,6 +1119,8 @@
             }
         },
         "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Quyền riêng tư của bạn rất quan trọng đối với chúng tôi (xem <a href=\"https://www.taiga.io/privacy-policy\" title=\"Đi đến chính sách quyền riêng tư\" target=\"_blank\">chính sách quyền riêng tư</a> của chúng tôi).",
+            "OPT_OUT": "Chúng tôi chỉ gửi cho bạn những email có liên quan (ít hơn 6 email mỗi năm). Bạn có thể hủy đăng ký bất kỳ lúc nào bằng cách gửi email đến <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> với tiêu đề “unsubscribe” hoặc qua liên kết trong bất kỳ bản tin nào của chúng tôi.",
             "DONT_ASK": "Đừng hỏi lại",
             "SUBSCRIBE": "Đăng ký",
             "SUBSCRIBED": "Bạn đã đăng ký",

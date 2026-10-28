@@ -1119,6 +1119,8 @@
             }
         },
         "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Ваша приватност нам је важна (погледајте нашу <a href=\"https://www.taiga.io/privacy-policy\" title=\"Иди на политику приватности\" target=\"_blank\">политику приватности</a>).",
+            "OPT_OUT": "Слаћемо вам само релевантне имејлове (мање од 6 годишње). Можете се одјавити у било ком тренутку слањем имејла на <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> са насловом “unsubscribe” или путем везе у било ком од наших билтена.",
             "DONT_ASK": "Не питај поново",
             "SUBSCRIBE": "Претплати се",
             "SUBSCRIBED": "Претплаћени сте",

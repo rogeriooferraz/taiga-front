@@ -1119,6 +1119,8 @@
             }
         },
         "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Din integritet är viktig för oss (se vår <a href=\"https://www.taiga.io/privacy-policy\" title=\"Gå till integritetspolicyn\" target=\"_blank\">integritetspolicy</a>).",
+            "OPT_OUT": "Vi skickar bara relevanta e-postmeddelanden till dig (färre än 6 per år). Du kan när som helst avsluta prenumerationen genom att skicka ett e-postmeddelande till <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> med ämnet “unsubscribe” eller via länken i något av våra nyhetsbrev.",
             "DONT_ASK": "Fråga inte igen",
             "SUBSCRIBE": "Prenumerera",
             "SUBSCRIBED": "Du prenumererar",

@@ -1119,6 +1119,8 @@
             }
         },
         "NEWSLETTER_OPENING": {
+            "NO_SHARE": "고객님의 개인정보는 저희에게 중요합니다(<a href=\"https://www.taiga.io/privacy-policy\" title=\"개인정보 처리방침으로 이동\" target=\"_blank\">개인정보 처리방침</a>을 확인해 주세요).",
+            "OPT_OUT": "관련 있는 이메일만 보내 드립니다(연간 6통 미만). 언제든지 <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a>로 제목이 “unsubscribe”인 이메일을 보내거나 뉴스레터에 있는 링크를 이용해 구독을 취소할 수 있습니다.",
             "DONT_ASK": "다시 묻지 않기",
             "SUBSCRIBE": "구독하기",
             "SUBSCRIBED": "구독 중",

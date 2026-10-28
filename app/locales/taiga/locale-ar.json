@@ -1119,6 +1119,8 @@
             }
         },
         "NEWSLETTER_OPENING": {
+            "NO_SHARE": "خصوصيتك تهمنا (اطّلع على <a href=\"https://www.taiga.io/privacy-policy\" title=\"الانتقال إلى سياسة الخصوصية\" target=\"_blank\">سياسة الخصوصية</a>).",
+            "OPT_OUT": "سنرسل إليك رسائل إلكترونية ذات صلة فقط (أقل من 6 رسائل سنويًا). يمكنك إلغاء الاشتراك في أي وقت بإرسال رسالة إلى <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> بعنوان “unsubscribe” أو باستخدام الرابط الموجود في أي من نشراتنا الإخبارية.",
             "DONT_ASK": "لا تسأل مرة أخرى",
             "SUBSCRIBE": "اشترك",
             "SUBSCRIBED": "أنت مشترك",

@@ -1120,6 +1120,8 @@
             }
         },
         "NEWSLETTER_OPENING": {
+            "NO_SHARE": "我们重视你的隐私（请查看我们的<a href=\"https://www.taiga.io/privacy-policy\" title=\"前往隐私政策\" target=\"_blank\">隐私政策</a>）。",
+            "OPT_OUT": "我们只会向你发送相关电子邮件（每年少于 6 封）。你可以随时向 <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> 发送主题为“unsubscribe”的电子邮件，或使用我们任一期新闻邮件中的链接取消订阅。",
             "DONT_ASK": "不再询问",
             "SUBSCRIBE": "订阅",
             "SUBSCRIBED": "已订阅",

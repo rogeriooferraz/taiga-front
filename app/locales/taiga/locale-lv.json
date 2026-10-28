@@ -1119,6 +1119,8 @@
             }
         },
         "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Jūsu privātums mums ir svarīgs (skatiet mūsu <a href=\"https://www.taiga.io/privacy-policy\" title=\"Doties uz privātuma politiku\" target=\"_blank\">privātuma politiku</a>).",
+            "OPT_OUT": "Mēs jums sūtīsim tikai atbilstošus e-pasta ziņojumus (mazāk nekā 6 gadā). Jūs jebkurā laikā varat atteikties no abonēšanas, nosūtot e-pasta ziņojumu uz <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> ar tematu “unsubscribe” vai izmantojot saiti jebkurā no mūsu jaunumu vēstulēm.",
             "DONT_ASK": "Vairs nejautāt",
             "SUBSCRIBE": "Abonēt",
             "SUBSCRIBED": "Abonements ir aktīvs",

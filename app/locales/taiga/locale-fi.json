@@ -1119,6 +1119,8 @@
             }
         },
         "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Yksityisyytesi on meille tärkeää (tutustu <a href=\"https://www.taiga.io/privacy-policy\" title=\"Siirry tietosuojakäytäntöön\" target=\"_blank\">tietosuojakäytäntöömme</a>).",
+            "OPT_OUT": "Lähetämme sinulle vain olennaisia sähköposteja (alle 6 vuodessa). Voit peruuttaa tilauksen milloin tahansa lähettämällä sähköpostia osoitteeseen <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> otsikolla “unsubscribe” tai käyttämällä missä tahansa uutiskirjeessämme olevaa linkkiä.",
             "DONT_ASK": "Älä kysy uudelleen",
             "SUBSCRIBE": "Tilaa",
             "SUBSCRIBED": "Olet tilannut",
