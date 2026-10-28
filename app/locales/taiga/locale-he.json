@@ -831,8 +831,10 @@
             "ADD_COMMENT": "האם אתה רוצה להוסיף תגובה לבעלים?",
             "UNLIMITED_PROJECTS": "בלתי מוגבל",
             "OWNER_MESSAGE": {
-                "PRIVATE": "זכור, יש באפשרותך להיות בעלים של  <strong>{{maxProjects}}</strong> פרוייקטים ציבוריים. כרגע כבר יש לך <strong>{{currentProjects}}</strong> פרוייקטים כאלה.",
-                "PUBLIC": "זכור, יש באפשרותך להיות בעלים של  <strong>{{maxProjects}}</strong> פרוייקטים ציבוריים. כרגע כבר יש לך <strong>{{currentProjects}}</strong> פרוייקטים כאלה."
+                "PRIVATE": "זכור, יש באפשרותך להיות בעלים של  <strong>{{maxProjects}}</strong> פרוייקטים פרטיים. כרגע כבר יש לך <strong>{{currentProjects}}</strong> פרוייקטים כאלה.",
+                "PRIVATE_EXCEEDED": "מספר הפרויקטים הפרטיים שלך הוא <strong>{{currentProjects}}</strong>, המספר המרבי שתוכנית המינוי שלך מאפשרת.",
+                "PUBLIC": "זכור, יש באפשרותך להיות בעלים של  <strong>{{maxProjects}}</strong> פרוייקטים ציבוריים. כרגע כבר יש לך <strong>{{currentProjects}}</strong> פרוייקטים כאלה.",
+                "PUBLIC_EXCEEDED": "מספר הפרויקטים הציבוריים שלך הוא <strong>{{currentProjects}}</strong>, המספר המרבי שתוכנית המינוי שלך מאפשרת."
             },
             "CANT_BE_OWNED": "כרגע אינך יכול להפוך ךהיות בעלי הפרויקט מסוג זה. אם תרצה להפוך כזה, אנא צור קשר עם המנהל כדי שישנו את הגדרת החשבון שלך כדי לאפשר לך בעלות על הפרויקט"
         },

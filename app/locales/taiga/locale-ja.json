@@ -834,7 +834,9 @@
             "UNLIMITED_PROJECTS": "無制限",
             "OWNER_MESSAGE": {
                 "PRIVATE": "あなたが持てる非公開プロジェクトは最大<strong>{{maxProjects}}</strong>個までです。現在<strong>{{currentProjects}}</strong>個持っています",
-                "PUBLIC": "あなたが持てる公開プロジェクトは最大<strong>{{maxProjects}}</strong>個までです。現在<strong>{{currentProjects}}</strong>個持っています"
+                "PRIVATE_EXCEEDED": "非公開プロジェクトの数は<strong>{{currentProjects}}</strong>個で、サブスクリプションプランで許可されている上限に達しています。",
+                "PUBLIC": "あなたが持てる公開プロジェクトは最大<strong>{{maxProjects}}</strong>個までです。現在<strong>{{currentProjects}}</strong>個持っています",
+                "PUBLIC_EXCEEDED": "公開プロジェクトの数は<strong>{{currentProjects}}</strong>個で、サブスクリプションプランで許可されている上限に達しています。"
             },
             "CANT_BE_OWNED": "現在あなたはこのタイプのプロジェクトのオーナーにはなれません。このプロジェクトのオーナーになりたい場合は管理者に問い合わせてオーナー権限を変更してもらってください。"
         },

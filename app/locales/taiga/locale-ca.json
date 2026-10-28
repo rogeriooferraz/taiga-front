@@ -835,8 +835,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Recordeu que podeu tenir fins a <strong>{{maxProjects}}</strong> projectes privats. Actualment sou propietari de <strong>{{currentProjects}}</strong> projectes privats.",
                 "PUBLIC": "Recordeu que podeu tenir fins a <strong>{{maxProjects}}</strong> projectes públics. Actualment sou propietari de <strong>{{currentProjects}}</strong> projectes públics.",
-                "PRIVATE_EXCEEDED": "Actualment té <strong>{{currentProjects}} projectes privats</strong>, el màxim que el teu pla permet.",
-                "PUBLIC_EXCEEDED": "Actualment té <strong>{{currentProjects}} projectes públics</strong>, el màxim que el teu pla permet."
+                "PRIVATE_EXCEEDED": "El nombre de projectes privats que teniu és <strong>{{currentProjects}}</strong>, el màxim que permet la vostra subscripció.",
+                "PUBLIC_EXCEEDED": "El nombre de projectes públics que teniu és <strong>{{currentProjects}}</strong>, el màxim que permet la vostra subscripció."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },

@@ -538,8 +538,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Ne feledd, hogy legfeljebb <strong>{{maxProjects}}</strong> privát projekt tulajdonosa lehetsz. Jelenleg <strong>{{currentProjects}}</strong> privát projekted van.",
                 "PUBLIC": "Ne feledd, hogy legfeljebb <strong>{{maxProjects}}</strong> nyilvános projekt tulajdonosa lehetsz. Jelenleg <strong>{{currentProjects}}</strong> nyilvános projekted van.",
-                "PUBLIC_EXCEEDED": "Jelenleg <strong>{{currentProjects}} privát projekted van </strong> a maximum amit a jelenlegi előfizetésed megenged.",
-                "PRIVATE_EXCEEDED": "Jelenleg <strong>{{currentProjects}} privát projekted van </strong> a maximum amit a jelenlegi előfizetésed megenged."
+                "PUBLIC_EXCEEDED": "Jelenleg <strong>{{currentProjects}} nyilvános projekted</strong> van, ami az előfizetésed által engedélyezett maximum.",
+                "PRIVATE_EXCEEDED": "Jelenleg <strong>{{currentProjects}} privát projekted</strong> van, ami az előfizetésed által engedélyezett maximum."
             }
         },
         "PROJECT_PROFILE": {

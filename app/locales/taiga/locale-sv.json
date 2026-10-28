@@ -832,7 +832,9 @@
             "UNLIMITED_PROJECTS": "Obegränsad",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Please remember that you can own up to <strong>{{maxProjects}}</strong> private projects. You currently own <strong>{{currentProjects}}</strong> private projects",
-                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects"
+                "PRIVATE_EXCEEDED": "Antalet privata projekt du har är <strong>{{currentProjects}}</strong>, vilket är det högsta antal som ditt abonnemang tillåter.",
+                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects",
+                "PUBLIC_EXCEEDED": "Antalet offentliga projekt du har är <strong>{{currentProjects}}</strong>, vilket är det högsta antal som ditt abonnemang tillåter."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },

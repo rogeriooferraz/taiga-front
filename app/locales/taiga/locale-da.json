@@ -832,7 +832,9 @@
             "UNLIMITED_PROJECTS": "Ubegrænset",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Husk at du kan eje op til <strong>{{maxProjects}}</strong> private projekter. Du ejer for tiden <strong>{{currentProjects}}</strong> private projekter",
-                "PUBLIC": "Husk at du kan eje op til <strong>{{maxProjects}}</strong> offentlige projekter. Du ejer for tiden <strong>{{currentProjects}}</strong> offentlige projekter"
+                "PRIVATE_EXCEEDED": "Antallet af dine private projekter er <strong>{{currentProjects}}</strong>, hvilket er det maksimale antal, dit abonnement tillader.",
+                "PUBLIC": "Husk at du kan eje op til <strong>{{maxProjects}}</strong> offentlige projekter. Du ejer for tiden <strong>{{currentProjects}}</strong> offentlige projekter",
+                "PUBLIC_EXCEEDED": "Antallet af dine offentlige projekter er <strong>{{currentProjects}}</strong>, hvilket er det maksimale antal, dit abonnement tillader."
             },
             "CANT_BE_OWNED": "I øjeblikket kan du ikke blive ejer af et projekt af denne type. Hvis du gerne vil blive ejer af dette projekt, bedes du kontakte administratoren, så kan de ændrer dine kontoindstillinger for at aktivere projektets ejerskab."
         }

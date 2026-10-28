@@ -834,7 +834,9 @@
             "UNLIMITED_PROJECTS": "无线的",
             "OWNER_MESSAGE": {
                 "PRIVATE": "请记住你可以拥有最多 <strong>{{maxProjects}}</strong> 个私有项目。你当前拥有 <strong>{{currentProjects}}</strong> 个私有项目",
-                "PUBLIC": "请记住你最多可以拥有 <strong>{{maxProjects}}</strong> 个公开项目。你当前拥有 <strong>{{currentProjects}}</strong> 个公开项目"
+                "PRIVATE_EXCEEDED": "您的私有项目数量为<strong>{{currentProjects}}</strong>，已达到订阅方案允许的上限。",
+                "PUBLIC": "请记住你最多可以拥有 <strong>{{maxProjects}}</strong> 个公开项目。你当前拥有 <strong>{{currentProjects}}</strong> 个公开项目",
+                "PUBLIC_EXCEEDED": "您的公开项目数量为<strong>{{currentProjects}}</strong>，已达到订阅方案允许的上限。"
             },
             "CANT_BE_OWNED": "目前你不能成为这类项目的所有者。如果你希望成为这个项目的所有者，请联系管理员，请其在你的账户设置中启用项目所有权。"
         },

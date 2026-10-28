@@ -832,7 +832,9 @@
             "UNLIMITED_PROJECTS": "Rajoittamaton",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Please remember that you can own up to <strong>{{maxProjects}}</strong> private projects. You currently own <strong>{{currentProjects}}</strong> private projects",
-                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects"
+                "PRIVATE_EXCEEDED": "Yksityisten projektiesi määrä on <strong>{{currentProjects}}</strong>, mikä on tilauksesi sallima enimmäismäärä.",
+                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects",
+                "PUBLIC_EXCEEDED": "Julkisten projektiesi määrä on <strong>{{currentProjects}}</strong>, mikä on tilauksesi sallima enimmäismäärä."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },

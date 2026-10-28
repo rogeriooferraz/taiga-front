@@ -832,7 +832,9 @@
             "UNLIMITED_PROJECTS": "Неограничено",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Имате право на <strong>{{maxProjects}}</strong> приватних пројекта. Тренутно имате <strong>{{currentProjects}}</strong> приватних пројекта.",
-                "PUBLIC": "Имате право на <strong>{{maxProjects}}</strong> јавних пројекта. Тренутно имате <strong>{{currentProjects}}</strong> јавних пројекта."
+                "PRIVATE_EXCEEDED": "Број ваших приватних пројеката је <strong>{{currentProjects}}</strong>, што је максималан број који дозвољава ваша претплата.",
+                "PUBLIC": "Имате право на <strong>{{maxProjects}}</strong> јавних пројекта. Тренутно имате <strong>{{currentProjects}}</strong> јавних пројекта.",
+                "PUBLIC_EXCEEDED": "Број ваших јавних пројеката је <strong>{{currentProjects}}</strong>, што је максималан број који дозвољава ваша претплата."
             },
             "CANT_BE_OWNED": "Тренутно неможете преузети власништво пројекта овог типа. Ако желите да постанете власник овог пројекта, молимо вас, контактирајте администратора да преко подешавања додели вама власништво."
         }

@@ -832,7 +832,9 @@
             "UNLIMITED_PROJECTS": "Neierobežots/bezgalīgs",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Lūdzu, atcerieties, ka Jūs varat vadīt ne vairāk kā <strong>{{maxProjects}}</strong> privātus projektus. Pašlaik Jūs vadāt <strong>{{currentProjects}}</strong> privātus projektus",
-                "PUBLIC": "Lūdzu, atcerieties, ka Jūs varat vadīt ne vairāk kā <strong>{{maxProjects}}</strong> publiskus projektus. Pašlaik Jūs vadāt <strong>{{currentProjects}}</strong> publiskus projektus"
+                "PRIVATE_EXCEEDED": "Jūsu privāto projektu skaits ir <strong>{{currentProjects}}</strong>, kas ir maksimālais jūsu abonementā atļautais skaits.",
+                "PUBLIC": "Lūdzu, atcerieties, ka Jūs varat vadīt ne vairāk kā <strong>{{maxProjects}}</strong> publiskus projektus. Pašlaik Jūs vadāt <strong>{{currentProjects}}</strong> publiskus projektus",
+                "PUBLIC_EXCEEDED": "Jūsu publisko projektu skaits ir <strong>{{currentProjects}}</strong>, kas ir maksimālais jūsu abonementā atļautais skaits."
             },
             "CANT_BE_OWNED": "Pašlaik jūs nevarat kļūt par šāda veida projekta vadītāju. Ja vēlaties kļūt par šī projekta vadītāju, lūdzu, sazinieties ar administratoru, lai viņš mainītu Jūsu konta iestatījumus, dodot iespēju kļūt par šī par projekta vadītāju."
         },

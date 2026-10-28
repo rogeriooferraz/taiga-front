@@ -838,8 +838,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Recuerde que puede poseer hasta <strong>{{maxProjects}}</strong> proyectos privados. Actualmente posee <strong>{{currentProjects}}</strong> proyectos privados.",
                 "PUBLIC": "Recuerde que puede poseer hasta <strong>{{maxProjects}}</strong> proyectos públicos. Actualmente posee <strong>{{currentProjects}}</strong> proyectos públicos.",
-                "PRIVATE_EXCEEDED": "Actualmente tiene <strong>{{currentProjects}} proyectos privados</strong> el máximo que permite su plan.",
-                "PUBLIC_EXCEEDED": "Actualmente tiene <strong>{{currentProjects}} proyectos públicos</strong> el máximo que permite su plan."
+                "PRIVATE_EXCEEDED": "El número de proyectos privados que tiene es <strong>{{currentProjects}}</strong>, el máximo que permite su suscripción.",
+                "PUBLIC_EXCEEDED": "El número de proyectos públicos que tiene es <strong>{{currentProjects}}</strong>, el máximo que permite su suscripción."
             },
             "CANT_BE_OWNED": "en el momento no puede ser el dueño de un proyecto de este tipo. Si desea ser el dueño de este proyecto, por favor contacte al administrador para cambiar la configuracion que le permita ser dueño del proyecto"
         },

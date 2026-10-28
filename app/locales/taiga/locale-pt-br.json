@@ -838,8 +838,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Por favor, lembre-se que você pode ser dono de até <strong>{{maxProjects}}</strong> projetos privados. Você, atualmente, é dono de <strong>{{currentProjects}}</strong> projetos privados.",
                 "PUBLIC": "Por favor, lembre-se de que você pode ser dono de até <strong>{{maxProjects}}</strong> projetos públicos. Você atualmente é dono de <strong>{{currentProjects}}</strong> projetos públicos.",
-                "PUBLIC_EXCEEDED": "Atualmente você tem <strong>{{currentProjects}} projetos públicos</strong> do máximo que seu plano permite.",
-                "PRIVATE_EXCEEDED": "Atualmente você tem <strong>{{currentProjects}} projetos privados </strong> do máximo que seu plano permite."
+                "PUBLIC_EXCEEDED": "Seu total de projetos públicos é <strong>{{currentProjects}}</strong>, o máximo permitido pelo seu plano de assinatura.",
+                "PRIVATE_EXCEEDED": "Seu total de projetos privados é <strong>{{currentProjects}}</strong>, o máximo permitido pelo seu plano de assinatura."
             },
             "CANT_BE_OWNED": "No momento, você não pode se tornar dono de um projeto desse tipo. Se você quiser se tornar dono desse projeto, por favor, entre em contato com os administradores para mudarem as configurações da sua conta para habilitar a propriedade do projeto."
         },

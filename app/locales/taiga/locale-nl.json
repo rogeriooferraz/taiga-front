@@ -837,7 +837,9 @@
             "UNLIMITED_PROJECTS": "Ongelimiteerd",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Please remember that you can own up to <strong>{{maxProjects}}</strong> private projects. You currently own <strong>{{currentProjects}}</strong> private projects",
-                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects"
+                "PRIVATE_EXCEEDED": "Het aantal privéprojecten dat u hebt, is <strong>{{currentProjects}}</strong> en heeft daarmee het maximum bereikt dat uw abonnement toestaat.",
+                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects",
+                "PUBLIC_EXCEEDED": "Het aantal openbare projecten dat u hebt, is <strong>{{currentProjects}}</strong> en heeft daarmee het maximum bereikt dat uw abonnement toestaat."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },

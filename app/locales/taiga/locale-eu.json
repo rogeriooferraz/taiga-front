@@ -838,8 +838,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Gogoan izan <strong>{{maxProjects}}</strong> proiektu pribaturen jabe izan zaitezke gehienez. Gaur gaurkoz <strong>{{currentProjects}}</strong> proiektu pribaturen jabe zara.",
                 "PUBLIC": "Gogoan izan, mesedez, <strong>{{maxProjects}}</strong> proiektu publikoren jabe izan zaitezke gehienez. Gaur gaurkoz <strong>{{currentProjects}}</strong> proiektu publikoren jabe zara.",
-                "PRIVATE_EXCEEDED": "Une honetan <strong>{{currentProjects}} proiektu pribatua</strong> dituzu, zure planak onartzen duen maximoa.",
-                "PUBLIC_EXCEEDED": "Une honetan <strong>{{currentProjects}} proiektu publiko</strong> dituzu, zure planak onartzen duen maximoa."
+                "PRIVATE_EXCEEDED": "Zure proiektu pribatuen kopurua <strong>{{currentProjects}}</strong> da, hau da, zure harpidetzak onartzen duen gehieneko kopurua.",
+                "PUBLIC_EXCEEDED": "Zure proiektu publikoen kopurua <strong>{{currentProjects}}</strong> da, hau da, zure harpidetzak onartzen duen gehieneko kopurua."
             },
             "CANT_BE_OWNED": "Orain ezin duzu halako proiektu baten jabe izan. Nahi baduzu proiektuaren jabe berria izan, jar zatez harremanetan administratzailearekin, zure kontuaren ezarpenak alda ditzan, proiektuaren jabe izan ahal izateko."
         },
