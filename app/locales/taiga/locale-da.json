@@ -1426,7 +1426,7 @@
         "PENDING_POINTS": "Afventer Points",
         "CLOSED_POINTS": "lukket",
         "COMPACT_SPRINT": "Kompakt Sprint",
-        "GO_TO_TASKBOARD": "Gå til opgave panelet for {{:: name}}",
+        "GO_TO_TASKBOARD": "Gå til opgave panelet for {{::name}}",
         "EDIT_SPRINT": "Rediger Sprint",
         "TOTAL_POINTS": "total",
         "STATUS_NAME": "Status navn",

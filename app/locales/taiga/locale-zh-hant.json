@@ -1426,7 +1426,7 @@
         "PENDING_POINTS": "待核點數",
         "CLOSED_POINTS": "關閉",
         "COMPACT_SPRINT": "濃縮衝刺點數",
-        "GO_TO_TASKBOARD": "到任務板 {{spring.name}}",
+        "GO_TO_TASKBOARD": "到任務板 {{::name}}",
         "EDIT_SPRINT": "編輯衝刺任務 ",
         "TOTAL_POINTS": "全部",
         "STATUS_NAME": "狀態名稱 ",
