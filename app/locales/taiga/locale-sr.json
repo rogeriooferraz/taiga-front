@@ -565,7 +565,7 @@
             "REQUEST_OWNERSHIP": "Потражи власништво",
             "REQUEST_OWNERSHIP_LIMIT": "Достигли сте ограничење броја приватних пројеката ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Да ли желите да постанете нови власници пројекта?",
-            "REQUEST_OWNERSHIP_DESC": "Поднесите захтев да власник прокета преда вама власништво.",
+            "REQUEST_OWNERSHIP_DESC": "Поднесите захтев да {{name}}, тренутни власник пројекта, пренесе власништво над овим пројектом на вас.",
             "REQUEST_OWNERSHIP_BUTTON": "Потражи",
             "REQUEST_OWNERSHIP_SUCCESS": "Обавештаваћемо власника пројекта",
             "CHANGE_OWNER": "Промени власништво",

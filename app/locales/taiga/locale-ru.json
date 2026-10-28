@@ -564,7 +564,7 @@
             "PROJECT_OWNER": "Владелец проекта",
             "REQUEST_OWNERSHIP": "Запрос владельца",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Хотите стать новым владельцем проекта?",
-            "REQUEST_OWNERSHIP_DESC": "Запрос текущему владельцу проекта передать Вам права на владение проектом.",
+            "REQUEST_OWNERSHIP_DESC": "Попросите {{name}}, текущего владельца проекта, передать вам право владения этим проектом.",
             "REQUEST_OWNERSHIP_BUTTON": "Запрос",
             "REQUEST_OWNERSHIP_SUCCESS": "Мы уведомим владельца проекта",
             "CHANGE_OWNER": "Сменить владельца",

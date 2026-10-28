@@ -1407,7 +1407,7 @@
     },
     "BACKLOG": {
         "PAGE_TITLE": "Arretrati - {{projectName}}",
-        "PAGE_DESCRIPTION": "Il pannello di backlog, con le storie degli utenti e gli sprint di progetto",
+        "PAGE_DESCRIPTION": "Il pannello del backlog, con le storie utente e gli sprint del progetto {{projectName}}: {{projectDescription}}",
         "SECTION_NAME": "Scrum",
         "CUSTOMIZE_GRAPH": "Personalizza il grafico del tuo backlog",
         "CUSTOMIZE_GRAPH_TEXT": "Per avere un grafico bello e utile che ti aiuti a seguire l'evoluzione del progetto devi impostare i punti e gli sprint come",

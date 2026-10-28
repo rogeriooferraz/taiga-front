@@ -1747,7 +1747,7 @@
         "ACTION_DELETE_ACCOUNT": "Poista Taiga-tunnus",
         "ACTION_DOWNLOAD_PROFILE": "Download Taiga profile",
         "ACTION_VERIFY_EMAIL": "Verify your email",
-        "CHANGE_EMAIL_SUCCESS": "<strong>Tarkista sähköpostisi!</strong><br />Lähetimme ohjeet<br /><strong>{{email}}</strong><br />uuden osoitteen asettamiseen",
+        "CHANGE_EMAIL_SUCCESS": "<strong>Tarkista sähköpostisi!</strong><br />Lähetimme sähköpostiisi ohjeet<br />uuden osoitteen asettamiseen",
         "VERIFY_EMAIL_SUCCESS": "<strong>Check your inbox!</strong><br />We have sent you an email<br />with instructions on how to verify your address",
         "CHANGE_PHOTO": "Muuta kuva",
         "FIELD": {

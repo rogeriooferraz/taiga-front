@@ -128,7 +128,7 @@
                 "SAT": "ש'"
             }
         },
-        "SEE_USER_PROFILE": "צפה בפרופיל המשתמש",
+        "SEE_USER_PROFILE": "הצג את הפרופיל של {{username}}",
         "USER_STORY": "סיפור משתמש",
         "TASK": "משימה",
         "ISSUE": "תקלה",

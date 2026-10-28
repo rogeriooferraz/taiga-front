@@ -776,7 +776,7 @@
             "SUCCESS_SEND_INVITATION": "Hemos enviado nuevamente la invitación a '{{email}}'.",
             "SUCCESS_DELETE": "Hemos eliminado {{message}}.",
             "ERROR_DELETE": "No se ha podido eliminar {{message}}. ",
-            "DEFAULT_DELETE_MESSAGE": "la invitación enviada a"
+            "DEFAULT_DELETE_MESSAGE": "la invitación enviada a {{email}}"
         },
         "DEFAULT_VALUES": {
             "LABEL_EPIC_STATUS": "Selector del estado de Epic",
