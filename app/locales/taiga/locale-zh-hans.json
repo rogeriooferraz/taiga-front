@@ -1158,7 +1158,9 @@
             "CREATE": "在此创建一个问题",
             "PUBLIC": "公开的Taiga项目",
             "EMAIL": "给我们发送邮件到",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "查看 ",
+            "FAQ": "常见问题"
         },
         "SEARCH": {
             "TITLE": "搜索",

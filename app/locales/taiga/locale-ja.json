@@ -1170,7 +1170,9 @@
             "CREATE": "課題を作成する: ",
             "PUBLIC": "public Taiga project",
             "EMAIL": "直接メールする: ",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "こちらをご覧ください： ",
+            "FAQ": "よくある質問"
         },
         "SEARCH": {
             "TITLE": "検索",

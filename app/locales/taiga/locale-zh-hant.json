@@ -1169,7 +1169,8 @@
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
             "SUPPORT": "support@taiga.io",
-            "FAQ": "常見問題"
+            "FAQ": "常見問題",
+            "VISIT": "參閱 "
         },
         "SEARCH": {
             "TITLE": "搜尋",

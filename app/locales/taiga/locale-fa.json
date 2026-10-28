@@ -1157,7 +1157,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "مشاهده کنید: ",
+            "FAQ": "پرسش‌های متداول"
         },
         "SEARCH": {
             "TITLE": "جست‌وجو",

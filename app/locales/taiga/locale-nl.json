@@ -1172,7 +1172,9 @@
             "CREATE": "Nieuw Issue aanmaken voor dit",
             "PUBLIC": "open Taiga project",
             "EMAIL": "Stuur ons een e-mail rechtstreeks aan",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "Bekijk onze ",
+            "FAQ": "veelgestelde vragen"
         },
         "SEARCH": {
             "TITLE": "Zoek",
