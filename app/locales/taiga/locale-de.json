@@ -1821,7 +1821,7 @@
         "US_UPDATED_POINTS": "{{username}} hat die '{{role_name}}'-Punkte der User-Story {{obj_name}} zu {{new_value}} geändert",
         "ISSUE_UPDATED": "{{username}} hat das Attribut \"{{field_name}}\" des Tickets {{obj_name}} aktualisiert",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} hat das Attribut \"{{field_name}}\" des Tickets {{obj_name}} zu {{new_value}} geändert",
-        "TASK_UPDATED": "{{username}} hat das Attribut \"{{field_name}}\" der Aufgabe {{obj_name}} zu {{new_value}} geändert",
+        "TASK_UPDATED": "{{username}} hat das Attribut \"{{field_name}}\" der Aufgabe {{obj_name}} aktualisiert",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} hat das Attribut \"{{field_name}}\" der Aufgabe {{obj_name}} zu {{new_value}} geändert",
         "TASK_UPDATED_WITH_US": "{{username}} hat das Attribut \"{{field_name}}\" der Aufgabe {{obj_name}}, die zur User-Story {{us_name}} gehört, aktualisiert",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} hat das Attribut \"{{field_name}}\" der Aufgabe {{obj_name}}, die zur User-Story {{us_name}} gehört, zu {{new_value}} geändert",

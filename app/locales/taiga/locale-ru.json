@@ -1821,7 +1821,7 @@
         "US_UPDATED_POINTS": "{{username}} обновил очки роли '{{role_name}}' истории {{obj_name}} на {{new_value}}",
         "ISSUE_UPDATED": "{{username}} изменил значение поля \"{{field_name}}\" запроса {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} изменил значение поля \"{{field_name}}\" запроса {{obj_name}} на \"{{new_value}}\"",
-        "TASK_UPDATED": "{{username}} изменил значение поля \"{{field_name}}\" задачи {{obj_name}} на \"{{new_value}}\"",
+        "TASK_UPDATED": "{{username}} изменил поле «{{field_name}}» задачи {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} изменил значение поля \"{{field_name}}\" задачи {{obj_name}} на \"{{new_value}}\"",
         "TASK_UPDATED_WITH_US": "{{username}} изменил значение поля \"{{field_name}}\" задачи {{obj_name}}, которая принадлежит истории {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} изменил значение поля \"{{field_name}}\" задачи {{obj_name}}, которая принадлежит истории {{us_name}} на \"{{new_value}}\"",

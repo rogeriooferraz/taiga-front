@@ -1821,7 +1821,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} خصوصیت \"{{field_name}}\" از موضوع {{obj_name}} را آپدیت کرده است",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} خصوصیت \"{{field_name}}\" از موضوع {{obj_name}} را به {{new_value}} آپدیت کرده است",
-        "TASK_UPDATED": "{{username}} خصوصیت \"{{field_name}}\" از وظیفه‌ی {{obj_name}} را به {{new_value}} آپدیت کرده است.",
+        "TASK_UPDATED": "{{username}} ویژگی \"{{field_name}}\" وظیفهٔ {{obj_name}} را به‌روزرسانی کرد",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} خصوصیت \"{{field_name}}\" از وظیفه‌ی {{obj_name}} را به {{new_value}} آپدیت کرده است.",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",

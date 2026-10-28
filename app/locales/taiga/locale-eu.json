@@ -1821,7 +1821,7 @@
         "US_UPDATED_POINTS": "{{username}} erabiltzaileak eguneratu ditu '{{role_name}}' erabiltzailearen puntuak {{obj_name}} zereginean, {{new_value}} baliora",
         "ISSUE_UPDATED": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" eginkizun honetan: {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} erabiltzaileak {{obj_name}} eskaeraren \"{{field_name}}\" ezaugarria {{new_value}} baliora aldatu du",
-        "TASK_UPDATED": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" eginkizun honetan: {{obj_name}}",
+        "TASK_UPDATED": "{{username}} erabiltzaileak \"{{field_name}}\" atributua eguneratu du {{obj_name}} eginkizunean",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} erabiltzaileak {{obj_name}} atazaren \"{{field_name}}\" ezaugarria {{new_value}} baliora aldatu du",
         "TASK_UPDATED_WITH_US": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" ataza honetan: {{obj_name}}, {{us_name}} zereginaren barruan",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" ataza honetan: {{obj_name}}, {{us_name}} zereginaren barruan, balio honetara: {{new_value}}",

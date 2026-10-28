@@ -1821,7 +1821,7 @@
         "US_UPDATED_POINTS": "{{username}} aktualizēja '{{role_name}}' VAJADZĪBAS {{obj_name}} punktus uz {{new_value}}.",
         "ISSUE_UPDATED": "{{username}} aktualizēja IZMAIŅAS PIEPRASĪJUMA {{obj_name}} atribūtu \"{{field_name}}\"",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} aktualizēja IZMAIŅAS PIEPRASĪJUMA {{obj_name}} atribūtu \"{{field_name}}\" uz {{new_value}}",
-        "TASK_UPDATED": "{{username}} aktualizēja UZDEVUMA {{obj_name}} atribūtu \"{{field_name}}\" uz {{new_value}}",
+        "TASK_UPDATED": "{{username}} atjaunināja uzdevuma {{obj_name}} atribūtu \"{{field_name}}\"",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} aktualizēja UZDEVUMA {{obj_name}} atribūtu \"{{field_name}}\" uz {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} aktualizēja UZDEVUMA {{obj_name}}, kas saistīts ar VAJADZĪBU {{us_name}}, atribūtu \"{{field_name}}\"",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} aktualizēja UZDEVUMA {{obj_name}}, kas saistīts ar VAJADZĪBU {{us_name}}, atribūtu \"{{field_name}}\" uz {{new_value}}",

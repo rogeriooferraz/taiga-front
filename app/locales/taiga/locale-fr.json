@@ -1821,7 +1821,7 @@
         "US_UPDATED_POINTS": "{{username}} a mis à jour les points '{{role_name}}' du récit utilisateur {{obj_name}} à {{new_value}}",
         "ISSUE_UPDATED": "{{username}} a mis à jour l'attribut «{{field_name}}» du ticket {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} a mis à jour l'attribut \"{{field_name}}\" du ticket {{obj_name}} à {{new_value}}",
-        "TASK_UPDATED": "{{username}} a mis l'attribut \"{{field_name}}\" à {{new_value}} pour la tâche {{obj_name}}",
+        "TASK_UPDATED": "{{username}} a mis à jour l'attribut « {{field_name}} » de la tâche {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} a mis l'attribut \"{{field_name}}\" à {{new_value}} pour la tâche {{obj_name}}",
         "TASK_UPDATED_WITH_US": "{{username}} a mis à jour l’attribut \"{{field_name}}\" de la tâche {{obj_name}} qui appartient au récit utilisateur {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} a mis à jour l’attribut \"{{field_name}}\" de la tâche {{obj_name}} qui appartient au récit utilisateur {{us_name}} à {{new_value}}",

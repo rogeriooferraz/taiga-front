@@ -1821,7 +1821,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} har opdateret attributten \"{{field_name}}\" af problemet {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} har opdateret feltet \"{{field_name}}\" på dette problem fra {{obj_name}} til {{new_value}}",
-        "TASK_UPDATED": "{{username}} har opdateret attributten \"{{field_name}}\" af opgaven {{obj_name}} til {{new_value}}",
+        "TASK_UPDATED": "{{username}} har opdateret attributten \"{{field_name}}\" for opgaven {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} har opdateret attributten \"{{field_name}}\" af opgaven {{obj_name}} til {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",

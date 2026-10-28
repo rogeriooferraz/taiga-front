@@ -1821,7 +1821,7 @@
         "US_UPDATED_POINTS": "{{username}} さんがユーザーストーリー {{obj_name}} における役割 '{{role_name}}' のポイントを {{new_value}} に更新しました",
         "ISSUE_UPDATED": "{{username}} さんが課題 {{obj_name}} の属性 \"{{field_name}}\" を更新しました",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} さんが課題 {{obj_name}} の属性 \"{{field_name}}\" を {{new_value}} に更新しました",
-        "TASK_UPDATED": "{{username}} さんが {{obj_name}} の {{field_name}} を {{new_value}} に更新しました",
+        "TASK_UPDATED": "{{username}} さんがタスク {{obj_name}} の属性「{{field_name}}」を更新しました",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} さんが {{obj_name}} の {{field_name}} を {{new_value}} に更新しました",
         "TASK_UPDATED_WITH_US": "{{username}} さんがユーザーストーリー {{us_name}} のタスク {{obj_name}} の属性 \"{{field_name}}\" を更新しました",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} さんがユーザーストーリー {{us_name}} のタスク {{obj_name}} における属性 \"{{field_name}}\" を {{new_value}} に更新しました",

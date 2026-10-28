@@ -1821,7 +1821,7 @@
         "US_UPDATED_POINTS": "{{username}}, {{obj_name}} kullanıcı hikayesinin '{{role_name}}' puanlarını {{new_value}} olarak güncelledi",
         "ISSUE_UPDATED": "{{username}}, {{obj_name}} talebinin \"{{field_name}}\" özniteliğini güncelledi",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}}, {{obj_name}} talebinin \"{{field_name}}\" özniteliğini {{new_value}} olarak güncelledi",
-        "TASK_UPDATED": "{{username}}, {{obj_name}} görevinin \"{{field_name}}\" öznitelliğini {{new_value}} olarak güncelledi",
+        "TASK_UPDATED": "{{username}}, {{obj_name}} görevinin \"{{field_name}}\" özniteliğini güncelledi",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}}, {{obj_name}} görevinin \"{{field_name}}\" öznitelliğini {{new_value}} olarak güncelledi",
         "TASK_UPDATED_WITH_US": "{{username}}, {{us_name}} kullanıcı hikayesine ait olan {{obj_name}} görevinin \"{{field_name}}\" öznitelliğini güncelledi",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}}, {{us_name}} kullanıcı hikayesine ait olan {{obj_name}} görevinin \"{{field_name}}\" öznitelliğini {{new_value}} olarak güncelledi",

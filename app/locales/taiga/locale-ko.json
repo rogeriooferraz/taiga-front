@@ -1821,7 +1821,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}}님이 {{obj_name}} 이슈의 \"{{field_name}}\" 속성을 변경하였습니다.",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} 님이 {{obj_name}} 이슈의 \"{{field_name}}\" 속성을 {{new_value}}로 변경하였습니다.",
-        "TASK_UPDATED": "{{username}} 님이 {{obj_name}} 태스크의 \"{{field_name}}\" 속성을 {{new_value}}로 변경하였습니다.",
+        "TASK_UPDATED": "{{username}}님이 작업 {{obj_name}}의 \"{{field_name}}\" 속성을 업데이트했습니다",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} 님이 {{obj_name}} 태스크의 \"{{field_name}}\" 속성을 {{new_value}}로 변경하였습니다.",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
