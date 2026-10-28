@@ -942,7 +942,9 @@
             "CHANGE_PASSWORD": "Изменить пароль",
             "DASHBOARD_TITLE": "Рабочий стол",
             "DISCOVER_TITLE": "Найти проекты в тренде",
-            "DISCOVER": "Найти"
+            "DISCOVER": "Найти",
+            "TAIGA_COMMUNITY": "Сообщество Taiga",
+            "TAIGA_COMMUNITY_TITLE": "В Сообщество Taiga"
         },
         "LIKE_BUTTON": {
             "LIKE": "Мне нравится",

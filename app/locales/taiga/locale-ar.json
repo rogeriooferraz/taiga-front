@@ -944,7 +944,9 @@
             "CHANGE_PASSWORD": "Change password",
             "DASHBOARD_TITLE": "Dashboard",
             "DISCOVER_TITLE": "Discover trending projects",
-            "DISCOVER": "Discover"
+            "DISCOVER": "Discover",
+            "TAIGA_COMMUNITY": "مجتمع Taiga",
+            "TAIGA_COMMUNITY_TITLE": "الذهاب إلى مجتمع Taiga"
         },
         "LIKE_BUTTON": {
             "LIKE": "Like",

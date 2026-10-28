@@ -945,7 +945,9 @@
             "CHANGE_PASSWORD": "Wachtwoord wijzigen",
             "DASHBOARD_TITLE": "Dashboard",
             "DISCOVER_TITLE": "Ontdek trending projecten",
-            "DISCOVER": "Ontdek"
+            "DISCOVER": "Ontdek",
+            "TAIGA_COMMUNITY": "Taiga-gemeenschap",
+            "TAIGA_COMMUNITY_TITLE": "Ga naar de Taiga-gemeenschap"
         },
         "LIKE_BUTTON": {
             "LIKE": "Vind ik leuk",
