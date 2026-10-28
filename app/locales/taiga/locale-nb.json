@@ -650,7 +650,7 @@
             "TITLE": "Typer",
             "SUBTITLE": "Angi hvilke typer dine hendelser kan være",
             "ISSUE_TITLE": "Hendelsestyper",
-            "ACTION_ADD": "Legg til {{objName}}"
+            "ACTION_ADD": "Legg til ny hendelsestype"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Etiketter",

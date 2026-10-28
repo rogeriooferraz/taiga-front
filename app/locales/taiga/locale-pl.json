@@ -650,7 +650,7 @@
             "TITLE": "Typy",
             "SUBTITLE": "Zdefiniuj typy zgłoszeń",
             "ISSUE_TITLE": "Typy zgłoszeń",
-            "ACTION_ADD": "Dodaj nowy {{objName}}"
+            "ACTION_ADD": "Dodaj nowy typ zgłoszenia"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Tagi",

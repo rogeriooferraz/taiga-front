@@ -650,7 +650,7 @@
             "TITLE": "Tipi/Veidi",
             "SUBTITLE": "Norādiet Jūsu izmaiņu pieprasījumu iespējamos tipus ",
             "ISSUE_TITLE": "Izmaiņu pieprasījumu tipi",
-            "ACTION_ADD": "Pievienot jaunu {{objName}}"
+            "ACTION_ADD": "Pievienot jaunu izmaiņu pieprasījuma tipu"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Birkas/marķieri",

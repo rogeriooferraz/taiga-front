@@ -650,7 +650,7 @@
             "TITLE": "タイプ",
             "SUBTITLE": "課題のタイプを定義することができます",
             "ISSUE_TITLE": "課題のタイプ",
-            "ACTION_ADD": "新しい {{objName}} を追加"
+            "ACTION_ADD": "新しい課題タイプを追加"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "タグ",

@@ -650,7 +650,7 @@
             "TITLE": "Motak",
             "SUBTITLE": "Zehaztu zein motatakoa izan daitezkeen zure eskaerak",
             "ISSUE_TITLE": "Eskaera motak",
-            "ACTION_ADD": "Gehitu {{objName}}"
+            "ACTION_ADD": "Gehitu eskaera mota berria"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Etiketak",

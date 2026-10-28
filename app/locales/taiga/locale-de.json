@@ -650,7 +650,7 @@
             "TITLE": "Typen",
             "SUBTITLE": "Spezifizieren Sie, welche Arten Ihre Tickets haben können",
             "ISSUE_TITLE": "Ticketarten",
-            "ACTION_ADD": "Neu hinzufügen {{objName}}"
+            "ACTION_ADD": "Neuen Tickettyp hinzufügen"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Schlagwörter",

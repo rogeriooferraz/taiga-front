@@ -650,7 +650,7 @@
             "TITLE": "סוגים",
             "SUBTITLE": "ספק את הטיפוסים שסיפורי המשתמש שלך יכולים להיות",
             "ISSUE_TITLE": "טיפוסי תקלות",
-            "ACTION_ADD": "הוסף  {{objName}} חדש"
+            "ACTION_ADD": "הוספת סוג תקלה חדש"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "תגיות",

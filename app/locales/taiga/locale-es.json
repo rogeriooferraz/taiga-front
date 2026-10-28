@@ -650,7 +650,7 @@
             "TITLE": "Tipos",
             "SUBTITLE": "Especifica los deferentes tipos posibles de peticiones que pueden existir.",
             "ISSUE_TITLE": "Tipos de la petición",
-            "ACTION_ADD": "Añadir nuevo {{objName}}"
+            "ACTION_ADD": "Añadir un nuevo tipo de petición"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Etiquetas",

@@ -650,7 +650,7 @@
             "TITLE": "Türler",
             "SUBTITLE": "Taleblerinizin olabileceği türleri belirtin",
             "ISSUE_TITLE": "Sorun türleri",
-            "ACTION_ADD": "Ekle yeni {{objName}}"
+            "ACTION_ADD": "Yeni sorun türü ekle"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Etiketler",

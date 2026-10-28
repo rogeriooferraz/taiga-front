@@ -650,7 +650,7 @@
             "TITLE": "انواع",
             "SUBTITLE": "نوع موضوع خود را مشخص کنید",
             "ISSUE_TITLE": "انواع موضوعات",
-            "ACTION_ADD": "اضافه کردن {{objName}} جدید"
+            "ACTION_ADD": "افزودن نوع جدید موضوع"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "برچسب‌ها",

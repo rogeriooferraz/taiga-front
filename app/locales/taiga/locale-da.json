@@ -650,7 +650,7 @@
             "TITLE": "Typer",
             "SUBTITLE": "Angiv hvilken type dit problem kan være",
             "ISSUE_TITLE": "Problem type",
-            "ACTION_ADD": "Tilføj ny {{objName}}"
+            "ACTION_ADD": "Tilføj ny problemtype"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Tags",

@@ -650,7 +650,7 @@
             "TITLE": "Tyypit",
             "SUBTITLE": "Määrittele pyyntöjen tyypit",
             "ISSUE_TITLE": "Pyyntöjen tyypit",
-            "ACTION_ADD": "Lisää uusi {{objName}}"
+            "ACTION_ADD": "Lisää uusi pyynnön tyyppi"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Avainsanat",

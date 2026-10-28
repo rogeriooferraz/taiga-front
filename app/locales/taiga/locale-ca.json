@@ -650,7 +650,7 @@
             "TITLE": "Tipus",
             "SUBTITLE": "Especifiqueu quin tipus d'incidència podria ser",
             "ISSUE_TITLE": "Tipus d'incidències",
-            "ACTION_ADD": "Afegir now {{objName}}"
+            "ACTION_ADD": "Afegir un tipus d'incidència nou"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Etiquetes",

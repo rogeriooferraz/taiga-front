@@ -650,7 +650,7 @@
             "TITLE": "Typ",
             "SUBTITLE": "Specificera typer av ärenden",
             "ISSUE_TITLE": "Ärendetyper",
-            "ACTION_ADD": "Lägg till ny {{objName}}"
+            "ACTION_ADD": "Lägg till ny ärendetyp"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Etiketter",

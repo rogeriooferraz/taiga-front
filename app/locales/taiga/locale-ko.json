@@ -650,7 +650,7 @@
             "TITLE": "타입",
             "SUBTITLE": "이슈의 종류를 지정하세요.",
             "ISSUE_TITLE": "이슈 타입",
-            "ACTION_ADD": "{{objName}} 새로 추가하기"
+            "ACTION_ADD": "새 이슈 유형 추가"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "태그",

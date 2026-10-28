@@ -650,7 +650,7 @@
             "TITLE": "Типови",
             "SUBTITLE": "Наведите типове ваших захтева",
             "ISSUE_TITLE": "Типови захтева",
-            "ACTION_ADD": "Додај нови {{objName}}"
+            "ACTION_ADD": "Додај нови тип захтева"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Ознаке",

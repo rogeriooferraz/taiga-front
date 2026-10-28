@@ -650,7 +650,7 @@
             "TITLE": "类型",
             "SUBTITLE": "指定你的问题类型可能是",
             "ISSUE_TITLE": "问题类型",
-            "ACTION_ADD": "新增{{objName}}"
+            "ACTION_ADD": "新增问题类型"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "标签",

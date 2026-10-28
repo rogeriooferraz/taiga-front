@@ -650,7 +650,7 @@
             "TITLE": "Types",
             "SUBTITLE": "Kies de types die je Issues kunnen hebben",
             "ISSUE_TITLE": "Issues types",
-            "ACTION_ADD": "Voeg nieuwe {{objName}} toe"
+            "ACTION_ADD": "Nieuw issuetype toevoegen"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Tags",

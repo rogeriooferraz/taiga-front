@@ -655,8 +655,8 @@
         "PROJECT_VALUES_TYPES": {
             "TITLE": "Types",
             "SUBTITLE": "Specify the types your issues could be",
-            "ISSUE_TITLE": "Issues types",
-            "ACTION_ADD": "Add new {{objName}}"
+            "ISSUE_TITLE": "Issue types",
+            "ACTION_ADD": "Add new issue type"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Tags",

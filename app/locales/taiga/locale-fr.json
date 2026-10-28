@@ -650,7 +650,7 @@
             "TITLE": "Types",
             "SUBTITLE": "Spécifiez les types de ticket possibles",
             "ISSUE_TITLE": "Types de tickets",
-            "ACTION_ADD": "Ajouter un nouveau {{objName}}"
+            "ACTION_ADD": "Ajouter un nouveau type de ticket"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Mots-clés",

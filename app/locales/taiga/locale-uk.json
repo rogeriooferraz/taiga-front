@@ -650,7 +650,7 @@
             "TITLE": "Типи",
             "SUBTITLE": "Вкажіть, яких типів можуть бути ваші проблеми",
             "ISSUE_TITLE": "Типи проблем",
-            "ACTION_ADD": "Додати новий {{objName}}"
+            "ACTION_ADD": "Додати новий тип проблеми"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Мітки",

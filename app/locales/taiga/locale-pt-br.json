@@ -650,7 +650,7 @@
             "TITLE": "Tipos",
             "SUBTITLE": "Especifique de que tipos seus problemas poderão ser",
             "ISSUE_TITLE": "Tipos de problemas",
-            "ACTION_ADD": "Adicionar novo {{objName}}"
+            "ACTION_ADD": "Adicionar novo tipo de problema"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Tags",

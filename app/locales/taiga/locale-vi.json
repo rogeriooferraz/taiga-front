@@ -650,7 +650,7 @@
             "TITLE": "Loại",
             "SUBTITLE": "Xác định hình thức issues của bạn",
             "ISSUE_TITLE": "Các loại issues",
-            "ACTION_ADD": "Thêm mới {{objName}}"
+            "ACTION_ADD": "Thêm loại vấn đề mới"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Thẻ",

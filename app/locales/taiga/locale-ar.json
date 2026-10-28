@@ -650,7 +650,7 @@
             "TITLE": "Types",
             "SUBTITLE": "Specify the types your issues could be",
             "ISSUE_TITLE": "Issues types",
-            "ACTION_ADD": "Add new {{objName}}"
+            "ACTION_ADD": "إضافة نوع جديد من المشكلات"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Tags",
