@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "پروژه به حداکثر تعداد اعضای پروژه‌های عمومی رسیده است",
             "PROJECT_OWNER": "مالکیت پروژه",
             "REQUEST_OWNERSHIP": "درخواست مالکیت",
+            "REQUEST_OWNERSHIP_LIMIT": "شما به سقف تعداد پروژه‌های خصوصی خود ({{maxProjects}}) رسیده‌اید.",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "آیا می‌خواهید مالک جدید پروژه شوید؟",
             "REQUEST_OWNERSHIP_DESC": "درخواست از مالک پروژه‌ {{name}} برای انتقال مالکیت این پروژه به شما",
             "REQUEST_OWNERSHIP_BUTTON": "درخواست",

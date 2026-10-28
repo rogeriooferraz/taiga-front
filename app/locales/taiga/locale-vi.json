@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Dự án vượt quá số lượng  thành viên tối đa cho các dự án công khai",
             "PROJECT_OWNER": "Chủ dự án",
             "REQUEST_OWNERSHIP": "Yêu cầu quyền sở hữu",
+            "REQUEST_OWNERSHIP_LIMIT": "Bạn đã đạt giới hạn số dự án riêng tư ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Bạn có muốn trở thành chủ dự án mới?",
             "REQUEST_OWNERSHIP_DESC": "Yêu cầu chủ dự án gần đây {{name}} trao quyền sở hữu dự án này cho bạn.",
             "REQUEST_OWNERSHIP_BUTTON": "Yêu cầu",

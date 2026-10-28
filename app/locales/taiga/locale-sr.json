@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Пројекат је превазишао максимум чланова за јавне пројекте",
             "PROJECT_OWNER": "Власник пројекта",
             "REQUEST_OWNERSHIP": "Потражи власништво",
+            "REQUEST_OWNERSHIP_LIMIT": "Достигли сте ограничење броја приватних пројеката ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Да ли желите да постанете нови власници пројекта?",
             "REQUEST_OWNERSHIP_DESC": "Поднесите захтев да власник прокета преда вама власништво.",
             "REQUEST_OWNERSHIP_BUTTON": "Потражи",

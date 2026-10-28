@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Projektet overstiger dit maksimale antal medlemmer for offentlige projekter",
             "PROJECT_OWNER": "Projekt ejer",
             "REQUEST_OWNERSHIP": "Bed om ejerskab",
+            "REQUEST_OWNERSHIP_LIMIT": "Du har nået grænsen for private projekter ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Ønsker du at blive den nye projekt ejer?",
             "REQUEST_OWNERSHIP_DESC": "Anmod om, at den nuværende projekt ejer {{name}} overfører ejerskab af dette projekt til dig.",
             "REQUEST_OWNERSHIP_BUTTON": "Forespørgsel",

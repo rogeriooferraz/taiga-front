@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Projekts pārsniedz Jums atļauto maksimālo publisku projektu dalībnieku skaitu",
             "PROJECT_OWNER": "Projekta vadītājs",
             "REQUEST_OWNERSHIP": "Pieprasīt vadību",
+            "REQUEST_OWNERSHIP_LIMIT": "Ir sasniegts privāto projektu limits ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Vēlme uzņemties projekta vadību?",
             "REQUEST_OWNERSHIP_DESC": "Pieprasīt pašreizējam projekta vadītājam {{name}} nodot šī projekta vadību man.",
             "REQUEST_OWNERSHIP_BUTTON": "Pieprasīt",

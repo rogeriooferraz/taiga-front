@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "프로젝트가 공개 프로젝트의 최대 회원 수를 초과했습니다.",
             "PROJECT_OWNER": "프로젝트 소유자",
             "REQUEST_OWNERSHIP": "소유권 요청",
+            "REQUEST_OWNERSHIP_LIMIT": "비공개 프로젝트 한도({{maxProjects}})에 도달했습니다.",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "새 프로젝트의 소유자가 되고 싶습니까?",
             "REQUEST_OWNERSHIP_DESC": "현재 프로젝트 소유자 {{name}}에게 이 프로젝트의 소유권을 당신에게 양도하도록 요청합니다.",
             "REQUEST_OWNERSHIP_BUTTON": "요청하기",

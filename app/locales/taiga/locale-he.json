@@ -563,6 +563,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "הפרוייקט עבר את מספר המשתמשים המירבי המותר לפרוייקטים פרטיים.",
             "PROJECT_OWNER": "בעלי הפרוייקט",
             "REQUEST_OWNERSHIP": "בקשת בעלות",
+            "REQUEST_OWNERSHIP_LIMIT": "הגעת למגבלת הפרויקטים הפרטיים שלך ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "האם אתה חפץ להיות בעלי הפרוייקט הבאים?",
             "REQUEST_OWNERSHIP_DESC": "בקש שבעלי הפרוייקט הנוכחי:  {{name}}, יעביר הבעלות לפרוייקט אליך",
             "REQUEST_OWNERSHIP_BUTTON": "בקשה",
