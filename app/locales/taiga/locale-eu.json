@@ -1124,7 +1124,7 @@
         },
         "NEWSLETTER_OPENING": {
             "NO_SHARE": "Zure pribatutasuna garrantzitsua da guretzat (ikus gure <a href=\"https://www.taiga.io/privacy-policy\" title=\"Joan pribatutasun-politika\" target=\"_blank\">pribatutasun-politika</a>).",
-            "OPT_OUT": "Mezu elektroniko garrantzitsuak soilik bidaliko dizkizugu (urtean <6). Harpidetza ken dezakezu edozein unetan, <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> helbidera mezu elektroniko bat bidalita, \"harpidetza kendu\" gaiarekin edo gure boletinen edozein estekaren bidez.",
+            "OPT_OUT": "Mezu elektroniko garrantzitsuak soilik bidaliko dizkizugu (urtean <6). Harpidetza ken dezakezu edozein unetan, <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> helbidera mezu elektroniko bat bidalita, \"unsubscribe\" gaiarekin edo gure boletinen edozein estekaren bidez.",
             "DONT_ASK": "Ez galdetu berriro",
             "SAVE_PREFERENCE": "GORDE HOBESPENAK",
             "LIGHTBOX_TITLE": "Taigari buruzko iragarkiak jaso nahi dituzu?",

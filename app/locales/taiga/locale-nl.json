@@ -1124,7 +1124,7 @@
         },
         "NEWSLETTER_OPENING": {
             "NOTIFY_EXPLANATION": "We zullen je nieuws, product updates en aanbevelingen over Taiga toesturen.",
-            "OPT_OUT": "We zullen allen belangrijke e-mails naar je sturen (<6 per jaar). Je kunt op elk moment uitschrijven door een e-mail te sturen naar <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> met als onderwerp \"uitschrijven\" of door op de link te klikken in een van onze e-mails.",
+            "OPT_OUT": "We zullen allen belangrijke e-mails naar je sturen (<6 per jaar). Je kunt op elk moment uitschrijven door een e-mail te sturen naar <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> met als onderwerp \"unsubscribe\" of door op de link te klikken in een van onze e-mails.",
             "LIGHTBOX_TITLE": "Wil je mededelingen over Taiga ontvangen?",
             "DONT_ASK": "Niet opnieuw vragen",
             "CONFIRMATION": "Ja, stuur me nieuws, product updates en aanbevelingen over Taiga.",
