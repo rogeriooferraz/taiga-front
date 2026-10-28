@@ -50,7 +50,7 @@ class UserNotificationsController extends mixOf(taiga.Controller, taiga.PageMixi
         ).then () =>
             text = @translate.instant("PROJECT.NEWSLETTER_OPENING.SAVED_PREFERENCE")
 
-            @confirm.notify("success", "Your preferences have been save successfully")
+            @confirm.notify("success", text)
             @.onPremiseSubscribed = true
             @.loadPremise = false
             @resources.user.getUserStorage('dont_ask_premise_newsletter')
