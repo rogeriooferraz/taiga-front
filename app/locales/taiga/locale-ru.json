@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Добавить wiki-ссылки",
                 "DELETE_WIKI_LINKS": "Удалить wiki-ссылки"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Этот проект был заархивирован. Теперь он доступен только для чтения."
         }
     },
     "LOGIN": {

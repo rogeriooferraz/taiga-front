@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "اضافه کردن لینک‌های ویکی",
                 "DELETE_WIKI_LINKS": "حذف لینک‌های ویکی"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "این پروژه بایگانی شده است. اکنون فقط قابل خواندن است."
         }
     },
     "LOGIN": {

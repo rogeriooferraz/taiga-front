@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "הוסף קישורי ויקי",
                 "DELETE_WIKI_LINKS": "מחק קישורי ויקי"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "הפרויקט הזה הועבר לארכיון. כעת הוא זמין לקריאה בלבד."
         }
     },
     "LOGIN": {

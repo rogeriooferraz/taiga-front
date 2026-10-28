@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "新增维基链接",
                 "DELETE_WIKI_LINKS": "删除维基链接"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "此项目已归档。现在为只读状态。"
         }
     },
     "LOGIN": {

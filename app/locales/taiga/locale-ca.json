@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Afegir link de wiki",
                 "DELETE_WIKI_LINKS": "Esborrar enllaços de wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Aquest projecte s'ha arxivat. Ara és de només lectura."
         }
     },
     "LOGIN": {

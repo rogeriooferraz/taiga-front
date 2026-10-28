@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Aggiungi un wiki links",
                 "DELETE_WIKI_LINKS": "Elimina il link wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Questo progetto è stato archiviato. Ora è di sola lettura."
         }
     },
     "LOGIN": {

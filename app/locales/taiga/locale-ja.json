@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Wikiリンクを追加",
                 "DELETE_WIKI_LINKS": "Wikiリンクの削除"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "このプロジェクトはアーカイブされました。現在は読み取り専用になっています。"
         }
     },
     "LOGIN": {

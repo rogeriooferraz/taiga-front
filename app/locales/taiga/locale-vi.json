@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Thêm liên kết wiki",
                 "DELETE_WIKI_LINKS": "Xóa liên kết wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Dự án này đã được lưu trữ. Hiện ở chế độ chỉ đọc."
         }
     },
     "LOGIN": {

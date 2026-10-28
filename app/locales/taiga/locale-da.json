@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Tilføj wiki links",
                 "DELETE_WIKI_LINKS": "Slet wiki links"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Dette projekt er arkiveret. Det er nu skrivebeskyttet."
         }
     },
     "LOGIN": {

@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Pievienot Wiki saites",
                 "DELETE_WIKI_LINKS": "Dzēst Wiki saites"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Šis projekts ir arhivēts. Tagad to var tikai lasīt."
         }
     },
     "LOGIN": {

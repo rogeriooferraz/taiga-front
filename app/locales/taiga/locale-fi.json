@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Lisää wiki-linkkejä",
                 "DELETE_WIKI_LINKS": "Poista wiki-linkkejä"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Tämä projekti on arkistoitu. Sitä voi nyt vain lukea."
         }
     },
     "LOGIN": {

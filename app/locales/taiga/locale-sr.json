@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "Додај вики-везе",
                 "DELETE_WIKI_LINKS": "Уклони вики-везе"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Овај пројекат је архивиран. Сада је само за читање."
         }
     },
     "LOGIN": {

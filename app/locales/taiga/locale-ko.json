@@ -320,6 +320,9 @@
                 "ADD_WIKI_LINKS": "위키 링크 추가하기",
                 "DELETE_WIKI_LINKS": "위키 링크 삭제하기"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "이 프로젝트는 보관되었습니다. 이제 읽기 전용입니다."
         }
     },
     "LOGIN": {
