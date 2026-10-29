@@ -987,6 +987,7 @@ init = ($log, $rootscope, $auth, $events, $analytics, $tagManager, $userPilot, $
     $rootscope.$on "$translateChangeEnd", (e, ctx) ->
         if lang != ctx.language
             lang = ctx.language
+            document.documentElement.lang = lang
             i18nInit(lang, $translate)
             # RTL
             rtlLanguages = $tgConfig.get("rtlLanguages", [])
