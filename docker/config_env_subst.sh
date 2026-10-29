@@ -66,6 +66,14 @@ if [[ ! "$LANGUAGE_CODE" =~ ^[a-z]{2}(-[a-z0-9]+)*$ ]] ||
     exit 1
 fi
 
+# The upstream image can contain an older prebuilt distribution. Offer the
+# dark theme only after that distribution includes its compiled stylesheet.
+TAIGA_THEMES_JSON='["taiga"]'
+if compgen -G "/usr/share/nginx/html/v-*/styles/theme-taiga-dark.css" > /dev/null; then
+    TAIGA_THEMES_JSON='["taiga", "taiga-dark"]'
+fi
+export TAIGA_THEMES_JSON
+
 # Debug
 if [[ -z "${DEBUG}" ]]; then
     export DEBUG="false"

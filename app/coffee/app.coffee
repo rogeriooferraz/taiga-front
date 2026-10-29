@@ -470,7 +470,8 @@ configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEven
                             return $q.reject("Instance defaults are disabled")
                         return httpService.get("#{config.get('api')}instance-defaults/admin")
                         .then ((result) -> result.data), (error) ->
-                            location.path(if error.status == 403 then "/permission-denied" else "/error")
+                            denied = error.status == 401 or error.status == 403
+                            location.path(if denied then "/permission-denied" else "/error")
                             return $q.reject(error)
                 ]
             }

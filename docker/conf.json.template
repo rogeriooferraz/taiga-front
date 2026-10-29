@@ -9,7 +9,7 @@
     "debugInfo": ${DEBUG},
     "defaultLanguage": "${LANGUAGE_CODE}",
     "instanceDefaultsEnabled": ${INSTANCE_DEFAULTS_ENABLED},
-    "themes": ["taiga", "taiga-dark"],
+    "themes": ${TAIGA_THEMES_JSON},
     "defaultTheme": "taiga",
     "defaultLoginEnabled": true,
     "publicRegisterEnabled": ${PUBLIC_REGISTER_ENABLED},

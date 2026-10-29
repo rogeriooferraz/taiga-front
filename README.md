@@ -48,7 +48,11 @@ provides the public and administrator instance-defaults endpoints. The
 frontend then waits for the public settings response before selecting a locale
 or stylesheet, and its avatar menu shows System settings to instance
 administrators. Profile language and theme choices take priority over the
-instance defaults.
+instance defaults. Configure the backend's selectable languages and themes to
+match the locales and stylesheets shipped by the selected frontend image;
+otherwise an administrator can save a choice that the browser cannot load.
+If that happens, restore the matching assets or use the backend's
+`clear_instance_defaults` management command to recover the interface.
 
 ## Documentation
 

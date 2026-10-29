@@ -16,11 +16,21 @@ class InstanceDefaultsController
         @saving = false
         @error = null
 
+    languageAvailable: ->
+        return @language and @data.languages.some (locale) => locale.code == @language
+
+    themeAvailable: ->
+        return @theme and @data.themes.includes(@theme)
+
+    hasUnavailableChoice: ->
+        return Boolean((@language and !@languageAvailable()) or
+                       (@theme and !@themeAvailable()))
+
     effectiveLanguage: -> @language || @data.deployment_language
     effectiveTheme: -> @theme || @data.deployment_theme
 
     save: ->
-        return if @saving
+        return if @saving or @hasUnavailableChoice()
         @saving = true
         @error = null
         payload = {
