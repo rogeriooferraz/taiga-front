@@ -677,7 +677,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -1541,7 +1541,7 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Виберіть пункт призначення",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
             "WARNING_ISSUES_NOT_MOVED_TITLE": "Ви щойно перемістили усі історії користувача та завдання і спринт буде закритий",
             "WARNING_ISSUES_NOT_MOVED": "Ця проблем залишиться у спринті та не буде видалена",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",

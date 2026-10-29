@@ -677,7 +677,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "看板选项",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -1541,7 +1541,7 @@
             "SELECT_DESTINATION_PLACEHOLDER": "选择目标",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
             "WARNING_ISSUES_NOT_MOVED_TITLE": "你刚刚移动了所有的用户故事和任务，这个冲刺任务将会被关闭",
             "WARNING_ISSUES_NOT_MOVED": "问题将继续在冲刺任务中，不会被移除",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",

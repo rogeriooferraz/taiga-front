@@ -1073,7 +1073,7 @@
                 "DESCRIPTION": "Aquest procés pot trigar una estona, si us plau mantingui la finestra oberta."
             },
             "WARNING": {
-                "TITLE": "Some taks will be unassigned",
+                "TITLE": "Some tasks will be unassigned",
                 "DESCRIPTION": "There are still unidentified people. The cards assigned to these people will remain unassigned. Check all the contacts to not lose that information.",
                 "CHECK": "Verifica els contactes"
             },
