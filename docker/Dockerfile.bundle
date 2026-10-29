@@ -1,0 +1,36 @@
+# This source code is licensed under the terms of the
+# GNU Affero General Public License found in the LICENSE file in
+# the root directory of this source tree.
+#
+# Package one locally built distribution over a reviewed frontend base image.
+# Supply dist/ as the named "bundle" build context and select its version.
+
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+ARG BUNDLE_VERSION
+
+RUN rm -rf /usr/share/nginx/html/v-* \
+    /usr/share/nginx/html/images \
+    /usr/share/nginx/html/index.html \
+    /usr/share/nginx/html/loading.css \
+    /usr/share/nginx/html/conf.json \
+    /usr/share/nginx/html/humans.txt
+
+COPY --from=bundle /index.html /usr/share/nginx/html/index.html
+COPY --from=bundle /loading.css /usr/share/nginx/html/loading.css
+COPY --from=bundle /humans.txt /usr/share/nginx/html/humans.txt
+COPY --from=bundle /${BUNDLE_VERSION}/ /usr/share/nginx/html/${BUNDLE_VERSION}/
+COPY docker/conf.json.template /usr/share/nginx/html/conf.json.template
+COPY docker/config_env_subst.sh /docker-entrypoint.d/30_config_env_subst.sh
+
+RUN set -eu; \
+    test -n "${BUNDLE_VERSION}"; \
+    test "$(find /usr/share/nginx/html -maxdepth 1 -type d -name 'v-*' | wc -l)" -eq 1; \
+    grep -F "window.TAIGA_VERSION = '${BUNDLE_VERSION}'" /usr/share/nginx/html/index.html; \
+    ln -s "./${BUNDLE_VERSION}/images" /usr/share/nginx/html/images; \
+    chmod +x /docker-entrypoint.d/30_config_env_subst.sh; \
+    test ! -e /usr/share/nginx/html/conf.json; \
+    test -s /usr/share/nginx/html/index.html; \
+    test -s /usr/share/nginx/html/loading.css; \
+    test -s "/usr/share/nginx/html/${BUNDLE_VERSION}/styles/theme-taiga.css"; \
+    test -s "/usr/share/nginx/html/${BUNDLE_VERSION}/styles/theme-taiga-dark.css"
