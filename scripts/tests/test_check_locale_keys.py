@@ -80,6 +80,22 @@ class CheckLocaleKeysTests(unittest.TestCase):
         _, failures = self.check(["en", "fr"])
         self.assertEqual(failures["locale-fr.json"]["placeholders"],
                          ["MENU.TITLE"])
+        self.write("fr", {"MENU": {"TITLE": "Ouvrir {{name}} }}", "CLOSE": "Fermer"}})
+        _, failures = self.check(["en", "fr"])
+        self.assertEqual(failures["locale-fr.json"]["placeholders"],
+                         ["MENU.TITLE"])
+
+    def test_angular_and_icu_braces_can_coexist(self):
+        source = "Hello {{name}}; {total, plural, =1{one} other{many}}"
+        self.write("en", {"COUNT": source})
+        self.write("fr", {"COUNT": "Bonjour {{name}}; {total, plural, =1{un} other{plusieurs}}"})
+        self.assertEqual(self.check(["en", "fr"]), (1, {}))
+
+    def test_unmatched_brace_without_angular_placeholder_is_reported(self):
+        self.write("en", {"DATE": "DD MMM YYYY [at] hh:mm:ss"})
+        self.write("fr", {"DATE": "DD MMM YYYY [à} hh:mm:ss"})
+        _, failures = self.check(["en", "fr"])
+        self.assertEqual(failures["locale-fr.json"]["placeholders"], ["DATE"])
 
     def test_icu_plural_braces_are_not_angular_placeholders(self):
         plural = "{total, plural, =1{one watcher} other{# watchers}}"

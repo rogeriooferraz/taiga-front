@@ -60,6 +60,16 @@ def placeholders(value):
     found = PLACEHOLDER.findall(value)
     if value.count("{{") != len(found) or any(not name.strip() for name in found):
         raise ValueError("malformed translation placeholder")
+    depth = 0
+    for character in PLACEHOLDER.sub("", value):
+        if character == "{":
+            depth += 1
+        elif character == "}":
+            depth -= 1
+        if depth < 0:
+            raise ValueError("unmatched translation brace")
+    if depth:
+        raise ValueError("unmatched translation brace")
     return Counter(name.strip() for name in found)
 
 

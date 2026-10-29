@@ -744,7 +744,7 @@
             "HEADERS": "Rubriker",
             "PAYLOAD": "Tjänster",
             "RESPONSE": "Respons",
-            "DATE": "DD MM YYY [at} hh:mm:ss",
+            "DATE": "DD MMM YYYY [kl.] HH:mm:ss",
             "ACTION_HIDE_HISTORY": "(Dölj historiken)",
             "ACTION_HIDE_HISTORY_TITLE": "Dölj detaljer för historiken",
             "ACTION_SHOW_HISTORY": "(Vis historiken)",
