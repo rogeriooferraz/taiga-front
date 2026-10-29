@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Beslægtede brugerhistorier",
         "CARD": {
             "ASSIGN_TO": "Tildel Til",
+            "MOVE_TO_TOP": "Flyt til toppen",
             "EDIT": "Rediger kort",
             "DELETE": "Slet kort",
             "DELETE_ISSUE": "Slet problem",
@@ -267,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Vælg Sprog",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Fjern formattering",
             "OUTDATED": "En anden person har foretaget ændringer, mens du redigerede. Tjek den nye version på fanen Aktivitet, før du gemmer dine ændringer.",
-            "MARKDOWN_HELP": "Nedjuster syntax hjælp"
+            "MARKDOWN_HELP": "Nedjuster syntax hjælp",
+            "LOAD_IMAGE": "Indlæs billede"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -319,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Tilføj wiki links",
                 "DELETE_WIKI_LINKS": "Slet wiki links"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Dette projekt er arkiveret. Det er nu skrivebeskyttet."
         }
     },
     "LOGIN": {
@@ -459,7 +464,7 @@
     },
     "ATTACHMENT": {
         "SECTION_NAME": "Attachments",
-        "TITLE": "{{ filNavn }} uploadet den {{ dato }}",
+        "TITLE": "{{ fileName }} uploadet den {{ date }}",
         "LIST_VIEW_MODE": "Liste visnings tilstand",
         "GALLERY_VIEW_MODE": "Galleri visnings tilstand",
         "DESCRIPTION": "Indtast en kort beskrivelse",
@@ -489,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Slet tag"
         },
         "HELP": "Har du brug for hjælp? Tjek vores support side!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Default værdi",
-            "SUBTITLE": "Sæt default værdien for alle valgte inddata."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Håndter medlemmer",
             "PAGE_TITLE": "Medlemskab - {{projectName}}",
@@ -563,6 +564,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Projektet overstiger dit maksimale antal medlemmer for offentlige projekter",
             "PROJECT_OWNER": "Projekt ejer",
             "REQUEST_OWNERSHIP": "Bed om ejerskab",
+            "REQUEST_OWNERSHIP_LIMIT": "Du har nået grænsen for private projekter ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Ønsker du at blive den nye projekt ejer?",
             "REQUEST_OWNERSHIP_DESC": "Anmod om, at den nuværende projekt ejer {{name}} overfører ejerskab af dette projekt til dig.",
             "REQUEST_OWNERSHIP_BUTTON": "Forespørgsel",
@@ -649,7 +651,7 @@
             "TITLE": "Typer",
             "SUBTITLE": "Angiv hvilken type dit problem kan være",
             "ISSUE_TITLE": "Problem type",
-            "ACTION_ADD": "Tilføj ny {{objName}}"
+            "ACTION_ADD": "Tilføj ny problemtype"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Tags",
@@ -676,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -773,6 +775,7 @@
             "DELETE_MEMBER": "Slet medlem",
             "RESEND": "Gensend",
             "SUCCESS_SEND_INVITATION": "Vi har sendt invitationen igen til '{{email}}'.",
+            "ERROR_SEND_INVITATION": "Invitationen kunne ikke sendes igen. Prøv igen.",
             "SUCCESS_DELETE": "Vi har slettet {{message}}.",
             "ERROR_DELETE": "Vi har ikke været i stand til at slette {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "invitationen til {{email}}"
@@ -836,9 +839,19 @@
             "UNLIMITED_PROJECTS": "Ubegrænset",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Husk at du kan eje op til <strong>{{maxProjects}}</strong> private projekter. Du ejer for tiden <strong>{{currentProjects}}</strong> private projekter",
-                "PUBLIC": "Husk at du kan eje op til <strong>{{maxProjects}}</strong> offentlige projekter. Du ejer for tiden <strong>{{currentProjects}}</strong> offentlige projekter"
+                "PRIVATE_EXCEEDED": "Antallet af dine private projekter er <strong>{{currentProjects}}</strong>, hvilket er det maksimale antal, dit abonnement tillader.",
+                "PUBLIC": "Husk at du kan eje op til <strong>{{maxProjects}}</strong> offentlige projekter. Du ejer for tiden <strong>{{currentProjects}}</strong> offentlige projekter",
+                "PUBLIC_EXCEEDED": "Antallet af dine offentlige projekter er <strong>{{currentProjects}}</strong>, hvilket er det maksimale antal, dit abonnement tillader."
             },
             "CANT_BE_OWNED": "I øjeblikket kan du ikke blive ejer af et projekt af denne type. Hvis du gerne vil blive ejer af dette projekt, bedes du kontakte administratoren, så kan de ændrer dine kontoindstillinger for at aktivere projektets ejerskab."
+        },
+        "PROJECT_PRESETS": {
+            "MENU_TITLE": "Forudindstillinger",
+            "TITLE": "Standardværdier",
+            "SUBTITLE": "Angiv standardværdier for alle valgfelter."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -890,7 +903,7 @@
         }
     },
     "PROJECT": {
-        "PAGE_TITLE": "{{projektnavn}}",
+        "PAGE_TITLE": "{{projectName}}",
         "HELP": "Reorder your projects to set at the top the most used ones.<br/> The top 4 projects will appear in the top navigation bar project list",
         "PRIVATE": "Privat projekt",
         "LOOKING_FOR_PEOPLE": "Dette projekt søger folk",
@@ -926,9 +939,9 @@
             "MANAGE_PROJECTS": "Håndter projekter",
             "TITLE_CREATE_PROJECT": "Opret projekt",
             "HELP_TITLE": "Hjælp",
+            "TAIGA_COMMUNITY_TITLE": "Gå til Taiga-fællesskabet",
+            "TAIGA_COMMUNITY": "Taiga-fællesskabet",
             "HOMEPAGE": "Hjemmeside",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Rediger dine notifikations indstillinger",
@@ -1053,7 +1066,7 @@
                     "DESC": "Det projekt, du forsøger at importere, er privat og har {{members}} medlemmer."
                 },
                 "PUBLIC_PROJECTS_SPACE_MEMBERS": {
-                    "TITLE": "Desværre tillader din nuværende plan ikke yderligere offentlige projekter eller en stigning på mere end {{max_membership}} medlemmer pr. offentligt projekt",
+                    "TITLE": "Desværre tillader din nuværende plan ikke yderligere offentlige projekter eller en stigning på mere end {{max_memberships}} medlemmer pr. offentligt projekt",
                     "DESC": "Det projekt, du forsøger at importere, er offentligt og har mere end {{members}} medlemmer."
                 }
             },
@@ -1110,6 +1123,18 @@
                 "CREATE_NEW_ISSUES": "Konverter under-problem til ny Taiga problem",
                 "NOT_CREATE_NEW_ISSUES": "Importer ikke under-problemer"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Dit privatliv er vigtigt for os (se vores <a href=\"https://www.taiga.io/privacy-policy\" title=\"Gå til privatlivspolitikken\" target=\"_blank\">privatlivspolitik</a>).",
+            "OPT_OUT": "Vi sender dig kun relevante e-mails (færre end 6 om året). Du kan til enhver tid afmelde dig ved at sende en e-mail til <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> med emnet “unsubscribe” eller via linket i et af vores nyhedsbreve.",
+            "DONT_ASK": "Spørg ikke igen",
+            "SUBSCRIBE": "Tilmeld dig",
+            "SUBSCRIBED": "Du er tilmeldt",
+            "LIGHTBOX_TITLE": "Vil du modtage meddelelser om Taiga?",
+            "CONFIRMATION": "Ja, send mig nyheder, produktopdateringer og anbefalinger om Taiga.",
+            "SAVE_PREFERENCE": "GEM INDSTILLINGER",
+            "NOTIFY_EXPLANATION": "Vi sender dig nyheder, produktopdateringer og anbefalinger om Taiga.",
+            "SAVED_PREFERENCE": "Dine indstillinger er blevet gemt"
         }
     },
     "LIGHTBOX": {
@@ -1152,7 +1177,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "Læs vores ",
+            "FAQ": "ofte stillede spørgsmål"
         },
         "SEARCH": {
             "TITLE": "Søg",
@@ -1188,7 +1215,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "Default",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "Placering",
+            "CREATE_TOP": "øverst",
+            "CREATE_BOTTOM": "nederst"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1398,7 +1428,7 @@
         "PENDING_POINTS": "Afventer Points",
         "CLOSED_POINTS": "lukket",
         "COMPACT_SPRINT": "Kompakt Sprint",
-        "GO_TO_TASKBOARD": "Gå til opgave panelet for {{:: name}}",
+        "GO_TO_TASKBOARD": "Gå til opgave panelet for {{::name}}",
         "EDIT_SPRINT": "Rediger Sprint",
         "TOTAL_POINTS": "total",
         "STATUS_NAME": "Status navn",
@@ -1513,9 +1543,9 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Select destination",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
-            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and taks, and the sprint'll be closed",
-            "WARNING_ISSUES_NOT_MOVED": "The issues'll remain in the sprint and don't be removed",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
+            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and tasks, and the sprint will be closed",
+            "WARNING_ISSUES_NOT_MOVED": "The issues will remain in the sprint and will not be removed",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
             "WARNING_SPRINT_STILL_OPEN": "Please note that the sprint {{sprintName}} <strong>will remain open</strong> as long as it contains unfinished items."
         }
@@ -1543,6 +1573,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Luk notifikation",
+        "COMMUNICATION": "Meddelelser fra Taiga",
         "MAIL": "Email notifikation",
         "DESKTOP": "Desktop notifikationer ved hjælp af browser advarsler",
         "ASK_DELETE": "Er du sikker på at du vil slette?"
@@ -1786,13 +1817,13 @@
         "EPIC_CREATED": "{{username}} har oprettet en ny episk {{obj_name}} i {{project_name}}",
         "EPIC_RELATED_USERSTORY_CREATED": "{{username}} has related the user story {{related_us_name}} to the epic {{epic_name}} in {{project_name}}",
         "NEW_PROJECT": "{{username}} oprettede projektet {{project_name}}",
-        "MILESTONE_UPDATED": "{{brugernavn}} har opdateret sprint'en {{obj_name}}",
+        "MILESTONE_UPDATED": "{{username}} har opdateret sprint'en {{obj_name}}",
         "US_UPDATED": "{{username}} has updated the attribute \"{{field_name}}\" of the user story {{obj_name}}",
         "US_UPDATED_WITH_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the user story {{obj_name}} to {{new_value}}",
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} har opdateret attributten \"{{field_name}}\" af problemet {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} har opdateret feltet \"{{field_name}}\" på dette problem fra {{obj_name}} til {{new_value}}",
-        "TASK_UPDATED": "{{username}} har opdateret attributten \"{{field_name}}\" af opgaven {{obj_name}} til {{new_value}}",
+        "TASK_UPDATED": "{{username}} har opdateret attributten \"{{field_name}}\" for opgaven {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} har opdateret attributten \"{{field_name}}\" af opgaven {{obj_name}} til {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1802,14 +1833,14 @@
         "EPIC_UPDATED_WITH_NEW_COLOR": "{{username}} har opdateret \"{{field_name}}\" af epic'en {{obj_name}} til <span class=\"new-color\" style=\"background: {{new_value}}\"></span>",
         "NEW_COMMENT_US": "{{username}} has commented in the user story {{obj_name}}",
         "NEW_COMMENT_ISSUE": "{{username}} har kommenteret i problem beskrivelsen for {{obj_name}}",
-        "NEW_COMMENT_TASK": "{{brugernavn}} har kommenteret opgaven {{obj_name}}",
+        "NEW_COMMENT_TASK": "{{username}} har kommenteret opgaven {{obj_name}}",
         "NEW_COMMENT_EPIC": "{{username}} har kommenteret epic'en {{obj_name}}",
         "NEW_MEMBER": "{{project_name}} har et nyt medlem",
         "US_ADDED_MILESTONE": "{{username}} has added the user story {{obj_name}} to {{sprint_name}}",
         "US_MOVED": "{{username}} has moved the user story {{obj_name}}",
         "US_REMOVED_FROM_MILESTONE": "{{username}} has added the user story {{obj_name}} to the backlog",
-        "BLOCKED": "{{brugernavn}} har blokeret {{obj_name}}",
-        "UNBLOCKED": "{{brugernavn}} har fjernet blokering på {{obj_name}}",
+        "BLOCKED": "{{username}} har blokeret {{obj_name}}",
+        "UNBLOCKED": "{{username}} har fjernet blokering på {{obj_name}}",
         "NEW_USER": "{{username}} er tilmeldt Taiga",
         "ITEM_TYPES": {
             "USERSTORY": "User Story",
@@ -1934,6 +1965,29 @@
             "ACTION_TITLE": "Søg",
             "RESULTS": "Søge resultater"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Systemindstillinger",
+        "DESCRIPTION": "Indstil standardindstillinger for konti uden et personligt valg.",
+        "LANGUAGE_HEADING": "Sprog",
+        "DEFAULT_LANGUAGE": "Standardsprog",
+        "APPEARANCE_HEADING": "Udseende",
+        "DEFAULT_THEME": "Standard tema",
+        "USE_DEPLOYMENT_DEFAULT": "Brug serverens standardindstilling",
+        "EFFECTIVE_VALUE": "Effektiv værdi:",
+        "SOURCE_DEPLOYMENT": "Kilde: serverstandardindstilling",
+        "SOURCE_ADMIN": "Kilde: administratorens gemte indstilling",
+        "LANGUAGE_HELP": "Bruges af grænseflader og e-mail, når et kontosprog ikke er indstillet.",
+        "THEME_HELP": "Bruges af grænseflader, når et kontotema ikke er indstillet.",
+        "RESET_DEFAULT": "Nulstil til serverens standardindstilling",
+        "APPLY_HELP": "Gemte ændringer gælder ved næste sideindlæsning. Personlige valg har prioritet.",
+        "CONFLICT": "En anden administrator ændrede disse standardindstillinger. Genindlæs før du gemmer.",
+        "UNAVAILABLE_CHOICE": "Et gemt valg er ikke længere tilgængeligt. Nulstil det før du gemmer.",
+        "ERROR_SAVE": "Systemindstillingerne kunne ikke gemmes. Prøv igen."
+    },
+    "THEMES": {
+        "LIGHT": "Lys",
+        "DARK": "Mørk"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

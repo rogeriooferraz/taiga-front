@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Sélectionnez la langue",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Retirer la mise en forme",
             "OUTDATED": "Quelqu'un d'autre a fait des modifications en même temps que vous. Vérifiez la nouvelle version dans l'onglet Activité avant de sauvegarder vos changements.",
-            "MARKDOWN_HELP": "Aide sur la syntaxe Markdown"
+            "MARKDOWN_HELP": "Aide sur la syntaxe Markdown",
+            "LOAD_IMAGE": "Charger l’image"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Ajouter des liens wiki",
                 "DELETE_WIKI_LINKS": "Supprimer des liens wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Ce projet a été archivé. Il est désormais en lecture seule."
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Supprimer le mot-clé"
         },
         "HELP": "Avez-vous besoin d'aide ? Consultez notre page d'assistance !",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Valeurs par défaut",
-            "SUBTITLE": "Définir les valeurs par défaut pour toutes les listes de sélection."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Gérer les membres",
             "PAGE_TITLE": "Membres - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "Types",
             "SUBTITLE": "Spécifiez les types de ticket possibles",
             "ISSUE_TITLE": "Types de tickets",
-            "ACTION_ADD": "Ajouter un nouveau {{objName}}"
+            "ACTION_ADD": "Ajouter un nouveau type de ticket"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Mots-clés",
@@ -775,6 +775,7 @@
             "DELETE_MEMBER": "Supprimer un membre",
             "RESEND": "Renvoyer",
             "SUCCESS_SEND_INVITATION": "Nous avons envoyé une autre invitation à '{{email}}'.",
+            "ERROR_SEND_INVITATION": "Impossible de renvoyer l’invitation. Réessayez.",
             "SUCCESS_DELETE": "Nous avons supprimé {{message}}.",
             "ERROR_DELETE": "Nous n'avons pas été capable de supprimer {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "l'invitation à {{email}}"
@@ -850,7 +851,7 @@
             "TITLE": "Valeurs par défaut"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugins  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "Créer un projet",
             "HELP_TITLE": "Aide",
             "HOMEPAGE": "Page d'accueil",
-            "TAIGA_RESOURCES_TITLE": "Aller aux ressources Taiga",
-            "TAIGA_RESOURCES": "Ressources Taiga",
             "FEEDBACK_TITLE": "Écrivez-nous vos commentaires",
             "FEEDBACK": "Posez une question",
             "NOTIFICATIONS_TITLE": "Modifier vos réglages de notification",
@@ -1824,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} a mis à jour les points '{{role_name}}' du récit utilisateur {{obj_name}} à {{new_value}}",
         "ISSUE_UPDATED": "{{username}} a mis à jour l'attribut «{{field_name}}» du ticket {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} a mis à jour l'attribut \"{{field_name}}\" du ticket {{obj_name}} à {{new_value}}",
-        "TASK_UPDATED": "{{username}} a mis l'attribut \"{{field_name}}\" à {{new_value}} pour la tâche {{obj_name}}",
+        "TASK_UPDATED": "{{username}} a mis à jour l'attribut « {{field_name}} » de la tâche {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} a mis l'attribut \"{{field_name}}\" à {{new_value}} pour la tâche {{obj_name}}",
         "TASK_UPDATED_WITH_US": "{{username}} a mis à jour l’attribut \"{{field_name}}\" de la tâche {{obj_name}} qui appartient au récit utilisateur {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} a mis à jour l’attribut \"{{field_name}}\" de la tâche {{obj_name}} qui appartient au récit utilisateur {{us_name}} à {{new_value}}",
@@ -1966,6 +1965,29 @@
             "ACTION_TITLE": "Rechercher",
             "RESULTS": "Résultats de la recherche"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Paramètres système",
+        "DESCRIPTION": "Définissez les valeurs par défaut pour les comptes sans choix personnel.",
+        "LANGUAGE_HEADING": "Langue",
+        "DEFAULT_LANGUAGE": "Langue par défaut",
+        "APPEARANCE_HEADING": "Apparence",
+        "DEFAULT_THEME": "Thème par défaut",
+        "USE_DEPLOYMENT_DEFAULT": "Utiliser les paramètres par défaut du serveur",
+        "EFFECTIVE_VALUE": "Valeur appliquée :",
+        "SOURCE_DEPLOYMENT": "Source : paramètre par défaut du serveur",
+        "SOURCE_ADMIN": "Source : paramètre enregistré par l'administrateur",
+        "LANGUAGE_HELP": "Utilisé par les interfaces et la messagerie électronique lorsqu'une langue de compte n'est pas définie.",
+        "THEME_HELP": "Utilisé par les interfaces lorsqu'un thème de compte n'est pas défini.",
+        "RESET_DEFAULT": "Rétablir la valeur par défaut du serveur",
+        "APPLY_HELP": "Les modifications enregistrées s’appliquent au prochain chargement de la page. Les choix personnels sont prioritaires.",
+        "CONFLICT": "Un autre administrateur a modifié ces valeurs par défaut. Rechargez avant de sauvegarder.",
+        "UNAVAILABLE_CHOICE": "Un choix enregistré n'est plus disponible. Réinitialisez-le avant de sauvegarder.",
+        "ERROR_SAVE": "Impossible d'enregistrer les paramètres système. Réessayez."
+    },
+    "THEMES": {
+        "LIGHT": "Clair",
+        "DARK": "Sombre"
     },
     "ZOOM": {
         "TITLE": "Zoom :",

@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Diş Seçin",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Biçemi kaldır",
             "OUTDATED": "Siz düzenleme yaparken başka bir kişi değişiklik yaptı. Değişikliklerinizi kaydetmeden önce etkinlik sekmesinde yeni sürüme göz atın.",
-            "MARKDOWN_HELP": "Markdown yazım kılavuzu"
+            "MARKDOWN_HELP": "Markdown yazım kılavuzu",
+            "LOAD_IMAGE": "Görseli yükle"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Wiki bağlantıları ekle",
                 "DELETE_WIKI_LINKS": "Wiki bağlantılarını sil"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Bu proje arşivlendi. Artık salt okunur durumdadır."
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Etiket sil"
         },
         "HELP": "Yardıma mı ihtiyacın var? Destek sayfamızı kontrol edin!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Varsayılan Değerler",
-            "SUBTITLE": "Tüm seçici girdiler için varsayılan değerleri seçin."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Üyeleri yönet",
             "PAGE_TITLE": "Üyelikler - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "Türler",
             "SUBTITLE": "Taleblerinizin olabileceği türleri belirtin",
             "ISSUE_TITLE": "Sorun türleri",
-            "ACTION_ADD": "Ekle yeni {{objName}}"
+            "ACTION_ADD": "Yeni sorun türü ekle"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Etiketler",
@@ -775,7 +775,8 @@
             "DELETE_MEMBER": "Üye sil",
             "RESEND": "Yeniden gönder",
             "SUCCESS_SEND_INVITATION": "Davetiyeyi '{{email}}' adresine tekrar gönderdik.",
-            "SUCCESS_DELETE": "{{mesaj}} mesajını sildik.",
+            "ERROR_SEND_INVITATION": "Davetiye yeniden gönderilemedi. Tekrar deneyin.",
+            "SUCCESS_DELETE": "{{message}} mesajını sildik.",
             "ERROR_DELETE": "{{message}} mesajını silemedik.",
             "DEFAULT_DELETE_MESSAGE": "{{email}} davetiyesi"
         },
@@ -850,7 +851,7 @@
             "MENU_TITLE": "Ön Ayarlar"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Eklentiler  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Eklentiler - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "Proje oluştur",
             "HELP_TITLE": "Yardım",
             "HOMEPAGE": "Ana sayfa",
-            "TAIGA_RESOURCES_TITLE": "Taiga kaynaklarına git",
-            "TAIGA_RESOURCES": "Taiga Kaynakları",
             "FEEDBACK_TITLE": "Geri bildirimlerinizi bize yazın",
             "FEEDBACK": "Bir soru sorun",
             "NOTIFICATIONS_TITLE": "Bildirim ayarlarını düzenle",
@@ -1544,7 +1543,7 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Hedef seç",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> bitmemiş kullanıcı hikayesi} other{<strong>#</strong> bitmemiş kullanıcı hikayesi}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> bitmemiş hikayesiz görev} other{<strong>#</strong> bitmemiş hikayesiz görev}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> bitmemiş talep} other{<strong>#</strong> bitmemiş talep",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> bitmemiş talep} other{<strong>#</strong> bitmemiş talep}}",
             "WARNING_ISSUES_NOT_MOVED_TITLE": "Tüm kullanıcı hikayelerini ve görevleri taşıdınız ve koşu kapatılacak",
             "WARNING_ISSUES_NOT_MOVED": "Talepler koşuda kalacak ve kaldırılmayacak",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{# ögeyi taşıdınız!} other{# ögeyi taşıdınız!}}",
@@ -1824,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}}, {{obj_name}} kullanıcı hikayesinin '{{role_name}}' puanlarını {{new_value}} olarak güncelledi",
         "ISSUE_UPDATED": "{{username}}, {{obj_name}} talebinin \"{{field_name}}\" özniteliğini güncelledi",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}}, {{obj_name}} talebinin \"{{field_name}}\" özniteliğini {{new_value}} olarak güncelledi",
-        "TASK_UPDATED": "{{username}}, {{obj_name}} görevinin \"{{field_name}}\" öznitelliğini {{new_value}} olarak güncelledi",
+        "TASK_UPDATED": "{{username}}, {{obj_name}} görevinin \"{{field_name}}\" özniteliğini güncelledi",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}}, {{obj_name}} görevinin \"{{field_name}}\" öznitelliğini {{new_value}} olarak güncelledi",
         "TASK_UPDATED_WITH_US": "{{username}}, {{us_name}} kullanıcı hikayesine ait olan {{obj_name}} görevinin \"{{field_name}}\" öznitelliğini güncelledi",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}}, {{us_name}} kullanıcı hikayesine ait olan {{obj_name}} görevinin \"{{field_name}}\" öznitelliğini {{new_value}} olarak güncelledi",
@@ -1966,6 +1965,29 @@
             "ACTION_TITLE": "Ara",
             "RESULTS": "Arama sonuçları"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Sistem ayarları",
+        "DESCRIPTION": "Kişisel tercihi olmayan hesaplar için varsayılanları ayarlayın.",
+        "LANGUAGE_HEADING": "Dil",
+        "DEFAULT_LANGUAGE": "Varsayılan dil",
+        "APPEARANCE_HEADING": "Görünüm",
+        "DEFAULT_THEME": "Varsayılan tema",
+        "USE_DEPLOYMENT_DEFAULT": "Sunucu varsayılan ayarını kullan",
+        "EFFECTIVE_VALUE": "Etkin değer:",
+        "SOURCE_DEPLOYMENT": "Kaynak: sunucu varsayılan ayarı",
+        "SOURCE_ADMIN": "Kaynak: yöneticinin kayıtlı ayarı",
+        "LANGUAGE_HELP": "Hesap dili ayarlanmadığında arayüzler ve e-posta tarafından kullanılır.",
+        "THEME_HELP": "Bir hesap teması ayarlanmadığında arayüzler tarafından kullanılır.",
+        "RESET_DEFAULT": "Sunucu varsayılan ayarına sıfırla",
+        "APPLY_HELP": "Kaydedilen değişiklikler bir sonraki sayfa yüklemesinde geçerli olur. Kişisel tercihler önceliklidir.",
+        "CONFLICT": "Başka bir yönetici bu varsayılanları değiştirdi. Kaydetmeden önce yeniden yükleyin.",
+        "UNAVAILABLE_CHOICE": "Kaydedilmiş bir seçim artık mevcut değil. Kaydetmeden önce sıfırlayın.",
+        "ERROR_SAVE": "Sistem ayarları kaydedilemedi. Tekrar deneyin."
+    },
+    "THEMES": {
+        "LIGHT": "Açık",
+        "DARK": "Koyu"
     },
     "ZOOM": {
         "TITLE": "Yakınlaştır:",

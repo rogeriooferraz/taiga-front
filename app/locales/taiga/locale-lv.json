@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Saistītās vajadzības",
         "CARD": {
             "ASSIGN_TO": "Piešķirt",
+            "MOVE_TO_TOP": "Pārvietot uz pašu augšu",
             "EDIT": "Rediģēt karti",
             "DELETE": "Dzēst karti",
             "DELETE_ISSUE": "Dzēst izmaiņas pieprasījumu",
@@ -267,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Izvēlieties valodu",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Noņemt formatējumu",
             "OUTDATED": "Jūsu rediģēšanas laikā cita persona ir veikusi izmaiņas. Pirms izmaiņu saglabāšanas pārbaudiet jauno versiju cilnē 'Aktivitātes'.",
-            "MARKDOWN_HELP": "Markdown sintakses palīdzība"
+            "MARKDOWN_HELP": "Markdown sintakses palīdzība",
+            "LOAD_IMAGE": "Ielādēt attēlu"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -319,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Pievienot Wiki saites",
                 "DELETE_WIKI_LINKS": "Dzēst Wiki saites"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Šis projekts ir arhivēts. Tagad to var tikai lasīt."
         }
     },
     "LOGIN": {
@@ -489,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Dzēst birku"
         },
         "HELP": "Vai nepieciešama palīdzība? Apskatiet atbalsta lapu!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Noklusētās vērtības",
-            "SUBTITLE": "Norādiet noklusētās vērtības visiem atlases ievades laukiem."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Pārvaldīt dalībniekus",
             "PAGE_TITLE": "Dalība - {{projectName}}",
@@ -500,7 +501,7 @@
             "ADD_BUTTON_TITLE": "Pievienot jaunu dalībnieku",
             "UPGRADE_BUTTON": "Aktualizējiet savu plānu",
             "LIMIT_USERS_WARNING_MESSAGE_FOR_ADMIN": "Ja vēlaties <strong>pievienot vēl kādu dalībnieku </strong>, lūdzu, sazinieties ar projekta vadītāju <a href='mailto:{{ owner_email }}' title='{{ owner_email }}'>{{ owner_email }}</a>",
-            "LIMIT_USERS_WARNING_MESSAGE_FOR_OWNER": "Šis projekts ir sasniedzis maksimālo pieļauto <strong>({{Members}})</strong> dalībnieku skaitu. Ja vēlaties palielināt šo limitu, lūdzu, sazinieties ar administratoru."
+            "LIMIT_USERS_WARNING_MESSAGE_FOR_OWNER": "Šis projekts ir sasniedzis maksimālo pieļauto <strong>({{members}})</strong> dalībnieku skaitu. Ja vēlaties palielināt šo limitu, lūdzu, sazinieties ar administratoru."
         },
         "PROJECT_EXPORT": {
             "TITLE": "Eksportēt",
@@ -563,6 +564,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Projekts pārsniedz Jums atļauto maksimālo publisku projektu dalībnieku skaitu",
             "PROJECT_OWNER": "Projekta vadītājs",
             "REQUEST_OWNERSHIP": "Pieprasīt vadību",
+            "REQUEST_OWNERSHIP_LIMIT": "Ir sasniegts privāto projektu limits ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Vēlme uzņemties projekta vadību?",
             "REQUEST_OWNERSHIP_DESC": "Pieprasīt pašreizējam projekta vadītājam {{name}} nodot šī projekta vadību man.",
             "REQUEST_OWNERSHIP_BUTTON": "Pieprasīt",
@@ -649,7 +651,7 @@
             "TITLE": "Tipi/Veidi",
             "SUBTITLE": "Norādiet Jūsu izmaiņu pieprasījumu iespējamos tipus ",
             "ISSUE_TITLE": "Izmaiņu pieprasījumu tipi",
-            "ACTION_ADD": "Pievienot jaunu {{objName}}"
+            "ACTION_ADD": "Pievienot jaunu izmaiņu pieprasījuma tipu"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Birkas/marķieri",
@@ -676,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -773,6 +775,7 @@
             "DELETE_MEMBER": "Dzēst dalībnieku",
             "RESEND": "Sūtīt atkārtoti",
             "SUCCESS_SEND_INVITATION": "Atkārtoti nosūtīts uzaicinājums uz “{{email}}”.",
+            "ERROR_SEND_INVITATION": "Neizdevās atkārtoti nosūtīt uzaicinājumu. Mēģiniet vēlreiz.",
             "SUCCESS_DELETE": "Ir izdzēsts {{message}}.",
             "ERROR_DELETE": "Nevarēja izdzēst {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "uzaicinājumu uz {{email}}"
@@ -836,9 +839,19 @@
             "UNLIMITED_PROJECTS": "Neierobežots/bezgalīgs",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Lūdzu, atcerieties, ka Jūs varat vadīt ne vairāk kā <strong>{{maxProjects}}</strong> privātus projektus. Pašlaik Jūs vadāt <strong>{{currentProjects}}</strong> privātus projektus",
-                "PUBLIC": "Lūdzu, atcerieties, ka Jūs varat vadīt ne vairāk kā <strong>{{maxProjects}}</strong> publiskus projektus. Pašlaik Jūs vadāt <strong>{{currentProjects}}</strong> publiskus projektus"
+                "PRIVATE_EXCEEDED": "Jūsu privāto projektu skaits ir <strong>{{currentProjects}}</strong>, kas ir maksimālais jūsu abonementā atļautais skaits.",
+                "PUBLIC": "Lūdzu, atcerieties, ka Jūs varat vadīt ne vairāk kā <strong>{{maxProjects}}</strong> publiskus projektus. Pašlaik Jūs vadāt <strong>{{currentProjects}}</strong> publiskus projektus",
+                "PUBLIC_EXCEEDED": "Jūsu publisko projektu skaits ir <strong>{{currentProjects}}</strong>, kas ir maksimālais jūsu abonementā atļautais skaits."
             },
             "CANT_BE_OWNED": "Pašlaik jūs nevarat kļūt par šāda veida projekta vadītāju. Ja vēlaties kļūt par šī projekta vadītāju, lūdzu, sazinieties ar administratoru, lai viņš mainītu Jūsu konta iestatījumus, dodot iespēju kļūt par šī par projekta vadītāju."
+        },
+        "PROJECT_PRESETS": {
+            "TITLE": "Noklusētās vērtības",
+            "SUBTITLE": "Norādiet noklusētās vērtības visiem atlases ievades laukiem.",
+            "MENU_TITLE": "Iepriekš definēti iestatījumi"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Spraudņi - {{projectName}}"
         }
     },
     "USER": {
@@ -926,9 +939,9 @@
             "MANAGE_PROJECTS": "Pārvaldīt projektus",
             "TITLE_CREATE_PROJECT": "Izveidot projektu",
             "HELP_TITLE": "Palīdzība",
+            "TAIGA_COMMUNITY_TITLE": "Doties uz Taiga kopienu",
+            "TAIGA_COMMUNITY": "Taiga kopiena",
             "HOMEPAGE": "Tīmekļvietne",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Rediģēt paziņojumu iestatījumus",
@@ -1110,6 +1123,18 @@
                 "CREATE_NEW_ISSUES": "Pārvērst apakš-izmaiņu pieprasījumus par jauniem Taigas izmaiņu pieprasījumiem ",
                 "NOT_CREATE_NEW_ISSUES": "Neimportēt apakš-izmaiņu pieprasījumus"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Jūsu privātums mums ir svarīgs (skatiet mūsu <a href=\"https://www.taiga.io/privacy-policy\" title=\"Doties uz privātuma politiku\" target=\"_blank\">privātuma politiku</a>).",
+            "OPT_OUT": "Mēs jums sūtīsim tikai atbilstošus e-pasta ziņojumus (mazāk nekā 6 gadā). Jūs jebkurā laikā varat atteikties no abonēšanas, nosūtot e-pasta ziņojumu uz <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> ar tematu “unsubscribe” vai izmantojot saiti jebkurā no mūsu jaunumu vēstulēm.",
+            "DONT_ASK": "Vairs nejautāt",
+            "SUBSCRIBE": "Abonēt",
+            "SUBSCRIBED": "Abonements ir aktīvs",
+            "LIGHTBOX_TITLE": "Vai vēlaties saņemt paziņojumus par Taiga?",
+            "CONFIRMATION": "Jā, sūtiet man ziņas, produkta atjauninājumus un ieteikumus par Taiga.",
+            "SAVE_PREFERENCE": "SAGLABĀT IZVĒLES",
+            "NOTIFY_EXPLANATION": "Mēs jums sūtīsim ziņas, produkta atjauninājumus un ieteikumus par Taiga.",
+            "SAVED_PREFERENCE": "Jūsu izvēles ir veiksmīgi saglabātas"
         }
     },
     "LIGHTBOX": {
@@ -1152,7 +1177,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "Skatiet sadaļu ",
+            "FAQ": "Biežāk uzdotie jautājumi"
         },
         "SEARCH": {
             "TITLE": "Meklēt",
@@ -1188,7 +1215,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "Noklusējuma",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "Novietojums",
+            "CREATE_TOP": "Pašā augšā",
+            "CREATE_BOTTOM": "Pašā apakšā"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1474,7 +1504,7 @@
     },
     "TASKBOARD": {
         "PAGE_TITLE": "{{sprintName}} - Sprinta panelis - {{projectName}}",
-        "PAGE_DESCRIPTION": "Sprints {{sprintName}} (no {{startDate}} līdz {{endDate}}) no {{projectName}}. Izpildīti {{completePercentage}}% ({{completePoints}} no {{totalPoints}} punktiem). {{openTasks}} atvērti uzdevumi no {{totalTasks}}.",
+        "PAGE_DESCRIPTION": "Sprints {{sprintName}} (no {{startDate}} līdz {{endDate}}) no {{projectName}}. Izpildīti {{completedPercentage}}% ({{completedPoints}} no {{totalPoints}} punktiem). {{openTasks}} atvērti uzdevumi no {{totalTasks}}.",
         "SECTION_NAME": "Uzdevumu panelis",
         "TITLE_ACTION_ADD": "Izveidot uzdevumu",
         "TITLE_ACTION_ADD_BULK": "Pievienot izmaiņu pieprasījumus vairumā (paketi)",
@@ -1511,7 +1541,7 @@
             "MOVE_TO_OPEN_SPRINT": "Pārvietot uz atklātu sprintu",
             "NO_OPEN_SPRINTS": "Te nav citu atklātu sprintu. Lūdzu vispirms kādu izveidojiet.",
             "SELECT_DESTINATION_PLACEHOLDER": "Izvēlaties galamērķi",
-            "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> nepabeigta/nenoslēgta vajadzība} citas{<strong>#</strong> nepabeigtas vajadzības}}",
+            "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> nepabeigta/nenoslēgta vajadzība} other{<strong>#</strong> nepabeigtas vajadzības}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> nepabeigts uzdevums bez vajadzības} other{<strong>#</strong> nepabeigti uzdevumi bez vajadzībām}}",
             "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> nepabeigts izmaiņu pieprasījums} other{<strong>#</strong> nepabeigts izmaiņu pieprasījums}}",
             "WARNING_ISSUES_NOT_MOVED_TITLE": "Jūs tikko pārvietojāt visas vajadzības un uzdevumus, un sprints tiks slēgts",
@@ -1543,6 +1573,7 @@
         "WARNING_TEXT": "Izmaiņas NEtika saglabātas!",
         "SAVED": "Taiga saglabāja visas izmaiņas!",
         "CLOSE": "Aizvērt paziņojumu",
+        "COMMUNICATION": "Taiga ziņojumi",
         "MAIL": "Paziņojumi ar e-pastu",
         "DESKTOP": "Darbvirsmas paziņojumi, izmantojot pārlūka brīdinājumus",
         "ASK_DELETE": "Tiešām vēlaties dzēst?"
@@ -1792,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} aktualizēja '{{role_name}}' VAJADZĪBAS {{obj_name}} punktus uz {{new_value}}.",
         "ISSUE_UPDATED": "{{username}} aktualizēja IZMAIŅAS PIEPRASĪJUMA {{obj_name}} atribūtu \"{{field_name}}\"",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} aktualizēja IZMAIŅAS PIEPRASĪJUMA {{obj_name}} atribūtu \"{{field_name}}\" uz {{new_value}}",
-        "TASK_UPDATED": "{{username}} aktualizēja UZDEVUMA {{obj_name}} atribūtu \"{{field_name}}\" uz {{new_value}}",
+        "TASK_UPDATED": "{{username}} atjaunināja uzdevuma {{obj_name}} atribūtu \"{{field_name}}\"",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} aktualizēja UZDEVUMA {{obj_name}} atribūtu \"{{field_name}}\" uz {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} aktualizēja UZDEVUMA {{obj_name}}, kas saistīts ar VAJADZĪBU {{us_name}}, atribūtu \"{{field_name}}\"",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} aktualizēja UZDEVUMA {{obj_name}}, kas saistīts ar VAJADZĪBU {{us_name}}, atribūtu \"{{field_name}}\" uz {{new_value}}",
@@ -1802,12 +1833,12 @@
         "EPIC_UPDATED_WITH_NEW_COLOR": "{{username}} aktualizēja EPOSA {{obj_name}} \"{{field_name}}\" uz <span class=\"new-color\" style=\"background: {{new_value}}\"></span>",
         "NEW_COMMENT_US": "{{username}} komentēja izmaiņas pieprasījumu {{obj_name}}",
         "NEW_COMMENT_ISSUE": "{{username}} komentēja izmaiņas pieprasījumu {{obj_name}}",
-        "NEW_COMMENT_TASK": "{{lietotājvārds}} komentēja UZDEVUMU {{obj_name}}",
-        "NEW_COMMENT_EPIC": "{{lietotājvārds}} komentēja EPOSU {{obj_name}}",
+        "NEW_COMMENT_TASK": "{{username}} komentēja UZDEVUMU {{obj_name}}",
+        "NEW_COMMENT_EPIC": "{{username}} komentēja EPOSU {{obj_name}}",
         "NEW_MEMBER": "{{project_name}} ir jauns dalībnieks",
-        "US_ADDED_MILESTONE": "{{lietotājvārds}} pievienoja VAJADZĪBU {{obj_name}} sprintam {{sprint_name}}",
+        "US_ADDED_MILESTONE": "{{username}} pievienoja VAJADZĪBU {{obj_name}} sprintam {{sprint_name}}",
         "US_MOVED": "{{username}} ir pārvietojis vajadzību {{obj_name}}",
-        "US_REMOVED_FROM_MILESTONE": "{{lietotājvārds}} darbu klāstam pievienoja VAJADZĪBU {{obj_name}}",
+        "US_REMOVED_FROM_MILESTONE": "{{username}} darbu klāstam pievienoja VAJADZĪBU {{obj_name}}",
         "BLOCKED": "{{username}} ir bloķējis {{obj_name}}",
         "UNBLOCKED": "{{username}} ir atbloķējis {{obj_name}}",
         "NEW_USER": "{{username}} ir pievienojies Taigai",
@@ -1934,6 +1965,29 @@
             "ACTION_TITLE": "Meklēt",
             "RESULTS": "Meklēšanas rezultāti"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Sistēmas iestatījumi",
+        "DESCRIPTION": "Iestatiet noklusējuma iestatījumus kontiem bez personīgas izvēles.",
+        "LANGUAGE_HEADING": "Valoda",
+        "DEFAULT_LANGUAGE": "Noklusējuma valoda",
+        "APPEARANCE_HEADING": "Izskats",
+        "DEFAULT_THEME": "Noklusējuma ādiņa",
+        "USE_DEPLOYMENT_DEFAULT": "Izmantojiet servera noklusējuma iestatījumu",
+        "EFFECTIVE_VALUE": "Efektīvā vērtība:",
+        "SOURCE_DEPLOYMENT": "Avots: servera noklusējuma iestatījums",
+        "SOURCE_ADMIN": "Avots: administratora saglabātais iestatījums",
+        "LANGUAGE_HELP": "Izmanto saskarnēs un e-pastā, ja konta valoda nav iestatīta.",
+        "THEME_HELP": "Izmanto saskarnē, ja konta ādiņa nav iestatīta.",
+        "RESET_DEFAULT": "Atiestatīt uz servera noklusējuma iestatījumu",
+        "APPLY_HELP": "Saglabātās izmaiņas tiek piemērotas nākamajā lapas ielādes reizē. Prioritāte ir personiskā izvēle.",
+        "CONFLICT": "Cits administrators mainīja šos noklusējuma iestatījumus. Pirms saglabāšanas atkārtoti ielādējiet.",
+        "UNAVAILABLE_CHOICE": "Saglabāta izvēle vairs nav pieejama. Pirms saglabāšanas atiestatiet to.",
+        "ERROR_SAVE": "Nevarēja saglabāt sistēmas iestatījumus. Mēģiniet vēlreiz."
+    },
+    "THEMES": {
+        "LIGHT": "Gaiša",
+        "DARK": "Tumša"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

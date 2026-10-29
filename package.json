@@ -16,6 +16,8 @@
     "url": "https://github.com/taigaio/taiga-front.git"
   },
   "scripts": {
+    "check:locale-keys": "python3 scripts/check_locale_keys.py --supported-codes-file scripts/selectable-locale-codes.json",
+    "check:locale-format": "node scripts/check_locale_icu.js && node scripts/tests/test_check_locale_icu.js",
     "scss-lint": "gulp scss-lint --fail",
     "test": "./node_modules/karma/bin/karma start",
     "e2e": "./node_modules/.bin/babel-node run-e2e.js",

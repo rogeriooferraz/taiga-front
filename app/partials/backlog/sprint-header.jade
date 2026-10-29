@@ -15,7 +15,7 @@
             a(
                 ng-if="::isVisible"
                 href="{{::taskboardUrl}}"
-                title="{{'BACKLOG.GO_TO_TASKBOARD' | translate}}"
+                title="{{'BACKLOG.GO_TO_TASKBOARD' | translate: {name: name}}}"
             )
                 span {{::name}}
 

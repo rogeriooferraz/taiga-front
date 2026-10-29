@@ -538,8 +538,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Ne feledd, hogy legfeljebb <strong>{{maxProjects}}</strong> privát projekt tulajdonosa lehetsz. Jelenleg <strong>{{currentProjects}}</strong> privát projekted van.",
                 "PUBLIC": "Ne feledd, hogy legfeljebb <strong>{{maxProjects}}</strong> nyilvános projekt tulajdonosa lehetsz. Jelenleg <strong>{{currentProjects}}</strong> nyilvános projekted van.",
-                "PUBLIC_EXCEEDED": "Jelenleg <strong>{{currentProjects}} privát projekted van </strong> a maximum amit a jelenlegi előfizetésed megenged.",
-                "PRIVATE_EXCEEDED": "Jelenleg <strong>{{currentProjects}} privát projekted van </strong> a maximum amit a jelenlegi előfizetésed megenged."
+                "PUBLIC_EXCEEDED": "Jelenleg <strong>{{currentProjects}} nyilvános projekted</strong> van, ami az előfizetésed által engedélyezett maximum.",
+                "PRIVATE_EXCEEDED": "Jelenleg <strong>{{currentProjects}} privát projekted</strong> van, ami az előfizetésed által engedélyezett maximum."
             }
         },
         "PROJECT_PROFILE": {
@@ -921,7 +921,6 @@
         },
         "NAVIGATION": {
             "DASHBOARD_TITLE": "Műszerfal",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "NOTIFICATIONS_TITLE": "Értesítési beállítások szerkesztése",
             "ACCOUNT_SETTINGS": "Fiók beállítások",
             "VIEW_ALL_PROJECTS": "Összes projekt megtekintése",
@@ -943,7 +942,6 @@
             "NOTIFICATIONS": "Értesítések",
             "VIEW_PROFILE_TITLE": "Profil megtekintése",
             "VIEW_PROFILE": "Profil megtekintése",
-            "TAIGA_RESOURCES_TITLE": "Ugrás a Taiga resources oldalra",
             "ACTION_CREATE_PROJECT_FIRST_TEXT": "Még nincsenek projektjeid. Hozz létre egyet most, hívd meg a csapatodat és kezd el teljes mértékben használni a Taigat.",
             "TAIGA_COMMUNITY": "Taiga Közösség",
             "TAIGA_COMMUNITY_TITLE": "Irány a Taiga közösség"
@@ -1601,6 +1599,29 @@
         "FEATURED": "Kiemelt projektek",
         "EMPTY": "Nincs megjeleníthető projekt ezzel a keresési feltétellel.<br> Próbáld újra!",
         "DISCOVER_SUBTITLE": "{projects, plural, =1{Egy felfedezésre váró nyilvános projekt} other{# felfedezésre váró nyilvános projekt}}"
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Rendszerbeállítások",
+        "DESCRIPTION": "A fiókok alapértelmezett beállításai személyes választás nélkül.",
+        "LANGUAGE_HEADING": "Nyelv",
+        "DEFAULT_LANGUAGE": "Alapértelmezett nyelv",
+        "APPEARANCE_HEADING": "Megjelenés",
+        "DEFAULT_THEME": "Alapértelmezett téma",
+        "USE_DEPLOYMENT_DEFAULT": "A szerver alapértelmezett beállításának használata",
+        "EFFECTIVE_VALUE": "Érvényes érték:",
+        "SOURCE_DEPLOYMENT": "Forrás: szerver alapértelmezett beállítása",
+        "SOURCE_ADMIN": "Forrás: a rendszergazda mentett beállítása",
+        "LANGUAGE_HELP": "Az interfészek és az e-mailek használják, ha a fiók nyelve nincs beállítva.",
+        "THEME_HELP": "Az interfészek akkor használják, ha nincs beállítva fióktéma.",
+        "RESET_DEFAULT": "Állítsa vissza a szerver alapértelmezett beállítását",
+        "APPLY_HELP": "A mentett módosítások a következő oldalbetöltéskor érvényesek. A személyes döntések elsőbbséget élveznek.",
+        "CONFLICT": "Egy másik rendszergazda megváltoztatta ezeket az alapértelmezéseket. Mentés előtt töltse be újra.",
+        "UNAVAILABLE_CHOICE": "Mentett választás már nem érhető el. Mentés előtt állítsa vissza.",
+        "ERROR_SAVE": "Nem sikerült menteni a rendszerbeállításokat. Próbáld újra."
+    },
+    "THEMES": {
+        "LIGHT": "Világos",
+        "DARK": "Sötét"
     },
     "ZOOM": {
         "TITLE": "Nagyítás:",

@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Вибрати мову",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Видалити форматування",
             "OUTDATED": "Інша особа внесла зміни під час редагування. Перш ніж зберегти зміни, перевірте нову версію на вкладці активності.",
-            "MARKDOWN_HELP": "Допомога по синтаксису markdown"
+            "MARKDOWN_HELP": "Допомога по синтаксису markdown",
+            "LOAD_IMAGE": "Завантажити зображення"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Додати посилання вікі",
                 "DELETE_WIKI_LINKS": "Видалити посилання вікі"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Цей проект було заархівовано. Тепер він доступний лише для читання."
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Видалити мітку"
         },
         "HELP": "Потрібна допомога? Завітайте на нашу сторінку підтримки!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Типові значення",
-            "SUBTITLE": "Встановити типові значення для всіх полів вибору."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Керувати учасниками",
             "PAGE_TITLE": "Членство - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "Типи",
             "SUBTITLE": "Вкажіть, яких типів можуть бути ваші проблеми",
             "ISSUE_TITLE": "Типи проблем",
-            "ACTION_ADD": "Додати новий {{objName}}"
+            "ACTION_ADD": "Додати новий тип проблеми"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Мітки",
@@ -678,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -775,6 +775,7 @@
             "DELETE_MEMBER": "Видалити учасника",
             "RESEND": "Надіслати повторно",
             "SUCCESS_SEND_INVITATION": "Ми знову надіслали запрошення на '{{email}}'.",
+            "ERROR_SEND_INVITATION": "Не вдалося повторно надіслати запрошення. Спробуйте ще раз.",
             "SUCCESS_DELETE": "Ми видалили {{message}}.",
             "ERROR_DELETE": "Ми не змогли видалити {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "запрошення на {{email}}"
@@ -850,7 +851,7 @@
             "MENU_TITLE": "Переднабори"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Додатки  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Додатки - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "Створити проєкт",
             "HELP_TITLE": "Допомога",
             "HOMEPAGE": "Домашня сторінка",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Відредагуйте Ваші налаштування повідомлень",
@@ -1132,7 +1131,7 @@
             "NOTIFY_EXPLANATION": "Ми надсилатимемо вам новини, оновлення продуктів та поради про Taiga.",
             "SAVE_PREFERENCE": "ЗБЕРЕГТИ НАЛАШТУВАННЯ",
             "DONT_ASK": "Більше не питати",
-            "OPT_OUT": "Ми надсилатимемо вам лише відповідні електронні листи (<6 на рік). Ви можете будь -коли відписатися, надіславши електронний лист на адресу <a href=\"mailto:support@taiga.io\" target=\"_blank\"> support@taiga.io </a> із темою \"скасувати підписку\" або за посиланням у будь -якому наших інформаційних бюлетенів.",
+            "OPT_OUT": "Ми надсилатимемо вам лише відповідні електронні листи (<6 на рік). Ви можете будь -коли відписатися, надіславши електронний лист на адресу <a href=\"mailto:support@taiga.io\" target=\"_blank\"> support@taiga.io </a> із темою \"unsubscribe\" або за посиланням у будь -якому наших інформаційних бюлетенів.",
             "NO_SHARE": "Для нас важлива ваша приватність (перегляньте нашу <a href=\"https://www.taiga.io/privacy-policy\" title=\"Go to privacy policy\" target=\"_blank\">політику приватності</a>).",
             "CONFIRMATION": "Так, надішліть мені новини, оновлення продуктів та поради про Taiga.",
             "LIGHTBOX_TITLE": "Хочете отримувати оголошення про Taiga?"
@@ -1544,7 +1543,7 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Виберіть пункт призначення",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
             "WARNING_ISSUES_NOT_MOVED_TITLE": "Ви щойно перемістили усі історії користувача та завдання і спринт буде закритий",
             "WARNING_ISSUES_NOT_MOVED": "Ця проблем залишиться у спринті та не буде видалена",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
@@ -1824,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} оновив значення '{{role_name}}' очок історії користувача {{obj_name}} на {{new_value}}",
         "ISSUE_UPDATED": "{{username}} оновив атрибут \"{{field_name}}\" проблеми {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} оновив атрибут \"{{field_name}}\" проблеми {{obj_name}} на {{new_value}}",
-        "TASK_UPDATED": "{{username}} оновив атрибут \"{{field_name}}\" завдання {{obj_name}} на {{new_value}}",
+        "TASK_UPDATED": "{{username}} оновив атрибут «{{field_name}}» завдання {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} оновив атрибут \"{{field_name}}\" завдання {{obj_name}} на {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} оновив атрибут \"{{field_name}}\" завдання {{obj_name}}, що належить до історії користувача {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} оновив атрибут \"{{field_name}}\" завдання {{obj_name}}, що належить до історії користувача {{us_name}} на {{new_value}}",
@@ -1966,6 +1965,29 @@
             "ACTION_TITLE": "Пошук",
             "RESULTS": "Результати пошуку"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Системні налаштування",
+        "DESCRIPTION": "Встановіть параметри за замовчуванням для облікових записів без особистого вибору.",
+        "LANGUAGE_HEADING": "Мова",
+        "DEFAULT_LANGUAGE": "Мова за замовчуванням",
+        "APPEARANCE_HEADING": "Вигляд",
+        "DEFAULT_THEME": "Тема за замовчуванням",
+        "USE_DEPLOYMENT_DEFAULT": "Використовувати налаштування сервера за замовчуванням",
+        "EFFECTIVE_VALUE": "Поточне значення:",
+        "SOURCE_DEPLOYMENT": "Джерело: налаштування сервера за замовчуванням",
+        "SOURCE_ADMIN": "Джерело: збережене налаштування адміністратора",
+        "LANGUAGE_HELP": "Використовується інтерфейсами та електронною поштою, якщо мову облікового запису не встановлено.",
+        "THEME_HELP": "Використовується інтерфейсами, коли тема облікового запису не встановлена.",
+        "RESET_DEFAULT": "Повернути значення за замовчуванням, задане на сервері",
+        "APPLY_HELP": "Збережені зміни застосовуються під час наступного завантаження сторінки. Особистий вибір має пріоритет.",
+        "CONFLICT": "Інший адміністратор змінив ці налаштування за замовчуванням. Перезавантажте сторінку перед збереженням.",
+        "UNAVAILABLE_CHOICE": "Збережений вибір більше не доступний. Скиньте його перед збереженням.",
+        "ERROR_SAVE": "Не вдалося зберегти налаштування системи. Спробуйте знову."
+    },
+    "THEMES": {
+        "LIGHT": "Світла",
+        "DARK": "Темна"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

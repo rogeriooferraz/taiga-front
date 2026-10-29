@@ -204,7 +204,7 @@
             "UNWATCH": "Deixar de Observar",
             "WATCHERS": "Observadores",
             "BUTTON_TITLE": "Observar/Deixar de observar este item",
-            "COUNTER_TITLE": "{total, plural, =1{um observador} outros{# observadores}}"
+            "COUNTER_TITLE": "{total, plural, =1{um observador} other{# observadores}}"
         },
         "VOTE_BUTTON": {
             "BUTTON_TITLE": "Aprovar/Reprovar este item",
@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Selecione sua linguagem",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Remove formatação",
             "OUTDATED": "Outra pessoa fez mudanças enquanto estava editando. Verifique a nova versão na guia atividade antes de salvar suas alterações.",
-            "MARKDOWN_HELP": "Ajuda de sintaxe markdown"
+            "MARKDOWN_HELP": "Ajuda de sintaxe markdown",
+            "LOAD_IMAGE": "Carregar imagem"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Adicionar links da wiki",
                 "DELETE_WIKI_LINKS": "Excluir links da wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Este projeto foi arquivado. Agora está em modo apenas leitura."
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Excluir tag"
         },
         "HELP": "Você precisa de ajuda? Verifique nossa pagina de suporte!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Valores Padrão",
-            "SUBTITLE": "Seleciona valores default para todos os seletores"
-        },
         "MEMBERSHIPS": {
             "TITLE": "Gerenciar Membros",
             "PAGE_TITLE": "Membros - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "Tipos",
             "SUBTITLE": "Especifique de que tipos seus problemas poderão ser",
             "ISSUE_TITLE": "Tipos de problemas",
-            "ACTION_ADD": "Adicionar novo {{objName}}"
+            "ACTION_ADD": "Adicionar novo tipo de problema"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Tags",
@@ -678,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -775,6 +775,7 @@
             "DELETE_MEMBER": "Excluir membro",
             "RESEND": "Reenviar",
             "SUCCESS_SEND_INVITATION": "Enviamos novamente um convite para '{{email}}'.",
+            "ERROR_SEND_INVITATION": "Não foi possível reenviar o convite. Tente novamente.",
             "SUCCESS_DELETE": "Nós excluimos {{message}}.",
             "ERROR_DELETE": "Nós não fomos capaz de excluir {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "o convite para {{email}}"
@@ -839,8 +840,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Por favor, lembre-se que você pode ser dono de até <strong>{{maxProjects}}</strong> projetos privados. Você, atualmente, é dono de <strong>{{currentProjects}}</strong> projetos privados.",
                 "PUBLIC": "Por favor, lembre-se de que você pode ser dono de até <strong>{{maxProjects}}</strong> projetos públicos. Você atualmente é dono de <strong>{{currentProjects}}</strong> projetos públicos.",
-                "PUBLIC_EXCEEDED": "Atualmente você tem <strong>{{currentProjects}} projetos públicos</strong> do máximo que seu plano permite.",
-                "PRIVATE_EXCEEDED": "Atualmente você tem <strong>{{currentProjects}} projetos privados </strong> do máximo que seu plano permite."
+                "PUBLIC_EXCEEDED": "Seu total de projetos públicos é <strong>{{currentProjects}}</strong>, o máximo permitido pelo seu plano de assinatura.",
+                "PRIVATE_EXCEEDED": "Seu total de projetos privados é <strong>{{currentProjects}}</strong>, o máximo permitido pelo seu plano de assinatura."
             },
             "CANT_BE_OWNED": "No momento, você não pode se tornar dono de um projeto desse tipo. Se você quiser se tornar dono desse projeto, por favor, entre em contato com os administradores para mudarem as configurações da sua conta para habilitar a propriedade do projeto."
         },
@@ -850,7 +851,7 @@
             "MENU_TITLE": "Predefinições"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "As pessoas com a qual você  na Taiga serão seus contatos automaticamente"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "Criar projeto",
             "HELP_TITLE": "Ajuda",
             "HOMEPAGE": "Página pessoal",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Pergunte algo",
             "NOTIFICATIONS_TITLE": "Editar suas configurações de notificações",
@@ -1135,7 +1134,7 @@
             "DONT_ASK": "Não pergunte novamente",
             "NO_SHARE": "Sua privacidade é importante para nós (veja nossa <a href=\"https://www.taiga.io/privacy-policy\" title=\"Ir para política de privacidade\" target=\"_blank\">política de privacidade</a>).",
             "SAVE_PREFERENCE": "SALVAR PREFERÊNCIAS",
-            "OPT_OUT": "Nós enviaremos para você apenas e-mails relevantes (menos de 6 por ano). Você pode cancelar a inscrição a qualquer momento enviando um e-mail para <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> com o assunto “Cancelar inscrição” ou através do link em qualquer um de nossos boletins."
+            "OPT_OUT": "Nós enviaremos para você apenas e-mails relevantes (menos de 6 por ano). Você pode cancelar a inscrição a qualquer momento enviando um e-mail para <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> com o assunto “unsubscribe” ou através do link em qualquer um de nossos boletins."
         }
     },
     "LIGHTBOX": {
@@ -1544,9 +1543,9 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Select destination",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
-            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and taks, and the sprint'll be closed",
-            "WARNING_ISSUES_NOT_MOVED": "The issues'll remain in the sprint and don't be removed",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
+            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and tasks, and the sprint will be closed",
+            "WARNING_ISSUES_NOT_MOVED": "The issues will remain in the sprint and will not be removed",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
             "WARNING_SPRINT_STILL_OPEN": "Please note that the sprint {{sprintName}} <strong>will remain open</strong> as long as it contains unfinished items."
         }
@@ -1824,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} atualizou o atributo \"{{field_name}}\" do problema {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} atualizou o atributo \"{{field_name}}\" do problema {{obj_name}} para {{new_value}}",
-        "TASK_UPDATED": "{{username}} atualizou o atributo \"{{field_name}}\" da tarefa {{obj_name}} para {{new_value}}",
+        "TASK_UPDATED": "{{username}} atualizou o atributo \"{{field_name}}\" da tarefa {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} atualizou o atributo \"{{field_name}}\" da tarefa {{obj_name}} para {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1967,10 +1966,6 @@
             "RESULTS": "Resultado de pesquisa"
         }
     },
-    "THEMES": {
-        "LIGHT": "Claro",
-        "DARK": "Escuro"
-    },
     "SYSTEM_SETTINGS": {
         "TITLE": "Configurações do sistema",
         "DESCRIPTION": "Defina os padrões para contas sem uma escolha pessoal.",
@@ -1987,7 +1982,12 @@
         "RESET_DEFAULT": "Restaurar o padrão da implantação",
         "APPLY_HELP": "As alterações salvas entram em vigor no próximo carregamento da página. As escolhas pessoais têm prioridade.",
         "CONFLICT": "Outro administrador alterou estes padrões. Recarregue antes de salvar.",
+        "UNAVAILABLE_CHOICE": "Uma opção salva não está mais disponível. Restaure o padrão antes de salvar.",
         "ERROR_SAVE": "Não foi possível salvar as configurações do sistema. Tente novamente."
+    },
+    "THEMES": {
+        "LIGHT": "Claro",
+        "DARK": "Escuro"
     },
     "ZOOM": {
         "TITLE": "Visualização:",

@@ -9,7 +9,10 @@ tg-lightbox-close
 
 .content
     h2.title(translate="ADMIN.PROJECT_PROFILE.REQUEST_OWNERSHIP_CONFIRMATION_TITLE")
-    p(translate="ADMIN.PROJECT_PROFILE.REQUEST_OWNERSHIP_DESC")
+    p(
+        translate="ADMIN.PROJECT_PROFILE.REQUEST_OWNERSHIP_DESC"
+        translate-values="{name: name}"
+    )
 
     button.btn-small(
         variant="primary"

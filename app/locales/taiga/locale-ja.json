@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "言語を選択",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Remove formatting",
             "OUTDATED": "編集中に別の人が変更を加えました。 変更を保存する前にアクティビティタブで新しいバージョンを確認してください。",
-            "MARKDOWN_HELP": "Markdown記法のヘルプ"
+            "MARKDOWN_HELP": "Markdown記法のヘルプ",
+            "LOAD_IMAGE": "画像を読み込む"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Wikiリンクを追加",
                 "DELETE_WIKI_LINKS": "Wikiリンクの削除"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "このプロジェクトはアーカイブされました。現在は読み取り専用になっています。"
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "タグを削除"
         },
         "HELP": "手助けが必要な場合はサポートページをチェックしてください！",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "初期値設定",
-            "SUBTITLE": "プルダウン項目の初期値を設定してください。"
-        },
         "MEMBERSHIPS": {
             "TITLE": "メンバー管理",
             "PAGE_TITLE": "メンバーシップ - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "タイプ",
             "SUBTITLE": "課題のタイプを定義することができます",
             "ISSUE_TITLE": "課題のタイプ",
-            "ACTION_ADD": "新しい {{objName}} を追加"
+            "ACTION_ADD": "新しい課題タイプを追加"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "タグ",
@@ -775,6 +775,7 @@
             "DELETE_MEMBER": "メンバーを削除",
             "RESEND": "再送信",
             "SUCCESS_SEND_INVITATION": "招待メールを '{{email}}' へもう一度送りました。",
+            "ERROR_SEND_INVITATION": "招待を再送できませんでした。もう一度お試しください。",
             "SUCCESS_DELETE": "{{message}} を削除しました。",
             "ERROR_DELETE": "{{message}} を削除できませんでした。",
             "DEFAULT_DELETE_MESSAGE": "{{email}} への招待メール"
@@ -838,7 +839,9 @@
             "UNLIMITED_PROJECTS": "無制限",
             "OWNER_MESSAGE": {
                 "PRIVATE": "あなたが持てる非公開プロジェクトは最大<strong>{{maxProjects}}</strong>個までです。現在<strong>{{currentProjects}}</strong>個持っています",
-                "PUBLIC": "あなたが持てる公開プロジェクトは最大<strong>{{maxProjects}}</strong>個までです。現在<strong>{{currentProjects}}</strong>個持っています"
+                "PRIVATE_EXCEEDED": "非公開プロジェクトの数は<strong>{{currentProjects}}</strong>個で、サブスクリプションプランで許可されている上限に達しています。",
+                "PUBLIC": "あなたが持てる公開プロジェクトは最大<strong>{{maxProjects}}</strong>個までです。現在<strong>{{currentProjects}}</strong>個持っています",
+                "PUBLIC_EXCEEDED": "公開プロジェクトの数は<strong>{{currentProjects}}</strong>個で、サブスクリプションプランで許可されている上限に達しています。"
             },
             "CANT_BE_OWNED": "現在あなたはこのタイプのプロジェクトのオーナーにはなれません。このプロジェクトのオーナーになりたい場合は管理者に問い合わせてオーナー権限を変更してもらってください。"
         },
@@ -846,6 +849,9 @@
             "SUBTITLE": "プルダウン項目の初期値を設定できます。",
             "TITLE": "初期値",
             "MENU_TITLE": "設定"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - プラグイン - {{projectName}}"
         }
     },
     "USER": {
@@ -933,9 +939,9 @@
             "MANAGE_PROJECTS": "プロジェクト管理",
             "TITLE_CREATE_PROJECT": "プロジェクトを作成",
             "HELP_TITLE": "ヘルプ",
+            "TAIGA_COMMUNITY_TITLE": "Taigaコミュニティへ移動",
+            "TAIGA_COMMUNITY": "Taigaコミュニティ",
             "HOMEPAGE": "ホームページ",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "通知設定を編集",
@@ -1171,7 +1177,9 @@
             "CREATE": "課題を作成する: ",
             "PUBLIC": "public Taiga project",
             "EMAIL": "直接メールする: ",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "こちらをご覧ください： ",
+            "FAQ": "よくある質問"
         },
         "SEARCH": {
             "TITLE": "検索",
@@ -1815,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} さんがユーザーストーリー {{obj_name}} における役割 '{{role_name}}' のポイントを {{new_value}} に更新しました",
         "ISSUE_UPDATED": "{{username}} さんが課題 {{obj_name}} の属性 \"{{field_name}}\" を更新しました",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} さんが課題 {{obj_name}} の属性 \"{{field_name}}\" を {{new_value}} に更新しました",
-        "TASK_UPDATED": "{{username}} さんが {{obj_name}} の {{field_name}} を {{new_value}} に更新しました",
+        "TASK_UPDATED": "{{username}} さんがタスク {{obj_name}} の属性「{{field_name}}」を更新しました",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} さんが {{obj_name}} の {{field_name}} を {{new_value}} に更新しました",
         "TASK_UPDATED_WITH_US": "{{username}} さんがユーザーストーリー {{us_name}} のタスク {{obj_name}} の属性 \"{{field_name}}\" を更新しました",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} さんがユーザーストーリー {{us_name}} のタスク {{obj_name}} における属性 \"{{field_name}}\" を {{new_value}} に更新しました",
@@ -1957,6 +1965,29 @@
             "ACTION_TITLE": "検索",
             "RESULTS": "検索結果"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "システム設定",
+        "DESCRIPTION": "個人的な選択なしにアカウントのデフォルトを設定します。",
+        "LANGUAGE_HEADING": "言語",
+        "DEFAULT_LANGUAGE": "デフォルトの言語",
+        "APPEARANCE_HEADING": "外観",
+        "DEFAULT_THEME": "デフォルトのテーマ",
+        "USE_DEPLOYMENT_DEFAULT": "サーバーのデフォルト設定を使用する",
+        "EFFECTIVE_VALUE": "実効値:",
+        "SOURCE_DEPLOYMENT": "ソース: サーバーのデフォルト設定",
+        "SOURCE_ADMIN": "ソース: 管理者が保存した設定",
+        "LANGUAGE_HELP": "アカウント言語が設定されていない場合に、インターフェイスと電子メールで使用されます。",
+        "THEME_HELP": "アカウントのテーマが設定されていない場合にインターフェイスによって使用されます。",
+        "RESET_DEFAULT": "サーバーのデフォルト設定にリセットする",
+        "APPLY_HELP": "保存された変更は、次のページの読み込み時に適用されます。個人の選択が優先されます。",
+        "CONFLICT": "別の管理者がこれらのデフォルトを変更しました。保存する前にリロードしてください。",
+        "UNAVAILABLE_CHOICE": "保存済みの選択肢は利用できなくなりました。保存する前にリセットしてください。",
+        "ERROR_SAVE": "システム設定を保存できませんでした。もう一度やり直してください。"
+    },
+    "THEMES": {
+        "LIGHT": "ライト",
+        "DARK": "ダーク"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

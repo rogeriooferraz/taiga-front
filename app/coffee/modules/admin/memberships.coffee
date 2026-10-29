@@ -116,17 +116,6 @@ class MembershipsController extends mixOf(taiga.Controller, taiga.PageMixin, tai
             }
         )
 
-    showLimitUsersWarningMessage: ->
-        title = @translate.instant("ADMIN.MEMBERSHIPS.LIMIT_USERS_WARNING")
-        message = @translate.instant("ADMIN.MEMBERSHIPS.LIMIT_USERS_WARNING_MESSAGE", {
-            members: @scope.project.max_memberships
-        })
-        icon = "/" + window._version + "/svg/icons/team-question.svg"
-        @confirm.success(title, message, {
-            name: icon,
-            type: "img"
-        })
-
 module.controller("MembershipsController", MembershipsController)
 
 

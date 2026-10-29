@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Selecciona un lenguaje",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Eliminar formato",
             "OUTDATED": "Otra persona ha realizado cambios mientras tú estabas editando. Revisa la nueva versión en la pestaña de actividad antes de guardar tus cambios.",
-            "MARKDOWN_HELP": "Ayuda de sintaxis Markdown"
+            "MARKDOWN_HELP": "Ayuda de sintaxis Markdown",
+            "LOAD_IMAGE": "Cargar imagen"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Crear enlaces",
                 "DELETE_WIKI_LINKS": "Borrar enlaces"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Este proyecto se ha archivado. Ahora es de solo lectura."
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Borrar etiqueta"
         },
         "HELP": "¿Necesitas ayuda? ¡Revisa nuestra página de soporte!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Valores por defecto",
-            "SUBTITLE": "Define los valores por defecto para todos los selectores."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Administrar miembros",
             "PAGE_TITLE": "Miembros - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "Tipos",
             "SUBTITLE": "Especifica los deferentes tipos posibles de peticiones que pueden existir.",
             "ISSUE_TITLE": "Tipos de la petición",
-            "ACTION_ADD": "Añadir nuevo {{objName}}"
+            "ACTION_ADD": "Añadir un nuevo tipo de petición"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Etiquetas",
@@ -775,9 +775,10 @@
             "DELETE_MEMBER": "Borrar miembro",
             "RESEND": "Enviar de nuevo",
             "SUCCESS_SEND_INVITATION": "Hemos enviado nuevamente la invitación a '{{email}}'.",
+            "ERROR_SEND_INVITATION": "No se pudo volver a enviar la invitación. Inténtalo de nuevo.",
             "SUCCESS_DELETE": "Hemos eliminado {{message}}.",
             "ERROR_DELETE": "No se ha podido eliminar {{message}}. ",
-            "DEFAULT_DELETE_MESSAGE": "la invitación enviada a"
+            "DEFAULT_DELETE_MESSAGE": "la invitación enviada a {{email}}"
         },
         "DEFAULT_VALUES": {
             "LABEL_EPIC_STATUS": "Selector del estado de Epic",
@@ -839,8 +840,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Recuerde que puede poseer hasta <strong>{{maxProjects}}</strong> proyectos privados. Actualmente posee <strong>{{currentProjects}}</strong> proyectos privados.",
                 "PUBLIC": "Recuerde que puede poseer hasta <strong>{{maxProjects}}</strong> proyectos públicos. Actualmente posee <strong>{{currentProjects}}</strong> proyectos públicos.",
-                "PRIVATE_EXCEEDED": "Actualmente tiene <strong>{{currentProjects}} proyectos privados</strong> el máximo que permite su plan.",
-                "PUBLIC_EXCEEDED": "Actualmente tiene <strong>{{currentProjects}} proyectos públicos</strong> el máximo que permite su plan."
+                "PRIVATE_EXCEEDED": "El número de proyectos privados que tiene es <strong>{{currentProjects}}</strong>, el máximo que permite su suscripción.",
+                "PUBLIC_EXCEEDED": "El número de proyectos públicos que tiene es <strong>{{currentProjects}}</strong>, el máximo que permite su suscripción."
             },
             "CANT_BE_OWNED": "en el momento no puede ser el dueño de un proyecto de este tipo. Si desea ser el dueño de este proyecto, por favor contacte al administrador para cambiar la configuracion que le permita ser dueño del proyecto"
         },
@@ -850,7 +851,7 @@
             "SUBTITLE": "Establecer los valores por defecto para todas las entradas del selector."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugins  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "Crear proyecto",
             "HELP_TITLE": "Ayuda",
             "HOMEPAGE": "Página de inicio",
-            "TAIGA_RESOURCES_TITLE": "Visita Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Envíanos tus comentarios",
             "FEEDBACK": "Escribe tu pregunta",
             "NOTIFICATIONS_TITLE": "Edita la configuración de tus notificaciones",
@@ -1130,7 +1129,7 @@
             "SAVED_PREFERENCE": "Tus preferencias se han guardado correctamente",
             "CONFIRMATION": "Sí, envíenme noticias, actualizaciones de productos y recomendaciones sobre Taiga.",
             "NO_SHARE": "Su privacidad nos importa (consulte nuestra <a href=\"https://www.taiga.io/privacy-policy\" title=\"Go to privacy policy\" target=\"_blank\">política de privacidad</a>).",
-            "OPT_OUT": "Lo haremos solo le enviaremos correos electrónicos relevantes (<6 por año). Puede darse de baja en cualquier momento enviando un correo electrónico a <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> con el asunto \"cancelar suscripción\" o a través del enlace en uno de nuestros boletines.",
+            "OPT_OUT": "Lo haremos solo le enviaremos correos electrónicos relevantes (<6 por año). Puede darse de baja en cualquier momento enviando un correo electrónico a <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> con el asunto \"unsubscribe\" o a través del enlace en uno de nuestros boletines.",
             "LIGHTBOX_TITLE": "¿Quieres recibir anuncios sobre Taiga?",
             "DONT_ASK": "No vuelvas a preguntar",
             "SUBSCRIBE": "Suscríbete",
@@ -1304,7 +1303,7 @@
     },
     "EPIC": {
         "PAGE_TITLE": "{{epicSubject}} - Épica {{epicRef}} - {{projectName}}",
-        "PAGE_DESCRIPTION": "Estado: {{taskStatus}}. Descripción: {{taskDescription}}",
+        "PAGE_DESCRIPTION": "Estado: {{epicStatus}}. Descripción: {{epicDescription}}",
         "EPIC_COLOR": "Color de la épica",
         "SECTION_NAME": "Épica",
         "ERROR_UNLINK_RELATED_USERSTORY": "No se ha podido desvincular: {{errorMessage}}",
@@ -1824,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} ha actualizado los puntos de '{{role_name}}' de la historia de usuario {{obj_name}} a {{new_value}}",
         "ISSUE_UPDATED": "{{username}} ha actualizado el atributo \"{{field_name}}\" de la petición {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} ha actualizado el atributo \"{{field_name}}\" de la petición {{obj_name}} a {{new_value}}",
-        "TASK_UPDATED": "{{username}} ha actualizado el atributo \"{{field_name}}\" de la tarea {{obj_name}} a {{new_value}}",
+        "TASK_UPDATED": "{{username}} ha actualizado el atributo \"{{field_name}}\" de la tarea {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} ha actualizado el atributo \"{{field_name}}\" de la tarea {{obj_name}} a {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} ha actualizado el atributo \"{{field_name}}\" de la tarea {{obj_name}} que proviene de la historia de usuario {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} ha actualizado el atributo \"{{field_name}}\" de la tarea {{obj_name}} que pertenece a la historia de usuario {{us_name}} a {{new_value}}",
@@ -1869,7 +1868,7 @@
     "EXTERNAL_APP": {
         "PAGE_TITLE": "Una aplicación externa requiere autenticación",
         "PAGE_DESCRIPTION": "Una aplicación externa requiere autenticación",
-        "AUTHORIZATION_REQUEST": "¿Autoriza {{aplicación}} para que utilice tu cuenta de Taiga?",
+        "AUTHORIZATION_REQUEST": "¿Autoriza {{application}} para que utilice tu cuenta de Taiga?",
         "LOGIN_WITH_ANOTHER_USER": "Ingresar con otro usuario",
         "AUTHORIZE_APP": "Autorizar aplicación",
         "CANCEL": "Cancelar"
@@ -1966,6 +1965,29 @@
             "ACTION_TITLE": "Buscar",
             "RESULTS": "Resultados de búsqueda"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Configuración del sistema",
+        "DESCRIPTION": "Establezca valores predeterminados para cuentas sin elección personal.",
+        "LANGUAGE_HEADING": "Idioma",
+        "DEFAULT_LANGUAGE": "Idioma predeterminado",
+        "APPEARANCE_HEADING": "Apariencia",
+        "DEFAULT_THEME": "Tema predeterminado",
+        "USE_DEPLOYMENT_DEFAULT": "Usar la configuración predeterminada del servidor",
+        "EFFECTIVE_VALUE": "Valor efectivo:",
+        "SOURCE_DEPLOYMENT": "Fuente: configuración predeterminada del servidor",
+        "SOURCE_ADMIN": "Fuente: configuración guardada del administrador",
+        "LANGUAGE_HELP": "Utilizado por interfaces y correo electrónico cuando no se establece un idioma de cuenta.",
+        "THEME_HELP": "Utilizado por interfaces cuando no se establece un tema de cuenta.",
+        "RESET_DEFAULT": "Restablecer el valor predeterminado del servidor",
+        "APPLY_HELP": "Los cambios guardados se aplican en la siguiente carga de la página. Las elecciones personales tienen prioridad.",
+        "CONFLICT": "Otro administrador cambió estos valores predeterminados. Vuelva a cargar antes de guardar.",
+        "UNAVAILABLE_CHOICE": "Una elección guardada ya no está disponible. Restablecerlo antes de guardar.",
+        "ERROR_SAVE": "No se pudo guardar la configuración del sistema. Intentar otra vez."
+    },
+    "THEMES": {
+        "LIGHT": "Claro",
+        "DARK": "Oscuro"
     },
     "ZOOM": {
         "TITLE": "Zoom",

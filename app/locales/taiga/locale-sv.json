@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Relaterade användarhistorier",
         "CARD": {
             "ASSIGN_TO": "Tilldela Till",
+            "MOVE_TO_TOP": "Flytta längst upp",
             "EDIT": "Ändra kort",
             "DELETE": "Delete card",
             "DELETE_ISSUE": "Ta bort ärende",
@@ -267,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Välj Språk",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Ta bort formatering",
             "OUTDATED": "Another person has made changes while you were editing. Check the new version on the activity tab before you save your changes.",
-            "MARKDOWN_HELP": "Hjälp för markeringssyntax"
+            "MARKDOWN_HELP": "Hjälp för markeringssyntax",
+            "LOAD_IMAGE": "Läs in bild"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -319,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Lägg till wiki-länkar",
                 "DELETE_WIKI_LINKS": "Ta bort wiki-länkar"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Det här projektet har arkiverats. Det är nu skrivskyddat."
         }
     },
     "LOGIN": {
@@ -489,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Ta bort etikett"
         },
         "HELP": "Behöver du hjälp? Besök hjälpsidorna!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Standardvärden",
-            "SUBTITLE": "Sätt standardvärden för alla ingångsval."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Hantera medlemmar",
             "PAGE_TITLE": "Medlemskap - {{projectName}}",
@@ -563,8 +564,9 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Projektet överstiger antalet tillåtna medlemmar för ett publikt projekt",
             "PROJECT_OWNER": "Projektägare",
             "REQUEST_OWNERSHIP": "Efterfråga ägareskap",
+            "REQUEST_OWNERSHIP_LIMIT": "Du har nått gränsen för privata projekt ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Do you want to become the new project owner?",
-            "REQUEST_OWNERSHIP_DESC": "Begär att den nuvarande projektägaren {{namn}} överför ägarskap av det här projektet till dig.",
+            "REQUEST_OWNERSHIP_DESC": "Begär att den nuvarande projektägaren {{name}} överför ägarskap av det här projektet till dig.",
             "REQUEST_OWNERSHIP_BUTTON": "Förfrågan",
             "REQUEST_OWNERSHIP_SUCCESS": "Vi noterar projektägaren",
             "CHANGE_OWNER": "Ända ägare",
@@ -649,7 +651,7 @@
             "TITLE": "Typ",
             "SUBTITLE": "Specificera typer av ärenden",
             "ISSUE_TITLE": "Ärendetyper",
-            "ACTION_ADD": "Lägg till ny {{objName}}"
+            "ACTION_ADD": "Lägg till ny ärendetyp"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Etiketter",
@@ -676,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -743,7 +745,7 @@
             "HEADERS": "Rubriker",
             "PAYLOAD": "Tjänster",
             "RESPONSE": "Respons",
-            "DATE": "DD MM YYY [at} hh:mm:ss",
+            "DATE": "DD MMM YYYY [kl.] HH:mm:ss",
             "ACTION_HIDE_HISTORY": "(Dölj historiken)",
             "ACTION_HIDE_HISTORY_TITLE": "Dölj detaljer för historiken",
             "ACTION_SHOW_HISTORY": "(Vis historiken)",
@@ -773,6 +775,7 @@
             "DELETE_MEMBER": "Ta bort medlem",
             "RESEND": "Skicka på nytt",
             "SUCCESS_SEND_INVITATION": "Vi har skickat på nytt invitationen till  '{{email}}'.",
+            "ERROR_SEND_INVITATION": "Det gick inte att skicka inbjudan igen. Försök igen.",
             "SUCCESS_DELETE": "Vi har tagit bort {{message}}.",
             "ERROR_DELETE": "Vi har inte lyckats att ta bort {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "den här invitationen till {{email}}"
@@ -836,9 +839,19 @@
             "UNLIMITED_PROJECTS": "Obegränsad",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Please remember that you can own up to <strong>{{maxProjects}}</strong> private projects. You currently own <strong>{{currentProjects}}</strong> private projects",
-                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects"
+                "PRIVATE_EXCEEDED": "Antalet privata projekt du har är <strong>{{currentProjects}}</strong>, vilket är det högsta antal som ditt abonnemang tillåter.",
+                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects",
+                "PUBLIC_EXCEEDED": "Antalet offentliga projekt du har är <strong>{{currentProjects}}</strong>, vilket är det högsta antal som ditt abonnemang tillåter."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
+        },
+        "PROJECT_PRESETS": {
+            "TITLE": "Standardvärden",
+            "MENU_TITLE": "Förinställningar",
+            "SUBTITLE": "Ange standardvärden för alla valfält."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Insticksprogram - {{projectName}}"
         }
     },
     "USER": {
@@ -926,9 +939,9 @@
             "MANAGE_PROJECTS": "Hantera projekt",
             "TITLE_CREATE_PROJECT": "Skapa projekt",
             "HELP_TITLE": "Hjälp",
+            "TAIGA_COMMUNITY_TITLE": "Gå till Taiga-gemenskapen",
+            "TAIGA_COMMUNITY": "Taiga-gemenskapen",
             "HOMEPAGE": "Webbplats",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Ändra inställningar för dina notifieringar",
@@ -1062,7 +1075,7 @@
                 "DESCRIPTION": "Den här processen kan ta en liten stund, vänligen försök med fönstret öppet. "
             },
             "WARNING": {
-                "TITLE": "Some taks will be unassigned",
+                "TITLE": "Some tasks will be unassigned",
                 "DESCRIPTION": "Det finns fortfarande oidentifierade användare. Korten som är tilldelade till de personerna, kommer fortsatt att vara otilldelade. Kontrollera alla kontakter för att inte förlora informationen.",
                 "CHECK": "Check contacts"
             },
@@ -1110,6 +1123,18 @@
                 "CREATE_NEW_ISSUES": "Convert sub-issues to new Taiga issues",
                 "NOT_CREATE_NEW_ISSUES": "Do not import sub-issues"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Din integritet är viktig för oss (se vår <a href=\"https://www.taiga.io/privacy-policy\" title=\"Gå till integritetspolicyn\" target=\"_blank\">integritetspolicy</a>).",
+            "OPT_OUT": "Vi skickar bara relevanta e-postmeddelanden till dig (färre än 6 per år). Du kan när som helst avsluta prenumerationen genom att skicka ett e-postmeddelande till <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> med ämnet “unsubscribe” eller via länken i något av våra nyhetsbrev.",
+            "DONT_ASK": "Fråga inte igen",
+            "SUBSCRIBE": "Prenumerera",
+            "SUBSCRIBED": "Du prenumererar",
+            "LIGHTBOX_TITLE": "Vill du få meddelanden om Taiga?",
+            "CONFIRMATION": "Ja, skicka mig nyheter, produktuppdateringar och rekommendationer om Taiga.",
+            "SAVE_PREFERENCE": "SPARA INSTÄLLNINGAR",
+            "NOTIFY_EXPLANATION": "Vi skickar dig nyheter, produktuppdateringar och rekommendationer om Taiga.",
+            "SAVED_PREFERENCE": "Dina inställningar har sparats"
         }
     },
     "LIGHTBOX": {
@@ -1152,7 +1177,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "Läs våra ",
+            "FAQ": "vanliga frågor"
         },
         "SEARCH": {
             "TITLE": "Sök",
@@ -1188,7 +1215,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "Default",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "Placering",
+            "CREATE_TOP": "längst upp",
+            "CREATE_BOTTOM": "längst ner"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1513,9 +1543,9 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Select destination",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
-            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and taks, and the sprint'll be closed",
-            "WARNING_ISSUES_NOT_MOVED": "The issues'll remain in the sprint and don't be removed",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
+            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and tasks, and the sprint will be closed",
+            "WARNING_ISSUES_NOT_MOVED": "The issues will remain in the sprint and will not be removed",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
             "WARNING_SPRINT_STILL_OPEN": "Please note that the sprint {{sprintName}} <strong>will remain open</strong> as long as it contains unfinished items."
         }
@@ -1543,6 +1573,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Stäng avisering",
+        "COMMUNICATION": "Meddelanden från Taiga",
         "MAIL": "Notifieringar via e-post",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Är du säker på att du vill radera?"
@@ -1792,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} har uppdaterad egenskapen \"{{field_name}}\" i ärendet {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} har uppdaterad egenskapen \"{{field_name}}\" för ärendet {{obj_name}} till {{new_value}}",
-        "TASK_UPDATED": "{{username}} har uppdaterad egenskapen \"{{field_name}}\" för uppgiften {{obj_name}} till {{new_value}}",
+        "TASK_UPDATED": "{{username}} har uppdaterat egenskapen \"{{field_name}}\" för uppgiften {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} har uppdaterad egenskapen \"{{field_name}}\" för uppgiften {{obj_name}} till {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1934,6 +1965,29 @@
             "ACTION_TITLE": "Sök",
             "RESULTS": "Sökresultat"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Systeminställningar",
+        "DESCRIPTION": "Ställ in standardinställningar för konton utan personligt val.",
+        "LANGUAGE_HEADING": "Språk",
+        "DEFAULT_LANGUAGE": "Standardspråk",
+        "APPEARANCE_HEADING": "Utseende",
+        "DEFAULT_THEME": "Standardtema",
+        "USE_DEPLOYMENT_DEFAULT": "Använd serverns standardinställning",
+        "EFFECTIVE_VALUE": "Effektivt värde:",
+        "SOURCE_DEPLOYMENT": "Källa: serverns standardinställning",
+        "SOURCE_ADMIN": "Källa: administratörens sparade inställning",
+        "LANGUAGE_HELP": "Används av gränssnitt och e-post när ett kontospråk inte är inställt.",
+        "THEME_HELP": "Används av gränssnitt när ett kontotema inte är inställt.",
+        "RESET_DEFAULT": "Återställ till serverns standardinställning",
+        "APPLY_HELP": "Sparade ändringar gäller vid nästa sidladdning. Personliga val prioriteras.",
+        "CONFLICT": "En annan administratör ändrade dessa standardinställningar. Ladda om innan du sparar.",
+        "UNAVAILABLE_CHOICE": "Ett sparat val är inte längre tillgängligt. Återställ den innan du sparar.",
+        "ERROR_SAVE": "Det gick inte att spara systeminställningarna. Försök igen."
+    },
+    "THEMES": {
+        "LIGHT": "Ljust tema",
+        "DARK": "Mörkt tema"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

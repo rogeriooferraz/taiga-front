@@ -204,7 +204,7 @@
             "UNWATCH": "撤销关注",
             "WATCHERS": "关注者列表",
             "BUTTON_TITLE": "关注/撤销关注该项",
-            "COUNTER_TITLE": "{total, plural, 1{1 个关注者} other{# 个关注者}}"
+            "COUNTER_TITLE": "{total, plural, =1{1 个关注者} other{# 个关注者}}"
         },
         "VOTE_BUTTON": {
             "BUTTON_TITLE": "赞/踩该项",
@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "选择语言",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "删除格式",
             "OUTDATED": "在你编辑的过程中其他用户对其做了更新。在你保存你的修改之前，请在活动标签页查看新版本。",
-            "MARKDOWN_HELP": "Markdown 语法帮助"
+            "MARKDOWN_HELP": "Markdown 语法帮助",
+            "LOAD_IMAGE": "加载图片"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "新增维基链接",
                 "DELETE_WIKI_LINKS": "删除维基链接"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "此项目已归档。现在为只读状态。"
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "删除标签"
         },
         "HELP": "需要帮助吗？看看我们的帮助页面吧！",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "预设值",
-            "SUBTITLE": "将所有选项设为预设值"
-        },
         "MEMBERSHIPS": {
             "TITLE": "管理成员",
             "PAGE_TITLE": "成员资格 - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "类型",
             "SUBTITLE": "指定你的问题类型可能是",
             "ISSUE_TITLE": "问题类型",
-            "ACTION_ADD": "新增{{objName}}"
+            "ACTION_ADD": "新增问题类型"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "标签",
@@ -678,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "看板选项",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -775,6 +775,7 @@
             "DELETE_MEMBER": "删除成员",
             "RESEND": "Resend",
             "SUCCESS_SEND_INVITATION": "我们已再次发出邀请信给'{{email}}'.",
+            "ERROR_SEND_INVITATION": "无法重新发送邀请。请重试。",
             "SUCCESS_DELETE": "已删除 {{message}}.",
             "ERROR_DELETE": "我们无法删除 {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "邀请  {{email}}"
@@ -838,7 +839,9 @@
             "UNLIMITED_PROJECTS": "无线的",
             "OWNER_MESSAGE": {
                 "PRIVATE": "请记住你可以拥有最多 <strong>{{maxProjects}}</strong> 个私有项目。你当前拥有 <strong>{{currentProjects}}</strong> 个私有项目",
-                "PUBLIC": "请记住你最多可以拥有 <strong>{{maxProjects}}</strong> 个公开项目。你当前拥有 <strong>{{currentProjects}}</strong> 个公开项目"
+                "PRIVATE_EXCEEDED": "您的私有项目数量为<strong>{{currentProjects}}</strong>，已达到订阅方案允许的上限。",
+                "PUBLIC": "请记住你最多可以拥有 <strong>{{maxProjects}}</strong> 个公开项目。你当前拥有 <strong>{{currentProjects}}</strong> 个公开项目",
+                "PUBLIC_EXCEEDED": "您的公开项目数量为<strong>{{currentProjects}}</strong>，已达到订阅方案允许的上限。"
             },
             "CANT_BE_OWNED": "目前你不能成为这类项目的所有者。如果你希望成为这个项目的所有者，请联系管理员，请其在你的账户设置中启用项目所有权。"
         },
@@ -846,6 +849,9 @@
             "TITLE": "默认值",
             "SUBTITLE": "为所有选择器输入设置的默认值。",
             "MENU_TITLE": "预设"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - 插件 - {{projectName}}"
         }
     },
     "USER": {
@@ -901,9 +907,9 @@
         "HELP": "记录你的项目在上方常用栏位<br/> 前4个项目将会显示在上方导览项目清单处。",
         "PRIVATE": "私有项目",
         "LOOKING_FOR_PEOPLE": "这个项目在寻找队友",
-        "FANS_COUNTER_TITLE": "{total, plural, 1{1 个粉丝} other{# 个粉丝}}",
-        "WATCHERS_COUNTER_TITLE": "{total, plural, 1{1 个关注者} other{# 个关注者}}",
-        "MEMBERS_COUNTER_TITLE": "{total, plural, 1{1 个成员} other{# 个成员}}",
+        "FANS_COUNTER_TITLE": "{total, plural, =1{1 个粉丝} other{# 个粉丝}}",
+        "WATCHERS_COUNTER_TITLE": "{total, plural, =1{1 个关注者} other{# 个关注者}}",
+        "MEMBERS_COUNTER_TITLE": "{total, plural, =1{1 个成员} other{# 个成员}}",
         "BLOCKED_PROJECT": {
             "BLOCKED": "关闭项目",
             "THIS_PROJECT_IS_BLOCKED": "这个项目暂时被关闭了",
@@ -933,9 +939,9 @@
             "MANAGE_PROJECTS": "管理项目",
             "TITLE_CREATE_PROJECT": "创建项目",
             "HELP_TITLE": "帮助",
+            "TAIGA_COMMUNITY_TITLE": "前往 Taiga 社区",
+            "TAIGA_COMMUNITY": "Taiga 社区",
             "HOMEPAGE": "主页",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "给我们提供建议",
             "FEEDBACK": "问一个问题",
             "NOTIFICATIONS_TITLE": "编辑个人通知设定",
@@ -955,13 +961,13 @@
             "LIKED": "已点赞",
             "UNLIKE": "取消点赞",
             "BUTTON_TITLE": "对这个项目点赞或者取消点赞",
-            "COUNTER_TITLE": "{total, plural, 1{1 个粉丝} other{# 个粉丝}}"
+            "COUNTER_TITLE": "{total, plural, =1{1 个粉丝} other{# 个粉丝}}"
         },
         "WATCH_BUTTON": {
             "BUTTON_TITLE": "关注这个项目并设置通知规则",
             "WATCH": "Watch",
             "WATCHING": "关注中",
-            "COUNTER_TITLE": "{total, plural, 1{1 个关注者} other{# 个关注者}}",
+            "COUNTER_TITLE": "{total, plural, =1{1 个关注者} other{# 个关注者}}",
             "OPTIONS": {
                 "NOTIFY_ALL": "接收所有通知",
                 "NOTIFY_ALL_TITLE": "接收这个项目的所有通知",
@@ -1117,6 +1123,18 @@
                 "CREATE_NEW_ISSUES": "将子问题转换为Taiga问题",
                 "NOT_CREATE_NEW_ISSUES": "不导入子问题"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "我们重视你的隐私（请查看我们的<a href=\"https://www.taiga.io/privacy-policy\" title=\"前往隐私政策\" target=\"_blank\">隐私政策</a>）。",
+            "OPT_OUT": "我们只会向你发送相关电子邮件（每年少于 6 封）。你可以随时向 <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> 发送主题为“unsubscribe”的电子邮件，或使用我们任一期新闻邮件中的链接取消订阅。",
+            "DONT_ASK": "不再询问",
+            "SUBSCRIBE": "订阅",
+            "SUBSCRIBED": "已订阅",
+            "LIGHTBOX_TITLE": "你想接收有关 Taiga 的公告吗？",
+            "CONFIRMATION": "是的，请向我发送有关 Taiga 的新闻、产品更新和推荐内容。",
+            "SAVE_PREFERENCE": "保存偏好设置",
+            "NOTIFY_EXPLANATION": "我们会向你发送有关 Taiga 的新闻、产品更新和推荐内容。",
+            "SAVED_PREFERENCE": "你的偏好设置已成功保存"
         }
     },
     "LIGHTBOX": {
@@ -1159,7 +1177,9 @@
             "CREATE": "在此创建一个问题",
             "PUBLIC": "公开的Taiga项目",
             "EMAIL": "给我们发送邮件到",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "查看 ",
+            "FAQ": "常见问题"
         },
         "SEARCH": {
             "TITLE": "搜索",
@@ -1195,7 +1215,10 @@
             "SELECT_STATUS": "选择状态",
             "DEFAULT": "默认",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "位置",
+            "CREATE_TOP": "最上方",
+            "CREATE_BOTTOM": "最下方"
         },
         "DISABLE_KANBAN": {
             "TITLE": "停用看板",
@@ -1405,7 +1428,7 @@
         "PENDING_POINTS": "待核点数",
         "CLOSED_POINTS": "关闭",
         "COMPACT_SPRINT": "浓缩冲刺点数",
-        "GO_TO_TASKBOARD": "前往任务板 {{spring.name}}",
+        "GO_TO_TASKBOARD": "前往任务板 {{::name}}",
         "EDIT_SPRINT": "编辑冲刺任务",
         "TOTAL_POINTS": "全部",
         "STATUS_NAME": "状态名称",
@@ -1461,7 +1484,7 @@
             "TITLE": "冲刺任务",
             "DATE": "DD MMM YYYY",
             "LINK_TASKBOARD": "冲刺任务板",
-            "TITLE_LINK_TASKBOARD": "到任务板 {{spring.name}}",
+            "TITLE_LINK_TASKBOARD": "到任务板 {{name}}",
             "EMPTY": "还没有冲刺",
             "WARNING_EMPTY_SPRINT_ANONYMOUS": "This sprint has no user stories",
             "WARNING_EMPTY_SPRINT": "从你的待办事项中拖拽一个用户故事到这里来开启一个新的冲刺",
@@ -1520,7 +1543,7 @@
             "SELECT_DESTINATION_PLACEHOLDER": "选择目标",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
             "WARNING_ISSUES_NOT_MOVED_TITLE": "你刚刚移动了所有的用户故事和任务，这个冲刺任务将会被关闭",
             "WARNING_ISSUES_NOT_MOVED": "问题将继续在冲刺任务中，不会被移除",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
@@ -1550,6 +1573,7 @@
         "WARNING_TEXT": "修改未能保存！",
         "SAVED": "修改已保存",
         "CLOSE": "关闭通知",
+        "COMMUNICATION": "Taiga 消息",
         "MAIL": "通过邮件通知",
         "DESKTOP": "使用浏览器警告作为桌面提醒",
         "ASK_DELETE": "你确定要删除吗？"
@@ -1799,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} 更新了问题 {{obj_name}} 的 \"{{field_name}}\" 属性",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} 更新了问题 {{obj_name}} 的 \"{{field_name}}\" 属性为 {{new_value}}",
-        "TASK_UPDATED": "{{username}} 更新了任务 {{obj_name}} 的 \"{{field_name}}\" 属性为 {{new_value}}",
+        "TASK_UPDATED": "{{username}} 更新了任务 {{obj_name}} 的“{{field_name}}”属性",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} 更新了任务 {{obj_name}} 的 \"{{field_name}}\" 属性为 {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1941,6 +1965,29 @@
             "ACTION_TITLE": "搜索",
             "RESULTS": "搜索结果"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "系统设置",
+        "DESCRIPTION": "为帐户设置默认值，无需个人选择。",
+        "LANGUAGE_HEADING": "语言",
+        "DEFAULT_LANGUAGE": "默认语言",
+        "APPEARANCE_HEADING": "外观",
+        "DEFAULT_THEME": "默认主题",
+        "USE_DEPLOYMENT_DEFAULT": "使用服务器默认设置",
+        "EFFECTIVE_VALUE": "有效值：",
+        "SOURCE_DEPLOYMENT": "来源：服务器默认设置",
+        "SOURCE_ADMIN": "来源：管理员保存的设置",
+        "LANGUAGE_HELP": "未设置帐户语言时由界面和电子邮件使用。",
+        "THEME_HELP": "未设置帐户主题时由界面使用。",
+        "RESET_DEFAULT": "重置为服务器默认设置",
+        "APPLY_HELP": "保存的更改适用于下一页加载。个人选择优先。",
+        "CONFLICT": "另一位管理员更改了这些默认值。保存前重新加载。",
+        "UNAVAILABLE_CHOICE": "已保存的选择不再可用。保存前重置它。",
+        "ERROR_SAVE": "无法保存系统设置。再试一次。"
+    },
+    "THEMES": {
+        "LIGHT": "浅色",
+        "DARK": "深色"
     },
     "ZOOM": {
         "TITLE": "缩放:",

@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "انتخاب زبان",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "حذف فرمت",
             "OUTDATED": "شخصی دیگری زمانی که شما مشغول ویرایش بودید، تغییراتی داده است. نسخه‌ی جدید را در تب فعالیت‌ها بررسی کنید و سپس تغییرات خود را ذخیره کنید",
-            "MARKDOWN_HELP": "راهنمایی علامت‌گذاری سینتکس‌ها"
+            "MARKDOWN_HELP": "راهنمایی علامت‌گذاری سینتکس‌ها",
+            "LOAD_IMAGE": "بارگذاری تصویر"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "اضافه کردن لینک‌های ویکی",
                 "DELETE_WIKI_LINKS": "حذف لینک‌های ویکی"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "این پروژه بایگانی شده است. اکنون فقط قابل خواندن است."
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "حذف برچسب"
         },
         "HELP": "نیازمند کمک هستید؟ به صفحه‌ی پشتیبانی ما مراجعه کنید!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "حذف کردن مقدار",
-            "SUBTITLE": "مقدار پیش‌فرض برای تمام ورودی‌های انتخابی را تنظیم کنید."
-        },
         "MEMBERSHIPS": {
             "TITLE": "مدیریت اعضا",
             "PAGE_TITLE": "عضویت‌ها - {{projectName}}",
@@ -564,6 +564,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "پروژه به حداکثر تعداد اعضای پروژه‌های عمومی رسیده است",
             "PROJECT_OWNER": "مالکیت پروژه",
             "REQUEST_OWNERSHIP": "درخواست مالکیت",
+            "REQUEST_OWNERSHIP_LIMIT": "شما به سقف تعداد پروژه‌های خصوصی خود ({{maxProjects}}) رسیده‌اید.",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "آیا می‌خواهید مالک جدید پروژه شوید؟",
             "REQUEST_OWNERSHIP_DESC": "درخواست از مالک پروژه‌ {{name}} برای انتقال مالکیت این پروژه به شما",
             "REQUEST_OWNERSHIP_BUTTON": "درخواست",
@@ -650,7 +651,7 @@
             "TITLE": "انواع",
             "SUBTITLE": "نوع موضوع خود را مشخص کنید",
             "ISSUE_TITLE": "انواع موضوعات",
-            "ACTION_ADD": "اضافه کردن {{objName}} جدید"
+            "ACTION_ADD": "افزودن نوع جدید موضوع"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "برچسب‌ها",
@@ -677,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -774,6 +775,7 @@
             "DELETE_MEMBER": "حذف عضو",
             "RESEND": "ارسال مجدد",
             "SUCCESS_SEND_INVITATION": "ما مجدداً دعوتنامه‌ای به  '{{email}}' ارسال کرده‌ایم.",
+            "ERROR_SEND_INVITATION": "ارسال دوبارهٔ دعوت‌نامه ممکن نشد. دوباره تلاش کنید.",
             "SUCCESS_DELETE": "پیام {{message}} را حذف کرده‌ایم",
             "ERROR_DELETE": "نمی‌توانیم حذف کنیم  {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "دعوتنامه برای {{email}}"
@@ -837,13 +839,19 @@
             "UNLIMITED_PROJECTS": "نامحدود",
             "OWNER_MESSAGE": {
                 "PRIVATE": "به خاطر داشته باشید که شما می‌توانید مالک حداکثر <strong>{{maxProjects}}</strong> پروژه‌ی شخصی باشید. در حال حاضر <strong>{{currentProjects}}</strong> پروژه‌ی شخصی دارید",
-                "PUBLIC": "به خاطر داشته باشید که شما می‌توانید مالک حداکثر <strong>{{maxProjects}}</strong> پروژه‌ی عمومی باشید. در حال حاضر <strong>{{currentProjects}}</strong> پروژه‌ی عمومی دارید"
+                "PRIVATE_EXCEEDED": "تعداد پروژه‌های خصوصی شما <strong>{{currentProjects}}</strong> است که به سقف مجاز طرح اشتراک شما رسیده است.",
+                "PUBLIC": "به خاطر داشته باشید که شما می‌توانید مالک حداکثر <strong>{{maxProjects}}</strong> پروژه‌ی عمومی باشید. در حال حاضر <strong>{{currentProjects}}</strong> پروژه‌ی عمومی دارید",
+                "PUBLIC_EXCEEDED": "تعداد پروژه‌های عمومی شما <strong>{{currentProjects}}</strong> است که به سقف مجاز طرح اشتراک شما رسیده است."
             },
             "CANT_BE_OWNED": "در حال حاضر نمی‌توانید مالک پروژه‌ای از این نوع شوید. اگر می‌خواهید مالک این پروژه شوید، لطفاً با ادمین تماس بگیرید تا تنظیمات حساب شما را برای فعالسازی مالکیت پروژه تغییر دهد."
         },
         "PROJECT_PRESETS": {
             "TITLE": "مقادیر پیش‌فرض",
-            "SUBTITLE": "مقادیر پیش‌فرض را برای همهۀ ورودی‌های انتخابگر تنظیم کنید."
+            "SUBTITLE": "مقادیر پیش‌فرض را برای همهٔ فیلدهای انتخابی تعیین کنید.",
+            "MENU_TITLE": "پیش‌تنظیم‌ها"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - پلاگین‌ها - {{projectName}}"
         }
     },
     "USER": {
@@ -931,9 +939,9 @@
             "MANAGE_PROJECTS": "مدیریت پروژه‌ها",
             "TITLE_CREATE_PROJECT": "ایجاد پروژه",
             "HELP_TITLE": "راهنمایی",
+            "TAIGA_COMMUNITY_TITLE": "رفتن به جامعهٔ تایگا",
+            "TAIGA_COMMUNITY": "جامعهٔ تایگا",
             "HOMEPAGE": "صفحه‌ی خانه",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "ویرایش تنظیمات نوتیفیکیشن",
@@ -1115,6 +1123,18 @@
                 "CREATE_NEW_ISSUES": "تبدیل موضوعات زیرمجموعه به موضوعات تایگا",
                 "NOT_CREATE_NEW_ISSUES": "موضوعات زیرمجموعه را وارد نکن"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "حریم خصوصی شما برای ما مهم است (<a href=\"https://www.taiga.io/privacy-policy\" title=\"رفتن به سیاست حفظ حریم خصوصی\" target=\"_blank\">سیاست حفظ حریم خصوصی</a> ما را ببینید).",
+            "OPT_OUT": "ما فقط ایمیل‌های مرتبط برای شما ارسال می‌کنیم (کمتر از ۶ ایمیل در سال). می‌توانید هر زمان با ارسال ایمیل به <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> با موضوع “unsubscribe” یا از طریق پیوند موجود در هر یک از خبرنامه‌های ما، اشتراک خود را لغو کنید.",
+            "DONT_ASK": "دیگر نپرسید",
+            "SUBSCRIBE": "مشترک شوید",
+            "SUBSCRIBED": "مشترک هستید",
+            "LIGHTBOX_TITLE": "آیا می‌خواهید اطلاعیه‌های Taiga را دریافت کنید؟",
+            "CONFIRMATION": "بله، اخبار، به‌روزرسانی‌های محصول و پیشنهادهای مربوط به Taiga را برای من بفرستید.",
+            "SAVE_PREFERENCE": "ذخیره تنظیمات",
+            "NOTIFY_EXPLANATION": "اخبار، به‌روزرسانی‌های محصول و پیشنهادهای مربوط به Taiga را برای شما می‌فرستیم.",
+            "SAVED_PREFERENCE": "تنظیمات شما با موفقیت ذخیره شد"
         }
     },
     "LIGHTBOX": {
@@ -1157,7 +1177,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "مشاهده کنید: ",
+            "FAQ": "پرسش‌های متداول"
         },
         "SEARCH": {
             "TITLE": "جست‌وجو",
@@ -1193,7 +1215,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "پیش فرض",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "جایگاه",
+            "CREATE_TOP": "در بالای فهرست",
+            "CREATE_BOTTOM": "در پایین فهرست"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1213,7 +1238,7 @@
         "CREATE_MEMBER": {
             "PLACEHOLDER_INVITATION_TEXT": "(اختیاری) متنی برای دعوت‌نامه اضافه کنید و جملات جالبی برای اعضای جدید بنویسید  ;-)",
             "PLACEHOLDER_TYPE_EMAIL": "ایمیلی تایپ کنید",
-            "LIMIT_USERS_WARNING_MESSAGE_FOR_OWNER": "به محدودیت تعداد اعضای این پروژه که <strong>({{maxFileSize}})</strong> است، نزدیک شده‌اید. برای افزایش سقف تعداد اعضا با ادمین تماس بگیرید.",
+            "LIMIT_USERS_WARNING_MESSAGE_FOR_OWNER": "به محدودیت تعداد اعضای این پروژه که <strong>({{maxMembers}})</strong> است، نزدیک شده‌اید. برای افزایش سقف تعداد اعضا با ادمین تماس بگیرید.",
             "LIMIT_USERS_WARNING_MESSAGE": "به محدودیت <strong>{{maxMembers}}</strong> عضو این پروژه نزدیک می‌شوید."
         },
         "LEAVE_PROJECT_WARNING": {
@@ -1518,9 +1543,9 @@
             "SELECT_DESTINATION_PLACEHOLDER": "هدف را انتخاب کنید",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
-            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and taks, and the sprint'll be closed",
-            "WARNING_ISSUES_NOT_MOVED": "The issues'll remain in the sprint and don't be removed",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
+            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and tasks, and the sprint will be closed",
+            "WARNING_ISSUES_NOT_MOVED": "The issues will remain in the sprint and will not be removed",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
             "WARNING_SPRINT_STILL_OPEN": "Please note that the sprint {{sprintName}} <strong>will remain open</strong> as long as it contains unfinished items."
         }
@@ -1548,6 +1573,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "بستن نوتیفیکیشن",
+        "COMMUNICATION": "پیام‌های تایگا",
         "MAIL": "نوتیفیکیشن از طریق ایمیل",
         "DESKTOP": "اعلانهای دسکتاپ با استفاده از هشدار مرورگر",
         "ASK_DELETE": "آیا در مورد حذف کردن، مطمئن هستید؟"
@@ -1796,8 +1822,8 @@
         "US_UPDATED_WITH_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the user story {{obj_name}} to {{new_value}}",
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} خصوصیت \"{{field_name}}\" از موضوع {{obj_name}} را آپدیت کرده است",
-        "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} خصوصیت \"{{field_name}}\" از موضوع {{obj_name}} را به {new_value}} آپدیت کرده است",
-        "TASK_UPDATED": "{{username}} خصوصیت \"{{field_name}}\" از وظیفه‌ی {{obj_name}} را به {{new_value}} آپدیت کرده است.",
+        "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} خصوصیت \"{{field_name}}\" از موضوع {{obj_name}} را به {{new_value}} آپدیت کرده است",
+        "TASK_UPDATED": "{{username}} ویژگی \"{{field_name}}\" وظیفهٔ {{obj_name}} را به‌روزرسانی کرد",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} خصوصیت \"{{field_name}}\" از وظیفه‌ی {{obj_name}} را به {{new_value}} آپدیت کرده است.",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1939,6 +1965,29 @@
             "ACTION_TITLE": "جست‌وجو",
             "RESULTS": "نتایج جست‌وجو"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "تنظیمات سیستم",
+        "DESCRIPTION": "بدون انتخاب شخصی، پیش فرض ها را برای حساب ها تنظیم کنید.",
+        "LANGUAGE_HEADING": "زبان",
+        "DEFAULT_LANGUAGE": "زبان پیش فرض",
+        "APPEARANCE_HEADING": "ظاهر",
+        "DEFAULT_THEME": "قالب پیش‌فرض",
+        "USE_DEPLOYMENT_DEFAULT": "از تنظیمات پیش فرض سرور استفاده کنید",
+        "EFFECTIVE_VALUE": "مقدار مؤثر:",
+        "SOURCE_DEPLOYMENT": "منبع: تنظیمات پیش فرض سرور",
+        "SOURCE_ADMIN": "منبع: تنظیمات ذخیره شده توسط مدیر",
+        "LANGUAGE_HELP": "هنگامی که زبان حساب تنظیم نشده باشد، توسط رابط ها و ایمیل استفاده می شود.",
+        "THEME_HELP": "هنگامی که قالب حساب تنظیم نشده است در رابط کاربری استفاده می‌شود.",
+        "RESET_DEFAULT": "بازنشانی به تنظیمات پیش فرض سرور",
+        "APPLY_HELP": "تغییرات ذخیره شده در بارگذاری صفحه بعدی اعمال می شود. انتخاب های شخصی در اولویت هستند.",
+        "CONFLICT": "مدیر دیگری این پیش فرض ها را تغییر داد. قبل از ذخیره مجدد بارگیری کنید.",
+        "UNAVAILABLE_CHOICE": "انتخاب ذخیره شده دیگر در دسترس نیست. قبل از ذخیره آن را بازنشانی کنید.",
+        "ERROR_SAVE": "تنظیمات سیستم ذخیره نشد. دوباره امتحان کنید."
+    },
+    "THEMES": {
+        "LIGHT": "روشن",
+        "DARK": "تیره"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Hautatu hizkuntza",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Ezabatu formatua",
             "OUTDATED": "Besteren batek aldaketak egin ditu zu editatzen ari zinen bitartean. Begiratu bertsio berria jardueren fitxan zure aldaketak gorde aurretik.",
-            "MARKDOWN_HELP": "Markdown sintaxiaren laguntza"
+            "MARKDOWN_HELP": "Markdown sintaxiaren laguntza",
+            "LOAD_IMAGE": "Kargatu irudia"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Gehitu wiki estekak",
                 "DELETE_WIKI_LINKS": "Ezabatu wiki esteka"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Proiektu hau artxibatu egin da. Orain irakurtzeko soilik da."
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Ezabatu etiketa"
         },
         "HELP": "Laguntza behar duzu? Begiratu gure laguntza orrira!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Balio lehenetsiak",
-            "SUBTITLE": "Ezarri balio lehenetsiak hautatutako guztiei"
-        },
         "MEMBERSHIPS": {
             "TITLE": "Kudeatu lankideak",
             "PAGE_TITLE": "Lankidetasuna - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "Motak",
             "SUBTITLE": "Zehaztu zein motatakoa izan daitezkeen zure eskaerak",
             "ISSUE_TITLE": "Eskaera motak",
-            "ACTION_ADD": "Gehitu {{objName}}"
+            "ACTION_ADD": "Gehitu eskaera mota berria"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Etiketak",
@@ -775,8 +775,9 @@
             "DELETE_MEMBER": "Ezabatu lankidea",
             "RESEND": "Berriro bidali",
             "SUCCESS_SEND_INVITATION": "Berriro bidali dugu gonbidapena helbide honetara: '{{email}}'.",
+            "ERROR_SEND_INVITATION": "Ezin izan da gonbidapena berriro bidali. Saiatu berriro.",
             "SUCCESS_DELETE": "Ezabatu dugu mezu hau: {{message}}.",
-            "ERROR_DELETE": "Ezin izan dugu ezabatu: {{errorMessage}}.",
+            "ERROR_DELETE": "Ezin izan dugu ezabatu: {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "gonbidapena helbide honetara: {{email}}"
         },
         "DEFAULT_VALUES": {
@@ -839,8 +840,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Gogoan izan <strong>{{maxProjects}}</strong> proiektu pribaturen jabe izan zaitezke gehienez. Gaur gaurkoz <strong>{{currentProjects}}</strong> proiektu pribaturen jabe zara.",
                 "PUBLIC": "Gogoan izan, mesedez, <strong>{{maxProjects}}</strong> proiektu publikoren jabe izan zaitezke gehienez. Gaur gaurkoz <strong>{{currentProjects}}</strong> proiektu publikoren jabe zara.",
-                "PRIVATE_EXCEEDED": "Une honetan <strong>{{currentProjects}} proiektu pribatua</strong> dituzu, zure planak onartzen duen maximoa.",
-                "PUBLIC_EXCEEDED": "Une honetan <strong>{{currentProjects}} proiektu publiko</strong> dituzu, zure planak onartzen duen maximoa."
+                "PRIVATE_EXCEEDED": "Zure proiektu pribatuen kopurua <strong>{{currentProjects}}</strong> da, hau da, zure harpidetzak onartzen duen gehieneko kopurua.",
+                "PUBLIC_EXCEEDED": "Zure proiektu publikoen kopurua <strong>{{currentProjects}}</strong> da, hau da, zure harpidetzak onartzen duen gehieneko kopurua."
             },
             "CANT_BE_OWNED": "Orain ezin duzu halako proiektu baten jabe izan. Nahi baduzu proiektuaren jabe berria izan, jar zatez harremanetan administratzailearekin, zure kontuaren ezarpenak alda ditzan, proiektuaren jabe izan ahal izateko."
         },
@@ -850,7 +851,7 @@
             "SUBTITLE": "Ezarri balio lehenetsiak hautatzaile-sarrera guztientzat."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugins  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -906,7 +907,7 @@
         "HELP": "Berrantolatu zure proiektuak gehien erabiltzen direnak goian ezartzeko.<br/> Goiko nabigazio-barrako proiektuen zerrendan agertuko dira lau proiektu nagusiak",
         "PRIVATE": "Proiektu pribatua",
         "LOOKING_FOR_PEOPLE": "Proiektu honek lankideak behar ditu",
-        "FANS_COUNTER_TITLE": "{guztira, plurala, =1{zale bat} beste{# zale}}",
+        "FANS_COUNTER_TITLE": "{total, plural, =1{zale bat} other{# zale}}",
         "WATCHERS_COUNTER_TITLE": "{total, plural, =1{behatzaile bat} other{# behatzaile}}",
         "MEMBERS_COUNTER_TITLE": "{total, plural, =1{lankide bat} other{# lankide}}",
         "BLOCKED_PROJECT": {
@@ -939,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "Sortu proiektu bat",
             "HELP_TITLE": "Laguntza",
             "HOMEPAGE": "Hasiera",
-            "TAIGA_RESOURCES_TITLE": "Ikusi Taigaren baliabideak",
-            "TAIGA_RESOURCES": "Taiga baliabideak",
             "FEEDBACK_TITLE": "Bidali zure iritzia",
             "FEEDBACK": "Egin galdera bat",
             "NOTIFICATIONS_TITLE": "Editatu jakinarazpen ezarpenak",
@@ -962,13 +961,13 @@
             "LIKED": "Gogokoa",
             "UNLIKE": "Ez datsegit",
             "BUTTON_TITLE": "Proiektu hau datsegit edo ez datsegit",
-            "COUNTER_TITLE": "{guztira, plurala, =1{zale bat} beste{# zale}}"
+            "COUNTER_TITLE": "{total, plural, =1{zale bat} other{# zale}}"
         },
         "WATCH_BUTTON": {
             "BUTTON_TITLE": "Begiratu proiektu hau eta ezarri jakinarazpenak",
             "WATCH": "Begiratu",
             "WATCHING": "Behatzen",
-            "COUNTER_TITLE": "{guztira, plurala, =1{behatzaile bat} other{# behatzaile}}",
+            "COUNTER_TITLE": "{total, plural, =1{behatzaile bat} other{# behatzaile}}",
             "OPTIONS": {
                 "NOTIFY_ALL": "Jaso jakinarazpen guztiak",
                 "NOTIFY_ALL_TITLE": "Jaso jakinarazpen guztiak proiektu honetan",
@@ -1127,7 +1126,7 @@
         },
         "NEWSLETTER_OPENING": {
             "NO_SHARE": "Zure pribatutasuna garrantzitsua da guretzat (ikus gure <a href=\"https://www.taiga.io/privacy-policy\" title=\"Joan pribatutasun-politika\" target=\"_blank\">pribatutasun-politika</a>).",
-            "OPT_OUT": "Mezu elektroniko garrantzitsuak soilik bidaliko dizkizugu (urtean <6). Harpidetza ken dezakezu edozein unetan, <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> helbidera mezu elektroniko bat bidalita, \"harpidetza kendu\" gaiarekin edo gure boletinen edozein estekaren bidez.",
+            "OPT_OUT": "Mezu elektroniko garrantzitsuak soilik bidaliko dizkizugu (urtean <6). Harpidetza ken dezakezu edozein unetan, <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> helbidera mezu elektroniko bat bidalita, \"unsubscribe\" gaiarekin edo gure boletinen edozein estekaren bidez.",
             "DONT_ASK": "Ez galdetu berriro",
             "SAVE_PREFERENCE": "GORDE HOBESPENAK",
             "LIGHTBOX_TITLE": "Taigari buruzko iragarkiak jaso nahi dituzu?",
@@ -1438,7 +1437,7 @@
         "CHART": {
             "XAXIS_LABEL": "Urratsak",
             "YAXIS_LABEL": "Puntuak",
-            "OPTIMAL": "\"{{sprintName}}\" urratsean eman beharreko puntu kopuru optimoa izango litzateke {{Value}}",
+            "OPTIMAL": "\"{{sprintName}}\" urratsean eman beharreko puntu kopuru optimoa izango litzateke {{value}}",
             "REAL": "\"{{sprintName}}\" urratsean benetan eman beharreko puntu kopuru izango litzateke {{value}}",
             "INCREMENT_TEAM": "Emendatutako puntuak dira {{value}} lantaldearen eskakizunengatik urrats honetan: \"{{sprintName}}\"",
             "INCREMENT_CLIENT": "Emendatutako puntuak dira {{value}} lantaldearen eskakizunengatik urrats honetan: \"{{sprintName}}\""
@@ -1485,7 +1484,7 @@
             "TITLE": "Urratsak",
             "DATE": "DD MMM YYYY",
             "LINK_TASKBOARD": "Urratsen arbela",
-            "TITLE_LINK_TASKBOARD": "Joan honen ataza arbelera: {{::name}}",
+            "TITLE_LINK_TASKBOARD": "Joan honen ataza arbelera: {{name}}",
             "EMPTY": "Ez dago urratsik oraingoz",
             "WARNING_EMPTY_SPRINT_ANONYMOUS": "Urrats honek ez du zereginik",
             "WARNING_EMPTY_SPRINT": "Ekarri hona zereginak zure atzeratutako lanetatik, urrats berri bat sortzeko",
@@ -1627,7 +1626,7 @@
         },
         "CONFIRM_CHANGE_FROM_SPRINT": {
             "TITLE": "Erantsi eskaera urrats bati",
-            "MESSAGE": "<strong>Eskaera hau loturik dago {{ oldSprintName } urratsarekin}</strong>. Desestekatu egingo duzu urrats honetatik eta estekatu <strong>{{ newSprintName }} urratsera.</strong>"
+            "MESSAGE": "<strong>Eskaera hau {{ oldSprintName }} urratsari lotuta dago</strong>. Urrats horretatik kendu eta <strong>{{ newSprintName }} urratsari</strong> lotuko diozu."
         },
         "TABLE": {
             "COLUMNS": {
@@ -1823,14 +1822,14 @@
         "US_UPDATED_WITH_NEW_VALUE": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" zeregin honetan: {{obj_name}}, balio honetara: {{new_value}}",
         "US_UPDATED_POINTS": "{{username}} erabiltzaileak eguneratu ditu '{{role_name}}' erabiltzailearen puntuak {{obj_name}} zereginean, {{new_value}} baliora",
         "ISSUE_UPDATED": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" eginkizun honetan: {{obj_name}}",
-        "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" eginkizun honetan: {{obj_name}}",
-        "TASK_UPDATED": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" eginkizun honetan: {{obj_name}}",
-        "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" eginkizun honetan: {{obj_name}}",
+        "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} erabiltzaileak {{obj_name}} eskaeraren \"{{field_name}}\" ezaugarria {{new_value}} baliora aldatu du",
+        "TASK_UPDATED": "{{username}} erabiltzaileak \"{{field_name}}\" atributua eguneratu du {{obj_name}} eginkizunean",
+        "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} erabiltzaileak {{obj_name}} atazaren \"{{field_name}}\" ezaugarria {{new_value}} baliora aldatu du",
         "TASK_UPDATED_WITH_US": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" ataza honetan: {{obj_name}}, {{us_name}} zereginaren barruan",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" ataza honetan: {{obj_name}}, {{us_name}} zereginaren barruan, balio honetara: {{new_value}}",
         "WIKI_UPDATED": "{{username}} erabiltzaileak eguneratu du wiki orri hau: {{obj_name}}",
         "EPIC_UPDATED": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" eginkizun honetan: {{obj_name}}",
-        "EPIC_UPDATED_WITH_NEW_VALUE": "{{username}} erabiltzaileak eguneratu du ezaugarri hau \"{{field_name}}\" eginkizun honetan: {{obj_name}}",
+        "EPIC_UPDATED_WITH_NEW_VALUE": "{{username}} erabiltzaileak {{obj_name}} eginkizunaren \"{{field_name}}\" ezaugarria {{new_value}} baliora aldatu du",
         "EPIC_UPDATED_WITH_NEW_COLOR": "{{username}} erabiltzaileak eguneratu du \"{{field_name}}\" eginkizun honetan: {{obj_name}}, balio honetara <span class=\"new-color\" style=\"background: {{new_value}}\"></span>",
         "NEW_COMMENT_US": "{{username}} erabiltzaileak iruzkindu du zeregin hau: {{obj_name}}",
         "NEW_COMMENT_ISSUE": "{{username}} erabiltzaileak iruzkindu du eskaera hau: {{obj_name}}",
@@ -1966,6 +1965,29 @@
             "ACTION_TITLE": "Bilatu",
             "RESULTS": "Bilatu emaitzetan"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Sistemaren ezarpenak",
+        "DESCRIPTION": "Ezarri aukera pertsonalik gabeko kontuen lehenetsiak.",
+        "LANGUAGE_HEADING": "Hizkuntza",
+        "DEFAULT_LANGUAGE": "Lehenetsitako hizkuntza",
+        "APPEARANCE_HEADING": "Itxura",
+        "DEFAULT_THEME": "Gai lehenetsia",
+        "USE_DEPLOYMENT_DEFAULT": "Erabili zerbitzariaren ezarpen lehenetsia",
+        "EFFECTIVE_VALUE": "Balio eraginkorra:",
+        "SOURCE_DEPLOYMENT": "Iturria: zerbitzariaren ezarpen lehenetsia",
+        "SOURCE_ADMIN": "Iturria: administratzaileak gordetako ezarpena",
+        "LANGUAGE_HELP": "Interfazeek eta posta elektronikoek erabiltzen dute kontuaren hizkuntza ezarrita ez dagoenean.",
+        "THEME_HELP": "Interfazeek erabiltzen dute kontuaren gaia ezarrita ez dagoenean.",
+        "RESET_DEFAULT": "Berrezarri zerbitzariaren ezarpen lehenetsira",
+        "APPLY_HELP": "Gordetako aldaketak hurrengo orrialdea kargatzean aplikatzen dira. Aukera pertsonalek lehentasuna dute.",
+        "CONFLICT": "Beste administratzaile batek lehenespen hauek aldatu ditu. Berriz kargatu gorde aurretik.",
+        "UNAVAILABLE_CHOICE": "Gordetako aukera bat jada ez dago erabilgarri. Berrezarri ezazu gorde aurretik.",
+        "ERROR_SAVE": "Ezin izan dira gorde sistemaren ezarpenak. Saiatu berriro."
+    },
+    "THEMES": {
+        "LIGHT": "Argia",
+        "DARK": "Iluna"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

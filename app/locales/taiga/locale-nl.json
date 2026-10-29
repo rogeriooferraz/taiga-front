@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Select Language",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Remove formatting",
             "OUTDATED": "Another person has made changes while you were editing. Check the new version on the activity tab before you save your changes.",
-            "MARKDOWN_HELP": "Markdown syntax help"
+            "MARKDOWN_HELP": "Markdown syntax help",
+            "LOAD_IMAGE": "Afbeelding laden"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Wiki links toevoegen",
                 "DELETE_WIKI_LINKS": "Verwijder wiki links"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Dit project is gearchiveerd. Het kan nu alleen nog worden gelezen."
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Verwijder tag"
         },
         "HELP": "Help je hulp nodig? Bekijk onze support pagina!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Standaard waardes",
-            "SUBTITLE": "Standaard waardes instellen voor alle invoer selecties."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Gebruikers beheren",
             "PAGE_TITLE": "Lidmaatschappen - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "Types",
             "SUBTITLE": "Kies de types die je Issues kunnen hebben",
             "ISSUE_TITLE": "Issues types",
-            "ACTION_ADD": "Voeg nieuwe {{objName}} toe"
+            "ACTION_ADD": "Nieuw issuetype toevoegen"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Tags",
@@ -678,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -775,6 +775,7 @@
             "DELETE_MEMBER": "Verwijder gebruiker",
             "RESEND": "Resend",
             "SUCCESS_SEND_INVITATION": "We hebben de uitnodiging opnieuw gestuurd aan '{{email}}'.",
+            "ERROR_SEND_INVITATION": "De uitnodiging kon niet opnieuw worden verzonden. Probeer het opnieuw.",
             "SUCCESS_DELETE": "We hebben {{message}} verwijderd.",
             "ERROR_DELETE": "We zijn er niet in geslaagd om te verwijderen {{message}}",
             "DEFAULT_DELETE_MESSAGE": "de uitnodiging naar {{email}}"
@@ -838,7 +839,9 @@
             "UNLIMITED_PROJECTS": "Ongelimiteerd",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Please remember that you can own up to <strong>{{maxProjects}}</strong> private projects. You currently own <strong>{{currentProjects}}</strong> private projects",
-                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects"
+                "PRIVATE_EXCEEDED": "Het aantal privéprojecten dat u hebt, is <strong>{{currentProjects}}</strong> en heeft daarmee het maximum bereikt dat uw abonnement toestaat.",
+                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects",
+                "PUBLIC_EXCEEDED": "Het aantal openbare projecten dat u hebt, is <strong>{{currentProjects}}</strong> en heeft daarmee het maximum bereikt dat uw abonnement toestaat."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },
@@ -846,6 +849,9 @@
             "TITLE": "Standaard Waardes",
             "SUBTITLE": "Zet standaard waardes voor alle selectie ingangen.",
             "MENU_TITLE": "Voorinstellingen"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -934,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "Project aanmaken",
             "HELP_TITLE": "Help",
             "HOMEPAGE": "Startpagina",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Stel een vraag",
             "NOTIFICATIONS_TITLE": "Notificatie instellingen bewerken",
@@ -948,7 +952,9 @@
             "CHANGE_PASSWORD": "Wachtwoord wijzigen",
             "DASHBOARD_TITLE": "Dashboard",
             "DISCOVER_TITLE": "Ontdek trending projecten",
-            "DISCOVER": "Ontdek"
+            "DISCOVER": "Ontdek",
+            "TAIGA_COMMUNITY": "Taiga-gemeenschap",
+            "TAIGA_COMMUNITY_TITLE": "Ga naar de Taiga-gemeenschap"
         },
         "LIKE_BUTTON": {
             "LIKE": "Vind ik leuk",
@@ -966,7 +972,7 @@
                 "NOTIFY_ALL": "Ontvang alle notificaties",
                 "NOTIFY_ALL_TITLE": "Ontvang alle notificaties voor dit project",
                 "NOTIFY_INVOLVED": "Only involved",
-                "NOTIFY_INVOLVED_TITLE": "Recive notificacions only when you are involved",
+                "NOTIFY_INVOLVED_TITLE": "Receive notifications only when you are involved",
                 "UNWATCH": "Unwatch",
                 "UNWATCH_TITLE": "Unwatch this project"
             }
@@ -1069,7 +1075,7 @@
                 "DESCRIPTION": "Dit proces kan even duren, laat het venster even open alsjeblieft."
             },
             "WARNING": {
-                "TITLE": "Some taks will be unassigned",
+                "TITLE": "Some tasks will be unassigned",
                 "DESCRIPTION": "There are still unidentified people. The cards assigned to these people will remain unassigned. Check all the contacts to not lose that information.",
                 "CHECK": "Check contacts"
             },
@@ -1120,7 +1126,7 @@
         },
         "NEWSLETTER_OPENING": {
             "NOTIFY_EXPLANATION": "We zullen je nieuws, product updates en aanbevelingen over Taiga toesturen.",
-            "OPT_OUT": "We zullen allen belangrijke e-mails naar je sturen (<6 per jaar). Je kunt op elk moment uitschrijven door een e-mail te sturen naar <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> met als onderwerp \"uitschrijven\" of door op de link te klikken in een van onze e-mails.",
+            "OPT_OUT": "We zullen allen belangrijke e-mails naar je sturen (<6 per jaar). Je kunt op elk moment uitschrijven door een e-mail te sturen naar <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> met als onderwerp \"unsubscribe\" of door op de link te klikken in een van onze e-mails.",
             "LIGHTBOX_TITLE": "Wil je mededelingen over Taiga ontvangen?",
             "DONT_ASK": "Niet opnieuw vragen",
             "CONFIRMATION": "Ja, stuur me nieuws, product updates en aanbevelingen over Taiga.",
@@ -1171,7 +1177,9 @@
             "CREATE": "Nieuw Issue aanmaken voor dit",
             "PUBLIC": "open Taiga project",
             "EMAIL": "Stuur ons een e-mail rechtstreeks aan",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "Bekijk onze ",
+            "FAQ": "veelgestelde vragen"
         },
         "SEARCH": {
             "TITLE": "Zoek",
@@ -1431,8 +1439,8 @@
             "YAXIS_LABEL": "Punten",
             "OPTIMAL": "Optimaal aantal openstaande punten voor sprint \"{{sprintName}}\" zou {{value}} moeten zijn",
             "REAL": "Reële openstaande punten voor sprint \"{{sprintName}}\" is {{value}}",
-            "INCREMENT_TEAM": "Toegevoegde aantal punten door team vereisten voor sprint \"{{sprintName}}\" is {{vallue}}",
-            "INCREMENT_CLIENT": "Toegevoegde aantal punten door klant vereisten voor sprint \"{{sprintName}}\" is {{vallue}}"
+            "INCREMENT_TEAM": "Toegevoegde aantal punten door team vereisten voor sprint \"{{sprintName}}\" is {{value}}",
+            "INCREMENT_CLIENT": "Toegevoegde aantal punten door klant vereisten voor sprint \"{{sprintName}}\" is {{value}}"
         },
         "TAGS": {
             "TOGGLE": "Zet de tag zichtbaarheid aan of af",
@@ -1535,9 +1543,9 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Select destination",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
-            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and taks, and the sprint'll be closed",
-            "WARNING_ISSUES_NOT_MOVED": "The issues'll remain in the sprint and don't be removed",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
+            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and tasks, and the sprint will be closed",
+            "WARNING_ISSUES_NOT_MOVED": "The issues will remain in the sprint and will not be removed",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
             "WARNING_SPRINT_STILL_OPEN": "Please note that the sprint {{sprintName}} <strong>will remain open</strong> as long as it contains unfinished items."
         }
@@ -1815,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} heeft de eigenschap \"{{field_name}}\" van het issue {{obj_name}} bijgewerkt",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} heeft het attribuut \"{{field_name}}\" van de issue gewijzigd van {{obj_name}} naar {{new_value}}",
-        "TASK_UPDATED": "{{username}} heeft het attribuut \"{{field_name}}\" van de taak {{obj_name}} gewijzigd naar {{new_value}}",
+        "TASK_UPDATED": "{{username}} heeft het attribuut \"{{field_name}}\" van taak {{obj_name}} bijgewerkt",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} heeft het attribuut \"{{field_name}}\" van de taak {{obj_name}} gewijzigd naar {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1957,6 +1965,29 @@
             "ACTION_TITLE": "Zoek",
             "RESULTS": "Search results"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Systeeminstellingen",
+        "DESCRIPTION": "Stel standaardinstellingen in voor accounts zonder een persoonlijke keuze.",
+        "LANGUAGE_HEADING": "Taal",
+        "DEFAULT_LANGUAGE": "Standaardtaal",
+        "APPEARANCE_HEADING": "Uiterlijk",
+        "DEFAULT_THEME": "Standaardthema",
+        "USE_DEPLOYMENT_DEFAULT": "Gebruik de standaardserverinstelling",
+        "EFFECTIVE_VALUE": "Effectieve waarde:",
+        "SOURCE_DEPLOYMENT": "Bron: standaardinstelling van de server",
+        "SOURCE_ADMIN": "Bron: opgeslagen instelling van de beheerder",
+        "LANGUAGE_HELP": "Wordt gebruikt door interfaces en e-mail wanneer er geen accounttaal is ingesteld.",
+        "THEME_HELP": "Wordt gebruikt door interfaces wanneer er geen accountthema is ingesteld.",
+        "RESET_DEFAULT": "Reset naar de standaardserverinstelling",
+        "APPLY_HELP": "Opgeslagen wijzigingen zijn van toepassing bij het laden van de volgende pagina. Persoonlijke keuzes hebben prioriteit.",
+        "CONFLICT": "Een andere beheerder heeft deze standaardwaarden gewijzigd. Herladen voordat u opslaat.",
+        "UNAVAILABLE_CHOICE": "Een opgeslagen keuze is niet langer beschikbaar. Reset het voordat u het opslaat.",
+        "ERROR_SAVE": "Kan systeeminstellingen niet opslaan. Probeer het opnieuw."
+    },
+    "THEMES": {
+        "LIGHT": "Licht",
+        "DARK": "Donker"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

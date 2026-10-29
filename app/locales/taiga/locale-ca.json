@@ -128,7 +128,7 @@
                 "SAT": "Ds"
             }
         },
-        "SEE_USER_PROFILE": "Veure el perfil de {{usuari}}",
+        "SEE_USER_PROFILE": "Veure el perfil de {{username}}",
         "USER_STORY": "Història d'usuari",
         "TASK": "Tasca",
         "ISSUE": "incidència",
@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Seleccioni una llengua",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Elimina el format",
             "OUTDATED": "Another person has made changes while you were editing. Check the new version on the activity tab before you save your changes.",
-            "MARKDOWN_HELP": "Ajuda de Markdown"
+            "MARKDOWN_HELP": "Ajuda de Markdown",
+            "LOAD_IMAGE": "Carrega la imatge"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Afegir link de wiki",
                 "DELETE_WIKI_LINKS": "Esborrar enllaços de wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Aquest projecte s'ha arxivat. Ara és de només lectura."
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Elimina l'etiqueta"
         },
         "HELP": "Necessites ajuda? Mira la nosta pàgina de suport!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Valors per defecte",
-            "SUBTITLE": "Selecciona els valors per defecte per a tots els selectors"
-        },
         "MEMBERSHIPS": {
             "TITLE": "Gestió de Membres",
             "PAGE_TITLE": "Afiliacions - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "Tipus",
             "SUBTITLE": "Especifiqueu quin tipus d'incidència podria ser",
             "ISSUE_TITLE": "Tipus d'incidències",
-            "ACTION_ADD": "Afegir now {{objName}}"
+            "ACTION_ADD": "Afegir un tipus d'incidència nou"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Etiquetes",
@@ -775,6 +775,7 @@
             "DELETE_MEMBER": "Esborrar membre",
             "RESEND": "Reenviar",
             "SUCCESS_SEND_INVITATION": "Hem tornat a enviar la invitació a '{{email}}'.",
+            "ERROR_SEND_INVITATION": "No s'ha pogut tornar a enviar la invitació. Torna-ho a provar.",
             "SUCCESS_DELETE": "Hem esborrat {{message}}.",
             "ERROR_DELETE": "No s'ha pogut esborrar {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "la invitació per a {{email}}"
@@ -839,8 +840,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Recordeu que podeu tenir fins a <strong>{{maxProjects}}</strong> projectes privats. Actualment sou propietari de <strong>{{currentProjects}}</strong> projectes privats.",
                 "PUBLIC": "Recordeu que podeu tenir fins a <strong>{{maxProjects}}</strong> projectes públics. Actualment sou propietari de <strong>{{currentProjects}}</strong> projectes públics.",
-                "PRIVATE_EXCEEDED": "Actualment té <strong>{{currentProjects}} projectes privats</strong>, el màxim que el teu pla permet.",
-                "PUBLIC_EXCEEDED": "Actualment té <strong>{{currentProjects}} projectes públics</strong>, el màxim que el teu pla permet."
+                "PRIVATE_EXCEEDED": "El nombre de projectes privats que teniu és <strong>{{currentProjects}}</strong>, el màxim que permet la vostra subscripció.",
+                "PUBLIC_EXCEEDED": "El nombre de projectes públics que teniu és <strong>{{currentProjects}}</strong>, el màxim que permet la vostra subscripció."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },
@@ -850,7 +851,7 @@
             "SUBTITLE": "Estableix els valors predeterminats per a totes les entrades del selector."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{NomConnector}} - Connectors  - {{NomProjecte}}"
+            "PAGE_TITLE": "{{pluginName}} - Connectors - {{projectName}}"
         }
     },
     "USER": {
@@ -861,7 +862,7 @@
             "PROJECTS": "Projectes",
             "PROJECTS_EMPTY": "{{username}} encara no te cap projecte",
             "CONTACTS": "Contactes",
-            "CONTACTS_EMPTY": "{{Usuari}} no té contactes encara",
+            "CONTACTS_EMPTY": "{{username}} no té contactes encara",
             "CURRENT_USER_CONTACTS_EMPTY": "No tens contactes encara",
             "CURRENT_USER_CONTACTS_EMPTY_EXPLAIN": "Les persones amb les que treballa a Taiga seran els seus contactes de forma automàtica",
             "TABS": {
@@ -939,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "Crear projecte",
             "HELP_TITLE": "Ajuda",
             "HOMEPAGE": "Inici",
-            "TAIGA_RESOURCES_TITLE": "Anar a Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Escriu-nos amb el teu feedback",
             "FEEDBACK": "Fes una pregunta",
             "NOTIFICATIONS_TITLE": "Edita la configuració de les teves notificacions",
@@ -1076,7 +1075,7 @@
                 "DESCRIPTION": "Aquest procés pot trigar una estona, si us plau mantingui la finestra oberta."
             },
             "WARNING": {
-                "TITLE": "Some taks will be unassigned",
+                "TITLE": "Some tasks will be unassigned",
                 "DESCRIPTION": "There are still unidentified people. The cards assigned to these people will remain unassigned. Check all the contacts to not lose that information.",
                 "CHECK": "Verifica els contactes"
             },
@@ -1133,7 +1132,7 @@
             "CONFIRMATION": "Sí, envieu-me notícies, actualitzacions de productes i recomanacions de Taiga.",
             "LIGHTBOX_TITLE": "Vol rebre les comunicacions de Taiga?",
             "NO_SHARE": "La vostra privadesa ens importa (vegeu la nostra <a href=\"https://www.taiga.io/privacy-policy\" title=\"Aneu a la política de privacitat\" target=\"_blank\">política de privacitat</a>).",
-            "OPT_OUT": "Només us enviarem correus electrònics rellevants (menys de 6 per any). Pot donar-se de baixa en qualsevol moment enviant un correu electrònic a <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> amb l'assumpte \"donar-se de baixa\" o mitjançant l'enllaç en qualsevol dels nostres butlletins.",
+            "OPT_OUT": "Només us enviarem correus electrònics rellevants (menys de 6 per any). Pot donar-se de baixa en qualsevol moment enviant un correu electrònic a <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> amb l'assumpte \"unsubscribe\" o mitjançant l'enllaç en qualsevol dels nostres butlletins.",
             "DONT_ASK": "No ho tornis a preguntar",
             "SAVED_PREFERENCE": "Les seves preferències s'han desat correctament"
         }
@@ -1485,7 +1484,7 @@
             "TITLE": "SPRINTS",
             "DATE": "DD MMM YYYY",
             "LINK_TASKBOARD": "Anar al panell de sprint",
-            "TITLE_LINK_TASKBOARD": "Anar al panell de {{::name}}",
+            "TITLE_LINK_TASKBOARD": "Anar al panell de {{name}}",
             "EMPTY": "There are no sprints yet",
             "WARNING_EMPTY_SPRINT_ANONYMOUS": "This sprint has no user stories",
             "WARNING_EMPTY_SPRINT": "Drop here Stories from your backlog to start a new sprint",
@@ -1824,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} has updated the attribute \"{{field_name}}\" of the issue {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the issue {{obj_name}} to {{new_value}}",
-        "TASK_UPDATED": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} to {{new_value}}",
+        "TASK_UPDATED": "{{username}} ha actualitzat l'atribut \"{{field_name}}\" de la tasca {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} to {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1940,7 +1939,7 @@
         "PAGE_TITLE": "Descobreix projectes - Taiga",
         "PAGE_DESCRIPTION": "Directori de projectes públics de Taiga. Explora els backlogs, timelines, incidències i equips. Descobreix els projectes més seguits o els més actius. Filtra projectes per Kanban o Scrum.",
         "DISCOVER_TITLE": "Descobreix projectes",
-        "DISCOVER_SUBTITLE": "{projectes, plural, =1{Un projecte públic per descobrir} other{# projectes públics per descobrir}}",
+        "DISCOVER_SUBTITLE": "{projects, plural, =1{Un projecte públic per descobrir} other{# projectes públics per descobrir}}",
         "MOST_ACTIVE": "Mès actius",
         "MOST_ACTIVE_EMPTY": "Encara no hi ha projectes ACTIUS",
         "MOST_LIKED": "Most liked",
@@ -1966,6 +1965,29 @@
             "ACTION_TITLE": "Cerca",
             "RESULTS": "Resultats de la cerca"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Configuració del sistema",
+        "DESCRIPTION": "Estableix valors predeterminats per als comptes sense una elecció personal.",
+        "LANGUAGE_HEADING": "Idioma",
+        "DEFAULT_LANGUAGE": "Idioma per defecte",
+        "APPEARANCE_HEADING": "Aparença",
+        "DEFAULT_THEME": "Tema predeterminat",
+        "USE_DEPLOYMENT_DEFAULT": "Utilitza la configuració predeterminada del servidor",
+        "EFFECTIVE_VALUE": "Valor efectiu:",
+        "SOURCE_DEPLOYMENT": "Font: configuració predeterminada del servidor",
+        "SOURCE_ADMIN": "Font: configuració desada de l'administrador",
+        "LANGUAGE_HELP": "S'utilitzen per interfícies i correu electrònic quan l'idioma del compte no està definit.",
+        "THEME_HELP": "S'utilitzen per interfícies quan no s'ha definit un tema de compte.",
+        "RESET_DEFAULT": "Restableix la configuració predeterminada del servidor",
+        "APPLY_HELP": "Els canvis desats s'apliquen a la càrrega de la pàgina següent. Les opcions personals tenen prioritat.",
+        "CONFLICT": "Un altre administrador ha canviat aquests valors predeterminats. Torneu a carregar abans de desar.",
+        "UNAVAILABLE_CHOICE": "Una opció desada ja no està disponible. Restableix-lo abans de desar-lo.",
+        "ERROR_SAVE": "No s'ha pogut desar la configuració del sistema. Torna-ho a provar."
+    },
+    "THEMES": {
+        "LIGHT": "Clar",
+        "DARK": "Fosc"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

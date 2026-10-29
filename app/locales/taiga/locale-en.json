@@ -18,7 +18,6 @@
         "COPY_TO_CLIPBOARD": "Copy to clipboard",
         "COPIED_TO_CLIPBOARD": "Text has been copied to clipboard",
         "MOVE_TO_TOP": "Move to top",
-        "MOVE_TO_TOP": "Move to top",
         "EDIT": "Edit",
         "DRAG": "Drag",
         "TAG_LINE": "Your agile, free, and open source project management tool",
@@ -270,10 +269,7 @@
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Remove formatting",
             "OUTDATED": "Another person has made changes while you were editing. Check the new version on the activity tab before you save your changes.",
             "MARKDOWN_HELP": "Markdown syntax help",
-            "LOAD_EXTERNAL_IMAGE": "Load external image",
-            "LOAD_EXTERNAL_IMAGES": "Load external images",
-            "LOAD_IMAGE": "Load image",
-            "LOAD_IMAGES": "Load images"
+            "LOAD_IMAGE": "Load image"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -573,7 +569,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "The project exceeds your maximum number of members for public projects",
             "PROJECT_OWNER": "Project owner",
             "REQUEST_OWNERSHIP": "Request ownership",
-            "REQUEST_OWNERSHIP_LIMIT": "You have reached your limit of {{maxProjects}} private project",
+            "REQUEST_OWNERSHIP_LIMIT": "You have reached your private project limit ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Do you want to become the new project owner?",
             "REQUEST_OWNERSHIP_DESC": "Request that current project owner {{name}} transfer ownership of this project to you.",
             "REQUEST_OWNERSHIP_BUTTON": "Request",
@@ -659,8 +655,8 @@
         "PROJECT_VALUES_TYPES": {
             "TITLE": "Types",
             "SUBTITLE": "Specify the types your issues could be",
-            "ISSUE_TITLE": "Issues types",
-            "ACTION_ADD": "Add new {{objName}}"
+            "ISSUE_TITLE": "Issue types",
+            "ACTION_ADD": "Add new issue type"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Tags",
@@ -687,7 +683,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -784,6 +780,7 @@
             "DELETE_MEMBER": "Delete member",
             "RESEND": "Resend",
             "SUCCESS_SEND_INVITATION": "We've sent the invitation again to '{{email}}'.",
+            "ERROR_SEND_INVITATION": "Could not resend the invitation. Try again.",
             "SUCCESS_DELETE": "We've deleted {{message}}.",
             "ERROR_DELETE": "We have not been able to delete {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "the invitation to {{email}}"
@@ -847,14 +844,14 @@
             "UNLIMITED_PROJECTS": "Unlimited",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Please remember that you can own up to <strong>{{maxProjects}}</strong> private projects. You currently own <strong>{{currentProjects}}</strong> private projects.",
-                "PRIVATE_EXCEEDED": "You currently have <strong>{{currentProjects}} private projects</strong> the maximum that you plan allows.",
+                "PRIVATE_EXCEEDED": "Your private project count is <strong>{{currentProjects}}</strong>, which has reached the maximum allowed by your plan.",
                 "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects.",
-                "PUBLIC_EXCEEDED": "You currently have <strong>{{currentProjects}} public projects</strong> the maximum that you plan allows."
+                "PUBLIC_EXCEEDED": "Your public project count is <strong>{{currentProjects}}</strong>, which has reached the maximum allowed by your plan."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugins  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -975,7 +972,7 @@
                 "NOTIFY_ALL": "Receive all notifications",
                 "NOTIFY_ALL_TITLE": "Receive all notifications for this project",
                 "NOTIFY_INVOLVED": "Only involved",
-                "NOTIFY_INVOLVED_TITLE": "Recive notificacions only when you are involved",
+                "NOTIFY_INVOLVED_TITLE": "Receive notifications only when you are involved",
                 "UNWATCH": "Unwatch",
                 "UNWATCH_TITLE": "Unwatch this project"
             }
@@ -1026,7 +1023,7 @@
             "ERROR_TOO_MANY_REQUEST": "Sorry, the Taiga is experiencing heavy load right now. Please try again in a few minutes.",
             "ERROR_MESSAGE": "The Taiga has some problems importing your dump data: {{error_message}}",
             "ERROR_MAX_SIZE_EXCEEDED": "'{{fileName}}' ({{fileSize}}) is too heavy for the Taiga, try it with a file smaller than ({{maxFileSize}})",
-            "SYNC_SUCCESS": "Your project has been imported successfuly",
+            "SYNC_SUCCESS": "Your project has been imported successfully",
             "IMPORT": "Import",
             "WHO_IS": "Their tasks will be assigned to ...",
             "WRITE_EMAIL": "Or if you want, write the email that this user uses in Taiga",
@@ -1078,7 +1075,7 @@
                 "DESCRIPTION": "This process can take a while, please keep the window open."
             },
             "WARNING": {
-                "TITLE": "Some taks will be unassigned",
+                "TITLE": "Some tasks will be unassigned",
                 "DESCRIPTION": "There are still unidentified people. The cards assigned to these people will remain unassigned. Check all the contacts to not lose that information.",
                 "CHECK": "Check contacts"
             },
@@ -1130,14 +1127,14 @@
         "NEWSLETTER_OPENING": {
             "LIGHTBOX_TITLE": "Do you want to receive announcements about Taiga?",
             "CONFIRMATION": "Yes, send me news, product updates and recommendations about Taiga.",
-            "NO_SHARE": "Your privacy matter to us (view our <a href=\"https://www.taiga.io/privacy-policy\" title=\"Go to privacy policy\" target=\"_blank\">privacy policy</a>).",
-            "OPT_OUT": "We will  only send relevant emails to you (<6 per year). You can unsubscribe at any time by sending an email to <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> with subject “unsubscribe” or through the link in any of our newsletters.",
+            "NO_SHARE": "Your privacy matters to us (view our <a href=\"https://www.taiga.io/privacy-policy\" title=\"Go to privacy policy\" target=\"_blank\">privacy policy</a>).",
+            "OPT_OUT": "We will only send relevant emails to you (fewer than 6 per year). You can unsubscribe at any time by sending an email to <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> with subject “unsubscribe” or through the link in any of our newsletters.",
             "DONT_ASK": "Don’t ask again",
             "SAVE_PREFERENCE": "SAVE PREFERENCES",
             "NOTIFY_EXPLANATION": "We will send you news, product updates and recommendations about Taiga.",
             "SUBSCRIBE": "Subscribe",
             "SUBSCRIBED": "You are subscribed",
-            "SAVED_PREFERENCE": "Your preferences have been save successfully"
+            "SAVED_PREFERENCE": "Your preferences have been saved successfully"
         }
     },
     "LIGHTBOX": {
@@ -1178,10 +1175,10 @@
             "ACTION_SEND": "Send Message",
             "YOU_CAN_ALSO": "You can also:",
             "VISIT": "Visit our ",
-            "FAQ": "Frecuently asked questions",
+            "FAQ": "Frequently asked questions",
             "CREATE": "Create an issue on this ",
             "PUBLIC": "public Taiga project",
-            "EMAIL": "Send us a e-mail directly to ",
+            "EMAIL": "Email us directly at ",
             "SUPPORT": "support@taiga.io"
         },
         "SEARCH": {
@@ -1546,9 +1543,9 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Select destination",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
-            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and taks, and the sprint'll be closed",
-            "WARNING_ISSUES_NOT_MOVED": "The issues'll remain in the sprint and don't be removed",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
+            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and tasks, and the sprint will be closed",
+            "WARNING_ISSUES_NOT_MOVED": "The issues will remain in the sprint and will not be removed",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
             "WARNING_SPRINT_STILL_OPEN": "Please note that the sprint {{sprintName}} <strong>will remain open</strong> as long as it contains unfinished items."
         }
@@ -1826,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} has updated the attribute \"{{field_name}}\" of the issue {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the issue {{obj_name}} to {{new_value}}",
-        "TASK_UPDATED": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} to {{new_value}}",
+        "TASK_UPDATED": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} to {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1969,10 +1966,6 @@
             "RESULTS": "Search results"
         }
     },
-    "THEMES": {
-        "LIGHT": "Light",
-        "DARK": "Dark"
-    },
     "SYSTEM_SETTINGS": {
         "TITLE": "System settings",
         "DESCRIPTION": "Set defaults for accounts without a personal choice.",
@@ -1989,7 +1982,12 @@
         "RESET_DEFAULT": "Reset to deployment default",
         "APPLY_HELP": "Saved changes apply on the next page load. Personal choices take priority.",
         "CONFLICT": "Another administrator changed these defaults. Reload before saving.",
+        "UNAVAILABLE_CHOICE": "A saved choice is no longer available. Reset it before saving.",
         "ERROR_SAVE": "Could not save system settings. Try again."
+    },
+    "THEMES": {
+        "LIGHT": "Light",
+        "DARK": "Dark"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Selezione Lingua",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Rimuove la formattazione",
             "OUTDATED": "Un'altra persona ha apportato dei cambiamenti mentre stavi scrivendo. Controlla la nuova versione nel registro delle attività prima di salvare le tue modifiche.",
-            "MARKDOWN_HELP": "Aiuto per la sintassi Markdown"
+            "MARKDOWN_HELP": "Aiuto per la sintassi Markdown",
+            "LOAD_IMAGE": "Carica immagine"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Aggiungi un wiki links",
                 "DELETE_WIKI_LINKS": "Elimina il link wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Questo progetto è stato archiviato. Ora è di sola lettura."
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Elimina etichetta"
         },
         "HELP": "Hai bisogno di aiuto? Controlla la nostra pagina di supporto!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Valori di default",
-            "SUBTITLE": "Imposta valori di default per tutti i selettori input."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Gestisci membri",
             "PAGE_TITLE": "Webhooks - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "Tipi",
             "SUBTITLE": "Specifica di che tipo puó essere il problema",
             "ISSUE_TITLE": "Tipi di problemi",
-            "ACTION_ADD": "Aggiungi {{objName}}"
+            "ACTION_ADD": "Aggiungi un nuovo tipo di problema"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Tag",
@@ -775,6 +775,7 @@
             "DELETE_MEMBER": "Elimina membro",
             "RESEND": "Invia di nuovo",
             "SUCCESS_SEND_INVITATION": "Abbiamo mandato nuovamente l'invito a '{{email}}'.",
+            "ERROR_SEND_INVITATION": "Impossibile inviare nuovamente l'invito. Riprova.",
             "SUCCESS_DELETE": "Abbiamo eliminato {{message}}.",
             "ERROR_DELETE": "Non siamo riusciti ad eliminare {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "L'invito a {{email}}"
@@ -850,7 +851,7 @@
             "MENU_TITLE": "Preimpostati"
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugin  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugin - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "Crea progetto",
             "HELP_TITLE": "Aiuto",
             "HOMEPAGE": "Pagina iniziale",
-            "TAIGA_RESOURCES_TITLE": "Vai alle risorse di Taiga",
-            "TAIGA_RESOURCES": "Risorse di Taiga",
             "FEEDBACK_TITLE": "Scrivici la tua opinione",
             "FEEDBACK": "Fai una domanda",
             "NOTIFICATIONS_TITLE": "Modifica le impostazioni delle notifiche",
@@ -1032,7 +1031,7 @@
             "WRITE_EMAIL_LABEL": "Scrivi la mail che questo utente utilizza in Taiga",
             "ACCEEDE": "Accesso",
             "PROJECT_MEMBERS": "Membri del Progetto",
-            "PROCESS_DESCRIPTION": "Dicci a quale membro di Taiga vuoi assegnare i compiti di {{piattaforma}}",
+            "PROCESS_DESCRIPTION": "Dicci a quale membro di Taiga vuoi assegnare i compiti di {{platform}}",
             "MATCH": "<strong>{{user_external}}</strong> e <strong>{{user_internal}}</strong> sono la stessa persona?",
             "CHOOSE": "Seleziona un utente",
             "LINKS": "Collega con {{platform}}",
@@ -1045,8 +1044,8 @@
                 "ACTION_BACK": "Indietro"
             },
             "PROJECT_RESTRICTIONS": {
-                "PROJECT_MEMBERS_DESC_PRIVATE": "Il progetto che stai cercando di importare ha {{membri}} membri incluso te. Sfortunatamente, il tuo piano attuale permette un massimo di {{max_membri}} membri per progetto privato. Se vuoi aumentare questo limite, contatta l'amministratore.",
-                "PROJECT_MEMBERS_DESC_PUBLIC": "Il progetto che stai cercando di importare ha {{membri}} membri incluso te. Sfortunatamente, il tuo piano attuale permette un massimo di {{max_memberships}} membri per progetto pubblico. Se vuoi aumentare questo limite, contatta l'amministratore.",
+                "PROJECT_MEMBERS_DESC_PRIVATE": "Il progetto che stai cercando di importare ha {{members}} membri incluso te. Sfortunatamente, il tuo piano attuale permette un massimo di {{max_memberships}} membri per progetto privato. Se vuoi aumentare questo limite, contatta l'amministratore.",
+                "PROJECT_MEMBERS_DESC_PUBLIC": "Il progetto che stai cercando di importare ha {{members}} membri incluso te. Sfortunatamente, il tuo piano attuale permette un massimo di {{max_memberships}} membri per progetto pubblico. Se vuoi aumentare questo limite, contatta l'amministratore.",
                 "ACCOUNT_ALLOW_MEMBERS": "Il tuo account permette solo {{members}} membri",
                 "PRIVATE_PROJECTS_SPACE": {
                     "TITLE": "Sfortunatamente, il tuo attuale abbonamento non permette altri progetti privati",
@@ -1304,10 +1303,10 @@
     },
     "EPIC": {
         "PAGE_TITLE": "{{epicSubject}} - Epico {{epicRef}} - {{projectName}}",
-        "PAGE_DESCRIPTION": "Stato: {{taskStatus }}. Descrizione: {{taskDescription}}",
+        "PAGE_DESCRIPTION": "Stato: {{epicStatus }}. Descrizione: {{epicDescription}}",
         "EPIC_COLOR": "Colore Epico:",
         "SECTION_NAME": "Epico",
-        "ERROR_UNLINK_RELATED_USERSTORY": "Non siamo riusciti a scollegare: {{erroreMessage}}",
+        "ERROR_UNLINK_RELATED_USERSTORY": "Non siamo riusciti a scollegare: {{errorMessage}}",
         "CREATE_RELATED_USERSTORIES": "Crea una relazione con",
         "NEW_USERSTORY": "Nuova storia utente",
         "EXISTING_USERSTORY": "Storia utente esistente",
@@ -1375,7 +1374,7 @@
     },
     "ACTIVITY": {
         "TITLE": "Attività",
-        "ACTIVITIES_COUNT": "{{Activities}} Attività",
+        "ACTIVITIES_COUNT": "{{activities}} Attività",
         "TAGS_ADDED": "etichette aggiunte:",
         "TAGS_REMOVED": "etichette rimosse:",
         "US_POINTS": "{{role}} punti",
@@ -1410,7 +1409,7 @@
     },
     "BACKLOG": {
         "PAGE_TITLE": "Arretrati - {{projectName}}",
-        "PAGE_DESCRIPTION": "Il pannello di backlog, con le storie degli utenti e gli sprint di progetto",
+        "PAGE_DESCRIPTION": "Il pannello del backlog, con le storie utente e gli sprint del progetto {{projectName}}: {{projectDescription}}",
         "SECTION_NAME": "Scrum",
         "CUSTOMIZE_GRAPH": "Personalizza il grafico del tuo backlog",
         "CUSTOMIZE_GRAPH_TEXT": "Per avere un grafico bello e utile che ti aiuti a seguire l'evoluzione del progetto devi impostare i punti e gli sprint come",
@@ -1824,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} ha aggiornato i punti di '{{role_name}}' della storia utente {{obj_name}} a {{new_value}}",
         "ISSUE_UPDATED": "{{username}} ha aggiornato l'attributo \"{{field_name}}\" del problema {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} ha aggiornato l'attributo \"{{field_name}}\" del problema {{obj_name}} a {{new_value}}",
-        "TASK_UPDATED": "{{username}} ha aggiornato l'attributo \"{{field_name}}\" del compito {{obj_name}} a {{new_value}}",
+        "TASK_UPDATED": "{{username}} ha aggiornato l'attributo \"{{field_name}}\" dell'attività {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} ha aggiornato l'attributo \"{{field_name}}\" del compito {{obj_name}} a {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} ha aggiornato l'attributo \"{{field_name}}\" del compito {{obj_name}} che appartiene alla storia utente {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} ha aggiornato l'attributo \"{{field_name}}\" del compito {{obj_name}} che appartiene alla storia utente {{us_name}} a {{new_value}}",
@@ -1966,6 +1965,29 @@
             "ACTION_TITLE": "Cerca",
             "RESULTS": "Risultati della ricerca"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Impostazioni di sistema",
+        "DESCRIPTION": "Imposta le impostazioni predefinite per gli account senza una scelta personale.",
+        "LANGUAGE_HEADING": "Lingua",
+        "DEFAULT_LANGUAGE": "Lingua predefinita",
+        "APPEARANCE_HEADING": "Aspetto",
+        "DEFAULT_THEME": "Tema predefinito",
+        "USE_DEPLOYMENT_DEFAULT": "Utilizza l'impostazione predefinita del server",
+        "EFFECTIVE_VALUE": "Valore effettivo:",
+        "SOURCE_DEPLOYMENT": "Origine: impostazione predefinita del server",
+        "SOURCE_ADMIN": "Origine: impostazione salvata dall’amministratore",
+        "LANGUAGE_HELP": "Utilizzato dalle interfacce e dalla posta elettronica quando non è impostata una lingua per l'account.",
+        "THEME_HELP": "Utilizzato dalle interfacce quando non è impostato un tema dell'account.",
+        "RESET_DEFAULT": "Ripristina il valore predefinito del server",
+        "APPLY_HELP": "Le modifiche salvate verranno applicate al caricamento della pagina successiva. Le scelte personali hanno la priorità.",
+        "CONFLICT": "Un altro amministratore ha modificato queste impostazioni predefinite. Ricarica prima di salvare.",
+        "UNAVAILABLE_CHOICE": "Una scelta salvata non è più disponibile. Reimpostalo prima di salvare.",
+        "ERROR_SAVE": "Impossibile salvare le impostazioni di sistema. Riprova."
+    },
+    "THEMES": {
+        "LIGHT": "Chiaro",
+        "DARK": "Scuro"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

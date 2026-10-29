@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Sprache wählen",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Lösche Formatierung",
             "OUTDATED": "Eine andere Person hat während Ihrer Bearbeitung Änderungen vorgenommen. Prüfen Sie die neue Version auf der Registerkarte \"Aktivität\", bevor Sie Ihre Änderungen speichern.",
-            "MARKDOWN_HELP": "Markdown syntax Hilfe"
+            "MARKDOWN_HELP": "Markdown syntax Hilfe",
+            "LOAD_IMAGE": "Bild laden"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Wiki Links hinzufügen",
                 "DELETE_WIKI_LINKS": "Wiki Links löschen"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Dieses Projekt wurde archiviert. Es kann jetzt nur noch gelesen werden."
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Schlagwort löschen"
         },
         "HELP": "Wenn Sie Hilfe benötigen, besuchen Sie unsere Support-Seite!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Vorgabewerte",
-            "SUBTITLE": "Standardwerte für alle ausgewählten Eingaben setzen."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Mitglieder verwalten",
             "PAGE_TITLE": "Mitgliedschaften - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "Typen",
             "SUBTITLE": "Spezifizieren Sie, welche Arten Ihre Tickets haben können",
             "ISSUE_TITLE": "Ticketarten",
-            "ACTION_ADD": "Neu hinzufügen {{objName}}"
+            "ACTION_ADD": "Neuen Tickettyp hinzufügen"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Schlagwörter",
@@ -775,6 +775,7 @@
             "DELETE_MEMBER": "Mitglied löschen",
             "RESEND": "Neu&nbsp;senden",
             "SUCCESS_SEND_INVITATION": "Wir haben die Einladung erneut versandt an '{{email}}'.",
+            "ERROR_SEND_INVITATION": "Die Einladung konnte nicht erneut gesendet werden. Versuchen Sie es noch einmal.",
             "SUCCESS_DELETE": "Gelöscht {{message}}.",
             "ERROR_DELETE": "Das Löschen ist fehlgeschlagen {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "die Einladung an {{email}}"
@@ -839,8 +840,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Bitte denken Sie daran, dass Sie bis zu <strong>{{maxProjects}}</strong> private Projekte besitzen können. Derzeit besitzen Sie <strong>{{currentProjects}}</strong> private Projekte.",
                 "PUBLIC": "Bitte denken Sie daran, dass Sie bis zu <strong>{{maxProjects}}</strong> öffentliche Projekte besitzen können. Sie besitzen derzeit <strong>{{currentProjects}}</strong> öffentliche Projekte.",
-                "PUBLIC_EXCEEDED": "Sie haben derzeit <strong>{{currentProjects}} öffentliche Projekte</strong>, das Maximum, das Ihr Plan erlaubt.",
-                "PRIVATE_EXCEEDED": "Sie haben derzeit <strong>{{currentProjects}} private Projekte</strong>, das Maximum, das Ihr Plan erlaubt."
+                "PUBLIC_EXCEEDED": "Die Anzahl Ihrer öffentlichen Projekte beträgt <strong>{{currentProjects}}</strong> und hat damit die in Ihrem Abonnement zulässige Höchstzahl erreicht.",
+                "PRIVATE_EXCEEDED": "Die Anzahl Ihrer privaten Projekte beträgt <strong>{{currentProjects}}</strong> und hat damit die in Ihrem Abonnement zulässige Höchstzahl erreicht."
             },
             "CANT_BE_OWNED": "Zurzeit können Sie kein Projektleiter für diesen Projekt-Typ werden. Wenn Sie Projektleiter für dieses Projekt werden möchten, kontaktieren Sie bitte den Administrator, damit er Ihre Benutzerkonto-Einstellungen anpassen kann, damit Sie Projektleiter werden zu können."
         },
@@ -850,7 +851,7 @@
             "SUBTITLE": "Standardwerte für alle Selektoreingänge setzen."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Plugins  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Plugins - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "Projekt anlegen",
             "HELP_TITLE": "Hilfe",
             "HOMEPAGE": "Homepage",
-            "TAIGA_RESOURCES_TITLE": "Wechseln Sie zu den Taiga-Ressourcen",
-            "TAIGA_RESOURCES": "Taiga-Ressourcen",
             "FEEDBACK_TITLE": "Schreiben Sie uns Ihr Feedback",
             "FEEDBACK": "Eine Frage stellen",
             "NOTIFICATIONS_TITLE": "Benachrichtigungseinstellungen bearbeiten",
@@ -1824,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} hat die '{{role_name}}'-Punkte der User-Story {{obj_name}} zu {{new_value}} geändert",
         "ISSUE_UPDATED": "{{username}} hat das Attribut \"{{field_name}}\" des Tickets {{obj_name}} aktualisiert",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} hat das Attribut \"{{field_name}}\" des Tickets {{obj_name}} zu {{new_value}} geändert",
-        "TASK_UPDATED": "{{username}} hat das Attribut \"{{field_name}}\" der Aufgabe {{obj_name}} zu {{new_value}} geändert",
+        "TASK_UPDATED": "{{username}} hat das Attribut \"{{field_name}}\" der Aufgabe {{obj_name}} aktualisiert",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} hat das Attribut \"{{field_name}}\" der Aufgabe {{obj_name}} zu {{new_value}} geändert",
         "TASK_UPDATED_WITH_US": "{{username}} hat das Attribut \"{{field_name}}\" der Aufgabe {{obj_name}}, die zur User-Story {{us_name}} gehört, aktualisiert",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} hat das Attribut \"{{field_name}}\" der Aufgabe {{obj_name}}, die zur User-Story {{us_name}} gehört, zu {{new_value}} geändert",
@@ -1966,6 +1965,29 @@
             "ACTION_TITLE": "Suche",
             "RESULTS": "Suchergebnisse"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Systemeinstellungen",
+        "DESCRIPTION": "Legen Sie Standardeinstellungen für Konten ohne persönliche Auswahl fest.",
+        "LANGUAGE_HEADING": "Sprache",
+        "DEFAULT_LANGUAGE": "Standardsprache",
+        "APPEARANCE_HEADING": "Aussehen",
+        "DEFAULT_THEME": "Standardthema",
+        "USE_DEPLOYMENT_DEFAULT": "Verwenden Sie die Standardeinstellung des Servers",
+        "EFFECTIVE_VALUE": "Effektiver Wert:",
+        "SOURCE_DEPLOYMENT": "Quelle: Server-Standardeinstellung",
+        "SOURCE_ADMIN": "Quelle: Gespeicherte Einstellung des Administrators",
+        "LANGUAGE_HELP": "Wird von Schnittstellen und E-Mail verwendet, wenn keine Kontosprache festgelegt ist.",
+        "THEME_HELP": "Wird von Schnittstellen verwendet, wenn kein Kontothema festgelegt ist.",
+        "RESET_DEFAULT": "Zurücksetzen auf die Server-Standardeinstellung",
+        "APPLY_HELP": "Gespeicherte Änderungen werden beim nächsten Laden der Seite übernommen. Persönliche Entscheidungen haben Vorrang.",
+        "CONFLICT": "Ein anderer Administrator hat diese Standardeinstellungen geändert. Vor dem Speichern neu laden.",
+        "UNAVAILABLE_CHOICE": "Eine gespeicherte Auswahl ist nicht mehr verfügbar. Setzen Sie es vor dem Speichern zurück.",
+        "ERROR_SAVE": "Systemeinstellungen konnten nicht gespeichert werden. Versuchen Sie es erneut."
+    },
+    "THEMES": {
+        "LIGHT": "Hell",
+        "DARK": "Dunkel"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

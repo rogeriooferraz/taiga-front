@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Select Language",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Remove formatting",
             "OUTDATED": "Another person has made changes while you were editing. Check the new version on the activity tab before you save your changes.",
-            "MARKDOWN_HELP": "Składnia Markdown pomoc"
+            "MARKDOWN_HELP": "Składnia Markdown pomoc",
+            "LOAD_IMAGE": "Wczytaj obraz"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Dodawaj linki Wiki",
                 "DELETE_WIKI_LINKS": "Usuwaj linki Wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Ten projekt został zarchiwizowany. Jest teraz tylko do odczytu."
         }
     },
     "LOGIN": {
@@ -460,7 +464,7 @@
     },
     "ATTACHMENT": {
         "SECTION_NAME": "Attachments",
-        "TITLE": "{{ plik }} załadowany dnia {{ data }}",
+        "TITLE": "{{ fileName }} załadowany dnia {{ date }}",
         "LIST_VIEW_MODE": "Tryb listy",
         "GALLERY_VIEW_MODE": "Tryb galerii",
         "DESCRIPTION": "Wpisz krótki opis",
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Usuń tag"
         },
         "HELP": "Potrzebujesz pomocy? Sprawdź naszą stronę wsparcia!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Domyślne wartości",
-            "SUBTITLE": "Ustaw wartości domyślne dla wszystkich pól wyboru."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Zarządzaj członkami",
             "PAGE_TITLE": "Członkostwa - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "Typy",
             "SUBTITLE": "Zdefiniuj typy zgłoszeń",
             "ISSUE_TITLE": "Typy zgłoszeń",
-            "ACTION_ADD": "Dodaj nowy {{objName}}"
+            "ACTION_ADD": "Dodaj nowy typ zgłoszenia"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Tagi",
@@ -678,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -774,10 +774,11 @@
             "STATUS_PENDING": "Nieaktywny",
             "DELETE_MEMBER": "Usuń członka",
             "RESEND": "Wyślij ponownie",
-            "SUCCESS_SEND_INVITATION": "Ponownie wysłano zaproszenie do '{{e-mail}}'.",
+            "SUCCESS_SEND_INVITATION": "Ponownie wysłano zaproszenie do '{{email}}'.",
+            "ERROR_SEND_INVITATION": "Nie udało się ponownie wysłać zaproszenia. Spróbuj ponownie.",
             "SUCCESS_DELETE": "Usunięto {{message}}.",
             "ERROR_DELETE": "Nie usunięto {{message}}.",
-            "DEFAULT_DELETE_MESSAGE": "zaproszenie do {{e-mail}}"
+            "DEFAULT_DELETE_MESSAGE": "zaproszenie do {{email}}"
         },
         "DEFAULT_VALUES": {
             "LABEL_EPIC_STATUS": "Default value for epic status selector",
@@ -839,8 +840,8 @@
             "OWNER_MESSAGE": {
                 "PRIVATE": "Pamiętaj, że możesz posiadać maksymalnie <strong>{{maxProjects}}</strong> projektów prywatnych. Obecnie posiadasz <strong>{{currentProjects}}</strong> projektów prywatnych.",
                 "PUBLIC": "Pamiętaj, że możesz posiadać maksymalnie <strong>{{maxProjects}}</strong> projektów publicznych. Obecnie posiadasz <strong>{{currentProjects}}</strong> projektów publicznych.",
-                "PRIVATE_EXCEEDED": "Obecnie posiadasz <strong>{{currentProjects}} projektów prywatnych</strong> maksymalnie tyle, na ile pozwala Twój plan.",
-                "PUBLIC_EXCEEDED": "Obecnie posiadasz <strong>{{currentProjects}} projektów publicznych</strong> maksymalnie tyle, na ile pozwala Twój plan."
+                "PRIVATE_EXCEEDED": "Liczba Twoich projektów prywatnych wynosi <strong>{{currentProjects}}</strong> i osiągnęła limit dozwolony w Twoim abonamencie.",
+                "PUBLIC_EXCEEDED": "Liczba Twoich projektów publicznych wynosi <strong>{{currentProjects}}</strong> i osiągnęła limit dozwolony w Twoim abonamencie."
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },
@@ -850,7 +851,7 @@
             "SUBTITLE": "Ustaw wartości domyślne dla wszystkich pól wyboru."
         },
         "PLUGINS": {
-            "PAGE_TITLE": "{{pluginName}} - Wtyczki  - {{projectName}}"
+            "PAGE_TITLE": "{{pluginName}} - Wtyczki - {{projectName}}"
         }
     },
     "USER": {
@@ -939,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "Utwórz projekt",
             "HELP_TITLE": "Pomoc",
             "HOMEPAGE": "Strona startowa",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Edytuj ustawienia powiadomień",
@@ -973,7 +972,7 @@
                 "NOTIFY_ALL": "Receive all notifications",
                 "NOTIFY_ALL_TITLE": "Receive all notifications for this project",
                 "NOTIFY_INVOLVED": "Only involved",
-                "NOTIFY_INVOLVED_TITLE": "Recive notificacions only when you are involved",
+                "NOTIFY_INVOLVED_TITLE": "Receive notifications only when you are involved",
                 "UNWATCH": "Unwatch",
                 "UNWATCH_TITLE": "Unwatch this project"
             }
@@ -1076,7 +1075,7 @@
                 "DESCRIPTION": "Proces może zająć chwilkę, proszę nie zamykaj okna."
             },
             "WARNING": {
-                "TITLE": "Some taks will be unassigned",
+                "TITLE": "Some tasks will be unassigned",
                 "DESCRIPTION": "There are still unidentified people. The cards assigned to these people will remain unassigned. Check all the contacts to not lose that information.",
                 "CHECK": "Check contacts"
             },
@@ -1438,10 +1437,10 @@
         "CHART": {
             "XAXIS_LABEL": "Sprinty",
             "YAXIS_LABEL": "Punkty",
-            "OPTIMAL": "Optymalna ilość puntów oczekujących w sprincie {{xval}} to {{yval}}",
-            "REAL": "Faktyczna ilość punktów oczekujących w sprincie {{xval}} to {{yval}}",
-            "INCREMENT_TEAM": "Punkty dodane na podstawie wymagań zespołu w sprincie {{xval}} to {{yval}}",
-            "INCREMENT_CLIENT": "Punkty dodane na podstawie wymagań klienta w sprincie {{xval}} to {{yval}}"
+            "OPTIMAL": "Optymalna ilość puntów oczekujących w sprincie {{sprintName}} to {{value}}",
+            "REAL": "Faktyczna ilość punktów oczekujących w sprincie {{sprintName}} to {{value}}",
+            "INCREMENT_TEAM": "Punkty dodane na podstawie wymagań zespołu w sprincie {{sprintName}} to {{value}}",
+            "INCREMENT_CLIENT": "Punkty dodane na podstawie wymagań klienta w sprincie {{sprintName}} to {{value}}"
         },
         "TAGS": {
             "TOGGLE": "Przełącz widoczność tagów",
@@ -1544,9 +1543,9 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Select destination",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
-            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and taks, and the sprint'll be closed",
-            "WARNING_ISSUES_NOT_MOVED": "The issues'll remain in the sprint and don't be removed",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
+            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and tasks, and the sprint will be closed",
+            "WARNING_ISSUES_NOT_MOVED": "The issues will remain in the sprint and will not be removed",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
             "WARNING_SPRINT_STILL_OPEN": "Please note that the sprint {{sprintName}} <strong>will remain open</strong> as long as it contains unfinished items."
         }
@@ -1574,6 +1573,7 @@
         "WARNING_TEXT": "Twoje zmiany nie zostały zapisane!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Zamknij powiadomienie",
+        "COMMUNICATION": "Wiadomości od Taigi",
         "MAIL": "Aktywność",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Czy na pewno chcesz usunąć?"
@@ -1823,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "Użytkownik {{username}} zaktualizował atrybut {{field_name}} zgłoszenia {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "Użytkownik {{username}} zaktualizował atrybut {{field_name}} zgłoszenia {{obj_name}} na {{new_value}}",
-        "TASK_UPDATED": "Użytkownik {{username}} zaktualizował atrybut {{field_name}} zadania {{obj_name}} na {{new_value}}",
+        "TASK_UPDATED": "Użytkownik {{username}} zaktualizował atrybut \"{{field_name}}\" zadania {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "Użytkownik {{username}} zaktualizował atrybut {{field_name}} zadania {{obj_name}} na {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1965,6 +1965,29 @@
             "ACTION_TITLE": "Szukaj",
             "RESULTS": "Search results"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Ustawienia systemowe",
+        "DESCRIPTION": "Ustaw wartości domyślne dla kont bez osobistego wyboru.",
+        "LANGUAGE_HEADING": "Język",
+        "DEFAULT_LANGUAGE": "Domyślny język",
+        "APPEARANCE_HEADING": "Wygląd",
+        "DEFAULT_THEME": "Domyślny szablon strony",
+        "USE_DEPLOYMENT_DEFAULT": "Użyj domyślnych ustawień serwera",
+        "EFFECTIVE_VALUE": "Efektywna wartość:",
+        "SOURCE_DEPLOYMENT": "Źródło: domyślne ustawienie serwera",
+        "SOURCE_ADMIN": "Źródło: ustawienie zapisane przez administratora",
+        "LANGUAGE_HELP": "Używany przez interfejsy i pocztę e-mail, gdy język konta nie jest ustawiony.",
+        "THEME_HELP": "Używany w interfejsie, gdy szablon strony konta nie jest ustawiony.",
+        "RESET_DEFAULT": "Przywróć wartość domyślną serwera",
+        "APPLY_HELP": "Zapisane zmiany obowiązują przy następnym załadowaniu strony. Osobiste wybory mają pierwszeństwo.",
+        "CONFLICT": "Inny administrator zmienił te ustawienia domyślne. Załaduj ponownie przed zapisaniem.",
+        "UNAVAILABLE_CHOICE": "Zapisany wybór nie jest już dostępny. Zresetuj go przed zapisaniem.",
+        "ERROR_SAVE": "Nie można zapisać ustawień systemowych. Spróbuj ponownie."
+    },
+    "THEMES": {
+        "LIGHT": "Jasny",
+        "DARK": "Ciemny"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Select Language",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Remove formatting",
             "OUTDATED": "Another person has made changes while you were editing. Check the new version on the activity tab before you save your changes.",
-            "MARKDOWN_HELP": "Markdown syntaks hjelp"
+            "MARKDOWN_HELP": "Markdown syntaks hjelp",
+            "LOAD_IMAGE": "Last inn bilde"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Legg til wiki-lenker",
                 "DELETE_WIKI_LINKS": "Slett wiki-lenker"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Dette prosjektet er arkivert. Det er nå skrivebeskyttet."
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Slett etikett"
         },
         "HELP": "Trenger du hjelp? Sjekk ut vår hjelpeside!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Standard verdier",
-            "SUBTITLE": "Sett standard verdi for alle valgte felter."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Konfigurer medlemmer",
             "PAGE_TITLE": "Medlemskap - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "Typer",
             "SUBTITLE": "Angi hvilke typer dine hendelser kan være",
             "ISSUE_TITLE": "Hendelsestyper",
-            "ACTION_ADD": "Legg til {{objName}}"
+            "ACTION_ADD": "Legg til ny hendelsestype"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Etiketter",
@@ -678,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "KanBan opsjoner",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Svømmebaner",
             "ACTION_ADD_SWIMLANE": "Ny svømmebane",
             "SWIMLANE_NAME_EXISTS": "Navn på svømmebane eksisterer allerede",
@@ -753,7 +753,7 @@
             "WEBHOOK_NAME": "Webkobling \"{{name}}\""
         },
         "CUSTOM_ATTRIBUTES": {
-            "PAGE_TITLE": "{{Seksjon navn}} - Egendefinerte felter - {{prosjekt Name}}",
+            "PAGE_TITLE": "{{sectionName}} - Egendefinerte felter - {{projectName}}",
             "ADD": "Legg til et egendefinert felt",
             "EDIT": "Rediger egendefinert felt",
             "DELETE": "Slett egendefinert felt",
@@ -775,9 +775,10 @@
             "DELETE_MEMBER": "Slett medlem",
             "RESEND": "Send igjen",
             "SUCCESS_SEND_INVITATION": "Vi har sendt invitasjonen på nytt til '{{email}}'.",
+            "ERROR_SEND_INVITATION": "Kunne ikke sende invitasjonen på nytt. Prøv igjen.",
             "SUCCESS_DELETE": "Vi har slettet {{message}}.",
             "ERROR_DELETE": "Vi har ikke vært i stand til å slette {{message}}.",
-            "DEFAULT_DELETE_MESSAGE": "invitasjonen til {{epost}}"
+            "DEFAULT_DELETE_MESSAGE": "invitasjonen til {{email}}"
         },
         "DEFAULT_VALUES": {
             "LABEL_EPIC_STATUS": "Epos-statusvelger",
@@ -939,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "Opprett prosjekt",
             "HELP_TITLE": "Hjelp",
             "HOMEPAGE": "Hjemmeside",
-            "TAIGA_RESOURCES_TITLE": "Gå til Ompa Lompa ressurser",
-            "TAIGA_RESOURCES": "Ompa Lompa ressurser",
             "FEEDBACK_TITLE": "Send tilbakemelding til oss",
             "FEEDBACK": "Spør et spørsmål",
             "NOTIFICATIONS_TITLE": "Endre dine varslingsinstillinger",
@@ -1441,7 +1440,7 @@
             "OPTIMAL": "Optimal mengde avventede poeng for sprint \"{{sprintName}}\" skal være {{value}}",
             "REAL": "Ekte avventende poeng for sprint \"{{sprintName}}\" er {{value}}",
             "INCREMENT_TEAM": "Inkrementelle poeng ved gruppekrav for sprint \"{{sprintName}}\" er {{value}}",
-            "INCREMENT_CLIENT": "Inkrementelle poeng med kundekrav for sprint \"{{sprintNam}}\" er {{verdi}}"
+            "INCREMENT_CLIENT": "Inkrementelle poeng med kundekrav for sprint \"{{sprintName}}\" er {{value}}"
         },
         "TAGS": {
             "TOGGLE": "Endre synligheten til etiketter",
@@ -1544,9 +1543,9 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Velg mål",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
-            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and taks, and the sprint'll be closed",
-            "WARNING_ISSUES_NOT_MOVED": "The issues'll remain in the sprint and don't be removed",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
+            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and tasks, and the sprint will be closed",
+            "WARNING_ISSUES_NOT_MOVED": "The issues will remain in the sprint and will not be removed",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
             "WARNING_SPRINT_STILL_OPEN": "Please note that the sprint {{sprintName}} <strong>will remain open</strong> as long as it contains unfinished items."
         }
@@ -1824,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} har oppdatert egenskapen \"{{field_name}}\" til hendelsen {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} har oppdatert egenskapen \"{{field_name}}\" til hendelsen {{obj_name}} til {{new_value}}",
-        "TASK_UPDATED": "{{username}} har oppdatert egenskapen \"{{field_name}}\" til oppgave {{obj_name}} til {{new_value}}",
+        "TASK_UPDATED": "{{username}} har oppdatert egenskapen \"{{field_name}}\" for oppgaven {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} har oppdatert egenskapen \"{{field_name}}\" til oppgave {{obj_name}} til {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1966,6 +1965,29 @@
             "ACTION_TITLE": "Søk",
             "RESULTS": "Søkeresultater"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Systeminnstillinger",
+        "DESCRIPTION": "Angi standardinnstillinger for kontoer uten personlig valg.",
+        "LANGUAGE_HEADING": "Språk",
+        "DEFAULT_LANGUAGE": "Standardspråk",
+        "APPEARANCE_HEADING": "Utseende",
+        "DEFAULT_THEME": "Standard tema",
+        "USE_DEPLOYMENT_DEFAULT": "Bruk serverstandardinnstilling",
+        "EFFECTIVE_VALUE": "Effektiv verdi:",
+        "SOURCE_DEPLOYMENT": "Kilde: serverstandardinnstilling",
+        "SOURCE_ADMIN": "Kilde: administratorens lagrede innstilling",
+        "LANGUAGE_HELP": "Brukes av grensesnitt og e-post når et kontospråk ikke er angitt.",
+        "THEME_HELP": "Brukes av grensesnitt når et kontotema ikke er angitt.",
+        "RESET_DEFAULT": "Tilbakestill til serverens standardinnstilling",
+        "APPLY_HELP": "Lagrede endringer gjelder ved neste sideinnlasting. Personlige valg prioriteres.",
+        "CONFLICT": "En annen administrator endret disse standardinnstillingene. Last inn på nytt før du lagrer.",
+        "UNAVAILABLE_CHOICE": "Et lagret valg er ikke lenger tilgjengelig. Tilbakestill den før du lagrer.",
+        "ERROR_SAVE": "Kunne ikke lagre systeminnstillingene. Prøv igjen."
+    },
+    "THEMES": {
+        "LIGHT": "Lys",
+        "DARK": "Mørk"
     },
     "ZOOM": {
         "TITLE": "Forstørr:",

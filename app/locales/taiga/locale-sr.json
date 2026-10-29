@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Повезане корисничке приче",
         "CARD": {
             "ASSIGN_TO": "Додели",
+            "MOVE_TO_TOP": "Премести на врх",
             "EDIT": "Уреди карту",
             "DELETE": "Delete card",
             "DELETE_ISSUE": "Уклони захтев",
@@ -267,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Select Language",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Remove formatting",
             "OUTDATED": "Another person has made changes while you were editing. Check the new version on the activity tab before you save your changes.",
-            "MARKDOWN_HELP": "Помоћ са Markdown синтаксом"
+            "MARKDOWN_HELP": "Помоћ са Markdown синтаксом",
+            "LOAD_IMAGE": "Учитај слику"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -319,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Додај вики-везе",
                 "DELETE_WIKI_LINKS": "Уклони вики-везе"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Овај пројекат је архивиран. Сада је само за читање."
         }
     },
     "LOGIN": {
@@ -489,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "Уклони ознаку"
         },
         "HELP": "Да ли вам је потребна помоћ? Прегледајте нашу страницу за подршку!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Подразумеване врености",
-            "SUBTITLE": "Постави почетне вредности за сва поља."
-        },
         "MEMBERSHIPS": {
             "TITLE": "Уреди чланове",
             "PAGE_TITLE": "Чланства - {{projectName}}",
@@ -500,7 +501,7 @@
             "ADD_BUTTON_TITLE": "Додај новог члана",
             "UPGRADE_BUTTON": "Upgrade your plan",
             "LIMIT_USERS_WARNING_MESSAGE_FOR_ADMIN": "If you would like to <strong>add more members</strong>, please contact the project owner <a href='mailto:{{ owner_email }}' title='{{ owner_email }}'>{{ owner_email }}</a>",
-            "LIMIT_USERS_WARNING_MESSAGE_FOR_OWNER": "Овај пројекат има максимални број чланова <strong>({{maxMembers}})</strong>. Контактирајте администратора ако желите да повећате тај број."
+            "LIMIT_USERS_WARNING_MESSAGE_FOR_OWNER": "Овај пројекат има максимални број чланова <strong>({{members}})</strong>. Контактирајте администратора ако желите да повећате тај број."
         },
         "PROJECT_EXPORT": {
             "TITLE": "Извоз",
@@ -563,8 +564,9 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Пројекат је превазишао максимум чланова за јавне пројекте",
             "PROJECT_OWNER": "Власник пројекта",
             "REQUEST_OWNERSHIP": "Потражи власништво",
+            "REQUEST_OWNERSHIP_LIMIT": "Достигли сте ограничење броја приватних пројеката ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Да ли желите да постанете нови власници пројекта?",
-            "REQUEST_OWNERSHIP_DESC": "Поднесите захтев да власник прокета преда вама власништво.",
+            "REQUEST_OWNERSHIP_DESC": "Поднесите захтев да {{name}}, тренутни власник пројекта, пренесе власништво над овим пројектом на вас.",
             "REQUEST_OWNERSHIP_BUTTON": "Потражи",
             "REQUEST_OWNERSHIP_SUCCESS": "Обавештаваћемо власника пројекта",
             "CHANGE_OWNER": "Промени власништво",
@@ -649,7 +651,7 @@
             "TITLE": "Типови",
             "SUBTITLE": "Наведите типове ваших захтева",
             "ISSUE_TITLE": "Типови захтева",
-            "ACTION_ADD": "Додај нови {{objName}}"
+            "ACTION_ADD": "Додај нови тип захтева"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Ознаке",
@@ -676,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -773,6 +775,7 @@
             "DELETE_MEMBER": "Уклони члана",
             "RESEND": "Пошаљи поново",
             "SUCCESS_SEND_INVITATION": "Поново смо послали позив на адресу '{{email}}'.",
+            "ERROR_SEND_INVITATION": "Није могуће поново послати позивницу. Покушајте поново.",
             "SUCCESS_DELETE": "Избрисали смо {{message}}.",
             "ERROR_DELETE": "Нисмо успели избрисати {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "позив на адресу {{email}}"
@@ -836,9 +839,19 @@
             "UNLIMITED_PROJECTS": "Неограничено",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Имате право на <strong>{{maxProjects}}</strong> приватних пројекта. Тренутно имате <strong>{{currentProjects}}</strong> приватних пројекта.",
-                "PUBLIC": "Имате право на <strong>{{maxProjects}}</strong> јавних пројекта. Тренутно имате <strong>{{currentProjects}}</strong> јавних пројекта."
+                "PRIVATE_EXCEEDED": "Број ваших приватних пројеката је <strong>{{currentProjects}}</strong>, што је максималан број који дозвољава ваша претплата.",
+                "PUBLIC": "Имате право на <strong>{{maxProjects}}</strong> јавних пројекта. Тренутно имате <strong>{{currentProjects}}</strong> јавних пројекта.",
+                "PUBLIC_EXCEEDED": "Број ваших јавних пројеката је <strong>{{currentProjects}}</strong>, што је максималан број који дозвољава ваша претплата."
             },
             "CANT_BE_OWNED": "Тренутно неможете преузети власништво пројекта овог типа. Ако желите да постанете власник овог пројекта, молимо вас, контактирајте администратора да преко подешавања додели вама власништво."
+        },
+        "PROJECT_PRESETS": {
+            "MENU_TITLE": "Унапред подешене вредности",
+            "TITLE": "Подразумеване вредности",
+            "SUBTITLE": "Подесите подразумеване вредности за сва поља за избор."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Плагини - {{projectName}}"
         }
     },
     "USER": {
@@ -926,9 +939,9 @@
             "MANAGE_PROJECTS": "Управљање пројектима",
             "TITLE_CREATE_PROJECT": "Креирај пројекат",
             "HELP_TITLE": "Помоћ",
+            "TAIGA_COMMUNITY_TITLE": "Иди у Taiga заједницу",
+            "TAIGA_COMMUNITY": "Taiga заједница",
             "HOMEPAGE": "Главна страна",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Уреди подешавања обавештајима",
@@ -1062,7 +1075,7 @@
                 "DESCRIPTION": "Процес може потрајати, молимо вас оставите прозор отворен."
             },
             "WARNING": {
-                "TITLE": "Some taks will be unassigned",
+                "TITLE": "Some tasks will be unassigned",
                 "DESCRIPTION": "There are still unidentified people. The cards assigned to these people will remain unassigned. Check all the contacts to not lose that information.",
                 "CHECK": "Check contacts"
             },
@@ -1110,6 +1123,18 @@
                 "CREATE_NEW_ISSUES": "Convert sub-issues to new Taiga issues",
                 "NOT_CREATE_NEW_ISSUES": "Do not import sub-issues"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Ваша приватност нам је важна (погледајте нашу <a href=\"https://www.taiga.io/privacy-policy\" title=\"Иди на политику приватности\" target=\"_blank\">политику приватности</a>).",
+            "OPT_OUT": "Слаћемо вам само релевантне имејлове (мање од 6 годишње). Можете се одјавити у било ком тренутку слањем имејла на <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> са насловом “unsubscribe” или путем везе у било ком од наших билтена.",
+            "DONT_ASK": "Не питај поново",
+            "SUBSCRIBE": "Претплати се",
+            "SUBSCRIBED": "Претплаћени сте",
+            "LIGHTBOX_TITLE": "Желите ли да примате обавештења о Taiga-и?",
+            "CONFIRMATION": "Да, шаљите ми вести, ажурирања производа и препоруке у вези са Taiga-ом.",
+            "SAVE_PREFERENCE": "САЧУВАЈ ПОДЕШАВАЊА",
+            "NOTIFY_EXPLANATION": "Слаћемо вам вести, ажурирања производа и препоруке у вези са Taiga-ом.",
+            "SAVED_PREFERENCE": "Ваша подешавања су успешно сачувана"
         }
     },
     "LIGHTBOX": {
@@ -1152,7 +1177,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "Погледајте ",
+            "FAQ": "Често постављана питања"
         },
         "SEARCH": {
             "TITLE": "Претрага",
@@ -1188,7 +1215,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "Default",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "Положај",
+            "CREATE_TOP": "На почетку",
+            "CREATE_BOTTOM": "На крају"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1293,7 +1323,7 @@
     },
     "US": {
         "PAGE_TITLE": "{{userStorySubject}} - Корисничка Прича {{userStoryRef}} - {{projectName}}",
-        "PAGE_DESCRIPTION": "Стање: {{userStoryStatus }}. Решено {{userStoryProgressPercentage}}% ({{userStoryClosedStories}} од {{userStoryTotalStories}} затворених задатака). Појена: {{userStoryPoints}}. Опис: {{userStoryDescription}}",
+        "PAGE_DESCRIPTION": "Стање: {{userStoryStatus }}. Решено {{userStoryProgressPercentage}}% ({{userStoryClosedTasks}} од {{userStoryTotalTasks}} затворених задатака). Појена: {{userStoryPoints}}. Опис: {{userStoryDescription}}",
         "SECTION_NAME": "Корисничка прича",
         "LINK_TASKBOARD": "Панела задатка",
         "TITLE_LINK_TASKBOARD": "Отиђи на списак задатака",
@@ -1474,7 +1504,7 @@
     },
     "TASKBOARD": {
         "PAGE_TITLE": "{{sprintName}} - Списак задатака шпринта - {{projectName}}",
-        "PAGE_DESCRIPTION": "Шпринт {{sprintName}} (од {{startDate}} до {{endDate}}) од {{projectName}}. Завршено {{completedPercentage}}% ({{completedPoints}} од {{totalPoints}} појена). {{openStories}} отворених задатака од {{totalStories}}.",
+        "PAGE_DESCRIPTION": "Шпринт {{sprintName}} (од {{startDate}} до {{endDate}}) од {{projectName}}. Завршено {{completedPercentage}}% ({{completedPoints}} од {{totalPoints}} појена). {{openTasks}} отворених задатака од {{totalTasks}}.",
         "SECTION_NAME": "Списак задатака",
         "TITLE_ACTION_ADD": "Add a new task",
         "TITLE_ACTION_ADD_BULK": "Add some new tasks in bulk",
@@ -1513,9 +1543,9 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Select destination",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
-            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and taks, and the sprint'll be closed",
-            "WARNING_ISSUES_NOT_MOVED": "The issues'll remain in the sprint and don't be removed",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
+            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and tasks, and the sprint will be closed",
+            "WARNING_ISSUES_NOT_MOVED": "The issues will remain in the sprint and will not be removed",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
             "WARNING_SPRINT_STILL_OPEN": "Please note that the sprint {{sprintName}} <strong>will remain open</strong> as long as it contains unfinished items."
         }
@@ -1543,6 +1573,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Затвори обавештење",
+        "COMMUNICATION": "Поруке од Taiga",
         "MAIL": "Обавештења поштом",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Да ли сте сигурни да желите да уклоните?"
@@ -1620,7 +1651,7 @@
     },
     "ISSUE": {
         "PAGE_TITLE": "{{issueSubject}} - Захтев {{issueRef}} - {{projectName}}",
-        "PAGE_DESCRIPTION": "Стање: {{issueStatus }}. Тип: {{issueType}}, Приоритет: {{issuePriority}}. Важност: {{issueВажност}}. Опис: {{issueDescription}}"
+        "PAGE_DESCRIPTION": "Стање: {{issueStatus }}. Тип: {{issueType}}, Приоритет: {{issuePriority}}. Важност: {{issueSeverity}}. Опис: {{issueDescription}}"
     },
     "KANBAN": {
         "PAGE_TITLE": "Kanban - {{projectName}}",
@@ -1736,7 +1767,7 @@
     },
     "WIKI": {
         "PAGE_TITLE": "{{wikiPageName}} - Вики - {{projectName}}",
-        "PAGE_DESCRIPTION": "Задње издање {{lastModifiedDate}} ({{totalRevisions}} укупних издања) Садржај: {{ wikiPageContent }}",
+        "PAGE_DESCRIPTION": "Задње издање {{lastModifiedDate}} ({{totalEditions}} укупних издања) Садржај: {{ wikiPageContent }}",
         "DATETIME": "DD/MM/YYYY HH:mm",
         "REMOVE": "Уклони ову вики-страницу",
         "DELETE_LIGHTBOX_TITLE": "Уклони вики-страниву",
@@ -1792,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} су ажурирали атрибуту \\\"{{field_name}}\\\" of the issue {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} су ажурирали атрибуту \\\"{{field_name}}\\\" of the issue {{obj_name}} to {{new_value}}",
-        "TASK_UPDATED": "{{username}} су ажурирали атрибуту \\\"{{field_name}}\\\" of the task {{obj_name}} to {{new_value}}",
+        "TASK_UPDATED": "Корисник {{username}} је ажурирао атрибут „{{field_name}}“ задатка {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} су ажурирали атрибуту \\\"{{field_name}}\\\" of the task {{obj_name}} to {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1934,6 +1965,29 @@
             "ACTION_TITLE": "Претрага",
             "RESULTS": "Резултати претраге"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Системске поставке",
+        "DESCRIPTION": "Подесите подразумеване вредности за налоге без личног избора.",
+        "LANGUAGE_HEADING": "Језик",
+        "DEFAULT_LANGUAGE": "Подразумевани језик",
+        "APPEARANCE_HEADING": "Изглед",
+        "DEFAULT_THEME": "Подразумевана тема",
+        "USE_DEPLOYMENT_DEFAULT": "Користи подразумевано подешавање сервера",
+        "EFFECTIVE_VALUE": "Ефективна вредност:",
+        "SOURCE_DEPLOYMENT": "Извор: подразумевана поставка сервера",
+        "SOURCE_ADMIN": "Извор: подешавања сачувана од стране администратора",
+        "LANGUAGE_HELP": "Користи се од интерфејса и е-поште када језик налога није подешен.",
+        "THEME_HELP": "Користе га интерфејси када тема налога није подешена.",
+        "RESET_DEFAULT": "Врати на подразумевану вредност сервера",
+        "APPLY_HELP": "Сачуване промене се примењују при следећем учитавању странице. Лични избори имају приоритет.",
+        "CONFLICT": "Други администратор је променио ове подразумеване вредности. Поново учитајте пре чувања.",
+        "UNAVAILABLE_CHOICE": "Сачувани избор више није доступан. Ресетујте га пре чувања.",
+        "ERROR_SAVE": "Није могуће сачувати системска подешавања. Покушајте поново."
+    },
+    "THEMES": {
+        "LIGHT": "Светла",
+        "DARK": "Тамна"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

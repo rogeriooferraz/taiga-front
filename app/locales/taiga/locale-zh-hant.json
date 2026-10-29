@@ -268,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Select Language",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Remove formatting",
             "OUTDATED": "Another person has made changes while you were editing. Check the new version on the activity tab before you save your changes.",
-            "MARKDOWN_HELP": "Markdown 語法協助"
+            "MARKDOWN_HELP": "Markdown 語法協助",
+            "LOAD_IMAGE": "載入圖片"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -320,6 +321,9 @@
                 "ADD_WIKI_LINKS": "新增維基連結",
                 "DELETE_WIKI_LINKS": "刪除維基連結"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "此專案已經歸檔。目前僅能讀取。"
         }
     },
     "LOGIN": {
@@ -490,10 +494,6 @@
             "TITLE_ACTION_DELETE_TAG": "刪除Tag"
         },
         "HELP": "需要幫助嗎？看看我們的支援頁面吧！",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "預設值",
-            "SUBTITLE": "將所有選項設為預設值"
-        },
         "MEMBERSHIPS": {
             "TITLE": "管理成員",
             "PAGE_TITLE": "成員資格 - {{projectName}}",
@@ -651,7 +651,7 @@
             "TITLE": "類型",
             "SUBTITLE": "指定你的問題類型可能是",
             "ISSUE_TITLE": "問題類型",
-            "ACTION_ADD": "新增{{objName}}"
+            "ACTION_ADD": "新增問題類型"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "標籤",
@@ -678,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -775,6 +775,7 @@
             "DELETE_MEMBER": "刪除成員",
             "RESEND": "重新送出",
             "SUCCESS_SEND_INVITATION": "我們已再次發出邀請信給'{{email}}'.　",
+            "ERROR_SEND_INVITATION": "無法重新傳送邀請。請再試一次。",
             "SUCCESS_DELETE": "已刪除 {{message}}.",
             "ERROR_DELETE": "我們無法刪除 {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "邀請  {{email}}"
@@ -838,7 +839,9 @@
             "UNLIMITED_PROJECTS": "Unlimited",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Please remember that you can own up to <strong>{{maxProjects}}</strong> private projects. You currently own <strong>{{currentProjects}}</strong> private projects",
-                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects"
+                "PRIVATE_EXCEEDED": "您的不公開專案數量為<strong>{{currentProjects}}</strong>，已達到訂閱方案允許的上限。",
+                "PUBLIC": "Please remember that you can own up to <strong>{{maxProjects}}</strong> public projects. You currently own <strong>{{currentProjects}}</strong> public projects",
+                "PUBLIC_EXCEEDED": "您的公開專案數量為<strong>{{currentProjects}}</strong>，已達到訂閱方案允許的上限。"
             },
             "CANT_BE_OWNED": "At the moment you cannot become an owner of a project of this type. If you would like to become the owner of this project, please contact the administrator so they change your account settings to enable project ownership."
         },
@@ -846,6 +849,9 @@
             "MENU_TITLE": "預設選項",
             "TITLE": "預設值",
             "SUBTITLE": "設置所有選擇器輸入的默認值。"
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - 外掛 - {{projectName}}"
         }
     },
     "USER": {
@@ -934,8 +940,6 @@
             "TITLE_CREATE_PROJECT": "創建專案",
             "HELP_TITLE": "幫助",
             "HOMEPAGE": "首頁",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "編輯個人通知設定",
@@ -1071,7 +1075,7 @@
                 "DESCRIPTION": "這個過桯要花點時間，請保持视窗開啟"
             },
             "WARNING": {
-                "TITLE": "Some taks will be unassigned",
+                "TITLE": "Some tasks will be unassigned",
                 "DESCRIPTION": "There are still unidentified people. The cards assigned to these people will remain unassigned. Check all the contacts to not lose that information.",
                 "CHECK": "Check contacts"
             },
@@ -1121,12 +1125,16 @@
             }
         },
         "NEWSLETTER_OPENING": {
+            "NO_SHARE": "我們重視你的隱私（請參閱我們的<a href=\"https://www.taiga.io/privacy-policy\" title=\"前往隱私政策\" target=\"_blank\">隱私政策</a>）。",
             "SUBSCRIBED": "已訂閱",
             "LIGHTBOX_TITLE": "你想接收Taiga的新訊息嗎？",
             "DONT_ASK": "不再詢問",
             "SUBSCRIBE": "訂閲",
-            "OPT_OUT": "我們只會向你發送相關電子郵件（每年少於 6 封）。你可以隨時發送以「unsubscribe」題的電子郵件到 <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a>，或通訊中的連結來取消訂閱。",
-            "SAVE_PREFERENCE": "儲存選項"
+            "OPT_OUT": "我們只會向你發送相關電子郵件（每年少於 6 封）。你可以隨時寄送主旨為「unsubscribe」的電子郵件至 <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a>，或使用我們任何一封電子報中的連結取消訂閱。",
+            "SAVE_PREFERENCE": "儲存選項",
+            "CONFIRMATION": "是的，請向我傳送有關 Taiga 的新聞、產品更新和推薦內容。",
+            "NOTIFY_EXPLANATION": "我們會向你傳送有關 Taiga 的新聞、產品更新和推薦內容。",
+            "SAVED_PREFERENCE": "你的偏好設定已成功儲存。"
         }
     },
     "LIGHTBOX": {
@@ -1170,7 +1178,8 @@
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
             "SUPPORT": "support@taiga.io",
-            "FAQ": "常見問題"
+            "FAQ": "常見問題",
+            "VISIT": "參閱 "
         },
         "SEARCH": {
             "TITLE": "搜尋",
@@ -1419,7 +1428,7 @@
         "PENDING_POINTS": "待核點數",
         "CLOSED_POINTS": "關閉",
         "COMPACT_SPRINT": "濃縮衝刺點數",
-        "GO_TO_TASKBOARD": "到任務板 {{spring.name}}",
+        "GO_TO_TASKBOARD": "到任務板 {{::name}}",
         "EDIT_SPRINT": "編輯衝刺任務 ",
         "TOTAL_POINTS": "全部",
         "STATUS_NAME": "狀態名稱 ",
@@ -1475,7 +1484,7 @@
             "TITLE": "衝刺任務",
             "DATE": "DD MMM YYYY",
             "LINK_TASKBOARD": "衝刺任務板",
-            "TITLE_LINK_TASKBOARD": "到任務板 {{spring.name}}",
+            "TITLE_LINK_TASKBOARD": "到任務板 {{name}}",
             "EMPTY": "尚無衝刺任務",
             "WARNING_EMPTY_SPRINT_ANONYMOUS": "This sprint has no user stories",
             "WARNING_EMPTY_SPRINT": "Drop here Stories from your backlog to start a new sprint",
@@ -1534,9 +1543,9 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Select destination",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
-            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and taks, and the sprint'll be closed",
-            "WARNING_ISSUES_NOT_MOVED": "The issues'll remain in the sprint and don't be removed",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
+            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and tasks, and the sprint will be closed",
+            "WARNING_ISSUES_NOT_MOVED": "The issues will remain in the sprint and will not be removed",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
             "WARNING_SPRINT_STILL_OPEN": "Please note that the sprint {{sprintName}} <strong>will remain open</strong> as long as it contains unfinished items."
         }
@@ -1564,6 +1573,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "關閉通知",
+        "COMMUNICATION": "Taiga 訊息",
         "MAIL": "透過郵件通知",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "你確定要刪除嗎？"
@@ -1813,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} 更新了{{obj_name}}問題的 \"{{field_name}}\" 屬性",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} 已更新了 {{obj_name}} 問題的\"{{field_name}}\"屬性到{{new_value}}",
-        "TASK_UPDATED": "{{username}} 已更新了 {{obj_name}} 使用者故事的\"{{field_name}}\"屬性到{{new_value}}",
+        "TASK_UPDATED": "{{username}} 更新了任務 {{obj_name}} 的「{{field_name}}」屬性",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} 已更新了 {{obj_name}} 任務\"{{field_name}}\"的屬性到{{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1955,6 +1965,29 @@
             "ACTION_TITLE": "搜尋",
             "RESULTS": "搜尋結果"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "系統設定",
+        "DESCRIPTION": "為帳戶設定預設值，無需個人選擇。",
+        "LANGUAGE_HEADING": "語言",
+        "DEFAULT_LANGUAGE": "預設語言",
+        "APPEARANCE_HEADING": "外觀",
+        "DEFAULT_THEME": "預設主題",
+        "USE_DEPLOYMENT_DEFAULT": "使用伺服器預設設定",
+        "EFFECTIVE_VALUE": "有效值：",
+        "SOURCE_DEPLOYMENT": "來源：伺服器預設設定",
+        "SOURCE_ADMIN": "來源：管理員儲存的設定",
+        "LANGUAGE_HELP": "未設定帳戶語言時由介面和電子郵件使用。",
+        "THEME_HELP": "未設定帳戶主題時由介面使用。",
+        "RESET_DEFAULT": "重置為伺服器預設設定",
+        "APPLY_HELP": "儲存的變更適用於下一頁載入。個人選擇優先。",
+        "CONFLICT": "另一位管理員變更了這些預設值。儲存前重新載入。",
+        "UNAVAILABLE_CHOICE": "已儲存的選項不再可用。請先重設，再儲存。",
+        "ERROR_SAVE": "無法儲存系統設定。再試一次。"
+    },
+    "THEMES": {
+        "LIGHT": "淺色",
+        "DARK": "深色"
     },
     "ZOOM": {
         "TITLE": "Zoom:",

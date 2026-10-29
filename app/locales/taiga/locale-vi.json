@@ -29,7 +29,7 @@
         "UNBLOCK_TITLE": "Chặn mục này",
         "BLOCKED_NOTE": "Vì sao mục này bị chặn?",
         "BLOCKED_REASON": "Vui lòng giải thích lí do",
-        "CREATED_BY": "Được tạo bởi {{hiển thị tên đầy đủ}}",
+        "CREATED_BY": "Được tạo bởi {{fullDisplayName}}",
         "CLOSE": "đóng",
         "GO_HOME": "Đưa tôi trở lại trang chủ",
         "PLUGINS": "Plugins",
@@ -51,6 +51,7 @@
         "RELATED_USERSTORIES": "Nhật kí người dùng liên quan",
         "CARD": {
             "ASSIGN_TO": "Phân chia cho",
+            "MOVE_TO_TOP": "Di chuyển lên đầu",
             "EDIT": "Chỉnh sửa thẻ",
             "DELETE": "Delete card",
             "DELETE_ISSUE": "Xóa issue",
@@ -267,7 +268,8 @@
             "SELECT_LANGUAGE_PLACEHOLDER": "Chọn ngôn ngữ",
             "SELECT_LANGUAGE_REMOVE_FORMATING": "Gỡ bỏ định dạng",
             "OUTDATED": "Người khác đã thực hiện những thay đổi trong khi bạn đang chỉnh sửa. Kiểm tra phiên bản mới trên tab hoạt động trước khi lưu các thay đổi của bạn.",
-            "MARKDOWN_HELP": "Trợ giúp của Markdown syntax"
+            "MARKDOWN_HELP": "Trợ giúp của Markdown syntax",
+            "LOAD_IMAGE": "Tải hình ảnh"
         },
         "PERMISIONS_CATEGORIES": {
             "EPICS": {
@@ -319,6 +321,9 @@
                 "ADD_WIKI_LINKS": "Thêm liên kết wiki",
                 "DELETE_WIKI_LINKS": "Xóa liên kết wiki"
             }
+        },
+        "ARCHIVED_PROJECT_WARNING": {
+            "MESSAGE": "Dự án này đã được lưu trữ. Hiện ở chế độ chỉ đọc."
         }
     },
     "LOGIN": {
@@ -459,13 +464,13 @@
     },
     "ATTACHMENT": {
         "SECTION_NAME": "Attachments",
-        "TITLE": "{{tên file}} được đăng vào {{ngày}}",
+        "TITLE": "{{fileName}} được đăng vào {{date}}",
         "LIST_VIEW_MODE": "Chế độ xem danh sách",
         "GALLERY_VIEW_MODE": "Chế độ xem bộ sưu tập ảnh",
         "DESCRIPTION": "Nhập mô tả ngắn gọn",
         "DEPRECATED": "(bị từ chối)",
         "DEPRECATED_FILE": "Bị từ chối?",
-        "ADD": "Bổ sung tệp đính kèm mới {{dung lượng tối đa}}",
+        "ADD": "Bổ sung tệp đính kèm mới {{maxFileSizeMsg}}",
         "DROP": "Thả tập tin đính kèm tại đây!",
         "SHOW_DEPRECATED": "+ hiện tập tin đính kèm bị từ chối",
         "HIDE_DEPRECATED": "- ẩn tập tin đính kèm bị từ chối ",
@@ -489,13 +494,9 @@
             "TITLE_ACTION_DELETE_TAG": "Xóa thẻ"
         },
         "HELP": "Bạn cần hỗ trợ? Tham khảo trang trợ giúp của chúng tôi!",
-        "PROJECT_DEFAULT_VALUES": {
-            "TITLE": "Giá trị mặc định",
-            "SUBTITLE": "Đặt giá trị mặc định cho tất cả nguồn vào được chọn"
-        },
         "MEMBERSHIPS": {
             "TITLE": "Quản lý thành viên",
-            "PAGE_TITLE": "Thành viên - {{Tên dự án}}",
+            "PAGE_TITLE": "Thành viên - {{projectName}}",
             "ADD_BUTTON": "+ Thêm thành viên mới",
             "ADD_BUTTON_TITLE": "Thêm thành viên mới",
             "UPGRADE_BUTTON": "Upgrade your plan",
@@ -563,6 +564,7 @@
             "MAX_PUBLIC_PROJECTS_MEMBERS": "Dự án vượt quá số lượng  thành viên tối đa cho các dự án công khai",
             "PROJECT_OWNER": "Chủ dự án",
             "REQUEST_OWNERSHIP": "Yêu cầu quyền sở hữu",
+            "REQUEST_OWNERSHIP_LIMIT": "Bạn đã đạt giới hạn số dự án riêng tư ({{maxProjects}}).",
             "REQUEST_OWNERSHIP_CONFIRMATION_TITLE": "Bạn có muốn trở thành chủ dự án mới?",
             "REQUEST_OWNERSHIP_DESC": "Yêu cầu chủ dự án gần đây {{name}} trao quyền sở hữu dự án này cho bạn.",
             "REQUEST_OWNERSHIP_BUTTON": "Yêu cầu",
@@ -649,7 +651,7 @@
             "TITLE": "Loại",
             "SUBTITLE": "Xác định hình thức issues của bạn",
             "ISSUE_TITLE": "Các loại issues",
-            "ACTION_ADD": "Thêm mới {{objName}}"
+            "ACTION_ADD": "Thêm loại vấn đề mới"
         },
         "PROJECT_VALUES_TAGS": {
             "TITLE": "Thẻ",
@@ -676,7 +678,7 @@
         },
         "PROJECT_KANBAN_OPTIONS": {
             "TITLE": "Kanban options",
-            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximun number of user stories on each status.",
+            "SUBTITLE": "Enable swimlanes to use in your workflow and set WIP limits to restrict the maximum number of user stories on each status.",
             "SWIMLANES": "Swimlanes",
             "ACTION_ADD_SWIMLANE": "New swimlane",
             "SWIMLANE_NAME_EXISTS": "This swimlane name already exists",
@@ -773,7 +775,8 @@
             "DELETE_MEMBER": "Xóa thành viên",
             "RESEND": "Gửi lại",
             "SUCCESS_SEND_INVITATION": "Chúng tôi đã gửi lời mời một lần nữa tới '{{email}}'.",
-            "SUCCESS_DELETE": "Chúng tôi vừa xóa {{tin nhắn}}",
+            "ERROR_SEND_INVITATION": "Không thể gửi lại lời mời. Vui lòng thử lại.",
+            "SUCCESS_DELETE": "Chúng tôi vừa xóa {{message}}",
             "ERROR_DELETE": "Chúng tôi không thể xóa {{message}}.",
             "DEFAULT_DELETE_MESSAGE": "thư mời tới {{email}}"
         },
@@ -836,20 +839,30 @@
             "UNLIMITED_PROJECTS": "Không giới hạn",
             "OWNER_MESSAGE": {
                 "PRIVATE": "Hãy nhớ rằng bạn có thể sở hữu tới <strong>{{maxProjects}}</strong> dự án riêng tư. Bạn hiện đang sở hữu <strong>{{currentProjects}}</strong> dự án riêng tư",
-                "PUBLIC": "Hãy nhớ rằng bạn có thể sở hữu tới <strong>{{maxProjects}}</strong> dự án riêng tư. Bạn hiện đang sở hữu <strong>{{currentProjects}}</strong> dự án riêng tư"
+                "PRIVATE_EXCEEDED": "Số lượng dự án riêng tư của bạn là <strong>{{currentProjects}}</strong>, đã đạt đến mức tối đa mà gói đăng ký của bạn cho phép.",
+                "PUBLIC": "Hãy nhớ rằng bạn có thể sở hữu tới <strong>{{maxProjects}}</strong> dự án công khai. Bạn hiện đang sở hữu <strong>{{currentProjects}}</strong> dự án công khai",
+                "PUBLIC_EXCEEDED": "Số lượng dự án công khai của bạn là <strong>{{currentProjects}}</strong>, đã đạt đến mức tối đa mà gói đăng ký của bạn cho phép."
             },
             "CANT_BE_OWNED": "Tại thời điểm này bạn không thể trở thành chủ sở hữu của loại dự án này. Nếu bạn muốn trở thành chủ sở hữu của dự án này, xin vui lòng liên hệ với quản trị viên để thay đổi cài đặt tài khoản của bạn và cho phép quyền sở hữu dự án."
+        },
+        "PROJECT_PRESETS": {
+            "TITLE": "Giá trị mặc định",
+            "MENU_TITLE": "Cài đặt sẵn",
+            "SUBTITLE": "Đặt giá trị mặc định cho tất cả các trường chọn."
+        },
+        "PLUGINS": {
+            "PAGE_TITLE": "{{pluginName}} - Plugin - {{projectName}}"
         }
     },
     "USER": {
         "PROFILE": {
-            "PAGE_TITLE": "{{tên đầy đủ của người dùng}}@{{tên người dùng sử dụng}}",
+            "PAGE_TITLE": "{{userFullName}}@{{userUsername}}",
             "USER_SETTINGS": "Cài đặt người dùng",
             "CLOSED_US": "Đóng NKND",
             "PROJECTS": "Dự án",
             "PROJECTS_EMPTY": "{{username}} vẫn chưa có dự án nào",
             "CONTACTS": "Liên lạc",
-            "CONTACTS_EMPTY": "{{tên người dùng}} vẫn chưa có liên lạc nào",
+            "CONTACTS_EMPTY": "{{username}} vẫn chưa có liên lạc nào",
             "CURRENT_USER_CONTACTS_EMPTY": "Bạn vẫn chưa có liên lạc nào",
             "CURRENT_USER_CONTACTS_EMPTY_EXPLAIN": "Thành viên hợp tác với bạn ở Taiga sẽ tự động được thêm vào danh sách liên lạc ",
             "TABS": {
@@ -890,7 +903,7 @@
         }
     },
     "PROJECT": {
-        "PAGE_TITLE": "{{Tên dự án}}",
+        "PAGE_TITLE": "{{projectName}}",
         "HELP": "Reorder your projects to set at the top the most used ones.<br/> The top 4 projects will appear in the top navigation bar project list",
         "PRIVATE": "Dự án riêng tư",
         "LOOKING_FOR_PEOPLE": "Dự án này đang cần thêm thành viên",
@@ -926,9 +939,9 @@
             "MANAGE_PROJECTS": "Quản lí dự án",
             "TITLE_CREATE_PROJECT": "Tạo dự án",
             "HELP_TITLE": "Trợ giúp",
+            "TAIGA_COMMUNITY_TITLE": "Đi đến cộng đồng Taiga",
+            "TAIGA_COMMUNITY": "Cộng đồng Taiga",
             "HOMEPAGE": "Trang chủ",
-            "TAIGA_RESOURCES_TITLE": "Go to Taiga resources",
-            "TAIGA_RESOURCES": "Taiga Resources",
             "FEEDBACK_TITLE": "Write to us with your feedback",
             "FEEDBACK": "Ask a question",
             "NOTIFICATIONS_TITLE": "Chỉnh sửa cài đặt thông báo",
@@ -1110,6 +1123,18 @@
                 "CREATE_NEW_ISSUES": "Chuyển đổi sub-issue thành issue mới ở Taiga",
                 "NOT_CREATE_NEW_ISSUES": "Không nhập các sub-issues"
             }
+        },
+        "NEWSLETTER_OPENING": {
+            "NO_SHARE": "Quyền riêng tư của bạn rất quan trọng đối với chúng tôi (xem <a href=\"https://www.taiga.io/privacy-policy\" title=\"Đi đến chính sách quyền riêng tư\" target=\"_blank\">chính sách quyền riêng tư</a> của chúng tôi).",
+            "OPT_OUT": "Chúng tôi chỉ gửi cho bạn những email có liên quan (ít hơn 6 email mỗi năm). Bạn có thể hủy đăng ký bất kỳ lúc nào bằng cách gửi email đến <a href=\"mailto:support@taiga.io\" target=\"_blank\">support@taiga.io</a> với tiêu đề “unsubscribe” hoặc qua liên kết trong bất kỳ bản tin nào của chúng tôi.",
+            "DONT_ASK": "Đừng hỏi lại",
+            "SUBSCRIBE": "Đăng ký",
+            "SUBSCRIBED": "Bạn đã đăng ký",
+            "LIGHTBOX_TITLE": "Bạn có muốn nhận thông báo về Taiga không?",
+            "CONFIRMATION": "Có, hãy gửi cho tôi tin tức, cập nhật sản phẩm và đề xuất về Taiga.",
+            "SAVE_PREFERENCE": "LƯU TÙY CHỌN",
+            "NOTIFY_EXPLANATION": "Chúng tôi sẽ gửi cho bạn tin tức, cập nhật sản phẩm và đề xuất về Taiga.",
+            "SAVED_PREFERENCE": "Tùy chọn của bạn đã được lưu thành công"
         }
     },
     "LIGHTBOX": {
@@ -1152,7 +1177,9 @@
             "CREATE": "Create an issue on this",
             "PUBLIC": "public Taiga project",
             "EMAIL": "Send us a e-mail directly to",
-            "SUPPORT": "support@taiga.io"
+            "SUPPORT": "support@taiga.io",
+            "VISIT": "Xem mục ",
+            "FAQ": "Câu hỏi thường gặp"
         },
         "SEARCH": {
             "TITLE": "Tìm kiếm",
@@ -1188,7 +1215,10 @@
             "SELECT_STATUS": "Select status",
             "DEFAULT": "Default",
             "ERROR_STATUS": "Changes cannot be saved because there is a problem with the selected status.",
-            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane."
+            "ERROR_SWIMLANE": "Changes cannot be saved because there is a problem with the selected swimlane.",
+            "LOCATION": "Vị trí",
+            "CREATE_TOP": "Trên cùng",
+            "CREATE_BOTTOM": "Dưới cùng"
         },
         "DISABLE_KANBAN": {
             "TITLE": "Disable kanban",
@@ -1326,7 +1356,7 @@
     },
     "COMMENTS": {
         "TITLE": "Bình luận",
-        "DELETED_INFO": "Nhận xét bị xóa bởi {{tên người dùng}}",
+        "DELETED_INFO": "Nhận xét bị xóa bởi {{user}}",
         "COMMENTS_COUNT": "{{comments}} Bình luận",
         "OLDER_FIRST": "Dự án cũ hiển thị trước",
         "RECENT_FIRST": "Dự án mới tạo hiển thị trước",
@@ -1513,9 +1543,9 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Select destination",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished user story} other{<strong>#</strong> unfinished user stories}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> unfinished storyless task} other{<strong>#</strong> unfinished storyless tasks}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issue}}",
-            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and taks, and the sprint'll be closed",
-            "WARNING_ISSUES_NOT_MOVED": "The issues'll remain in the sprint and don't be removed",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> unfinished issue} other{<strong>#</strong> unfinished issues}}",
+            "WARNING_ISSUES_NOT_MOVED_TITLE": "You just moved all user stories and tasks, and the sprint will be closed",
+            "WARNING_ISSUES_NOT_MOVED": "The issues will remain in the sprint and will not be removed",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{You just moved # item!} other{You just moved # items!}}",
             "WARNING_SPRINT_STILL_OPEN": "Please note that the sprint {{sprintName}} <strong>will remain open</strong> as long as it contains unfinished items."
         }
@@ -1543,6 +1573,7 @@
         "WARNING_TEXT": "Your changes were not saved!",
         "SAVED": "The Taiga saved all your changes!",
         "CLOSE": "Đóng thông báo",
+        "COMMUNICATION": "Thông tin từ Taiga",
         "MAIL": "Thông báo qua mail",
         "DESKTOP": "Desktop notifications using browser alerts",
         "ASK_DELETE": "Bạn có chắc chắn muốn xóa không?"
@@ -1792,7 +1823,7 @@
         "US_UPDATED_POINTS": "{{username}} has updated '{{role_name}}' points of the user story {{obj_name}} to {{new_value}}",
         "ISSUE_UPDATED": "{{username}} vừa cập nhật thuộc tính \"{{field_name}}\" của issue {{obj_name}}",
         "ISSUE_UPDATED_WITH_NEW_VALUE": "{{username}} vừa cập nhật thuộc tính \"{{field_name}}\" của issue {{obj_name}} tới {{new_value}}",
-        "TASK_UPDATED": "{{username}} vừa cập nhật thuộc tính \"{{field_name}}\" của nhiệm vụ {{obj_name}} tới {{new_value}}",
+        "TASK_UPDATED": "{{username}} đã cập nhật thuộc tính \"{{field_name}}\" của tác vụ {{obj_name}}",
         "TASK_UPDATED_WITH_NEW_VALUE": "{{username}} vừa cập nhật thuộc tính \"{{field_name}}\" của nhiệm vụ {{obj_name}} tới {{new_value}}",
         "TASK_UPDATED_WITH_US": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}}",
         "TASK_UPDATED_WITH_US_NEW_VALUE": "{{username}} has updated the attribute \"{{field_name}}\" of the task {{obj_name}} which belongs to the user story {{us_name}} to {{new_value}}",
@@ -1934,6 +1965,29 @@
             "ACTION_TITLE": "Tìm kiếm",
             "RESULTS": "Kết quả tìm kiếm"
         }
+    },
+    "SYSTEM_SETTINGS": {
+        "TITLE": "Cài đặt hệ thống",
+        "DESCRIPTION": "Đặt mặc định cho các tài khoản mà không có sự lựa chọn cá nhân.",
+        "LANGUAGE_HEADING": "Ngôn ngữ",
+        "DEFAULT_LANGUAGE": "Ngôn ngữ mặc định",
+        "APPEARANCE_HEADING": "Ngoại hình",
+        "DEFAULT_THEME": "Chủ đề mặc định",
+        "USE_DEPLOYMENT_DEFAULT": "Sử dụng cài đặt mặc định của máy chủ",
+        "EFFECTIVE_VALUE": "Giá trị hiệu quả:",
+        "SOURCE_DEPLOYMENT": "Nguồn: cài đặt mặc định của máy chủ",
+        "SOURCE_ADMIN": "Nguồn: cài đặt đã lưu của quản trị viên",
+        "LANGUAGE_HELP": "Được sử dụng bởi các giao diện và email khi ngôn ngữ tài khoản không được đặt.",
+        "THEME_HELP": "Được sử dụng bởi các giao diện khi chủ đề tài khoản không được đặt.",
+        "RESET_DEFAULT": "Đặt lại về cài đặt mặc định của máy chủ",
+        "APPLY_HELP": "Những thay đổi đã lưu áp dụng cho lần tải trang tiếp theo. Lựa chọn cá nhân được ưu tiên.",
+        "CONFLICT": "Một quản trị viên khác đã thay đổi các giá trị mặc định này. Tải lại trước khi lưu.",
+        "UNAVAILABLE_CHOICE": "Lựa chọn đã lưu không còn nữa. Đặt lại nó trước khi lưu.",
+        "ERROR_SAVE": "Không thể lưu cài đặt hệ thống. Hãy thử lại."
+    },
+    "THEMES": {
+        "LIGHT": "Sáng",
+        "DARK": "Tối"
     },
     "ZOOM": {
         "TITLE": "Zoom:",
