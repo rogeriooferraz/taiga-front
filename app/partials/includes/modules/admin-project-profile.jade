@@ -66,6 +66,7 @@ form
                     tg-admin-project-request-ownership.admin-project-profile-owner-actions(
                         ng-class="{limit: !canCreatePrivateProjects}"
                         can-request="canCreatePrivateProjects"
+                        max-projects="maxPrivateProjects"
                         owner="project.owner",
                         project-id="project.id"
                     )
