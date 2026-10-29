@@ -14,6 +14,10 @@ import re
 
 DEFAULT_LOCALES_DIR = Path(__file__).resolve().parents[1] / "app/locales/taiga"
 PLACEHOLDER = re.compile(r"{{\s*([^{}]*?)\s*}}")
+ICU_ARGUMENT = re.compile(
+    r"\{\s*([A-Za-z_][\w]*)\s*,\s*(plural|select|selectordinal)\s*,"
+)
+ICU_SELECTOR = re.compile(r"(?<!\w)(=\d+|other)\s*\{")
 
 
 def reject_duplicate_keys(pairs):
@@ -59,6 +63,11 @@ def placeholders(value):
     return Counter(name.strip() for name in found)
 
 
+def icu_tokens(value):
+    return (Counter(ICU_ARGUMENT.findall(value)),
+            Counter(ICU_SELECTOR.findall(value)))
+
+
 def validate_codes(locale_codes):
     if not isinstance(locale_codes, list) or "en" not in locale_codes:
         raise ValueError("supported locales must be a list including en")
@@ -97,6 +106,7 @@ def check_locales(locales_dir, locale_codes=None):
             missing = sorted(english.keys() - actual.keys())
             extra = sorted(actual.keys() - english.keys())
             placeholder_errors = []
+            icu_errors = []
             for key in sorted(actual.keys() & english.keys()):
                 try:
                     expected_tokens = placeholders(english[key])
@@ -105,14 +115,17 @@ def check_locales(locales_dir, locale_codes=None):
                         placeholder_errors.append(key)
                 except ValueError:
                     placeholder_errors.append(key)
-            if missing or extra or placeholder_errors:
+                if icu_tokens(english[key]) != icu_tokens(actual[key]):
+                    icu_errors.append(key)
+            if missing or extra or placeholder_errors or icu_errors:
                 failures[path.name] = {
                     "missing": missing, "extra": extra,
-                    "placeholders": placeholder_errors, "errors": []
+                    "placeholders": placeholder_errors, "icu": icu_errors,
+                    "errors": []
                 }
         except (OSError, UnicodeError, ValueError) as error:
             failures[path.name] = {
-                "missing": [], "extra": [], "placeholders": [],
+                "missing": [], "extra": [], "placeholders": [], "icu": [],
                 "errors": [str(error)]
             }
     return len(translations), failures
@@ -145,7 +158,7 @@ def main():
     if failures:
         print(f"FAIL: {len(failures)}/{count} catalogs differ from English")
         return 1
-    print(f"PASS: {count} catalogs match English keys and placeholders")
+    print(f"PASS: {count} catalogs match English keys and format tokens")
     return 0
 
 

@@ -1937,7 +1937,7 @@
         "PAGE_TITLE": "Descobreix projectes - Taiga",
         "PAGE_DESCRIPTION": "Directori de projectes públics de Taiga. Explora els backlogs, timelines, incidències i equips. Descobreix els projectes més seguits o els més actius. Filtra projectes per Kanban o Scrum.",
         "DISCOVER_TITLE": "Descobreix projectes",
-        "DISCOVER_SUBTITLE": "{projectes, plural, =1{Un projecte públic per descobrir} other{# projectes públics per descobrir}}",
+        "DISCOVER_SUBTITLE": "{projects, plural, =1{Un projecte públic per descobrir} other{# projectes públics per descobrir}}",
         "MOST_ACTIVE": "Mès actius",
         "MOST_ACTIVE_EMPTY": "Encara no hi ha projectes ACTIUS",
         "MOST_LIKED": "Most liked",

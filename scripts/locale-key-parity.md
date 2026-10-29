@@ -1,10 +1,14 @@
 # Selectable locale consistency
 
-Run `npm run check:locale-keys` before merging translation changes. CI runs the
-same command and its unit tests. The checker requires every selectable locale
-to have exactly the English leaf keys, nonblank string values, valid JSON with
-no duplicate keys, and the same interpolation placeholders at each key.
-Placeholder names and repetition matter; whitespace inside `{{ }}` does not.
+Run `npm run check:locale-keys` and `npm run check:locale-format` before
+merging translation changes. CI runs both commands and their unit tests. The
+checker requires every selectable locale to have exactly the English leaf
+keys, nonblank string values, valid JSON with
+no duplicate keys, and the same interpolation placeholders and ICU plural
+controls at each key. Placeholder names and repetition matter; whitespace
+inside `{{ }}` does not. ICU variable names and selectors such as `=1` and
+`other` must remain valid. The format check compiles and renders every ICU
+message for zero, one, and two with the shipped MessageFormat library.
 A failure identifies the locale and affected key. There is no debt baseline.
 
 `scripts/selectable-locale-codes.json` mirrors the backend's selectable

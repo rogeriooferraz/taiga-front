@@ -204,7 +204,7 @@
             "UNWATCH": "撤销关注",
             "WATCHERS": "关注者列表",
             "BUTTON_TITLE": "关注/撤销关注该项",
-            "COUNTER_TITLE": "{total, plural, 1{1 个关注者} other{# 个关注者}}"
+            "COUNTER_TITLE": "{total, plural, =1{1 个关注者} other{# 个关注者}}"
         },
         "VOTE_BUTTON": {
             "BUTTON_TITLE": "赞/踩该项",
@@ -905,9 +905,9 @@
         "HELP": "记录你的项目在上方常用栏位<br/> 前4个项目将会显示在上方导览项目清单处。",
         "PRIVATE": "私有项目",
         "LOOKING_FOR_PEOPLE": "这个项目在寻找队友",
-        "FANS_COUNTER_TITLE": "{total, plural, 1{1 个粉丝} other{# 个粉丝}}",
-        "WATCHERS_COUNTER_TITLE": "{total, plural, 1{1 个关注者} other{# 个关注者}}",
-        "MEMBERS_COUNTER_TITLE": "{total, plural, 1{1 个成员} other{# 个成员}}",
+        "FANS_COUNTER_TITLE": "{total, plural, =1{1 个粉丝} other{# 个粉丝}}",
+        "WATCHERS_COUNTER_TITLE": "{total, plural, =1{1 个关注者} other{# 个关注者}}",
+        "MEMBERS_COUNTER_TITLE": "{total, plural, =1{1 个成员} other{# 个成员}}",
         "BLOCKED_PROJECT": {
             "BLOCKED": "关闭项目",
             "THIS_PROJECT_IS_BLOCKED": "这个项目暂时被关闭了",
@@ -959,13 +959,13 @@
             "LIKED": "已点赞",
             "UNLIKE": "取消点赞",
             "BUTTON_TITLE": "对这个项目点赞或者取消点赞",
-            "COUNTER_TITLE": "{total, plural, 1{1 个粉丝} other{# 个粉丝}}"
+            "COUNTER_TITLE": "{total, plural, =1{1 个粉丝} other{# 个粉丝}}"
         },
         "WATCH_BUTTON": {
             "BUTTON_TITLE": "关注这个项目并设置通知规则",
             "WATCH": "Watch",
             "WATCHING": "关注中",
-            "COUNTER_TITLE": "{total, plural, 1{1 个关注者} other{# 个关注者}}",
+            "COUNTER_TITLE": "{total, plural, =1{1 个关注者} other{# 个关注者}}",
             "OPTIONS": {
                 "NOTIFY_ALL": "接收所有通知",
                 "NOTIFY_ALL_TITLE": "接收这个项目的所有通知",

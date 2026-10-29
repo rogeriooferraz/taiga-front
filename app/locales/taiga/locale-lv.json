@@ -1539,7 +1539,7 @@
             "MOVE_TO_OPEN_SPRINT": "Pārvietot uz atklātu sprintu",
             "NO_OPEN_SPRINTS": "Te nav citu atklātu sprintu. Lūdzu vispirms kādu izveidojiet.",
             "SELECT_DESTINATION_PLACEHOLDER": "Izvēlaties galamērķi",
-            "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> nepabeigta/nenoslēgta vajadzība} citas{<strong>#</strong> nepabeigtas vajadzības}}",
+            "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> nepabeigta/nenoslēgta vajadzība} other{<strong>#</strong> nepabeigtas vajadzības}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> nepabeigts uzdevums bez vajadzības} other{<strong>#</strong> nepabeigti uzdevumi bez vajadzībām}}",
             "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> nepabeigts izmaiņu pieprasījums} other{<strong>#</strong> nepabeigts izmaiņu pieprasījums}}",
             "WARNING_ISSUES_NOT_MOVED_TITLE": "Jūs tikko pārvietojāt visas vajadzības un uzdevumus, un sprints tiks slēgts",

@@ -204,7 +204,7 @@
             "UNWATCH": "Deixar de Observar",
             "WATCHERS": "Observadores",
             "BUTTON_TITLE": "Observar/Deixar de observar este item",
-            "COUNTER_TITLE": "{total, plural, =1{um observador} outros{# observadores}}"
+            "COUNTER_TITLE": "{total, plural, =1{um observador} other{# observadores}}"
         },
         "VOTE_BUTTON": {
             "BUTTON_TITLE": "Aprovar/Reprovar este item",

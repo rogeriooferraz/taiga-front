@@ -905,7 +905,7 @@
         "HELP": "Berrantolatu zure proiektuak gehien erabiltzen direnak goian ezartzeko.<br/> Goiko nabigazio-barrako proiektuen zerrendan agertuko dira lau proiektu nagusiak",
         "PRIVATE": "Proiektu pribatua",
         "LOOKING_FOR_PEOPLE": "Proiektu honek lankideak behar ditu",
-        "FANS_COUNTER_TITLE": "{guztira, plurala, =1{zale bat} beste{# zale}}",
+        "FANS_COUNTER_TITLE": "{total, plural, =1{zale bat} other{# zale}}",
         "WATCHERS_COUNTER_TITLE": "{total, plural, =1{behatzaile bat} other{# behatzaile}}",
         "MEMBERS_COUNTER_TITLE": "{total, plural, =1{lankide bat} other{# lankide}}",
         "BLOCKED_PROJECT": {
@@ -959,13 +959,13 @@
             "LIKED": "Gogokoa",
             "UNLIKE": "Ez datsegit",
             "BUTTON_TITLE": "Proiektu hau datsegit edo ez datsegit",
-            "COUNTER_TITLE": "{guztira, plurala, =1{zale bat} beste{# zale}}"
+            "COUNTER_TITLE": "{total, plural, =1{zale bat} other{# zale}}"
         },
         "WATCH_BUTTON": {
             "BUTTON_TITLE": "Begiratu proiektu hau eta ezarri jakinarazpenak",
             "WATCH": "Begiratu",
             "WATCHING": "Behatzen",
-            "COUNTER_TITLE": "{guztira, plurala, =1{behatzaile bat} other{# behatzaile}}",
+            "COUNTER_TITLE": "{total, plural, =1{behatzaile bat} other{# behatzaile}}",
             "OPTIONS": {
                 "NOTIFY_ALL": "Jaso jakinarazpen guztiak",
                 "NOTIFY_ALL_TITLE": "Jaso jakinarazpen guztiak proiektu honetan",

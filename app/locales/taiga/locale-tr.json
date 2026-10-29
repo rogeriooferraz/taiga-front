@@ -1541,7 +1541,7 @@
             "SELECT_DESTINATION_PLACEHOLDER": "Hedef seç",
             "UNFINISHED_USER_STORIES_COUNT": "{total, plural, =1{<strong>#</strong> bitmemiş kullanıcı hikayesi} other{<strong>#</strong> bitmemiş kullanıcı hikayesi}}",
             "UNFINISHED_STORYLESS_TASKS_COUNT": "{total, plural, =1{<strong>#</strong> bitmemiş hikayesiz görev} other{<strong>#</strong> bitmemiş hikayesiz görev}}",
-            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> bitmemiş talep} other{<strong>#</strong> bitmemiş talep",
+            "UNFINISHED_ISSUES_COUNT": "{total, plural, =1{<strong>#</strong> bitmemiş talep} other{<strong>#</strong> bitmemiş talep}}",
             "WARNING_ISSUES_NOT_MOVED_TITLE": "Tüm kullanıcı hikayelerini ve görevleri taşıdınız ve koşu kapatılacak",
             "WARNING_ISSUES_NOT_MOVED": "Talepler koşuda kalacak ve kaldırılmayacak",
             "WARNING_SPRINT_STILL_OPEN_TITLE": "{total, plural, =1{# ögeyi taşıdınız!} other{# ögeyi taşıdınız!}}",

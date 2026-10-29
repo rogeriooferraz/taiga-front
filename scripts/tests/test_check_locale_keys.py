@@ -87,6 +87,18 @@ class CheckLocaleKeysTests(unittest.TestCase):
         self.write("fr", {"COUNT": "{total, plural, =1{un} other{# personnes}}"})
         self.assertEqual(self.check(["en", "fr"]), (1, {}))
 
+    def test_icu_variable_and_selector_drift_are_reported(self):
+        source = "{total, plural, =1{one watcher} other{# watchers}}"
+        self.write("en", {"COUNT": source})
+        self.write("fr", {"COUNT": "{somme, pluriel, =1{un} autres{#}}"})
+        _, failures = self.check(["en", "fr"])
+        self.assertEqual(failures["locale-fr.json"]["icu"], ["COUNT"])
+        self.write("fr", {"COUNT": "{total, plural, 1{un} other{#}}"})
+        _, failures = self.check(["en", "fr"])
+        self.assertEqual(failures["locale-fr.json"]["icu"], ["COUNT"])
+        self.write("fr", {"COUNT": "{total, plural, =1{un} other{#}}"})
+        self.assertEqual(self.check(["en", "fr"]), (1, {}))
+
     def test_missing_supported_catalog_and_invalid_codes_are_rejected(self):
         self.write("fr", {"MENU": {"TITLE": "Ouvrir {{name}}", "CLOSE": "Fermer"}})
         self.write("id", {"MENU": {"TITLE": "extra only"}})
