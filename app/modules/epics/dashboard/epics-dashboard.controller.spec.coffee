@@ -389,6 +389,27 @@ describe "EpicsDashboard", ->
         expect(mocks.tgLocation.replace).to.have.been.calledOnce
         expect(ctrl.filterQ).to.equal(undefined)
 
+    it "reloads status-filtered epics after a status change with stored filters", ->
+        mocks.urlParams = {}
+        mocks.routeParams.pslug = "project"
+        mocks.tgStorage.get.returns({status: "3"})
+        ctrl = createController()
+        ctrl.reloadWithFilters = sinon.spy()
+
+        ctrl.scope.$broadcast("epic:status:changed")
+
+        expect(ctrl.reloadWithFilters).to.have.been.calledOnce
+
+    it "refreshes facet counts after an unfiltered status change", ->
+        mocks.urlParams = {assigned_to: "7"}
+        mocks.tgProjectService.project = Immutable.Map({id: 42})
+        ctrl = createController()
+        ctrl.loadFilterData = sinon.spy()
+
+        ctrl.scope.$broadcast("epic:status:changed")
+
+        expect(ctrl.loadFilterData).to.have.been.calledWith({assigned_to: "7", project: 42})
+
     it "keeps URL filters ahead of stored filters", ->
         mocks.routeParams.pslug = "project"
         mocks.tgStorage.get.returns({status: "3"})
