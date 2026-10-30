@@ -111,7 +111,7 @@ module.controller("UserSettingsController", UserSettingsController)
 ## User Profile Directive
 #############################################################################
 
-UserProfileDirective = ($confirm, $auth, $repo, $translate) ->
+UserProfileDirective = ($confirm, $auth, $repo, $translate, $window) ->
     link = ($scope, $el, $attrs) ->
         submit = debounce 2000, (event) =>
             event.preventDefault()
@@ -120,6 +120,8 @@ UserProfileDirective = ($confirm, $auth, $repo, $translate) ->
             return if not form.validate()
 
             changeEmail = $scope.user.isAttributeModified("email")
+            inheritChoice = (!$scope.lang and $scope.user.lang) or
+                            (!$scope.theme and $scope.user.theme)
             $scope.user.lang = $scope.lang
             $scope.user.theme = $scope.theme
 
@@ -131,6 +133,10 @@ UserProfileDirective = ($confirm, $auth, $repo, $translate) ->
                     $confirm.success(text)
                 else
                     $confirm.notify('success')
+
+                # A system default may have changed while this profile was open.
+                # Reload bootstrap settings when an explicit choice is cleared.
+                $window.location.reload() if inheritChoice
 
             onError = (data) =>
                 form.setErrors(data)
@@ -145,7 +151,7 @@ UserProfileDirective = ($confirm, $auth, $repo, $translate) ->
 
     return {link:link}
 
-module.directive("tgUserProfile", ["$tgConfirm", "$tgAuth", "$tgRepo", "$translate", UserProfileDirective])
+module.directive("tgUserProfile", ["$tgConfirm", "$tgAuth", "$tgRepo", "$translate", "$window", UserProfileDirective])
 
 
 #############################################################################
