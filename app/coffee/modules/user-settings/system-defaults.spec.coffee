@@ -6,7 +6,7 @@
 
 describe "Instance defaults controller", ->
     controller = http = deferred = rootScope = null
-    browser = null
+    browser = user = null
 
     beforeEach ->
         module "taigaUserSettings"
@@ -15,7 +15,8 @@ describe "Instance defaults controller", ->
             rootScope = $rootScope
             deferred = $q.defer()
             http = {patch: sinon.stub().returns(deferred.promise)}
-            browser = {location: {reload: sinon.spy()}}
+            browser = {alert: sinon.spy(), location: {reload: sinon.spy()}}
+            user = {lang: "", theme: ""}
             controller = $controller "InstanceDefaultsController", {
                 instanceDefaults: {
                     default_language: null
@@ -28,6 +29,8 @@ describe "Instance defaults controller", ->
                 }
                 "$tgHttp": http
                 "$tgConfig": {get: -> "/api/v1/"}
+                "$tgAuth": {getUser: -> user}
+                "$translate": {instant: (key) -> key}
                 "$window": browser
             }
 
@@ -44,6 +47,30 @@ describe "Instance defaults controller", ->
         })
         deferred.resolve({data: {revision: 4}})
         rootScope.$apply()
+        expect(browser.location.reload.calledOnce).to.be.true
+        expect(browser.alert.called).to.be.false
+
+    it "explains changed defaults hidden by personal choices", ->
+        user.lang = "en"
+        user.theme = "taiga"
+        controller.language = "fr"
+        controller.theme = "taiga-dark"
+        controller.save()
+        deferred.resolve({data: {revision: 4}})
+        rootScope.$apply()
+        expect(browser.alert.calledOnce).to.be.true
+        expect(browser.alert.firstCall.args[0]).to.contain("SYSTEM_SETTINGS.APPLY_HELP")
+        expect(browser.alert.firstCall.args[0]).to.contain("USER_PROFILE.FIELD.LANGUAGE_DEFAULT")
+        expect(browser.alert.firstCall.args[0]).to.contain("USER_PROFILE.FIELD.THEME_DEFAULT")
+        expect(browser.location.reload.calledOnce).to.be.true
+
+    it "does not warn when a personal choice matches the new default", ->
+        user.lang = "fr"
+        controller.language = "fr"
+        controller.save()
+        deferred.resolve({data: {revision: 4}})
+        rootScope.$apply()
+        expect(browser.alert.called).to.be.false
         expect(browser.location.reload.calledOnce).to.be.true
 
     it "shows a conflict without reloading or issuing a second write", ->

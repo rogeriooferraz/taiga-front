@@ -7,9 +7,9 @@
 ###
 
 class InstanceDefaultsController
-    @.$inject = ["instanceDefaults", "$tgHttp", "$tgConfig", "$window"]
+    @.$inject = ["instanceDefaults", "$tgHttp", "$tgConfig", "$tgAuth", "$translate", "$window"]
 
-    constructor: (instanceDefaults, @http, @config, @window) ->
+    constructor: (instanceDefaults, @http, @config, @auth, @translate, @window) ->
         @data = instanceDefaults
         @language = @data.default_language || ""
         @theme = @data.default_theme || ""
@@ -31,6 +31,13 @@ class InstanceDefaultsController
 
     save: ->
         return if @saving or @hasUnavailableChoice()
+        user = @auth.getUser()
+        overriddenLanguage = user?.lang and
+                             @effectiveLanguage() != user.lang and
+                             @effectiveLanguage() != (@data.default_language || @data.deployment_language)
+        overriddenTheme = user?.theme and
+                          @effectiveTheme() != user.theme and
+                          @effectiveTheme() != (@data.default_theme || @data.deployment_theme)
         @saving = true
         @error = null
         payload = {
@@ -40,6 +47,18 @@ class InstanceDefaultsController
         }
         @http.patch("#{@config.get('api')}instance-defaults/admin", payload)
         .then (result) =>
+            if overriddenLanguage or overriddenTheme
+                lines = [@translate.instant("SYSTEM_SETTINGS.APPLY_HELP")]
+                profile = @translate.instant("USER_SETTINGS.MENU.SECTION_TITLE")
+                if overriddenLanguage
+                    label = @translate.instant("USER_PROFILE.FIELD.LANGUAGE")
+                    choice = @translate.instant("USER_PROFILE.FIELD.LANGUAGE_DEFAULT")
+                    lines.push("#{profile} → #{label}: #{choice}")
+                if overriddenTheme
+                    label = @translate.instant("USER_PROFILE.FIELD.THEME")
+                    choice = @translate.instant("USER_PROFILE.FIELD.THEME_DEFAULT")
+                    lines.push("#{profile} → #{label}: #{choice}")
+                @window.alert(lines.join("\n\n"))
             @window.location.reload()
         , (error) =>
             @saving = false
